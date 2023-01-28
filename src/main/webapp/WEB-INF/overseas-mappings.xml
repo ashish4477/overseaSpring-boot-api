@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- the interseptor to keep the session open to avoid lazy initialization problems -->
+    <bean name="openSessionInViewInterceptor" class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <mvc:interceptors>
+        <ref bean="openSessionInViewInterceptor"/>
+    </mvc:interceptors>
+
+	<!-- annotation-based handler -->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>-->
+
+    <bean id="annotationMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+        <property name="order" value="1"/>
+        <property name="alwaysUseFullPath" value="true"/>
+        <property name="interceptors">
+            <list>
+                <ref bean="openSessionInViewInterceptor"/>
+            </list>
+        </property>
+	</bean>
+	<!-- simpleUrl handler -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="order" value="2"/>
+		<property name="alwaysUseFullPath" value="true"/>
+        <property name="mappings">
+            <props>
+                <prop key="/**/ExpressYourVote.htm">expressYourVote</prop>
+                <prop key="/**/ExpressYourVote">expressYourVote</prop>
+                <prop key="/**/ExpressGetLabel.htm">eyvGetFedexLabel</prop>
+                <prop key="/**/LabelImage.htm">eyvGetFedexImage</prop>
+                <prop key="/**/admin/EyvCountryList.htm">eyvFedexCountries</prop>
+                <prop key="/**/admin/EyvEditCountry.htm">eyvEditCountry</prop>
+
+                <!--
+                <prop key="/**/scytlLogin.htm">scytlLogin</prop>
+                <prop key="/**/scytlIframe.htm">scytlIframe</prop>
+				-->
+                <!--<prop key="/**/ws/user">getUser</prop>-->
+             </props>
+        </property>
+		<property name="interceptors">
+            <list>
+                <ref bean="openSessionInViewInterceptor"/>
+            </list>
+        </property>
+	</bean>
+
+
+</beans>

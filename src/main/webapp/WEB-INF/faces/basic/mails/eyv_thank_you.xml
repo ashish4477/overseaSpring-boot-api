@@ -1,0 +1,26 @@
+<email>
+    <subject>Important Reminders from Overseas Vote</subject>
+    <from>express-helpdesk@overseasvotefoundation.org</from>
+   <reply_to>express-helpdesk@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Dear $!firstName,</strong></p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Thank you for using Express Your Vote to return your ballot this year!</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">You will now be able to track your ballot through the Express Your Vote entry screen at www.overseasvotefoundation.org/ExpressYourVote, and you can expect an automatic email confirming to you that your ballot has been delivered to your Election Office.
+</p>
+  <p style="font-family: 'Trebuchet MS', Arial, sans-serif; font-weight:bold;">Please Note: You MUST schedule your pickup or drop off your shipment by the November 1st cutoff date!</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">If you need to consult the system again to arrange FedEx Express pick-up or dropoff, go to www.overseasvotefoundation.org/ExpressYourVote, choose your country and hit Continue.  The country specific information will be displayed.
+ </p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Important!  You now have a Voter Account.  By using Express Your Vote, you either created or updated a Voter Account. Never share your Voter Account.  Always logout of your Voter Account prior to leaving the Express Your Vote and before allowing other voters use your system to register to vote or to order an Express Your Vote shipment.
+</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">If you have questions or feedback, please contact voterhelpdesk@overseasvotefoundation.org.
+ </p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Thanks again for your support of the Express Your Vote program.  We hope it provides you confidence that your ballot will arrive in time to be counted.
+ </p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Overseas Vote<br />
+	www.overseasvotefoundation.org</p>
+	<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;">Contact us at <a href="mailto:voterhelpdesk@overseasvotefoundation.org">voterhelpdesk@overseasvotefoundation.org</a> anytime with questions or comments.<br />
+	&copy;2005-$!year Overseas Vote. All Rights Reserved.</p>
+</div>
+    ]]></body_template>
+</email>

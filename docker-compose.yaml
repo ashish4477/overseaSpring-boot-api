@@ -1,0 +1,53 @@
+version: '3.3'
+
+services:
+  spring:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 8081:8080
+    restart: always
+    environment:
+      - ENVIRONMENT=stage
+      - DB_URL=jdbc:mysql://ovf-stage-cluster.cluster-co5z687yzqev.us-east-1.rds.amazonaws.com/overseas_foundation?autoReconnect=true
+      - DB_USER=overseas
+      - DB_PASS=v0t!n9_4ud
+      - VOTE_SMART_KEY=81ba21bf2e0ee373aa1d9997233b04e7
+      - JEDIS_HOST=ovf.x9r93i.0001.use1.cache.amazonaws.com
+      - JEDIS_PORT=6379
+      - JEDIS_DB=2
+      - JEDIS_ENABLED=true
+      - FEDEX_AUTH_KEY=icTJUioIgk8FYbut
+      - FEDEX_AUTH_PASS=45J5WpehYOlmjZHJ9vi3rCIOa
+      - FEDEX_CLIENT_NUM=438370048
+      - FEDEX_METER_NUM=5592212
+      - AUTHORIZE_NET_LOGIN=5Cpjp52Uz
+      - AUTHORIZE_NET_KEY=4T55Hgste5H3T8Qz
+      - FACT_CHECK_KEY="0b25f5dbe310df54f83607ad9f5fe4474c5070fb"
+      - LOCAL_ELECTION_AUTH_TOKEN=58c54e205dc41005aa8d57271c5240a39c709e7c
+      - LOCAL_ELECTION_URL=http://electionmanager-stage.isqpycpmab.us-east-1.elasticbeanstalk.com/api/v1
+      - EOD_API_SERVICE_URL=http://electionmanager-stage.isqpycpmab.us-east-1.elasticbeanstalk.com/eod/v3
+      - SENDGRID_API_KEY=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
+      - RECAPTCHA_SITE_KEY=6LehECgUAAAAAG_59yA3GjlPhPGqp1PhyiuiW0pu
+      - RECAPTCHA_SECRET_KEY=6LehECgUAAAAAEix-gSdmYDIqxdPNUMtNy-knifl
+      - RE_CAPTCHA_SITE_KEY_SKIMM=6Le6Qq4ZAAAAAIXqPzB87Iyfvsauo46n7KcThAxy
+      - RECAPTCHA_SECRET_KEY_SKIMM=6Le6Qq4ZAAAAAFlvjT5y0ZDWHW9ekM4ByThgxxy2
+      - RE_CAPTCHA_SITE_KEY_VOTE411=6LcI3s4ZAAAAACkMv7soCVg4Xdt3_BFqN7ld-vqz
+      - RECAPTCHA_SECRET_KEY_VOTE411=6LcI3s4ZAAAAACuahrb5c_K8F4SR0BqyxUrVsv_w
+      - MAIL_HOST=email-smtp.us-east-1.amazonaws.com
+      - MAIL_LOGIN=AKIAI3JOR2ZBBXGLWPOA
+      - MAIL_PASS=AjEKJVrLHGpWCo1o7GIk+Wpisf3iYBkib7beOufay4A8
+      - MAIL_TLS=true
+      - MAIL_PORT=25
+      - SKIMM_SES_CONFIGSET=skimm
+      - VOTE411_SES_CONFIGSET=vote411
+      - IVOTE_ISRAEL_SERVER=198.100.47.189
+      - IVOTE_ISRAEL_PORT=7822
+      - IVOTE_ISRAEL_USER=ovf53thsd5
+      - IVOTE_ISRAEL_PASS=;hQ~P8k3RT+,
+      - IVOTE_ISRAEL_SFTP_DIR=ovf
+      - S3_ACCESS_KEY=access
+      - S3_SECRET_KEY=secret
+      - IS_JOB_ENABLED=true

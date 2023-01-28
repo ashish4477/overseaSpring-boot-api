@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common">
+    <class name="Person" table="user_names" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="title" type="string" column="title" />
+        <property name="firstName" type="string" column="first_name" />
+        <property name="initial" type="string" column="middle_name" />
+        <property name="lastName" type="string" column="last_name" />
+        <property name="suffix" type="string" column="suffix" />
+
+    </class>
+
+    <class name="WizardResultPerson" table="wizard_result_names" dynamic-insert="true" dynamic-update="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="title" type="string" column="title" />
+        <property name="firstName" type="string" column="first_name" />
+        <property name="initial" type="string" column="middle_name" />
+        <property name="lastName" type="string" column="last_name" />
+        <property name="suffix" type="string" column="suffix" />
+
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.bearcode.ovf.tools" />
+	<context:component-scan base-package="com.bearcode.ovf.DAO" />
+	<context:component-scan base-package="com.bearcode.ovf.service" />
+
+	<bean id="votingPrecinctService"
+		class="com.bearcode.ovf.tools.votingprecinct.VotingPrecinctService" />
+
+	<bean id="streetSegmentFinderCSV"
+		class="com.bearcode.ovf.tools.votingprecinct.StreetSegmentFinderCSV">
+		<property name="restrictedAddressesRequired" value="true" />
+		<property name="csvFilePath"
+			value="com/bearcode/ovf/tools/votingprecinct/precinctfinder.txt" />
+		<property name="countyFilePath"
+			value="com/bearcode/ovf/tools/votingprecinct/counties.txt" />
+		<property name="states">
+			<list>
+				<value>MN</value>
+			</list>
+		</property>
+		<property name="needNormalization" value="true" />
+		<property name="fieldMap">
+			<map>
+				<entry key="StreetAddr" value="STREET" />
+				<entry key="HouseNbrLo" value="HOUSE_NUMBER_LOW" />
+				<entry key="HouseNbrHi" value="HOUSE_NUMBER_HIGH" />
+				<entry key="OddEven" value="ODD_EVEN" />
+				<entry key="PctName" value="PRECINCT_NAME" />
+				<entry key="City" value="CITY" />
+				<entry key="County" value="COUNTY" />
+				<entry key="State" value="STATE" />
+				<entry key="Zip" value="ZIP" />
+				<!-- <entry key="CongDist" value="US_DISTRICT" /> <entry key="SenDist" 
+					value="STATE_SENATORIAL_DISTRICT" /> <entry key="LegDist" value="STATE_REPRESENTATIVE_DISTRICT" 
+					/> -->
+			</map>
+		</property>
+		<property name="votingRegionType" value="County" />
+	</bean>
+
+	<bean id="vipStreetSegmentFinder"
+		class="com.bearcode.ovf.tools.votingprecinct.StreetSegmentFinderVip">
+		<property name="restrictedAddressesRequired" value="true" />
+		<property name="states">
+			<list>
+				<value>OH</value>
+				<value>VA</value>
+			</list>
+		</property>
+		<property name="needNormalization" value="true" />
+		<property name="votingRegionType" value="County" />
+	</bean>
+
+	<bean id="melissaStreetSegmentFinder"
+		class="com.bearcode.ovf.tools.votingprecinct.StreetSegmentFinderMelissa">
+		<property name="cityFilePath"
+			value="com/bearcode/ovf/tools/votingprecinct/fl_okaloosa_cities.csv" />
+		<property name="states">
+			<list>
+				<value>MI</value>
+			</list>
+		</property>
+		<property name="votingRegions">
+			<map>
+				<entry key="FL">
+					<list>
+						<value>OKALOOSA COUNTY</value>
+					</list>
+				</entry>
+			</map>
+		</property>
+		<property name="needNormalization" value="true" />
+		<property name="votingRegionType" value="County" />
+	</bean>
+
+	<bean id="districtLookupService" class="com.bearcode.ovf.webservices.DistrictLookupService">
+		<property name="melissaDataUrl" value="http://xml.melissadata.com/xml.asp" />
+		<property name="cacheDir"
+			value="/var/www/www.overseasvotefoundation.org/districtlookup_cache" />
+		<!-- production and staging -->
+		<property name="cacheTime" value="2592000000" />
+		<!-- 1 month = 30d*24h*60m*60s*1000ms, time in milliseconds -->
+	</bean>
+    <bean id="smartyStreetService" class="com.bearcode.ovf.webservices.SmartyStreetService">
+    </bean>
+
+	<!-- Factory to create PDF generators. -->
+	<bean id="velocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+				input.encoding=UTF-8
+				output.encoding=UTF-8
+			</value>
+		</property>
+	</bean>
+</beans>

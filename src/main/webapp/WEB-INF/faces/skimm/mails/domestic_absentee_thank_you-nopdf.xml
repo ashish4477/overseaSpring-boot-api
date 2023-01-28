@@ -1,0 +1,24 @@
+<email>
+    <subject>Reminder: Mail your absentee ballot request</subject>
+    <from>theSkimm &lt;skimm2020@usvotefoundation.org&gt;</from>
+   <reply_to>skimm2020@theskimm.com</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+    <p>
+	    <a href="https://vote.theskimm.com"><img src="https://usvotefoundation-drupal.s3.amazonaws.com/prod/s3fs-public/theskimm_email_banner.png" alt="SKIMM 2020"/></a>
+		<hr style="width: auto; max-width: 695px;margin: 0 auto 0 0;"/>
+	</p>
+	<p><strong>Hey $!firstName,</strong></p>
+	
+<p>Congrats. You’re on your way to getting an absentee ballot. We love that big election energy. Now that your application is downloaded, all you have to do is print, sign, and mail it to your election office. That address is included.</p>
+
+<p>Forgot to download it? We warned you. In that case, here’s your reminder to return to <a href="https://vote.theskimm.com">https://vote.theskimm.com</a> for take two. Don’t give up now: You got this.<p>
+
+
+<p>Check out <a href="https://skimmth.is/3fP11WQ">Skimm2020.com</a> for more election info. We've got you covered with all the nonpartisan info and tools you need to vote confidently, no matter how or where you cast your ballot. Plus sign up <a href="https://skimmth.is/2Der4ZG">here</a> for more news from theSkimm.</p>
+
+   	<p><strong>Happy voting,</strong><br/>
+	theSkimm</p>
+</div>
+    ]]></body_template>
+</email>

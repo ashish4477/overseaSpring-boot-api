@@ -1,0 +1,423 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: '{{ include "ovf.fullname" . }}'
+  labels:
+    app.kubernetes.io/name: ovf
+    app.kubernetes.io/instance: ovf
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ovf
+      app.kubernetes.io/instance: ovf
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: ovf
+        app.kubernetes.io/instance: ovf
+    spec:
+      serviceAccountName: '{{ include "ovf.serviceAccountName" . }}'
+      securityContext:
+        {}
+      volumes:        
+        - name: ovf-disk          
+          persistentVolumeClaim:              
+            claimName: ovf-stage-efs-pvc
+      containers:
+        - name: '{{ .Chart.Name }}'
+          securityContext:
+            {}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: '{{ .Values.image.pullPolicy }}'
+          env: 
+            - name: "ENV"
+              valueFrom:
+                secretKeyRef:
+                    name: env-secrets
+                    key: ENV
+            - name: "ENVIRONMENT"
+              valueFrom: 
+                secretKeyRef:
+                  name: env-secrets
+                  key: ENVIRONMENT
+            - name: "AUTHORIZE_NET_KEY"
+              valueFrom: 
+                secretKeyRef:
+                  name: env-secrets
+                  key: AUTHORIZE_NET_KEY
+            - name: "AUTHORIZE_NET_LOGIN"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: AUTHORIZE_NET_LOGIN
+            - name: "DB_PASS"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: DB_PASS
+            - name: "DB_URL"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: DB_URL
+            - name: "DB_USER"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: DB_USER
+            - name: "EOD_API_SERVICE_URL"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: EOD_API_SERVICE_URL
+            - name: "FACT_CHECK_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: FACT_CHECK_KEY
+            - name: "FEDEX_AUTH_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: FEDEX_AUTH_KEY
+            - name: "FEDEX_AUTH_PASS"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: FEDEX_AUTH_PASS
+            - name: "FEDEX_CLIENT_NUM"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: FEDEX_CLIENT_NUM
+            - name: "FEDEX_METER_NUM"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: FEDEX_METER_NUM
+            - name: "IMAGE_VERSION"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: IMAGE_VERSION
+            - name: "IS_JOB_ENABLED"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: IS_JOB_ENABLED
+            - name: "IVOTE_ISRAEL_PASS"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: IVOTE_ISRAEL_PASS
+            - name: "IVOTE_ISRAEL_PORT"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: IVOTE_ISRAEL_PORT
+            - name: "IVOTE_ISRAEL_SERVER"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: IVOTE_ISRAEL_SERVER
+            - name: "IVOTE_ISRAEL_SFTP_DIR"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: IVOTE_ISRAEL_SFTP_DIR
+            - name: "IVOTE_ISRAEL_USER"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: IVOTE_ISRAEL_USER
+            - name: "JEDIS_DB"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: JEDIS_DB
+            - name: "JEDIS_ENABLED"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: JEDIS_ENABLED
+            - name: "JEDIS_HOST"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: JEDIS_HOST
+            - name: "JEDIS_PORT"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: JEDIS_PORT
+            - name: "LOCAL_ELECTION_AUTH_TOKEN"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: LOCAL_ELECTION_AUTH_TOKEN
+            - name: "LOCAL_ELECTION_URL"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: LOCAL_ELECTION_URL
+            - name: "MAIL_HOST"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: MAIL_HOST
+            - name: "MAIL_LOGIN"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: MAIL_LOGIN
+            - name: "MAIL_PASS"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: MAIL_PASS
+            - name: "MAIL_PORT"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: MAIL_PORT
+            - name: "MAIL_TLS"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: MAIL_TLS
+            - name: "RECAPTCHA_SECRET_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: RECAPTCHA_SECRET_KEY
+            - name: "RECAPTCHA_SECRET_KEY_SKIMM"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: RECAPTCHA_SECRET_KEY_SKIMM
+            - name: "RECAPTCHA_SECRET_KEY_VOTE411"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: RECAPTCHA_SECRET_KEY_VOTE411
+            - name: "RECAPTCHA_SITE_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: RECAPTCHA_SITE_KEY
+            - name: "RE_CAPTCHA_SITE_KEY_SKIMM"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: RE_CAPTCHA_SITE_KEY_SKIMM
+            - name: "RE_CAPTCHA_SITE_KEY_VOTE411"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: RE_CAPTCHA_SITE_KEY_VOTE411
+            - name: "S3_ACCESS_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: S3_ACCESS_KEY
+            - name: "S3_PATH"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: S3_PATH
+            - name: "S3_SECRET_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: S3_SECRET_KEY
+            - name: "SENDGRID_API_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: SENDGRID_API_KEY
+            - name: "SKIMM_MAIL_HOST"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: SKIMM_MAIL_HOST
+            - name: "SKIMM_MAIL_LOGIN"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: SKIMM_MAIL_LOGIN
+            - name: "SKIMM_MAIL_PASS"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: SKIMM_MAIL_PASS
+            - name: "SKIMM_MAIL_PORT"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: SKIMM_MAIL_PORT
+            - name: "SKIMM_MAIL_TLS"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: SKIMM_MAIL_TLS
+            - name: "SKIMM_SES_CONFIGSET"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: SKIMM_SES_CONFIGSET
+            - name: "VOTE411_SES_CONFIGSET"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: VOTE411_SES_CONFIGSET
+            - name: "VOTE_SMART_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: VOTE_SMART_KEY
+            - name: "ZOHO_USER"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: ZOHO_USER
+            - name: "ZOHO_CLIENT_ID"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: ZOHO_CLIENT_ID
+            - name: "ZOHO_CLIENT_SECRET"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: ZOHO_CLIENT_SECRET
+            # - name: "ZOHO_GRANT_TOKEN"
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: env-secrets
+            #       key: ZOHO_GRANT_TOKEN
+            # - name: "ZOHO_DB_HOST"
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: env-secrets
+            #       key: ZOHO_DB_HOST
+            # - name: "ZOHO_DB_DATABASE"
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: env-secrets
+            #       key: ZOHO_DB_DATABASE
+            # - name: "ZOHO_DB_TABLE"
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: env-secrets
+            #       key: ZOHO_DB_TABLE                                    
+            # - name: "ZOHO_DB_PORT"
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: env-secrets
+            #       key: ZOHO_DB_PORT
+            - name: "ZOHO_LOG_PATH"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: ZOHO_LOG_PATH 
+            - name: "ZOHO_RESOURCE_PATH"
+              valueFrom:
+                secretKeyRef:
+                  name: env-secrets
+                  key: ZOHO_RESOURCE_PATH      
+ 
+          
+          ports: 
+            - name: http
+              containerPort: 80
+              protocol: TCP
+            - name: http1
+              containerPort: 8081
+              protocol: TCP
+            - name: https
+              containerPort: 443
+              protocol: TCP
+
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {}
+          volumeMounts:
+            - mountPath: "/var/www/html/sites/default/files"
+              name: ovf-disk
+
+        - name: node-exporter
+          image: public.ecr.aws/bitnami/node-exporter:latest
+          imagePullPolicy: Always
+          ports:
+          - name: http
+            containerPort: 9100
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {}
+        - name: cadvisor
+          image:  public.ecr.aws/r3x8z0n0/cadvisor:latest
+          imagePullPolicy: Always
+          ports:
+          - name: http
+            containerPort: 9100
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          # readinessProbe:
+          #  0 httpGet:
+          #     path: /
+          #     port: http
+          resources:
+            {}
+          
+
+
+              
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: default
+  name: ovf-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:477658251325:certificate/6ca07340-a846-4035-9b97-ae8595145f53, arn:aws:acm:us-east-1:477658251325:certificate/c965fc30-263f-40f7-9b30-a90096563c7a,
+     arn:aws:acm:us-east-1:477658251325:certificate/37b918cc-b126-4166-b906-caeae7b490d8, arn:aws:acm:us-east-1:477658251325:certificate/50b8e1af-cbb9-489f-9353-c1d3eaaa1459
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/subnets: subnet-007ecebd69c78fd79, subnet-0d4bea8f09c9a6c11
+    alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}' 
+spec:
+  rules:
+  - http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: ssl-redirect
+              port:
+                number: "use-annotation"
+          path: "/"
+          backend:
+            service:
+                name: ovf
+                port:
+                  number: 80

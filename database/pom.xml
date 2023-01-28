@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.overseasvotefoundation</groupId>
+	<artifactId>database</artifactId>
+	<name>database</name>
+	<packaging>jar</packaging>
+	<version>1.0.0</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<logging.version>1.6.1</logging.version>
+		<maven.test.failure.ignore>false</maven.test.failure.ignore>
+
+		<flyway.basePackage>com.bearcode.patches</flyway.basePackage>
+		<flyway.baseDir>patches</flyway.baseDir>
+       		<flyway.driver>com.mysql.jdbc.Driver</flyway.driver>
+       		<flyway.url>jdbc:mysql://localhost:3306/overseas_foundation?characterEncoding=utf8</flyway.url>
+       		<flyway.user>overseas</flyway.user>
+       		<flyway.password>v0t!n9_4ud</flyway.password>
+
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>devel</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+
+			<properties>
+				<flyway.sqlMigrationPrefix>V</flyway.sqlMigrationPrefix>
+			</properties>
+
+		</profile>
+
+		<profile>
+			<id>qa</id>
+			<properties>
+				<flyway.sqlMigrationPrefix>QA_V</flyway.sqlMigrationPrefix>
+
+				<!-- put production qa settings here
+				<flyway.url>jdbc:mysql://localhost:3306/db_name?characterEncoding=utf8</flyway.url>
+				<flyway.user>username</flyway.user>
+				<flyway.password>password</flyway.password>
+				 -->
+			</properties>
+		</profile>
+
+		<profile>
+			<id>prod</id>
+			<properties>
+				<flyway.sqlMigrationPrefix>PROD_V</flyway.sqlMigrationPrefix>
+
+				<!-- put production db settings here
+				<flyway.url>jdbc:mysql://localhost:3306/db_name?characterEncoding=utf8</flyway.url>
+				<flyway.user>username</flyway.user>
+				<flyway.password>password</flyway.password>
+				 -->
+			</properties>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.16</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.flyway</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>1.6</version>
+			<scope>compile</scope>
+		</dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>3.0.5.RELEASE</version>
+        </dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+
+		<repository>
+			<id>com.springsource.repository.bundle.external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+
+		<repository>
+			<id>org.apache.snapshot</id>
+			<name>Apache Repository - Snapshot Releases</name>
+			<url>https://repository.apache.org/content/repositories/snapshots</url>
+		</repository>
+
+		<repository>
+			<id>com.springsource.repository.libraries.release</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Library Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/release</url>
+		</repository>
+
+		<repository>
+			<id>com.springsource.repository.libraries.external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Library Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/external</url>
+		</repository>
+
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Repository Group</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>com.googlecode.flyway</id>
+			<name>Maven Central</name>
+			<url>http://repo2.maven.org/maven2</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.googlecode.flyway</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>1.5</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<id>default-jar</id>
+						<configuration>
+							<archive>
+								<addMavenDescriptor>false</addMavenDescriptor>
+							</archive>
+		  					<excludes>
+		  						<exclude>**/*-test.xml</exclude>
+		  					</excludes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>test-jar</id>
+						<configuration>
+							<archive>
+								<addMavenDescriptor>false</addMavenDescriptor>
+							</archive>
+						</configuration>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

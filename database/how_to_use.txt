@@ -1,0 +1,50 @@
+Migration Project.
+
+Database setup on the developer side
+====================================
+(For #1 assume running mysql as root or have global privileges)
+
+1. mysql> source create_database.sql			// create database and user, need additional grants for user (LOCK TABLES, DROP)
+                                                        // Example: mysql> C:\Users\XXX\XXX\ovf_spring\database\create_database.sql
+
+2. shell> mvn clean install				// build database project and install into local maven repository
+                                                        // run clean installation on database directory
+3. shell> mvn clean test                                // run clean test on ovf_spring directory
+                                                        
+4. shell> mvn flyway:clean flyway:migrate		// drop tables and apply all patches from (src/main/resources/patches/, src/main/java/com/bearcode/patches/)                                                       // run flyway:clean flyway:migrate on database directory
+
+5. shell> cd data
+
+6. mysql> source all.sql
+ 
+Database reset
+==============exit
+If you want to reset DB:
+1. shell> mvn flyway:clean flyway:init flyway:migratequit
+
+
+Be careful, this command will reset the entire database.
+
+Creating a patch
+================
+If you want to create a new SQL patch, 
+see example in src/main/resources/patches directory
+
+If you want to create a JAVA patch, 
+TBD
+
+Existing Database Setup
+=======================
+1. mvn clean package flyway:init -Dflyway.initialVersion=3 flyway:migrate
+       \___________/ |           |                         +------------- Migrates the schema to the latest version
+             |       |           +--------------------------------------- The initial version to put in the database
+             |       |                                                    In other words, skip V1__create_schema.sql, V2__init... 
+             |       |                                                    and V3_...data.sql scripts
+             |       +--------------------------------------------------- Creates and initializes the metadata table in the schema
+             +----------------------------------------------------------- Maven goals (create database-1.0.0.jar)
+
+More information about Flyway migration framework can be found here:
+http://code.google.com/p/flyway/
+
+Pavel Larkin
+plarkin@bear-code.com

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common" >
+    <class name="OverseasUser" table="users" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="username" type="string"/>
+        <property name="password" type="string"/>
+        <property name="scytlPassword" type="string" column="scytl_password"/>
+
+        <many-to-one name="name" column="name_id" lazy="false" cascade="all"/>
+        <many-to-one name="previousName" column="previous_name_id" lazy="false" cascade="all"/>
+
+       	<property name="phone" type="string" column="phone" />
+        <property name="phoneType" type="string" column="phone_type" />
+        <property name="alternateEmail" type="string" column="alternate_email" />
+        <property name="alternatePhone" type="string" column="alternate_phone" />
+        <property name="alternatePhoneType" type="string" column="alternate_phone_type" />
+
+       	<many-to-one name="currentAddress" class="com.bearcode.ovf.model.common.UserAddress" lazy="false" column="current_address" cascade="all"/>
+       	<many-to-one name="votingAddress" class="com.bearcode.ovf.model.common.UserAddress" lazy="false" column="voting_address"  cascade="all" />
+       	<many-to-one name="forwardingAddress" class="com.bearcode.ovf.model.common.UserAddress" lazy="false" column="forwarding_address"  cascade="all"/>
+        <many-to-one name="previousAddress" class="com.bearcode.ovf.model.common.UserAddress" lazy="false" column="previous_address"  cascade="all"/>
+
+       	<many-to-one name="votingRegion" class="com.bearcode.ovf.model.common.VotingRegion" lazy="false" column="voting_region" />
+		<property name="eodRegionId" type="string" column="eod_region_id"/>
+        <property name="voterType" column="voter_type" not-null="false">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.common.VoterType</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+			</type>
+		</property>
+        <property name="voterClassificationType" column="voter_classification_type" not-null="false">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.common.VoterClassificationType</param>
+                <param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+            </type>
+        </property>
+		<property name="voterHistory" column="voter_history" not-null="false">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.common.VoterHistory</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+			</type>
+		</property>
+       	<property name="ballotPref" type="string" column="ballot_pref" />
+       	<property name="birthYear" type="int" column="birth_year" />
+       	<property name="birthMonth" type="int" column="birth_month" />
+        <property name="birthDate" type="int" column="birth_date" />
+       	<property name="race" type="string" column="race" />
+       	<property name="ethnicity" type="string" column="ethnicity" />
+       	<property name="gender" type="string" column="gender" />
+       	<property name="faceName" type="string" column="face_name" />
+
+        <property name="scytlIntegration" type="boolean"  column="scytl_integration" />
+        <property name="facebookIntegration" type="boolean"  column="facebook_integration" />
+
+        <property name="lastUpdated" type="java.util.Date">
+        	<column name="last_updated" sql-type="datetime" />
+        </property>
+        <property name="created" type="java.util.Date">
+        	<column name="created" sql-type="datetime" />
+        </property>
+        <property name="emailOptOut" type="boolean" column="email_opt_out"/>
+        <property name="voterAlertOnly" type="boolean" column="voter_alert_only"/>
+        <bag name="roles" table="users_roles" lazy="false">
+            <key column="user_id"/>
+            <many-to-many class="UserRole" column="role_id" />
+        </bag>
+
+        <bag name="faces" table="users_admin_faces" lazy="false" ><!---->
+            <key column="user_id"/>
+            <many-to-many class="FaceConfig" column="face_id"/>
+        </bag>
+    </class>
+</hibernate-mapping>

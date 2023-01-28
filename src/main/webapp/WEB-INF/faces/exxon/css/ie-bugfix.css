@@ -1,0 +1,64 @@
+/** Fixes for IE **/
+
+#fx-frame-main {
+}
+
+#fx-frame {
+	margin-left: 202px;
+}
+
+#fx-frame .column-form {
+	width:402px;
+}
+
+#fx-shadow {
+	position:absolute;
+	top: expression(eval(document.body.scrollTop) + "px");
+}
+
+
+
+/** Fix for a tiny break above the H3 in the sidebar.
+ Don't know why it's there, but it's in both IE6 and 7 **/
+#sidebar h3 {
+	margin-top: -2px;
+}
+
+/** Fix for a tiny break in the layout. Very strange. **/
+#sidebar ol li.fwab {
+	margin-bottom: -1px;
+}
+
+/** Minor tweak to make that checkbox look better **/
+#account-panel #remember-me {
+	line-height: 26px;
+}
+
+/** IE doesn't support colored form elements **/
+.checkbox {
+	border: 0px !important;
+	background-color: transparent !important;
+}
+
+/** This fixes the insane float-clearing whitespace bug
+Strangely enough, it presents itself in two different ways
+between the two versions in question. **SIGH**
+**/
+#body {
+	zoom: 1;
+}
+#foot {
+	zoom: 1;
+}
+
+
+/** PNG transparency workarounds **/
+#head #title a {	background-image: url(../img/ovf-logo.gif); }
+#head #top-items #search { background-image: url(../img/backgrounds/404-w-col-nograd-ft.gif); }
+#head #top-items #search form { background-image: url(../img/backgrounds/404-w-col-hd.gif);	}
+#head #top-items #account { background-image: url(../img/backgrounds/200-w-col-nograd-ft.gif); }
+#head #top-items #account #account-link { background-image: url(../img/backgrounds/200-w-col-hd.gif); }
+#account-panel { background-image: url(../img/backgrounds/200-w-col-nograd-ft.gif); }
+#account-panel form .account-items ul li { background-image: url(../img/icons/checkbox.gif); }
+.large-overlay .hd { background-image: url(../img/backgrounds/404-w-col-hd.gif); }
+.large-overlay .ft { background-image: url(../img/backgrounds/404-w-col-ft.gif); }

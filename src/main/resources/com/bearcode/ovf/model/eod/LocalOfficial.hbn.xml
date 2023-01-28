@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.eod">
+    <class name="LocalOfficial" table="local_officials" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <many-to-one name="region" column="region_id" cascade="all" lazy="false" not-null="true"/> <!--class="VotingRegion"-->
+        <many-to-one name="physical" column="physical_address_id" lazy="false" cascade="all"/><!--class="Address" -->
+        <many-to-one name="mailing" column="mailing_address_id" lazy="false" cascade="all"/><!--class="Address" -->  
+
+        <property name="generalEmail" type="string" column="general_email"/>
+        <property name="dsnPhone" type="string" column="dsn_phone"/>
+
+        <property name="website" type="string" column="website" />
+        <property name="hours" type="string" column="hours" />
+        <property name="updated" type="java.util.Date" column="updated" />
+        <property name="furtherInstruction" type="string" column="further_instruction" />
+        <property name="status" type="int" />
+        <property name="localOfficeType" column="local_office_type">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.eod.LocalOfficeType</param>
+                <param name="type">12<!--java.sql.Types.VARCHAR--></param>
+            </type>
+        </property>
+        
+        <bag name="officers" table="local_officials_to_officers" lazy="false" cascade="all-delete-orphan">
+            <key column="local_official_id"/>
+            <many-to-many entity-name="Officer" column="officer_id" order-by="order_number"/>
+        </bag>
+
+        <bag name="additionalAddresses" cascade="all-delete-orphan" lazy="false">
+            <key column="local_official_id" not-null="true"/>
+            <one-to-many class="AdditionalAddress"/>
+        </bag>
+    </class>
+
+    <class name="AdditionalAddressType" table="eod_additional_address_type" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="name" column="name"/>
+    </class>
+
+    <class name="AdditionalAddress" table="eod_additional_address" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="email" type="string" column="email" />
+        <property name="website" type="string" column="website" />
+        <many-to-one name="type" column="type_id" lazy="false" cascade="all"/>
+        <many-to-one name="address" column="address_id" lazy="false" cascade="all"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,213 @@
+
+.body-content .bd ul, .body-content .bd ol {
+	padding:0 0 30px 30px;
+}
+
+.body-content .bd ul li, .body-content .bd ol li {
+	padding-top: 5px;
+}
+
+.break { clear:both; }
+/*.wide-content .ft { display:none;}*/
+
+
+.column-right { float: right; }
+.bd h2 { font-size: 13px; color:#c00; line-height: 16px; }
+
+.hd { position: relative; }
+#candidate-finder-form .hd h2 {
+    background: url("../img/icons/sidebar-icons.png") 2px -291px no-repeat;
+    padding-left: 33px;
+}
+
+.bd ol {
+	padding: 0px 0px 0px 30px;
+}
+.bd blockquote {
+	margin: 0px;
+}
+
+
+.column-left h4 {
+	margin-top: 10px;
+}
+
+.candidate-details pre,
+.candidate-details p { 
+	font-family: "Trebuchet MS", Trebuchet, Tahoma, sans-serif; 
+	font-size: 13px; 
+	line-height: 20px; 
+	color: #444;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.candidate-details h3 {
+	float: none;
+}
+
+.candidate-details h4 {
+	float: left;
+}
+
+.input-text, .input-select {
+	width: 100%;
+	padding: 2px;
+}
+
+.date {
+	color: #22a510;
+	font-weight: bold;
+}
+
+#candidate-finder-form ul {
+    list-style-type: none;
+}
+
+#candidate-finder-form li {
+	background-image: url('../img/icons/checkbox.gif');
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+	padding:0px 0 5px 23px;
+    list-style-type: none;
+}
+
+#candidate-finder-form strong {
+    color: #C00;
+}
+/*
+
+dt, dd {
+	height: 25px;
+    margin-bottom: 8px;
+	float: left;
+}
+
+dt {
+	width: 25%;
+	text-align: right;
+    padding-right: 8px;
+    clear: left;
+}
+
+dd {
+	width: 50%;
+}
+
+dd a {
+	display: block;
+	height: 25px;
+	text-align: right;
+}
+
+dd select.input-select {
+	padding-bottom: 2px;
+	width: 102.5%;
+}
+
+dd.last-row {
+	padding-top: 20px;
+}
+
+dd.last-row input {
+	float: right;
+}
+*/
+label.error-indicator {
+	background-color: #F6FFCF;
+	color: #D11919;
+	padding: 1px;  
+}
+
+.body-content div.error-indicator {
+	width: 100%;
+	background-color: #F6FFCF;
+	border: solid 1px #D11919;
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+.body-content div.error-indicator p {
+	color: #D11919;
+	padding:2px 2px 2px 5px;
+	margin: 0px;
+}
+
+.candidate-list li a {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.candidate-photo {
+    padding: 25px;
+    background-color: #fff;
+    border: solid 1px #ddd;
+}
+
+.your-address { background-color:#FCFCFC; padding:6px; }
+
+.change-address {
+	float:right;
+}
+
+.ie6-tooltip {
+	position: relative;
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+}
+.ie6-tooltip .tooltip {
+	position: static;
+	width: 246px;
+	margin: 3px 0px 10px 120px;
+	border: 2px solid #fff;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title {
+	padding: 5px 5px 0px 5px;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title .close-tooltip {
+	top: 5px; right: 5px;
+}
+.ie6-tooltip .tooltip-text {
+	background: #F3F9FB;
+	padding: 5px;
+}
+
+.tooltip {
+	position: absolute;
+	width: 290px;
+    z-index:50;
+}
+.tooltip-icon {
+	cursor: pointer;
+}
+.tooltip-title {
+	position: relative;
+	padding: 45px 15px 0px 20px;
+	height: 19px;
+	background: transparent url(../img/backgrounds/rava-bubble-hd.png) top center no-repeat;
+}
+.tooltip-title .close-tooltip {
+	position: absolute;
+	top: 45px; right: 15px;
+	cursor: pointer;
+}
+.tooltip-text {
+	padding: 5px 15px 35px 20px;
+	background: transparent url(../img/backgrounds/rava-bubble-ft.png) bottom center no-repeat;
+}
+
+.back-button {
+    text-align: center;
+}
+
+.your-address {
+  background-color:#eef1f3;
+  margin: 8px;
+}
+.your-address h2 {
+  margin-top:0;
+  font-size: 115%;
+}

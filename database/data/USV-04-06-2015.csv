@@ -1,0 +1,1800 @@
+region_id,region_name,county_name,municipality_name,municipality_type,state_name,state_abbr
+2509,City of Beverly,Essex,Beverly,City,Massachusetts,MA
+2510,City of Boston,Suffolk,Boston,City,Massachusetts,MA
+2511,City of Brockton,Plymouth,Brockton,City,Massachusetts,MA
+2512,City of Cambridge,Middlesex,Cambridge,City,Massachusetts,MA
+2513,City of Chelsea,Suffolk,Chelsea,City,Massachusetts,MA
+2514,City of Chicopee,Hampden,Chicopee,City,Massachusetts,MA
+2515,City of Everett,Middlesex,Everett,City,Massachusetts,MA
+2516,City of Fall River,Bristol,Fall,City,Massachusetts,MA
+2517,City of Fitchburg,Worcester,Fitchburg,City,Massachusetts,MA
+2518,Ctiy of Gardner,Worcester,Gardner,City,Massachusetts,MA
+2519,City of Gloucester,Essex,Gloucester,City,Massachusetts,MA
+2520,City of Haverhill,Essex,Haverhill,City,Massachusetts,MA
+2521,City of Holyoke,Hampden,Holyoke,City,Massachusetts,MA
+2522,City of Lawrence,Essex,Lawrence,City,Massachusetts,MA
+2523,City of Leominister,Worcester,Leominister,City,Massachusetts,MA
+2524,City of Lowell,Middlesex,Lowell,City,Massachusetts,MA
+2525,City of Lynn,Essex,Lynn,City,Massachusetts,MA
+2526,City of Malden,Middlesex,Malden,City,Massachusetts,MA
+2527,City of Marlborough,Middlesex,Marlborough,City,Massachusetts,MA
+2528,City of Melrose,Middlesex,Melrose,City,Massachusetts,MA
+2529,City of New Bedford,Bristol,New,City,Massachusetts,MA
+2530,City of Newburyport,Essex,Newburyport,City,Massachusetts,MA
+2531,City of Newton,Middlesex,Newton,City,Massachusetts,MA
+2532,City of North Adams,Berkshire,North,City,Massachusetts,MA
+2533,City of Northampton,Hampshire,Northampton,City,Massachusetts,MA
+2534,City of Peabody,Essex,Peabody,City,Massachusetts,MA
+2535,City of Pittsfield,Berkshire,Pittsfield,City,Massachusetts,MA
+2536,City of Quincy,Norfolk,Quincy,City,Massachusetts,MA
+2537,City of Revere,Suffolk,Revere,City,Massachusetts,MA
+2538,City of Salem,Essex,Salem,City,Massachusetts,MA
+2539,City of Somerville,Middlesex,Somerville,City,Massachusetts,MA
+2540,City of Springfield,Hampden,Springfield,City,Massachusetts,MA
+2541,City of Taunton,Bristol,Taunton,City,Massachusetts,MA
+2542,City of Waltham,Middlesex,Waltham,City,Massachusetts,MA
+2543,City of Westfield,Hampden,Westfield,City,Massachusetts,MA
+2544,City of Woburn,Middlesex,Woburn,City,Massachusetts,MA
+2545,City of Worcester,Worcester,Worcester,City,Massachusetts,MA
+2546,Town of Abington,Plymouth,Abington,Town,Massachusetts,MA
+2547,Town of Acton,Middlesex,Acton,Town,Massachusetts,MA
+2548,Town of Acushnet,Bristol,Acushnet,Town,Massachusetts,MA
+2549,Town of Adams,Berkshire,Adams,Town,Massachusetts,MA
+2550,Town of Agawam,Hampden,Agawam,Town,Massachusetts,MA
+2551,Town of Alford,Berkshire,Alford,Town,Massachusetts,MA
+2552,Town of Amesbury,Essex,Amesbury,Town,Massachusetts,MA
+2553,Town of Amherst,Hampshire,Amherst,Town,Massachusetts,MA
+2554,Town of Andover,Essex,Andover,Town,Massachusetts,MA
+2555,Town of Aquinnah,Dukes,Aquinnah,Town,Massachusetts,MA
+2556,Town of Arlington,Middlesex,Arlington,Town,Massachusetts,MA
+2557,Town of Ashburnham,Worcester,Ashburnham,Town,Massachusetts,MA
+2558,Town of Ashby,Middlesex,Ashby,Town,Massachusetts,MA
+2559,Town of Ashfield,Franklin,Ashfield,Town,Massachusetts,MA
+2560,Town of Ashland,Middlesex,Ashland,Town,Massachusetts,MA
+2561,Town of Athol,Worcester,Athol,Town,Massachusetts,MA
+2562,Town of Attleboro,Bristol,Attleboro,Town,Massachusetts,MA
+2563,Town of Auburn,Worcester,Auburn,Town,Massachusetts,MA
+2564,Town of Avon,Norfolk,Avon,Town,Massachusetts,MA
+2565,Town of Ayer,Middlesex,Ayer,Town,Massachusetts,MA
+2566,Town of Barnstable,Barnstable,Barnstable,Town,Massachusetts,MA
+2567,Town of Barre,Worcester,Barre,Town,Massachusetts,MA
+2568,Town of Becket,Hampden,Becket,Town,Massachusetts,MA
+2569,Town of Bedford,Middlesex,Bedford,Town,Massachusetts,MA
+2570,Town of Belchertown,Hampshire,Belchertown,Town,Massachusetts,MA
+2571,Town of Bellingham,Norfolk,Bellingham,Town,Massachusetts,MA
+2572,Town of Belmont,Middlesex,Belmont,Town,Massachusetts,MA
+2573,Town of Berkley,Bristol,Berkley,Town,Massachusetts,MA
+2574,Town of Berlin,Worcester,Berlin,Town,Massachusetts,MA
+2575,Town of Bernardston,Franklin,Bernardston,Town,Massachusetts,MA
+2576,Town of Billerica,Middlesex,Billerica,Town,Massachusetts,MA
+2577,Town of Blackstone,Worcester,Blackstone,Town,Massachusetts,MA
+2578,Town of Blandford,Hampden,Blandford,Town,Massachusetts,MA
+2579,Town of Bolton,Worcester,Bolton,Town,Massachusetts,MA
+2580,Town of Bourne,Barnstable,Bourne,Town,Massachusetts,MA
+2581,Town of Boxborough,Middlesex,Boxborough,Town,Massachusetts,MA
+2582,Town of BOxford,Essex,BOxford,Town,Massachusetts,MA
+2583,Town of Boylston,Worcester,Boylston,Town,Massachusetts,MA
+2584,Town of Braintree,Norfolk,Braintree,Town,Massachusetts,MA
+2585,Town of Brewster,Barnstable,Brewster,Town,Massachusetts,MA
+2586,Town of Bridgewater,Plymouth,Bridgewater,Town,Massachusetts,MA
+2587,Town of Brimfield,Hampden,Brimfield,Town,Massachusetts,MA
+2588,Town of Brookfield,Worcester,Brookfield,Town,Massachusetts,MA
+2589,Town of Brookline,Middlesex,Brookline,Town,Massachusetts,MA
+2590,Town of Buckland,Franklin,Buckland,Town,Massachusetts,MA
+2591,Town of Burlington,Middlesex,Burlington,Town,Massachusetts,MA
+2592,Town of Canton,Norfolk,Canton,Town,Massachusetts,MA
+2593,Town of Carlisle,Middlesex,Carlisle,Town,Massachusetts,MA
+2594,Town of Carver,Plymouth,Carver,Town,Massachusetts,MA
+2595,Town of Charlemont,Berkshire,Charlemont,Town,Massachusetts,MA
+2596,Town of Charlton,Worcester,Charlton,Town,Massachusetts,MA
+2597,Town of Chatham,Barnstable,Chatham,Town,Massachusetts,MA
+2598,Town of Chelmsford,Middlesex,Chelmsford,Town,Massachusetts,MA
+2599,Town of Cheshire,Berkshire,Cheshire,Town,Massachusetts,MA
+2600,Town of Chester,Hampden,Chester,Town,Massachusetts,MA
+2601,Town of Chesterfield,Hampshire,Chesterfield,Town,Massachusetts,MA
+2602,Town of Chilmark,Dukes,Chilmark,Town,Massachusetts,MA
+2603,Town of Clarksburg,Berkshire,Clarksburg,Town,Massachusetts,MA
+2604,Town of Clinton,Worcester,Clinton,Town,Massachusetts,MA
+2605,Town of Cohasset,Norfolk,Cohasset,Town,Massachusetts,MA
+2606,Town of Colrain,Franklin,Colrain,Town,Massachusetts,MA
+2607,Town of Concord,Middlesex,Concord,Town,Massachusetts,MA
+2608,Town of Conway,Franklin,Conway,Town,Massachusetts,MA
+2609,Town of Cummington,Hampshire,Cummington,Town,Massachusetts,MA
+2610,Town of Dalton,Berkshire,Dalton,Town,Massachusetts,MA
+2611,Town of Danvers,Essex,Danvers,Town,Massachusetts,MA
+2612,Town of Dartmouth,Bristol,Dartmouth,Town,Massachusetts,MA
+2613,Town of Dedham,Norfolk,Dedham,Town,Massachusetts,MA
+2614,Town of Deerfield,Franklin,Deerfield,Town,Massachusetts,MA
+2615,Town of Dennis,Barnstable,Dennis,Town,Massachusetts,MA
+2616,Town of Dighton,Bristol,Dighton,Town,Massachusetts,MA
+2617,Town of Douglas,Worcester,Douglas,Town,Massachusetts,MA
+2618,Town of Dover,Norfolk,Dover,Town,Massachusetts,MA
+2619,Town of Dracut,Middlesex,Dracut,Town,Massachusetts,MA
+2620,Town of Dudley,Worcester,Dudley,Town,Massachusetts,MA
+2621,Town of Dunstable,Middlesex,Dunstable,Town,Massachusetts,MA
+2622,Town of Duxbury,Plymouth,Duxbury,Town,Massachusetts,MA
+2623,Town of East Bridgewater,Plymouth,East Bridgewater,Town,Massachusetts,MA
+2624,Town of East Brookfield,Worcester,East Brookfield,Town,Massachusetts,MA
+2625,Town of East Longmeadow,Hampden,East Longmeadow,Town,Massachusetts,MA
+2626,Town of Eastham,Barnstable,Eastham,Town,Massachusetts,MA
+2627,Town of Easthampton,Hampshire,Easthampton,Town,Massachusetts,MA
+2628,Town of Easton,Bristol,Easton,Town,Massachusetts,MA
+2629,Town of Edgartown,Dukes,Edgartown,Town,Massachusetts,MA
+2630,Town of Egremont,Berkshire,Egremont,Town,Massachusetts,MA
+2631,Town of Erving,Franklin,Erving,Town,Massachusetts,MA
+2632,Town of Essex,Essex,Essex,Town,Massachusetts,MA
+2633,Town of Fairhaven,Bristol,Fairhaven,Town,Massachusetts,MA
+2634,Town of Falmouth,Barnstable,Falmouth,Town,Massachusetts,MA
+2635,Town of Florida,Berkshire,Florida,Town,Massachusetts,MA
+2636,Town of Foxborough,Norfolk,Foxborough,Town,Massachusetts,MA
+2637,Town of Framingham,Middlesex,Framingham,Town,Massachusetts,MA
+2638,Town of Franklin,Norfolk,Franklin,Town,Massachusetts,MA
+2639,Town of Freetown,Bristol,Freetown,Town,Massachusetts,MA
+2640,Town of Georgetown,Essex,Georgetown,Town,Massachusetts,MA
+2641,Town of Gill,Franklin,Gill,Town,Massachusetts,MA
+2642,Town of Goshen,Hampshire,Goshen,Town,Massachusetts,MA
+2643,Town of Gosnold,Dukes,Gosnold,Town,Massachusetts,MA
+2644,Town of Grafton,Worcester,Grafton,Town,Massachusetts,MA
+2645,Town of Granby,Hampshire,Granby,Town,Massachusetts,MA
+2646,Town of Granville,Hampden,Granville,Town,Massachusetts,MA
+2647,Town of Great Barrington,Berkshire,Great Barrington,Town,Massachusetts,MA
+2648,Town of Greenfield,Franklin,Greenfield,Town,Massachusetts,MA
+2649,Town of Groton,Middlesex,Groton,Town,Massachusetts,MA
+2650,Town of Groveland,Essex,Groveland,Town,Massachusetts,MA
+2651,Town of Hadley,Hampshire,Hadley,Town,Massachusetts,MA
+2652,Town of Halifax,Plymouth,Halifax,Town,Massachusetts,MA
+2653,Town of Hamilton,Essex,Hamilton,Town,Massachusetts,MA
+2654,Town of Hampden,Hampden,Hampden,Town,Massachusetts,MA
+2655,Town of Hancock,Berkshire,Hancock,Town,Massachusetts,MA
+2656,Town of Hanover,Plymouth,Hanover,Town,Massachusetts,MA
+2657,Town of Hanson,Plymouth,Hanson,Town,Massachusetts,MA
+2658,Town of Hardwick,Worcester,Hardwick,Town,Massachusetts,MA
+2659,Town of Harvard,Worcester,Harvard,Town,Massachusetts,MA
+2660,Town of Harwich,Barnstable,Harwich,Town,Massachusetts,MA
+2661,Town of Hatfield,Hampshire,Hatfield,Town,Massachusetts,MA
+2662,Town of Hawley,Franklin,Hawley,Town,Massachusetts,MA
+2663,Town of Heath,Franklin,Heath,Town,Massachusetts,MA
+2664,Town of Hingham,Plymouth,Hingham,Town,Massachusetts,MA
+2665,Town of Hinsdale,Berkshire,Hinsdale,Town,Massachusetts,MA
+2666,Town of Holbrook,Norfolk,Holbrook,Town,Massachusetts,MA
+2667,Town of Holden,Worcester,Holden,Town,Massachusetts,MA
+2668,Town of Holland,Hampden,Holland,Town,Massachusetts,MA
+2669,Town of Holliston,Middlesex,Holliston,Town,Massachusetts,MA
+2670,Town of Hopedale,Worcester,Hopedale,Town,Massachusetts,MA
+2671,Town of Hopkinton,Middlesex,Hopkinton,Town,Massachusetts,MA
+2672,Town of Hubbardston,Worcester,Hubbardston,Town,Massachusetts,MA
+2673,Town of Hudson,Middlesex,Hudson,Town,Massachusetts,MA
+2674,Town of Hull,Plymouth,Hull,Town,Massachusetts,MA
+2675,Town of Huntington,Hampshire,Huntington,Town,Massachusetts,MA
+2676,Town of Ipswich,Essex,Ipswich,Town,Massachusetts,MA
+2677,Town of Kingston,Plymouth,Kingston,Town,Massachusetts,MA
+2678,Town of Lakeville,Plymouth,Lakeville,Town,Massachusetts,MA
+2679,Town of Lancaster,Worcester,Lancaster,Town,Massachusetts,MA
+2680,Town of Lanesborough,Berkshire,Lanesborough,Town,Massachusetts,MA
+2681,Town of Lee,Berkshire,Lee,Town,Massachusetts,MA
+2682,Town of Leicester,Worcester,Leicester,Town,Massachusetts,MA
+2683,Town of Lenox,Berkshire,Lenox,Town,Massachusetts,MA
+2684,Town of Leverett,Franklin,Leverett,Town,Massachusetts,MA
+2685,Town of Lexington,Middlesex,Lexington,Town,Massachusetts,MA
+2686,Town of Leyden,Franklin,Leyden,Town,Massachusetts,MA
+2687,Town of Lincoln,Middlesex,Lincoln,Town,Massachusetts,MA
+2688,Town of Littleton,Middlesex,Littleton,Town,Massachusetts,MA
+2689,Town of Longmeadow,Hampden,Longmeadow,Town,Massachusetts,MA
+2690,Town of Ludlow,Hampden,Ludlow,Town,Massachusetts,MA
+2691,Town of Lunenburg,Worcester,Lunenburg,Town,Massachusetts,MA
+2692,Town of Lynnfield,Essex,Lynnfield,Town,Massachusetts,MA
+2693,Town of Manchester-by-the-Sea,Essex,Manchester-by-the-Sea,Town,Massachusetts,MA
+2694,Town of Mansfield,Bristol,Mansfield,Town,Massachusetts,MA
+2695,Town of Marblehead,Essex,Marblehead,Town,Massachusetts,MA
+2696,Town of Marion,Plymouth,Marion,Town,Massachusetts,MA
+2697,Town of Marshfield,Plymouth,Marshfield,Town,Massachusetts,MA
+2698,Town of Mashpee,Barnstable,Mashpee,Town,Massachusetts,MA
+2699,Town of Mattapoisett,Plymouth,Mattapoisett,Town,Massachusetts,MA
+2700,Town of Maynard,Middlesex,Maynard,Town,Massachusetts,MA
+2701,Town of Medfield,Norfolk,Medfield,Town,Massachusetts,MA
+2702,Town of Medford,Middlesex,Medford,Town,Massachusetts,MA
+2703,Town of Medway,Norfolk,Medway,Town,Massachusetts,MA
+2704,Town of Mendon,Worcester,Mendon,Town,Massachusetts,MA
+2705,Town of Merrimac,Essex,Merrimac,Town,Massachusetts,MA
+2706,Town of Methuen,Essex,Methuen,Town,Massachusetts,MA
+2707,Town of Middleborough,Plymouth,Middleborough,Town,Massachusetts,MA
+2708,Town of Middlefield,Hampshire,Middlefield,Town,Massachusetts,MA
+2709,Town of Middleton,Essex,Middleton,Town,Massachusetts,MA
+2710,Town of Milford,Worcester,Milford,Town,Massachusetts,MA
+2711,Town of Millbury,Worcester,Millbury,Town,Massachusetts,MA
+2712,Town of Millis,Norfolk,Millis,Town,Massachusetts,MA
+2713,Town of Millville,Worcester,Millville,Town,Massachusetts,MA
+2714,Town of Milton,Norfolk,Milton,Town,Massachusetts,MA
+2715,Town of Monroe,Franklin,Monroe,Town,Massachusetts,MA
+2716,Town of Monson,Hampden,Monson,Town,Massachusetts,MA
+2717,Town of Montague,Franklin,Montague,Town,Massachusetts,MA
+2718,Town of Monterey,Berkshire,Monterey,Town,Massachusetts,MA
+2719,Town of Montgomery,hampden,Montgomery,Town,Massachusetts,MA
+2720,Town of Mount Washington,Berkshire,Mount Washington,Town,Massachusetts,MA
+2721,Town of Nahant,Essex,Nahant,Town,Massachusetts,MA
+2722,Town of Nantucket,Nantucket,Nantucket,Town,Massachusetts,MA
+2723,Town of Natick,Middlesex,Natick,Town,Massachusetts,MA
+2724,Town of Needham,Norfolk,Needham,Town,Massachusetts,MA
+2725,Town of New Ashford,Berkshire,New Ashford,Town,Massachusetts,MA
+2726,Town of New Braintree,Worcester,New Braintree,Town,Massachusetts,MA
+2727,Town of New Marlborough,Berkshire,New Marlborough,Town,Massachusetts,MA
+2728,Town of New Salem,Franklin,New Salem,Town,Massachusetts,MA
+2729,Town of Newbury,Essex,Newbury,Town,Massachusetts,MA
+2730,Town of Norfolk,Norfolk,Norfolk,Town,Massachusetts,MA
+2731,Town of North Andover,Essex,North Andover,Town,Massachusetts,MA
+2732,Town of North Attleborough,Bristol,North Attleborough,Town,Massachusetts,MA
+2733,Town of North Brookfield,Worcester,North Brookfield,Town,Massachusetts,MA
+2734,Town of North Reading,Middlesex,North Reading,Town,Massachusetts,MA
+2735,Town of Northborough,Worcester,Northborough,Town,Massachusetts,MA
+2736,Town of Northbridge,Worcester,Northbridge,Town,Massachusetts,MA
+2737,Town of Northfield,Franklin,Northfield,Town,Massachusetts,MA
+2738,Town of Norton,Bristol,Norton,Town,Massachusetts,MA
+2739,Town of Norwell,Plymouth,Norwell,Town,Massachusetts,MA
+2740,Town of Norwood,Norfolk,Norwood,Town,Massachusetts,MA
+2741,Town of Oak Bluffs,Dukes,Oak Bluffs,Town,Massachusetts,MA
+2742,Town of Oakham,Worcester,Oakham,Town,Massachusetts,MA
+2743,Town of Orange,Franklin,Orange,Town,Massachusetts,MA
+2744,Town of Orleans,Barnstable,Orleans,Town,Massachusetts,MA
+2745,Town of Otis,Berkshire,Otis,Town,Massachusetts,MA
+2746,Town of Oxford,Essex,Oxford,Town,Massachusetts,MA
+2747,Town of Palmer,Hampden,Palmer,Town,Massachusetts,MA
+2748,Town of Paxton,Worcester,Paxton,Town,Massachusetts,MA
+2749,Town of Pelham,Hampshire,Pelham,Town,Massachusetts,MA
+2750,Town of Pembroke,Plymouth,Pembroke,Town,Massachusetts,MA
+2751,Town of Pepperell,Middlesex,Pepperell,Town,Massachusetts,MA
+2752,Town of Peru,Berkshire,Peru,Town,Massachusetts,MA
+2753,Town of Petersham,Franklin,Petersham,Town,Massachusetts,MA
+2754,Town of Phillipston,Worcester,Phillipston,Town,Massachusetts,MA
+2755,Town of Plainfield,Hamphshire,Plainfield,Town,Massachusetts,MA
+2756,Town of Plainville,Norfolk,Plainville,Town,Massachusetts,MA
+2757,Town of Plymouth,Plymouth,Plymouth,Town,Massachusetts,MA
+2758,Town of Plympton,Plymouth,Plympton,Town,Massachusetts,MA
+2759,Town of Princeton,Worcester,Princeton,Town,Massachusetts,MA
+2760,Town of Provincetown,Barnstable,Provincetown,Town,Massachusetts,MA
+2761,Town of Randolph,Norfolk,Randolph,Town,Massachusetts,MA
+2762,Town of Raynham,Bristol,Raynham,Town,Massachusetts,MA
+2763,Town of Reading,Middlesex,Reading,Town,Massachusetts,MA
+2764,Town of Rehoboth,Bristol,Rehoboth,Town,Massachusetts,MA
+2765,Town of Richmond,Berkshire,Richmond,Town,Massachusetts,MA
+2766,Town of Rochester,Plymouth,Rochester,Town,Massachusetts,MA
+2767,Town of Rockland,Plymouth,Rockland,Town,Massachusetts,MA
+2768,Town of Rockport,Essex,Rockport,Town,Massachusetts,MA
+2769,Town of Rowe,Franklin,Rowe,Town,Massachusetts,MA
+2770,Town of Rowley,Essex,Rowley,Town,Massachusetts,MA
+2771,Town of Royalston,Worcester,Royalston,Town,Massachusetts,MA
+2772,Town of Russell,Hampden,Russell,Town,Massachusetts,MA
+2773,Town of Rutland,Worcester,Rutland,Town,Massachusetts,MA
+2774,Town of Salisbury,Essex,Salisbury,Town,Massachusetts,MA
+2775,Town of Sandisfield,Berkshire,Sandisfield,Town,Massachusetts,MA
+2776,Town of Sandwich,Barnstable,Sandwich,Town,Massachusetts,MA
+2777,Town of Saugus,Essex,Saugus,Town,Massachusetts,MA
+2778,Town of Savoy,Berkshire,Savoy,Town,Massachusetts,MA
+2779,Town of Scituate,Plymouth,Scituate,Town,Massachusetts,MA
+2780,Town of Seekonk,Bristol,Seekonk,Town,Massachusetts,MA
+2781,Town of Sharon,Norfolk,Sharon,Town,Massachusetts,MA
+2782,Town of Sheffield,Berkshire,Sheffield,Town,Massachusetts,MA
+2783,Town of Shelburne,Franklin,Shelburne,Town,Massachusetts,MA
+2784,Town of Sherborn,Middlesex,Sherborn,Town,Massachusetts,MA
+2785,Town of Shirley,Middlesex,Shirley,Town,Massachusetts,MA
+2786,Town of Shrewsbury,Worcester,Shrewsbury,Town,Massachusetts,MA
+2787,Town of Shutesbury,Franklin,Shutesbury,Town,Massachusetts,MA
+2788,Town of Somerset,Bristol,Somerset,Town,Massachusetts,MA
+2789,Town of South Hadley,Hampshire,South Hadley,Town,Massachusetts,MA
+2790,Town of Southampton,Hampshire,Southampton,Town,Massachusetts,MA
+2791,Town of Southborough,Worcester,Southborough,Town,Massachusetts,MA
+2792,Town of Southbridge,Worcester,Southbridge,Town,Massachusetts,MA
+2793,Town of Southwick,Hampden,Southwick,Town,Massachusetts,MA
+2794,Town of Spencer,Worcester,Spencer,Town,Massachusetts,MA
+2795,Town of Sterling,Worcester,Sterling,Town,Massachusetts,MA
+2796,Town of Stockbridge,Berkshire,Stockbridge,Town,Massachusetts,MA
+2797,Town of Stoneham,Middlesex,Stoneham,Town,Massachusetts,MA
+2798,Town of Stoughton,Norfolk,Stoughton,Town,Massachusetts,MA
+2799,Town of Stow,Middlesex,Stow,Town,Massachusetts,MA
+2800,Town of Sturbridge,Worcester,Sturbridge,Town,Massachusetts,MA
+2801,Town of Sudbury,Middlesex,Sudbury,Town,Massachusetts,MA
+2802,Town of Sunderland,Franklin,Sunderland,Town,Massachusetts,MA
+2803,Town of Sutton,Worcester,Sutton,Town,Massachusetts,MA
+2804,Town of Swampscott,Essex,Swampscott,Town,Massachusetts,MA
+2805,Town of Swansea,Bristol,Swansea,Town,Massachusetts,MA
+2806,Town of Templeton,Worcester,Templeton,Town,Massachusetts,MA
+2807,Town of Tewksbury,Middlesex,Tewksbury,Town,Massachusetts,MA
+2808,Town of Tisbury,Dukes,Tisbury,Town,Massachusetts,MA
+2809,Town of Tolland,Hampden,Tolland,Town,Massachusetts,MA
+2810,Town of Topsfield,Essex,Topsfield,Town,Massachusetts,MA
+2811,Town of Townsend,Middlesex,Townsend,Town,Massachusetts,MA
+2812,Town of Truro,Barnstable,Truro,Town,Massachusetts,MA
+2813,Town of Tyngsborough,Middlesex,Tyngsborough,Town,Massachusetts,MA
+2814,Town of Tyringham,Berkshire,Tyringham,Town,Massachusetts,MA
+2815,Town of Upton,Worcester,Upton,Town,Massachusetts,MA
+2816,Town of Uxbridge,Worcester,Uxbridge,Town,Massachusetts,MA
+2817,Town of Wakefield,Middlesex,Wakefield,Town,Massachusetts,MA
+2818,Town of Wales,Hampden,Wales,Town,Massachusetts,MA
+2819,Town of Walpole,Norfolk,Walpole,Town,Massachusetts,MA
+2820,Town of Ware,Hampden,Ware,Town,Massachusetts,MA
+2821,Town of Wareham,Plymouth,Wareham,Town,Massachusetts,MA
+2822,Town of Warren,Worcester,Warren,Town,Massachusetts,MA
+2823,Town of Warwick,Franklin,Warwick,Town,Massachusetts,MA
+2824,Town of Washington,Berkshire,Washington,Town,Massachusetts,MA
+2825,Town of Watertown,Middlesex,Watertown,Town,Massachusetts,MA
+2826,Town of Wayland,Middlesex,Wayland,Town,Massachusetts,MA
+2827,Town of Webster,Worcester,Webster,Town,Massachusetts,MA
+2828,Town of Wellesley,Norfolk,Wellesley,Town,Massachusetts,MA
+2829,Town of Wellfleet,Barnstable,Wellfleet,Town,Massachusetts,MA
+2830,Town of Wendell,Franklin,Wendell,Town,Massachusetts,MA
+2831,Town of Wenham,Essex,Wenham,Town,Massachusetts,MA
+2832,Town of West Boylston,Worcester,West Boylston,Town,Massachusetts,MA
+2833,Town of West Bridgewater,Plymouth,West Bridgewater,Town,Massachusetts,MA
+2834,Town of West Brookfield,Worcester,West Brookfield,Town,Massachusetts,MA
+2835,Town of West Newbury,Essex,West Newbury,Town,Massachusetts,MA
+2836,Town of West Springfield,Hampden,West Springfield,Town,Massachusetts,MA
+2837,Town of West Stockbridge,Berkshire,West Stockbridge,Town,Massachusetts,MA
+2838,Town of West Tisbury,Dukes,West Tisbury,Town,Massachusetts,MA
+2839,Town of Westborough,Worcester,Westborough,Town,Massachusetts,MA
+2840,Town of Westford,Middlesex,Westford,Town,Massachusetts,MA
+2841,Town of Westhampton,Hampshire,Westhampton,Town,Massachusetts,MA
+2842,Town of Westminster,Worcester,Westminster,Town,Massachusetts,MA
+2843,Town of Weston,Middlesex,Weston,Town,Massachusetts,MA
+2844,Town of Westport,Bristol,Westport,Town,Massachusetts,MA
+2845,Town of Westwood,Norfolk,Westwood,Town,Massachusetts,MA
+2846,Town of Weymouth,Norfolk,Weymouth,Town,Massachusetts,MA
+2847,Town of Whately,Franklin,Whately,Town,Massachusetts,MA
+2848,Town of Whitman,Plymouth,Whitman,Town,Massachusetts,MA
+2849,Town of Wilbraham,Hampden,Wilbraham,Town,Massachusetts,MA
+2850,Town of Williamsburg,Hampshire,Williamsburg,Town,Massachusetts,MA
+2851,Town of Williamstown,Berkshire,Williamstown,Town,Massachusetts,MA
+2852,Town of Wilmington,Middlesex,Wilmington,Town,Massachusetts,MA
+2853,Town of Winchendon,Worcester,Winchendon,Town,Massachusetts,MA
+2854,Town of Winchester,Middlesex,Winchester,Town,Massachusetts,MA
+2855,Town of Windsor,Berkshire,Windsor,Town,Massachusetts,MA
+2856,Town of Winthrop,Suffolk,Winthrop,Town,Massachusetts,MA
+2857,Town of Worthington,Hampshire,Worthington,Town,Massachusetts,MA
+2858,Town of Wrentham,Norfolk,Wrentham,Town,Massachusetts,MA
+2859,Town of Yarmouth,Barnstable,Yarmouth,Town,Massachusetts,MA
+4291,City of Pawtucket,Providence,Pawtucket,City,Rhode Island,RI
+4292,City of Providence,Providence,Providence,City,Rhode Island,RI
+4293,City of Warwick,Kent,Warwick,City,Rhode Island,RI
+4294,City of Central Falls,Providence,Central Falls,City,Rhode Island,RI
+4295,City of Cranston,Providence,Cranston,City,Rhode Island,RI
+4296,City of East Providence,Providence,East Providence,City,Rhode Island,RI
+4297,City of Newport,Newport,Newport,City,Rhode Island,RI
+4298,City of Woonsocket,Providence,Woonsocket,City,Rhode Island,RI
+4299,Town of Exeter,Washington,Exeter,Town,Rhode Island,RI
+4300,Town of Foster,Providence,Foster,Town,Rhode Island,RI
+4301,Town of Glocester,Providence,Glocester,Town,Rhode Island,RI
+4302,Town of Hopkinton,Washington,Hopkinton,Town,Rhode Island,RI
+4303,Town of Jamestown,Newport,Jamestown,Town,Rhode Island,RI
+4304,Town of Johnston,Providence,Johnston,Town,Rhode Island,RI
+4305,Town of Lincoln,Providence,Lincoln,Town,Rhode Island,RI
+4306,Town of Little Compton,Newport,Little Compton,Town,Rhode Island,RI
+4307,Town of Middletown,Newport,Middletown,Town,Rhode Island,RI
+4308,Town of Narragansett,Washington,Narragansett,Town,Rhode Island,RI
+4309,Town of North Kingstown,Washington,North Kingstown,Town,Rhode Island,RI
+4310,Town of North Providence,Providence,North Providence,Town,Rhode Island,RI
+4311,Town of North Smithfield,Providence,North Smithfield,Town,Rhode Island,RI
+4312,Town of Portsmouth,Bristol,Portsmouth,Town,Rhode Island,RI
+4313,Town of Richmond,Washington,Richmond,Town,Rhode Island,RI
+4314,Town of Scituate,Providence,Scituate,Town,Rhode Island,RI
+4315,Town of Smithfield,Providence,Smithfield,Town,Rhode Island,RI
+4316,Town of South Kingstown,Washington,South Kingstown,Town,Rhode Island,RI
+4317,Town of Tiverton,Newport,Tiverton,Town,Rhode Island,RI
+4318,Town of Warren,Bristol,Warren,Town,Rhode Island,RI
+4319,Town of Barrington,Bristol,Barrington,Town,Rhode Island,RI
+4320,Town of Bristol,Bristol,Bristol,Town,Rhode Island,RI
+4321,Town of Burrillville,Providence,Burrillville,Town,Rhode Island,RI
+4322,Town of Charlestown,Washington,Charlestown,Town,Rhode Island,RI
+4323,Town of Coventry,Kent,Coventry,Town,Rhode Island,RI
+4324,Town of Cumberland,Providence,Cumberland,Town,Rhode Island,RI
+4325,Town of East Greenwich,Kent,East Greenwich,Town,Rhode Island,RI
+4326,Town of New Shoreham,Washington,New Shoreham,Town,Rhode Island,RI
+4327,Town of West Greenwich,Kent,West Greenwich,Town,Rhode Island,RI
+4328,Town of West Warwick,Kent,West Warwick,Town,Rhode Island,RI
+4329,Town of Westerly,Washington,Westerly,Town,Rhode Island,RI
+4820,Addison,Addison,Addison,Town,Vermont,VT
+4821,Albany,Orleans,Albany,Town,Vermont,VT
+4822,Alburgh,Grand Isle,Alburgh,Town,Vermont,VT
+4823,Andover,Windsor,Andover,Town,Vermont,VT
+4824,Arlington,Bennington,Arlington,Town,Vermont,VT
+4825,Athens,Windsor,Athens,Town,Vermont,VT
+4826,Bakersfield,Franklin,Bakersfield,Town,Vermont,VT
+4827,Baltimore,Windsor,Baltimore,Town,Vermont,VT
+4828,Barnard,Windsor,Barnard,Town,Vermont,VT
+4829,Barnet,Caledonia,Barnet,Town,Vermont,VT
+4830,Barre City,Washington,Barre City,Town,Vermont,VT
+4831,Barre Town,Washington,Barre Town,Town,Vermont,VT
+4832,Barton,Orleans,Barton,Town,Vermont,VT
+4833,Belvidere,Lamoille,Belvidere,Town,Vermont,VT
+4834,Bennington,Bennington,Bennington,Town,Vermont,VT
+4835,Benson,Rutland,Benson,Town,Vermont,VT
+4836,Berkshire,Franklin,Berkshire,Town,Vermont,VT
+4837,Berlin,Washington,Berlin,Town,Vermont,VT
+4838,Bethel,Windsor,Bethel,Town,Vermont,VT
+4839,Bloomfield,Essex,Bloomfield,Town,Vermont,VT
+4840,Bolton,Washington,Bolton,Town,Vermont,VT
+4841,Bradford,Orange,Bradford,Town,Vermont,VT
+4842,Braintree,Orange,Braintree,Town,Vermont,VT
+4843,Brandon,Rutland,Brandon,Town,Vermont,VT
+4844,Brattleboro,Windham,Brattleboro,Town,Vermont,VT
+4845,Bridgewater,Windsor,Bridgewater,Town,Vermont,VT
+4846,Bridport,Addison,Bridport,Town,Vermont,VT
+4847,Brighton,Essex,Brighton,Town,Vermont,VT
+4848,Bristol,Addison,Bristol,Town,Vermont,VT
+4849,Brookfield,Orange,Brookfield,Town,Vermont,VT
+4850,Brookline,Windham,Brookline,Town,Vermont,VT
+4851,Brownington,Orleans,Brownington,Town,Vermont,VT
+4852,Brunswick,Essex,Brunswick,Town,Vermont,VT
+4853,Burke,Caledonia,Burke,Town,Vermont,VT
+4854,Burlington,Chittenden,Burlington,Town,Vermont,VT
+4855,Cabot,Washington,Cabot,Town,Vermont,VT
+4856,Calais,Washington,Calais,Town,Vermont,VT
+4857,Cambridge,Chittenden,Cambridge,Town,Vermont,VT
+4858,Canaan,Essex,Canaan,Town,Vermont,VT
+4859,Castleton,Rutland,Castleton,Town,Vermont,VT
+4860,Cavendish,Windsor,Cavendish,Town,Vermont,VT
+4861,Charleston,Orleans,Charleston,Town,Vermont,VT
+4862,Charlotte,Chittenden,Charlotte,Town,Vermont,VT
+4863,Chelsea,Orange,Chelsea,Town,Vermont,VT
+4864,Chester,Windsor,Chester,Town,Vermont,VT
+4865,Chittenden,Rutland,Chittenden,Town,Vermont,VT
+4866,Clarendon,Rutland,Clarendon,Town,Vermont,VT
+4867,Colchester,Chittenden,Colchester,Town,Vermont,VT
+4868,Concord,Essex,Concord,Town,Vermont,VT
+4869,Corinth,Orange,Corinth,Town,Vermont,VT
+4870,Cornwall,Addison,Cornwall,Town,Vermont,VT
+4871,Coventry,Orleans,Coventry,Town,Vermont,VT
+4872,Craftsbury,Orleans,Craftsbury,Town,Vermont,VT
+4873,Danby,Rutland,Danby,Town,Vermont,VT
+4874,Danville,Caledonia,Danville,Town,Vermont,VT
+4875,Derby,Orleans,Derby,Town,Vermont,VT
+4876,Dorset,Bennington,Dorset,Town,Vermont,VT
+4877,Dover,Windham,Dover,Town,Vermont,VT
+4878,Dummerston,Windham,Dummerston,Town,Vermont,VT
+4879,Duxbury,Washington,Duxbury,Town,Vermont,VT
+4880,East Haven,Essex,East Haven,Town,Vermont,VT
+4881,East Montpelier,Washington,East Montpelier,Town,Vermont,VT
+4882,Eden,Lamoille,Eden,Town,Vermont,VT
+4883,Elmore,Lamoille,Elmore,Town,Vermont,VT
+4884,Enosburgh,Franklin,Enosburgh,Town,Vermont,VT
+4885,Essex,Chittenden,Essex,Town,Vermont,VT
+4886,Fair Haven,Rutland,Fair Haven,Town,Vermont,VT
+4887,Fairfax,Fairfax,Fairfax,Town,Vermont,VT
+4888,Fairfield,Franklin,Fairfield,Town,Vermont,VT
+4889,Fairlee,Orange,Fairlee,Town,Vermont,VT
+4890,Fayston,Washington,Fayston,Town,Vermont,VT
+4891,Ferrisburgh,Addison,Ferrisburgh,Town,Vermont,VT
+4892,Fletcher,Chittenden,Fletcher,Town,Vermont,VT
+4893,Franklin,Franklin,Franklin,Town,Vermont,VT
+4894,"Georgia, Chittenden County",Chittenden,Georgia,Town,Vermont,VT
+,"Georgia, Franklin County",Franklin,Georgia,Town,Vermont,VT
+4895,Glover,Orleans,Glover,Town,Vermont,VT
+4896,Goshen,Rutland,Goshen,Town,Vermont,VT
+4897,Grafton,Windham,Grafton,Town,Vermont,VT
+4898,Granby,Essex,Granby,Town,Vermont,VT
+4899,Grand Isle,Grand Isle,Grand Isle,Town,Vermont,VT
+4900,Granville,Addison,Granville,Town,Vermont,VT
+4901,Greensboro,Orleans,Greensboro,Town,Vermont,VT
+4902,Groton,Caledonia,Groton,Town,Vermont,VT
+4903,Guildhall,Essex,Guildhall,Town,Vermont,VT
+4904,Guilford,Windham,Guilford,Town,Vermont,VT
+4905,Halifax,Windham,Halifax,Town,Vermont,VT
+4906,Hancock,Addison,Hancock,Town,Vermont,VT
+4907,Hardwick,Caledonia,Hardwick,Town,Vermont,VT
+4908,Hartford,Windsor,Hartford,Town,Vermont,VT
+4909,Hartland,Windsor,Hartland,Town,Vermont,VT
+4910,Highgate,Franklin,Highgate,Town,Vermont,VT
+4911,Hinesburg,Chittenden,Hinesburg,Town,Vermont,VT
+4912,Holland,Orleans,Holland,Town,Vermont,VT
+4913,Hubbardton,Rutland,Hubbardton,Town,Vermont,VT
+4914,Huntington,Chittenden,Huntington,Town,Vermont,VT
+4915,Hyde Park,Lamoille,Hyde Park,Town,Vermont,VT
+4916,Ira,Rutland,Ira,Town,Vermont,VT
+4917,Irasburg,Orleans,Irasburg,Town,Vermont,VT
+4918,Isle La Motte,Grand Isle,Isle La Motte,Town,Vermont,VT
+4919,Jamaica,Windham,Jamaica,Town,Vermont,VT
+4920,Jay,Orleans,Jay,Town,Vermont,VT
+4921,Jericho,Chittenden,Jericho,Town,Vermont,VT
+4922,Johnson,Lamoille,Johnson,Town,Vermont,VT
+4923,Killington,Rutland,Killington,Town,Vermont,VT
+4924,Kirby,Essex,Kirby,Town,Vermont,VT
+4925,Landgrove,Windham,Landgrove,Town,Vermont,VT
+4926,Leicester,Rutland,Leicester,Town,Vermont,VT
+4927,Lemington,Essex,Lemington,Town,Vermont,VT
+4928,Lincoln,Addison,Lincoln,Town,Vermont,VT
+4929,Londonderry,windham,Londonderry,Town,Vermont,VT
+4930,Lowell,Orleans,Lowell,Town,Vermont,VT
+4931,Ludlow,Windsor,Ludlow,Town,Vermont,VT
+4932,Lunenburg,Essex,Lunenburg,Town,Vermont,VT
+4933,Lyndon,Caledonia,Lyndon,Town,Vermont,VT
+4934,Maidstone,Essex,Maidstone,Town,Vermont,VT
+4935,Manchester,Bennington,Manchester,Town,Vermont,VT
+4936,Marlboro,Windham,Marlboro,Town,Vermont,VT
+4937,Marshfield,Washington,Marshfield,Town,Vermont,VT
+4938,Mendon,Rutland,Mendon,Town,Vermont,VT
+4939,Middlebury,Addison,Middlebury,Town,Vermont,VT
+4940,Middlesex,Washington,Middlesex,Town,Vermont,VT
+4941,Middletown Springs,Rutland,Middletown Springs,Town,Vermont,VT
+4942,Milton,Chittenden,Milton,Town,Vermont,VT
+4943,Monkton,Addison,Monkton,Town,Vermont,VT
+4944,Montgomery,Franklin,Montgomery,Town,Vermont,VT
+4945,Montpelier,Washington,Montpelier,Town,Vermont,VT
+4946,Moretown,Washington,Moretown,Town,Vermont,VT
+4947,Morgan,Orleans,Morgan,Town,Vermont,VT
+4948,Morristown,Lamoille,Morristown,Town,Vermont,VT
+4949,Mount Holly,Rutland,Mount Holly,Town,Vermont,VT
+4950,Mount Tabor,Rutland,Mount Tabor,Town,Vermont,VT
+4951,New Haven,Addison,New Haven,Town,Vermont,VT
+4952,Newark,Caledonia,Newark,Town,Vermont,VT
+4953,Newbury,Orange,Newbury,Town,Vermont,VT
+4954,Newfane,Windham,Newfane,Town,Vermont,VT
+4955,Newport City,Orleans,Newport,Town,Vermont,VT
+4956,Newport Town,Orleans,Newport,Town,Vermont,VT
+4957,North Hero,Grand Isle,North Hero,Town,Vermont,VT
+4958,Northfield,Washington,Northfield,Town,Vermont,VT
+4959,Norton,Essex,Norton,Town,Vermont,VT
+4960,Norwich,Windsor,Norwich,Town,Vermont,VT
+4961,Orange,Washington,Orange,Town,Vermont,VT
+4962,Orwell,Addison,Orwell,Town,Vermont,VT
+4963,Panton,Addison,Panton,Town,Vermont,VT
+4964,Pawlet,rutland,Pawlet,Town,Vermont,VT
+4965,Peacham,Caledonia,Peacham,Town,Vermont,VT
+4966,Peru,Bennington,Peru,Town,Vermont,VT
+4967,Pittsfield,Rutland,Pittsfield,Town,Vermont,VT
+4968,Pittsford,Rutland,Pittsford,Town,Vermont,VT
+4969,Plainfield,Washington,Plainfield,Town,Vermont,VT
+4970,Plymouth,windsor,Plymouth,Town,Vermont,VT
+4971,Pomfret,windsor,Pomfret,Town,Vermont,VT
+4972,Poultney,Rutland,Poultney,Town,Vermont,VT
+4973,Pownal,Bennington,Pownal,Town,Vermont,VT
+4974,Proctor,Rutland,Proctor,Town,Vermont,VT
+4975,Putney,Windham,Putney,Town,Vermont,VT
+4976,Randolph,Orange,Randolph,Town,Vermont,VT
+4977,Reading,Windsor,Reading,Town,Vermont,VT
+4978,Readsboro,Bennington,Readsboro,Town,Vermont,VT
+4979,Richford,Franklin,Richford,Town,Vermont,VT
+4980,Richmond,Chittenden,Richmond,Town,Vermont,VT
+4981,Ripton,Addison,Ripton,Town,Vermont,VT
+4982,Rochester,windsor,Rochester,Town,Vermont,VT
+4983,Rockingham,windham,Rockingham,Town,Vermont,VT
+4984,Roxbury,Addison,Roxbury,Town,Vermont,VT
+4985,Royalton,Windsor,Royalton,Town,Vermont,VT
+4986,Rupert,Bennington,Rupert,Town,Vermont,VT
+4987,Rutland City,Rutland,Rutland,Town,Vermont,VT
+4988,Rutland Town,Rutland,Rutland,Town,Vermont,VT
+4989,Ryegate,Caledonia,Ryegate,Town,Vermont,VT
+4990,Saint Albans City,Franklin,Saint Albans,Town,Vermont,VT
+4991,Saint Albans Town,Franklin,Saint Albans,Town,Vermont,VT
+4992,Saint George,Chittenden,Saint George,Town,Vermont,VT
+4993,Saint Johnsbury,Caledonia,Saint Johnsbury,Town,Vermont,VT
+4994,Salisbury,Addison,Salisbury,Town,Vermont,VT
+4995,Sandgate,Bennington,Sandgate,Town,Vermont,VT
+4996,Searsburg,Windham,Searsburg,Town,Vermont,VT
+4997,Shaftsbury,Bennington,Shaftsbury,Town,Vermont,VT
+4998,Sharon,Windsor,Sharon,Town,Vermont,VT
+4999,Sheffield,Caledonia,Sheffield,Town,Vermont,VT
+5000,Shelburne,Chittenden,Shelburne,Town,Vermont,VT
+5001,Sheldon,Franklin,Sheldon,Town,Vermont,VT
+5002,Shoreham,Addison,Shoreham,Town,Vermont,VT
+5003,Shrewsbury,Rutland,Shrewsbury,Town,Vermont,VT
+5004,South Burlington City,Chittenden,South Burlington,Town,Vermont,VT
+5005,South Hero,Grand Isle,South Hero,Town,Vermont,VT
+5006,Springfield,Windsor,Springfield,Town,Vermont,VT
+5007,Stamford,Bennington,Stamford,Town,Vermont,VT
+5008,Stannard,Orleans,Stannard,Town,Vermont,VT
+5009,Starksboro,Addison,Starksboro,Town,Vermont,VT
+5010,Stockbridge,Windsor,Stockbridge,Town,Vermont,VT
+5011,Stowe,Lamoille,Stowe,Town,Vermont,VT
+5012,Strafford,Orange,Strafford,Town,Vermont,VT
+5013,Stratton,Windham,Stratton,Town,Vermont,VT
+5014,Sudbury,rutland,Sudbury,Town,Vermont,VT
+5015,Sunderland,Bennington,Sunderland,Town,Vermont,VT
+5016,Sutton,Caledonia,Sutton,Town,Vermont,VT
+5017,Swanton,Franklin,Swanton,Town,Vermont,VT
+5018,Thetford,Orange,Thetford,Town,Vermont,VT
+5019,Tinmouth,Rutland,Tinmouth,Town,Vermont,VT
+5020,Topsham,Orange,Topsham,Town,Vermont,VT
+5021,Townshend,Windham,Townshend,Town,Vermont,VT
+5022,Troy,Orleans,Troy,Town,Vermont,VT
+5023,Tunbridge,Orange,Tunbridge,Town,Vermont,VT
+5024,Underhill,Chittenden,Underhill,Town,Vermont,VT
+5025,Vergennes,Addison,Vergennes,Town,Vermont,VT
+5026,Vernon,windham,Vernon,Town,Vermont,VT
+5027,Vershire,Orange,Vershire,Town,Vermont,VT
+5028,Victory,Essex,Victory,Town,Vermont,VT
+5029,Waitsfield,Washington,Waitsfield,Town,Vermont,VT
+5030,Walden,Caledonia,Walden,Town,Vermont,VT
+5031,Wallingford,Rutland,Wallingford,Town,Vermont,VT
+5032,Waltham,Addison,Waltham,Town,Vermont,VT
+5033,Wardsboro,Windham,Wardsboro,Town,Vermont,VT
+5034,Warren,Washington,Warren,Town,Vermont,VT
+5035,Washington,Orange,Washington,Town,Vermont,VT
+5036,Waterbury,Washington,Waterbury,Town,Vermont,VT
+5037,Waterford,Caledonia,Waterford,Town,Vermont,VT
+5038,Waterville,Lamoille,Waterville,Town,Vermont,VT
+5039,Weathersfield,Windsor,Weathersfield,Town,Vermont,VT
+5040,Wells,Rutland,Wells,Town,Vermont,VT
+5041,West Fairlee,Orange,West Fairlee,Town,Vermont,VT
+5042,West Haven,Rutland,West Haven,Town,Vermont,VT
+5043,West Rutland,Rutland,West Rutland,Town,Vermont,VT
+5044,West Windsor,Windsor,West Windsor,Town,Vermont,VT
+5045,Westfield,Orleans,Westfield,Town,Vermont,VT
+5046,Westford,Chittenden,Westford,Town,Vermont,VT
+5047,Westminster,Windham,Westminster,Town,Vermont,VT
+5048,Westmore,Orleans,Westmore,Town,Vermont,VT
+5049,Weston,Windsor,Weston,Town,Vermont,VT
+5050,Weybridge,Addison,Weybridge,Town,Vermont,VT
+5051,Wheelock,Caledonia,Wheelock,Town,Vermont,VT
+5052,Whiting,Addison,Whiting,Town,Vermont,VT
+5053,Whitingham,Windham,Whitingham,Town,Vermont,VT
+5054,Williamstown,Orange,Williamstown,Town,Vermont,VT
+5055,Williston,Chittenden,Williston,Town,Vermont,VT
+5056,Wilmington,Windham,Wilmington,Town,Vermont,VT
+5057,Windham,Windham,Windham,Town,Vermont,VT
+5058,Windsor,Windsor,Windsor,Town,Vermont,VT
+5059,Winhall,Bennington,Winhall,Town,Vermont,VT
+5060,Winooski,Chittenden,Winooski,Town,Vermont,VT
+5061,Wolcott,Lamoille,Wolcott,Town,Vermont,VT
+5062,Woodbury,Washington,Woodbury,Town,Vermont,VT
+5063,Woodford,Bennington,Woodford,Town,Vermont,VT
+5064,Woodstock,Windsor,Woodstock,Town,Vermont,VT
+5065,Worcester,Washington,Worcester,Town,Vermont,VT
+5067,Accomack County,Accomack,,,Virginia,VA
+5068,Albemarle County,Albemarle,,,Virginia,VA
+5069,Alleghany County,Alleghany,,,Virginia,VA
+5070,Amelia County,Amelia,,,Virginia,VA
+5071,Amherst County,Amherst,,,Virginia,VA
+5072,Appomattox County,Appomattox,,,Virginia,VA
+5073,Arlington County,Arlington,,,Virginia,VA
+5074,Augusta County,Augusta,,,Virginia,VA
+5075,Bath County,Bath,,,Virginia,VA
+5076,Bedford County,Bedford,,,Virginia,VA
+5077,Bland County,Bland,,,Virginia,VA
+5078,Botetourt County,Botetourt,,,Virginia,VA
+5079,Brunswick County,Brunswick,,,Virginia,VA
+5080,Buchanan County,Buchanan,,,Virginia,VA
+5081,Buckingham County,Buckingham,,,Virginia,VA
+5082,Campbell County,Campbell,,,Virginia,VA
+5083,Caroline County,Caroline,,,Virginia,VA
+5084,Carroll County,Carroll,,,Virginia,VA
+5085,Charles City County,Charles City,,,Virginia,VA
+5086,Charlotte County,Charlotte,,,Virginia,VA
+5087,Chesterfield County,Chesterfield,,,Virginia,VA
+5088,City of Alexandria,City of Alexandria,Alexandria,City,Virginia,VA
+5089,City of Bedford,City of Bedford,Bedford,City,Virginia,VA
+5090,City of Bristol,City of Bristol,Bristol,City,Virginia,VA
+5091,City of Buena Vista,City Buena Buena,Buena,City,Virginia,VA
+5092,City of Charlottesville,City of Charlottesville,Charlottesville,City,Virginia,VA
+5093,City of Chesapeake,City of Chesapeake,Chesapeake,City,Virginia,VA
+5094,City of Colonial Heights,City Colonial Colonial,Colonial,City,Virginia,VA
+5095,City of Covington,City of Covington,Covington,City,Virginia,VA
+5096,City of Danville,City of Danville,Danville,City,Virginia,VA
+5097,City of Emporia,City of Emporia,Emporia,City,Virginia,VA
+5098,City of Fairfax,City of Fairfax,Fairfax,City,Virginia,VA
+5099,City of Falls Church,City Falls Falls,Falls,City,Virginia,VA
+5100,City of Franklin,City of Franklin,Franklin,City,Virginia,VA
+5101,City of Fredericksburg,City of Fredericksburg,Fredericksburg,City,Virginia,VA
+5102,City of Galax,City of Galax,Galax,City,Virginia,VA
+5103,City of Hampton,City of Hampton,Hampton,City,Virginia,VA
+5104,City of Harrisonburg,City of Harrisonburg,Harrisonburg,City,Virginia,VA
+5105,City of Hopewell,City of Hopewell,Hopewell,City,Virginia,VA
+5106,City of Lexington,City of Lexington,Lexington,City,Virginia,VA
+5107,City of Lynchburg,City of Lynchburg,Lynchburg,City,Virginia,VA
+5108,City of Manassas,City of Manassas,Manassas,City,Virginia,VA
+5109,City of Manassas Park,City Manassas Manassas,Manassas,City,Virginia,VA
+5110,City of Martinsville,City of Martinsville,Martinsville,City,Virginia,VA
+5111,City of Newport News,City Newport Newport,Newport,City,Virginia,VA
+5112,City of Norfolk,City of Norfolk,Norfolk,City,Virginia,VA
+5113,City of Norton,City of Norton,Norton,City,Virginia,VA
+5114,City of Petersburg,City of Petersburg,Petersburg,City,Virginia,VA
+5115,City of Poquoson,City of Poquoson,Poquoson,City,Virginia,VA
+5116,City of Portsmouth,City of Portsmouth,Portsmouth,City,Virginia,VA
+5117,City of Radford,City of Radford,Radford,City,Virginia,VA
+5118,City of Richmond,City of Richmond,Richmond,City,Virginia,VA
+5119,City of Roanoke,City of Roanoke,Roanoke,City,Virginia,VA
+5120,City of Salem,City of Salem,Salem,City,Virginia,VA
+5121,City of Staunton,City of Staunton,Staunton,City,Virginia,VA
+5122,City of Suffolk,City of Suffolk,Suffolk,City,Virginia,VA
+5123,City of Virginia Beach,City Virginia Virginia,Virginia,City,Virginia,VA
+5124,City of Waynesboro,City of Waynesboro,Waynesboro,City,Virginia,VA
+5125,City of Williamsburg,City of Williamsburg,Williamsburg,City,Virginia,VA
+5126,City of Winchester,City of Winchester,Winchester,City,Virginia,VA
+5127,Clarke County,Clarke,,,Virginia,VA
+5128,Craig County,Craig,,,Virginia,VA
+5129,Culpeper County,Culpeper,,,Virginia,VA
+5130,Cumberland County,Cumberland,,,Virginia,VA
+5131,Dickenson County,Dickenson,,,Virginia,VA
+5132,Dinwiddie County,Dinwiddie,,,Virginia,VA
+5133,Essex County,Essex,,,Virginia,VA
+5134,Fairfax County,Fairfax,,,Virginia,VA
+5135,Fauquier County,Fauquier,,,Virginia,VA
+5136,Floyd County,Floyd,,,Virginia,VA
+5137,Fluvanna County,Fluvanna,,,Virginia,VA
+5138,Franklin County,Franklin,,,Virginia,VA
+5139,Frederick County,Frederick,,,Virginia,VA
+5140,Giles County,Giles,,,Virginia,VA
+5141,Gloucester County,Gloucester,,,Virginia,VA
+5142,Goochland County,Goochland,,,Virginia,VA
+5143,Grayson County,Grayson,,,Virginia,VA
+5144,Greene County,Greene,,,Virginia,VA
+5145,Greensville County,Greensville,,,Virginia,VA
+5146,Halifax County,Halifax,,,Virginia,VA
+5147,Hanover County,Hanover,,,Virginia,VA
+5148,Henrico County,Henrico,,,Virginia,VA
+5149,Henry County,Henry,,,Virginia,VA
+5150,Highland County,Highland,,,Virginia,VA
+5151,Isle of Wight County,Isle of Wight,,,Virginia,VA
+5152,James City County,James City,,,Virginia,VA
+5153,King and Queen County,King and Queen,,,Virginia,VA
+5154,King George County,King George,,,Virginia,VA
+5155,King William County,King William,,,Virginia,VA
+5156,Lancaster County,Lancaster,,,Virginia,VA
+5157,Lee County,Lee,,,Virginia,VA
+5158,Loudoun County,Loudoun,,,Virginia,VA
+5159,Louisa County,Louisa,,,Virginia,VA
+5160,Lunenburg County,Lunenburg,,,Virginia,VA
+5161,Madison County,Madison,,,Virginia,VA
+5162,Mathews County,Mathews,,,Virginia,VA
+5163,Mecklenburg County,Mecklenburg,,,Virginia,VA
+5164,Middlesex County,Middlesex,,,Virginia,VA
+5165,Montgomery County,Montgomery,,,Virginia,VA
+5166,Nelson County,Nelson,,,Virginia,VA
+5167,New Kent County,New Kent,,,Virginia,VA
+5168,Northampton County,Northampton,,,Virginia,VA
+5169,Northumberland County,Northumberland,,,Virginia,VA
+5170,Nottoway County,Nottoway,,,Virginia,VA
+5171,Orange County,Orange,,,Virginia,VA
+5172,Page County,Page,,,Virginia,VA
+5173,Patrick County,Patrick,,,Virginia,VA
+5174,Pittsylvania County,Pittsylvania,,,Virginia,VA
+5175,Powhatan County,Powhatan,,,Virginia,VA
+5176,Prince Edward County,Prince Edward,,,Virginia,VA
+5177,Prince George County,Prince George,,,Virginia,VA
+5178,Prince William County,Prince William,,,Virginia,VA
+5179,Pulaski County,Pulaski,,,Virginia,VA
+5180,Rappahannock County,Rappahannock,,,Virginia,VA
+5181,Richmond County,Richmond,,,Virginia,VA
+5182,Roanoke County,Roanoke,,,Virginia,VA
+5183,Rockbridge County,Rockbridge,,,Virginia,VA
+5184,Rockingham County,Rockingham,,,Virginia,VA
+5185,Russell County,Russell,,,Virginia,VA
+5186,Scott County,Scott,,,Virginia,VA
+5187,Shenandoah County,Shenandoah,,,Virginia,VA
+5188,Smyth County,Smyth,,,Virginia,VA
+5189,Southampton County,Southampton,,,Virginia,VA
+5190,Spotsylvania County,Spotsylvania,,,Virginia,VA
+5191,Stafford County,Stafford,,,Virginia,VA
+5192,Surry County,Surry,,,Virginia,VA
+5193,Sussex County,Sussex,,,Virginia,VA
+5194,Tazewell County,Tazewell,,,Virginia,VA
+5195,Warren County,Warren,,,Virginia,VA
+5196,Washington County,Washington,,,Virginia,VA
+5197,Westmoreland County,Westmoreland,,,Virginia,VA
+5198,Wise County,Wise,,,Virginia,VA
+5199,Wythe County,Wythe,,,Virginia,VA
+5200,York County,York,,,Virginia,VA
+16130,Town of Andover,Tolland,Andover,Town,Connecticut,CT
+16131,Town of Ansonia,New Haven,Ansonia,Town,Connecticut,CT
+16132,"Town of Ashford, Tolland County",Tolland,Ashford,Town,Connecticut,CT
+,"Town of Ashford, Windham County",Windham,Ashford,Town,Connecticut,CT
+16133,Town of Avon,Hartford,Avon,Town,Connecticut,CT
+16134,Town of Barkhamsted,Litchfield,Barkhamsted,Town,Connecticut,CT
+16135,Town of Beacon Falls,New Haven,Beacon Falls,Town,Connecticut,CT
+16136,Town of Berlin,Hartford,Berlin,Town,Connecticut,CT
+16137,Town of Bethany,New Haven,Bethany,Town,Connecticut,CT
+16138,Town of Bethel,Fairfield,Bethel,Town,Connecticut,CT
+16139,Town of Bethlehem,Litchfield,Bethlehem,Town,Connecticut,CT
+16140,Town of Bloomfield,Hartford,Bloomfield,Town,Connecticut,CT
+16141,Town of Bolton,Tolland,Bolton,Town,Connecticut,CT
+16142,Town of Bozrah,New London,Bozrah,Town,Connecticut,CT
+16143,Town of Branford,New Haven,Branford,Town,Connecticut,CT
+16144,Town of Bridgeport,Fairfield,Bridgeport,Town,Connecticut,CT
+16145,Town of Bridgewater,Litchfield,Bridgewater,Town,Connecticut,CT
+16146,Town of Bristol,Hartford,Bristol,Town,Connecticut,CT
+16147,Town of Brookfield,Fairfield,Brookfield,Town,Connecticut,CT
+16148,Town of Brooklyn,Windham,Brooklyn,Town,Connecticut,CT
+16149,Town of Burlington,Hartford,Burlington,Town,Connecticut,CT
+16150,Town of Canaan,Litchfield,Canaan,Town,Connecticut,CT
+16151,"Town of Canterbury, New London County",New London,Canterbury,Town,Connecticut,CT
+,"Town of Canterbury, Windham County",Windham,Canterbury,Town,Connecticut,CT
+16152,Town of Canton,Hartford,Canton,Town,Connecticut,CT
+16153,Town of Chaplin,Windham,Chaplin,Town,Connecticut,CT
+16154,Town of Cheshire,New Haven,Cheshire,Town,Connecticut,CT
+16155,Town of Chester,Litchfield,Chester,Town,Connecticut,CT
+16156,Town of Clinton,Middlesex,Clinton,Town,Connecticut,CT
+16157,Town of Colchester,New London,Colchester,Town,Connecticut,CT
+16158,Town of Colebrook,Lichtfield,Colebrook,Town,Connecticut,CT
+16159,Town of Columbia,Tolland,Columbia,Town,Connecticut,CT
+16160,Town of Coventry,Tolland,Coventry,Town,Connecticut,CT
+16161,Town of Cornwall,Litchfield,Cornwall,Town,Connecticut,CT
+16162,Town of Cromwell,Middlesex,Cromwell,Town,Connecticut,CT
+16163,Town of Danbury,Fairfield,Danbury,Town,Connecticut,CT
+16164,Town of Darien,Fairfield,Darien,Town,Connecticut,CT
+16165,Town of Deep River,Deep River,Deep River,Town,Connecticut,CT
+16166,Town of Derby,New Haven,Derby,Town,Connecticut,CT
+16167,Town of Durham,Middlesex,Durham,Town,Connecticut,CT
+16168,Town of East Granby,Hartford,East Granby,Town,Connecticut,CT
+16169,Town of East Haddam,Middlesex,East Haddam,Town,Connecticut,CT
+16170,"Town of East Hampton, Hartford County",Hartford,East Hampton,Town,Connecticut,CT
+,"Town of East Hampton, Middlesex County",Middlesex,East Hampton,Town,Connecticut,CT
+16171,Town of East Hartford,Harford,East Hartford,Town,Connecticut,CT
+16172,Town of East Haven,New Haven,East Haven,Town,Connecticut,CT
+16173,Town of East Lyme,New London,East Lyme,Town,Connecticut,CT
+16174,Town of East Windsor,Hartford,East Windsor,Town,Connecticut,CT
+16175,Town of Eastford,Windham,Eastford,Town,Connecticut,CT
+16176,Town of Easton,Fairfield,Easton,Town,Connecticut,CT
+16177,Town of Ellington,Tolland,Ellington,Town,Connecticut,CT
+16178,Town of Enfield,Hartford,Enfield,Town,Connecticut,CT
+16179,Town of Essex,Middlesex,Essex,Town,Connecticut,CT
+16180,Town of Fairfield,Fairfield,Fairfield,Town,Connecticut,CT
+16181,Town of Farmington,Hartford,Farmington,Town,Connecticut,CT
+16182,Town of Franklin,New London,Franklin,Town,Connecticut,CT
+16183,Town of Glastonbury,Hartford,Glastonbury,Town,Connecticut,CT
+16184,Town of Goshen,Litchfield,Goshen,Town,Connecticut,CT
+16185,Town of Granby,Hartford,Granby,Town,Connecticut,CT
+16186,Town of Greenwich,Fairfield,Greenwich,Town,Connecticut,CT
+16187,Town of Griswold,New London,Griswold,Town,Connecticut,CT
+16188,Town of Groton,New London,Groton,Town,Connecticut,CT
+16189,Town of Guilford,New Haven,Guilford,Town,Connecticut,CT
+16190,Town of Haddam,Middlesex,Haddam,Town,Connecticut,CT
+16191,Town of Hamden,New Haven,Hamden,Town,Connecticut,CT
+16192,Town of Hampton,Windham,Hampton,Town,Connecticut,CT
+16193,Town of Hartford,Hartford,Hartford,Town,Connecticut,CT
+16194,Town of East Hartland,Hartford,East Hartland,Town,Connecticut,CT 
+16195,Town of Harwinton,Litchfield,Harwinton,Town,Connecticut,CT
+16196,Town of Hebron,Tolland,Hebron,Town,Connecticut,CT
+16197,Town of Kent,Litchfield,Kent,Town,Connecticut,CT
+16198,Town of Killingly,Windham,Killingly,Town,Connecticut,CT
+16199,Town of Killingworth,Middlesex,Killingworth,Town,Connecticut,CT
+16200,Town of Lebanon,New London,Lebanon,Town,Connecticut,CT
+16201,Town of Ledyard,New London,Ledyard,Town,Connecticut,CT
+16202,Town of Lisbon,New London,Lisbon,Town,Connecticut,CT
+16203,Town of Litchfield,Litchfield,Litchfield,Town,Connecticut,CT
+16204,Town of Lyme,New London,Lyme,Town,Connecticut,CT
+16205,Town of Madison,New Haven,Madison,Town,Connecticut,CT
+16206,"Town of Manchester, Hartford County",Hartford,Manchester,Town,Connecticut,CT
+,"Town of Manchester, Tolland County",Tolland,Manchester,Town,Connecticut,CT
+16207,Town of Mansfield,Tolland,Mansfield,Town,Connecticut,CT
+16208,Town of Marlborough,Hartford,Marlborough,Town,Connecticut,CT
+16209,Town of Meriden,New Haven,Meriden,Town,Connecticut,CT
+16210,Town of Middlebury,New Haven,Middlebury,Town,Connecticut,CT
+16211,Town of Middlefield,Middlesex,Middlefield,Town,Connecticut,CT
+16212,Town of Middletown,Middlesex,Middletown,Town,Connecticut,CT
+16213,Town of Milford,New Haven,Milford,Town,Connecticut,CT
+16214,Town of Monroe,Fairfield,Monroe,Town,Connecticut,CT
+16215,Town of Montville,New London,Montville,Town,Connecticut,CT
+16216,Town of Morris,Litchfield,Morris,Town,Connecticut,CT
+16217,Town of Naugatuck,New Haven,Naugatuck,Town,Connecticut,CT
+16218,Town of New Britain,Hartford,New Britain,Town,Connecticut,CT
+16219,Town of New Canaan,Fairfield,New Canaan,Town,Connecticut,CT
+16220,Town of New Fairfield,Fairfield,New Fairfield,Town,Connecticut,CT
+16221,Town of New Hartford,Litchfield,New Hartford,Town,Connecticut,CT
+16222,Town of New Haven,New Haven,New Haven,Town,Connecticut,CT
+16223,Town of New London,New London,New London,Town,Connecticut,CT
+16224,Town of New Milford,Litchfield,New Milford,Town,Connecticut,CT
+16225,Town of Newington,Hartford,Newington,Town,Connecticut,CT
+16226,Town of Newtown,Fairfield,Newtown,Town,Connecticut,CT
+16227,Town of Norfolk,Litchfield,Norfolk,Town,Connecticut,CT
+16228,Town of North Branford,New Haven,North Branford,Town,Connecticut,CT
+16229,Town of North Canaan,Litchfield,North Canaan,Town,Connecticut,CT
+16230,Town of North Haven,New Haven,North Haven,Town,Connecticut,CT
+16231,Town of North Stonington,New London,North Stonington,Town,Connecticut,CT
+16232,Town of Norwalk,Fairfield,Norwalk,Town,Connecticut,CT
+16233,Town of Norwich,New London,Norwich,Town,Connecticut,CT
+16234,Town of Old Lyme,New London,Old Lyme,Town,Connecticut,CT
+16235,Town of Old Saybrook,Middlesex,Old Saybrook,Town,Connecticut,CT
+16236,Town of Orange,New Haven,Orange,Town,Connecticut,CT
+16237,Town of Oxford,New Haven,Oxford,Town,Connecticut,CT
+16238,Town of Plainfield,Windham,Plainfield,Town,Connecticut,CT
+16239,Town of Plainville,Hartford,Plainville,Town,Connecticut,CT
+16240,Town of Plymouth,Litchfield,Plymouth,Town,Connecticut,CT
+16241,Town of Pomfret,Windham,Pomfret,Town,Connecticut,CT
+16242,Town of Portland,Middlesex,Portland,Town,Connecticut,CT
+16243,Town of Preston,New London,Preston,Town,Connecticut,CT
+16244,Town of Prospect,New Haven,Prospect,Town,Connecticut,CT
+16245,Town of Putnam,Windham,Putnam,Town,Connecticut,CT
+16246,Town of Redding,Fairfield,Redding,Town,Connecticut,CT
+16247,Town of Ridgefield,Fairfield,Ridgefield,Town,Connecticut,CT
+16248,Town of Rocky Hill,Hartford,Rocky Hill,Town,Connecticut,CT
+16249,Town of Roxbury,Litchfield,Roxbury,Town,Connecticut,CT
+16250,Town of Salem,New London,Salem,Town,Connecticut,CT
+16251,Town of Salisbury,Litchfield,Salisbury,Town,Connecticut,CT
+16252,Town of Scotland,Windham,Scotland,Town,Connecticut,CT
+16253,Town of Seymour,New Haven,Seymour,Town,Connecticut,CT
+16254,Town of Sharon,Litchfield,Sharon,Town,Connecticut,CT
+16255,Town of Shelton,Fairfield,Shelton,Town,Connecticut,CT
+16256,Town of Sherman,Fairfield,Sherman,Town,Connecticut,CT
+16257,Town of Simsbury,Hartford,Simsbury,Town,Connecticut,CT
+16258,Town of Somers,Tolland,Somers,Town,Connecticut,CT
+16259,Town of South Windsor,Hartford,South Windsor,Town,Connecticut,CT
+16260,Town of Southbury,New Haven,Southbury,Town,Connecticut,CT
+16261,Town of Southington,Hartford,Southington,Town,Connecticut,CT
+16262,Town of Sprague,New London,Sprague,Town,Connecticut,CT
+16263,Town of Stafford,Tolland,Stafford,Town,Connecticut,CT
+16264,Town of Stamford,Fairfield,Stamford,Town,Connecticut,CT
+16265,Town of Sterling,Windham,Sterling,Town,Connecticut,CT
+16266,Town of Stonington,New London,Stonington,Town,Connecticut,CT
+16267,Town of Stratford,Fairfield,Stratford,Town,Connecticut,CT
+16268,Town of Suffield,Hartford,Suffield,Town,Connecticut,CT
+16269,Town of Thomaston,Litchfield,Thomaston,Town,Connecticut,CT
+16270,Town of Thompson,Windham,Thompson,Town,Connecticut,CT
+16271,Town of Tolland,Tolland,Tolland,Town,Connecticut,CT
+16272,Town of Torrington,Litchfield,Torrington,Town,Connecticut,CT
+16273,Town of Trumbull,Fairfield,Trumbull,Town,Connecticut,CT
+16274,Town of Union,Tolland,Union,Town,Connecticut,CT
+16275,Town of Vernon,Tolland,Vernon,Town,Connecticut,CT
+16276,Town of Voluntown,New London,Voluntown,Town,Connecticut,CT
+16277,Town of Wallingford,New Haven,Wallingford,Town,Connecticut,CT
+16278,Town of Warren,Lichtfield,Warren,Town,Connecticut,CT
+16279,Town of Washington,Litchfield,Washington,Town,Connecticut,CT
+16280,Town of Waterbury,New Haven,Waterbury,Town,Connecticut,CT
+16281,Town of Waterford,New London,Waterford,Town,Connecticut,CT
+16282,Town of Watertown,Lichtfield,Watertown,Town,Connecticut,CT
+16283,Town of West Hartford,Hartford,West Hartford,Town,Connecticut,CT
+16284,Town of West Haven,New Haven,West Haven,Town,Connecticut,CT
+16285,Town of Westbrook,Middlesex,Westbrook,Town,Connecticut,CT
+16286,Town of Weston,Fairfield,Weston,Town,Connecticut,CT
+16287,Town of Westport,Fairfield,Westport,Town,Connecticut,CT
+16288,Town of Wethersfield,Hartford,Wethersfield,Town,Connecticut,CT
+16289,Town of Willington,Tolland,Willington,Town,Connecticut,CT
+16290,Town of Wilton,Fairfield,Wilton,Town,Connecticut,CT
+16291,Town of Winchester,Litchfield,Winchester,Town,Connecticut,CT
+16292,Town of Windham,Windham,Windham,Town,Connecticut,CT
+16293,Town of Windsor,Hartford,Windsor,Town,Connecticut,CT
+16294,Town of Windsor Locks,Hartford,Windsor Locks,Town,Connecticut,CT
+16295,Town of Wolcott,New Haven,Wolcott,Town,Connecticut,CT
+16296,Town of Woodbridge,New Haven,Woodbridge,Town,Connecticut,CT
+16297,Town of Woodbury,Litchfield,Woodbury,Town,Connecticut,CT
+16298,Town of Woodstock,Windham,Woodstock,Town,Connecticut,CT
+16743,City of Berlin,Coos,Berlin,City,New Hampshire,NH
+16744,City of Claremont,Sullivan,Claremont,City,New Hampshire,NH
+16745,City of Concord,Merrimack,Concord,City,New Hampshire,NH
+16746,City of Dover,Strafford,Dover,City,New Hampshire,NH
+16747,City of Franklin,Merrimack,Franklin,City,New Hampshire,NH
+16748,City of Keene,Chesire,Keene,City,New Hampshire,NH
+16749,City of Laconia,Belknap,Laconia,City,New Hampshire,NH
+16750,City of Lebanon,Grafton,Lebanon,City,New Hampshire,NH
+16751,City of Manchester,Merrimack,Manchester,City,New Hampshire,NH
+16752,City of Nashua,Hillsborough,Nashua,City,New Hampshire,NH
+16753,City of Portsmouth,Strafford,Portsmouth,City,New Hampshire,NH
+16754,City of Rochester,Strafford,Rochester,City,New Hampshire,NH
+16755,City of Somersworth,Strafford,Somersworth,City,New Hampshire,NH
+16756,Town of Acworth,Sullivan,Acworth,Town,New Hampshire,NH
+16757,Town of Albany,Carroll,Albany,Town,New Hampshire,NH
+16758,Town of Alexandria,Grafton,Alexandria,Town,New Hampshire,NH
+16759,Town of Allenstown,Merrimack,Allenstown,Town,New Hampshire,NH
+16760,Town of Alstead,Chesire,Alstead,Town,New Hampshire,NH
+16761,Town of Alton,Belknap,Alton,Town,New Hampshire,NH
+16762,Town of Amherst,Hillsborough,Amherst,Town,New Hampshire,NH
+16763,Town of Andover,Merrimack,Andover,Town,New Hampshire,NH
+16764,Town of Antrim,Hillsborough,Antrim,Town,New Hampshire,NH
+16765,Town of Ashland,Grafton,Ashland,Town,New Hampshire,NH
+16766,Town of Atkinson,Rockingham,Atkinson,Town,New Hampshire,NH
+16767,Town of Auburn,Rockingham,Auburn,Town,New Hampshire,NH
+16768,Town of Barnstead,Belknap,Barnstead,Town,New Hampshire,NH
+16769,Town of Barrington,Strafford,Barrington,Town,New Hampshire,NH
+16770,Town of Bartlett,Carroll,Bartlett,Town,New Hampshire,NH
+16771,Town of Bath,Grafton,Bath,Town,New Hampshire,NH
+16772,Town of Bedford,Hillsborough,Bedford,Town,New Hampshire,NH
+16773,Town of Belmont,Belknap,Belmont,Town,New Hampshire,NH
+16774,Town of Bennington,Hillsborough,Bennington,Town,New Hampshire,NH
+16775,Town of Benton,Grafton,Benton,Town,New Hampshire,NH
+16776,Town of Bethlehem,Grafton,Bethlehem,Town,New Hampshire,NH
+16777,Town of Boscawen,Merrimack,Boscawen,Town,New Hampshire,NH
+16778,Town of Bow,Merrimack,Bow,Town,New Hampshire,NH
+16779,Town of Bradford,Merrimack,Bradford,Town,New Hampshire,NH
+16780,Town of Brentwood,Rockingham,Brentwood,Town,New Hampshire,NH
+16781,Town of Bridgewater,Grafton,Bridgewater,Town,New Hampshire,NH
+16782,Town of Bristol,Bristol,Bristol,Town,New Hampshire,NH
+16783,Town of Brookfield,Carroll,Brookfield,Town,New Hampshire,NH
+16784,Town of Brookline,Hillsborough,Brookline,Town,New Hampshire,NH
+16785,Town of Campton,Grafton,Campton,Town,New Hampshire,NH
+16786,Town of Canaan,Grafton,Canaan,Town,New Hampshire,NH
+16787,Town of Candia,Rockingham,Candia,Town,New Hampshire,NH
+16788,Town of Canterbury,Merrimack,Canterbury,Town,New Hampshire,NH
+16789,Town of Carroll,Coos,Carroll,Town,New Hampshire,NH
+16790,Town of Center Harbor,Belknap,Center Harbor,Town,New Hampshire,NH
+16791,Town of Charlestown,Sullivan,Charlestown,Town,New Hampshire,NH
+16792,Town of Chatham,Carroll,Chatham,Town,New Hampshire,NH
+16793,Town of Chester,Rockingham,Chester,Town,New Hampshire,NH
+16794,Town of Chesterfield,Chesire,Chesterfield,Town,New Hampshire,NH
+16795,Town of Chichester,Merrimack,Chichester,Town,New Hampshire,NH
+16796,Town of Clarksville,Coos,Clarksville,Town,New Hampshire,NH
+16797,Town of Colebrook,Coos,Colebrook,Town,New Hampshire,NH
+16798,Town of Columbia,Coos,Columbia,Town,New Hampshire,NH
+16799,Town of Conway,Carroll,Conway,Town,New Hampshire,NH
+16800,Town of Cornish,Sullivan,Cornish,Town,New Hampshire,NH
+16801,Town of Croydon,Sullivan,Croydon,Town,New Hampshire,NH
+16802,Town of Dalton,Coos,Dalton,Town,New Hampshire,NH
+16803,Town of Danbury,Merrimack,Danbury,Town,New Hampshire,NH
+16804,Town of Danville,Rockingham,Danville,Town,New Hampshire,NH
+16805,Town of Deerfield,Rockingham,Deerfield,Town,New Hampshire,NH
+16806,Town of Deering,Hillsborough,Deering,Town,New Hampshire,NH
+16807,Town of Derry,Rockingham,Derry,Town,New Hampshire,NH
+16808,Town of Dixville Notch,Coos,Dixville Notch,Town,New Hampshire,NH
+16809,Town of Dorchester,Grafton,Dorchester,Town,New Hampshire,NH
+16810,Town of Dublin,Chesire,Dublin,Town,New Hampshire,NH
+16811,Town of Dummer,Coos,Dummer,Town,New Hampshire,NH
+16812,"Town of Dunbarton, Hillborough County",Hillsborough,Dunbarton,Town,New Hampshire,NH
+,"Town of Dunbarton, Merrimack County",Merrimack,Dunbarton,Town,New Hampshire,NH
+16813,Town of Durham,Strafford,Durham,Town,New Hampshire,NH
+16814,Town of East Kingston,Rockingham,East Kingston,Town,New Hampshire,NH
+16815,Town of Easton,Grafton,Easton,Town,New Hampshire,NH
+16816,Town of Eaton,Carroll,Eaton,Town,New Hampshire,NH
+16817,Town of Effingham,Carroll,Effingham,Town,New Hampshire,NH
+16818,Town of Ellsworth,Grafton,Ellsworth,Town,New Hampshire,NH
+16819,Town of Enfield,Grafton,Enfield,Town,New Hampshire,NH
+16820,Town of Epping,Rockingham,Epping,Town,New Hampshire,NH
+16821,Town of Epsom,Merrimack,Epsom,Town,New Hampshire,NH
+16822,Town of Errol,Coos,Errol,Town,New Hampshire,NH
+16823,Town of Exeter,Rockingham,Exeter,Town,New Hampshire,NH
+16824,Town of Farmington,Strafford,Farmington,Town,New Hampshire,NH
+16825,Town of Fitzwilliam,Cheshire,Fitzwilliam,Town,New Hampshire,NH
+16826,Town of Francestown,Hillsborough,Francestown,Town,New Hampshire,NH
+16827,Town of Franconia,Grafton,Franconia,Town,New Hampshire,NH
+16828,Town of Freedom,Carroll,Freedom,Town,New Hampshire,NH
+16829,Town of Fremont,Rockingham,Fremont,Town,New Hampshire,NH
+16830,Town of Gilford,Belknap,Gilford,Town,New Hampshire,NH
+16831,Town of Gilmanton,Belknap,Gilmanton,Town,New Hampshire,NH
+16832,Town of Gilsum,Cheshire,Gilsum,Town,New Hampshire,NH
+16833,Town of Goffstown,Merrimack,Goffstown,Town,New Hampshire,NH
+16834,Town of Gorham,Coos,Gorham,Town,New Hampshire,NH
+16835,Town of Goshen,Sullivan,Goshen,Town,New Hampshire,NH
+16836,Town of Grafton,Grafton,Grafton,Town,New Hampshire,NH
+16837,Town of Grantham,Sullivan,Grantham,Town,New Hampshire,NH
+16838,Town of Greenfield,Hillsborough,Greenfield,Town,New Hampshire,NH
+16839,Town of Greenland,Rockingham,Greenland,Town,New Hampshire,NH
+16840,Town of Greenville,Hillsborough,Greenville,Town,New Hampshire,NH
+16841,Town of Groton,Grafton,Groton,Town,New Hampshire,NH
+16842,Town of Hampstead,Rockingham,Hampstead,Town,New Hampshire,NH
+16843,Town of Hampton,Rockingham,Hampton,Town,New Hampshire,NH
+16844,Town of Hampton Falls,Rockingham,Hampton Falls,Town,New Hampshire,NH
+16845,Town of Hancock,Hillsborough,Hancock,Town,New Hampshire,NH
+16846,Town of Hanover,Grafton,Hanover,Town,New Hampshire,NH
+16847,Town of Harrisville,Cheshire,Harrisville,Town,New Hampshire,NH
+16848,Town of Harts Location,Carroll,Harts Location,Town,New Hampshire,NH
+16849,Town of Haverhill,Grafton,Haverhill,Town,New Hampshire,NH
+16850,Town of Hebron,Grafton,Hebron,Town,New Hampshire,NH
+16851,Town of Henniker,Merrimack,Henniker,Town,New Hampshire,NH
+16852,Town of Hill,Merrimack,Hill,Town,New Hampshire,NH
+16853,Town of Hillsborough,Hillsborough,Hillsborough,Town,New Hampshire,NH
+16854,Town of Hinsdale,Cheshire,Hinsdale,Town,New Hampshire,NH
+16855,Town of Holderness,Grafton,Holderness,Town,New Hampshire,NH
+16856,Town of Hollis,Hillsborough,Hollis,Town,New Hampshire,NH
+16857,Town of Hooksett,Merrimack,Hooksett,Town,New Hampshire,NH
+16858,Town of Hopkinton,Merrimack,Hopkinton,Town,New Hampshire,NH
+16859,Town of Hudson,Hillsborough,Hudson,Town,New Hampshire,NH
+16860,Town of Jackson,Carroll,Jackson,Town,New Hampshire,NH
+16861,Town of Jaffrey,Cheshire,Jaffrey,Town,New Hampshire,NH
+16862,Town of Jefferson,Coos,Jefferson,Town,New Hampshire,NH
+16863,Town of Kensington,Rockingham,Kensington,Town,New Hampshire,NH
+16864,Town of Kingston,Rockingham,Kingston,Town,New Hampshire,NH
+16865,Town of Lancaster,Coos,Lancaster,Town,New Hampshire,NH
+16866,Town of Landaff,Grafton,Landaff,Town,New Hampshire,NH
+16867,Town of Langdon,Cheshire,Langdon,Town,New Hampshire,NH
+16868,Town of Lee,Strafford,Lee,Town,New Hampshire,NH
+16869,Town of Lempster,Sullivan,Lempster,Town,New Hampshire,NH
+16870,Town of Lincoln,Grafton,Lincoln,Town,New Hampshire,NH
+16871,Town of Lisbon,Grafton,Lisbon,Town,New Hampshire,NH
+16872,Town of Litchfield,Hillsborough,Litchfield,Town,New Hampshire,NH
+16873,Town of Littleton,Grafton,Littleton,Town,New Hampshire,NH
+16874,Town of Londonderry,Rockingham,Londonderry,Town,New Hampshire,NH
+16875,Town of Loudon,Merrimack,Loudon,Town,New Hampshire,NH
+16876,Town of Lyman,Grafton,Lyman,Town,New Hampshire,NH
+16877,Town of Lyme,Grafton,Lyme,Town,New Hampshire,NH
+16878,Town of Lyndeborough,Hillsborough,Lyndeborough,Town,New Hampshire,NH
+16879,Town of Madbury,Strafford,Madbury,Town,New Hampshire,NH
+16880,Town of Madison,Carroll,Madison,Town,New Hampshire,NH
+16881,Town of Marlborough,Cheshire,Marlborough,Town,New Hampshire,NH
+16882,Town of Marlow,Cheshire,Marlow,Town,New Hampshire,NH
+16883,Town of Mason,Hillsborough,Mason,Town,New Hampshire,NH
+16884,Town of Meredith,Belknap,Meredith,Town,New Hampshire,NH
+16885,Town of Merrimack,Hillsborough,Merrimack,Town,New Hampshire,NH
+16886,Town of Middleton,Strafford,Middleton,Town,New Hampshire,NH
+16887,Town of Milan,Coos,Milan,Town,New Hampshire,NH
+16888,Town of Milford,Hillsborough,Milford,Town,New Hampshire,NH
+16889,Town of Millsfield,Errol,Millsfield,Town,New Hampshire,NH
+16890,Town of Milton,Strafford,Milton,Town,New Hampshire,NH
+16891,Town of Monroe,Grafton,Monroe,Town,New Hampshire,NH
+16892,Town of Mont Vernon,Hillsborough,Mont Vernon,Town,New Hampshire,NH
+16893,Town of Moultonborough,Carroll,Moultonborough,Town,New Hampshire,NH
+16894,Town of Nelson,Cheshire,Nelson,Town,New Hampshire,NH
+16895,Town of New Boston,Hillsborough,New Boston,Town,New Hampshire,NH
+16896,Town of New Castle,Rockingham,New Castle,Town,New Hampshire,NH
+16897,Town of New Durham,Strafford,New Durham,Town,New Hampshire,NH
+16898,Town of New Hampton,Belknap,New Hampton,Town,New Hampshire,NH
+16899,Town of New Ipswich,Hillsborough,New Ipswich,Town,New Hampshire,NH
+16900,Town of New London,Merrimack,New London,Town,New Hampshire,NH
+16901,Town of Newbury,Merrimack,Newbury,Town,New Hampshire,NH
+16902,Town of Newfields,Rockingham,Newfields,Town,New Hampshire,NH
+16903,Town of Newington,Strafford,Newington,Town,New Hampshire,NH
+16904,Town of Newmarket,Rockingham,Newmarket,Town,New Hampshire,NH
+16905,Town of Newport,Sullivan,Newport,Town,New Hampshire,NH
+16906,Town of Newton,Rockingham,Newton,Town,New Hampshire,NH
+16907,Town of North Hampton,Rockingham,North Hampton,Town,New Hampshire,NH
+16908,Town of Northfield,Belknap,Northfield,Town,New Hampshire,NH
+16909,Town of Northumberland,Coos,Northumberland,Town,New Hampshire,NH
+16910,Town of Northwood,Rockingham,Northwood,Town,New Hampshire,NH
+16911,Town of Nottingham,Rockingham,Nottingham,Town,New Hampshire,NH
+16912,Town of Orange,Grafton,Orange,Town,New Hampshire,NH
+16913,Town of Orford,Grafton,Orford,Town,New Hampshire,NH
+16914,Town of Ossipee,Carroll,Ossipee,Town,New Hampshire,NH
+16915,Town of Pelham,Hillsborough,Pelham,Town,New Hampshire,NH
+16916,Town of Pembroke,Merrimack,Pembroke,Town,New Hampshire,NH
+16917,Town of Peterborough,Hillsborough,Peterborough,Town,New Hampshire,NH
+16918,Town of Piermont,Grafton,Piermont,Town,New Hampshire,NH
+16919,Town of Pittsburg,Coos,Pittsburg,Town,New Hampshire,NH
+16920,Town of Pittsfield,Merrimack,Pittsfield,Town,New Hampshire,NH
+16921,Town of Plainfield,Sullivan,Plainfield,Town,New Hampshire,NH
+16922,Town of Plaistow,Rockingham,Plaistow,Town,New Hampshire,NH
+16923,Town of Plymouth,Grafton,Plymouth,Town,New Hampshire,NH
+16924,Town of Randolph,Coos,Randolph,Town,New Hampshire,NH
+16925,Town of Raymond,Rockingham,Raymond,Town,New Hampshire,NH
+16926,Town of Richmond,Cheshire,Richmond,Town,New Hampshire,NH
+16927,Town of Rindge,Cheshire,Rindge,Town,New Hampshire,NH
+16928,Town of Rollinsford,Strafford,Rollinsford,Town,New Hampshire,NH
+16929,Town of Roxbury,Cheshire,Roxbury,Town,New Hampshire,NH
+16930,Town of Rumney,Grafton,Rumney,Town,New Hampshire,NH
+16931,Town of Rye,Rockingham,Rye,Town,New Hampshire,NH
+16932,Town of Salem,Rockingham,Salem,Town,New Hampshire,NH
+16933,Town of Salisbury,Merrimack,Salisbury,Town,New Hampshire,NH
+16934,Town of Sanbornton,Belknap,Sanbornton,Town,New Hampshire,NH
+16935,Town of Sandown,Rockingham,Sandown,Town,New Hampshire,NH
+16936,Town of Sandwich,Carroll,Sandwich,Town,New Hampshire,NH
+16937,Town of Seabrook,Rockingham,Seabrook,Town,New Hampshire,NH
+16938,Town of Sharon,Hillsborough,Sharon,Town,New Hampshire,NH
+16939,Town of Shelburne,Coos,Shelburne,Town,New Hampshire,NH
+16940,Town of South Hampton,Rockingham,South Hampton,Town,New Hampshire,NH
+16941,Town of Springfield,Sullivan,Springfield,Town,New Hampshire,NH
+16942,Town of Stark,Coos,Stark,Town,New Hampshire,NH
+16943,Town of Stewartstown,Coos,Stewartstown,Town,New Hampshire,NH
+16944,Town of Stoddard,Cheshire,Stoddard,Town,New Hampshire,NH
+16945,Town of Strafford,Strafford,Strafford,Town,New Hampshire,NH
+16946,Town of Stratford,Coos,Stratford,Town,New Hampshire,NH
+16947,Town of Stratham,Rockingham,Stratham,Town,New Hampshire,NH
+16948,Town of Sugar Hill,Grafton,Sugar Hill,Town,New Hampshire,NH
+16949,Town of Sullivan,Cheshire,Sullivan,Town,New Hampshire,NH
+16950,Town of Sunapee,Sullivan,Sunapee,Town,New Hampshire,NH
+16951,Town of Surry,Cheshire,Surry,Town,New Hampshire,NH
+16952,Town of Sutton,Merrimack,Sutton,Town,New Hampshire,NH
+16953,Town of Swanzey,Cheshire,Swanzey,Town,New Hampshire,NH
+16954,Town of Tamworth,Carroll,Tamworth,Town,New Hampshire,NH
+16955,Town of Temple,Hillsborough,Temple,Town,New Hampshire,NH
+16956,Town of Thornton,Grafton,Thornton,Town,New Hampshire,NH
+16957,Town of Tilton,Belknap,Tilton,Town,New Hampshire,NH
+16958,Town of Troy,Cheshire,Troy,Town,New Hampshire,NH
+16959,Town of Tuftonboro,Carroll,Tuftonboro,Town,New Hampshire,NH
+16960,Town of Unity,Sullivan,Unity,Town,New Hampshire,NH
+16961,Town of Wakefield,Carroll,Wakefield,Town,New Hampshire,NH
+16962,Town of Walpole,Cheshire,Walpole,Town,New Hampshire,NH
+16963,Town of Warner,Grafton,Warner,Town,New Hampshire,NH
+16964,Town of Warren,Grafton,Warren,Town,New Hampshire,NH
+16965,Town of Washington,Sullivan,Washington,Town,New Hampshire,NH
+16966,Town of Waterville Valley,Grafton,Waterville Valley,Town,New Hampshire,NH
+16967,Town of Weare,Hillsborough,Weare,Town,New Hampshire,NH
+16968,Town of Webster,Merrimack,Webster,Town,New Hampshire,NH
+16969,Town of Wentworth,Grafton,Wentworth,Town,New Hampshire,NH
+16970,Town of Westmoreland,Cheshire,Westmoreland,Town,New Hampshire,NH
+16971,Town of Whitefield,Coos,Whitefield,Town,New Hampshire,NH
+16972,Town of Wilmot,Merrimack,Wilmot,Town,New Hampshire,NH
+16973,Town of Wilton,Hillsborough,Wilton,Town,New Hampshire,NH
+16974,Town of Winchester,Cheshire,Winchester,Town,New Hampshire,NH
+16975,Town of Windham,Rockingham,Windham,Town,New Hampshire,NH
+16976,Town of Windsor,,Windsor,Town,New Hampshire,NH
+16977,Town of Wolfeboro,Carroll,Wolfeboro,Town,New Hampshire,NH
+16978,Town of Woodstock,Grafton,Woodstock,Town,New Hampshire,NH
+17099,Abbot,Piscataguis,Abbot,Town,Maine,ME
+17100,Acton,York,Acton,Town,Maine,ME
+17101,Addison,Washington,Addison,Town,Maine,ME
+17102,Albany Township,Oxford,Albany,Township,Maine,ME
+17103,Albion,Kennebec,Albion,Town,Maine,ME
+17104,Alexander,Washington,Alexander,Town,Maine,ME
+17105,Alfred,York,Alfred,Town,Maine,ME
+17106,Allagash,Aroostook,Allagash,Town,Maine,ME
+17107,Alna,Lincoln,Alna,Town,Maine,ME
+17108,Alton,Penobscot,Alton,Town,Maine,ME
+17109,Amherst,Hancock,Amherst,Town,Maine,ME
+17110,Andover,Oxford,Andover,Town,Maine,ME
+17111,Anson,Somerset,Anson,Town,Maine,ME
+17112,Appleton,Knox,Appleton,Town,Maine,ME
+17113,Arrowsic,Sagadahoc,Arrowsic,Town,Maine,ME
+17114,Arundel,York,Arundel,Town,Maine,ME
+17115,Ashland,Aroostook,Ashland,Town,Maine,ME
+17116,Athens,Somerset,Athens,Town,Maine,ME
+17117,Atkinson,Piscataguis,Atkinson,Town,Maine,ME
+17118,Auburn,Androscroggin,Auburn,Town,Maine,ME
+17119,Augusta,Kennebec,Augusta,Town,Maine,ME
+17120,Aurora,Hancock,Aurora,Town,Maine,ME
+17121,Avon,Franklin,Avon,Town,Maine,ME
+17122,Baileyville,Washington,Baileyville,Town,Maine,ME
+17123,Baldwin,Cumberland,Baldwin,Town,Maine,ME
+17124,Bancroft,Aroostook,Bancroft,Town,Maine,ME
+17125,Bangor,Penobscot,Bangor,Town,Maine,ME
+17126,Bar Harbor,Hancock,Bar Harbor,Town,Maine,ME
+17127,Baring Plantation,Washington,Baring,Plantation,Maine,ME
+17128,Bath,Sagadahoc,Bath,Town,Maine,ME
+17129,Beals,Washington,Beals,Town,Maine,ME
+17130,Beaver Cove,Piscataguis,Beaver Cove,Town,Maine,ME
+17131,Beddington,Washington,Beddington,Town,Maine,ME
+17132,Belfast,Waldo,Belfast,Town,Maine,ME
+17133,Belgrade,Kennebec,Belgrade,Town,Maine,ME
+17134,Belmont,Waldo,Belmont,Town,Maine,ME
+17135,Benedicta Township,Aroostook,Benedicta,Township,Maine,ME
+17136,Benton,Kennebec,Benton,Town,Maine,ME
+17137,Berwick,York,Berwick,Town,Maine,ME
+17138,Bethel,Oxford,Bethel,Town,Maine,ME
+17139,Biddeford,York,Biddeford,Town,Maine,ME
+17140,Bingham,Somerset,Bingham,Town,Maine,ME
+17141,Blaine,Aroostook,Blaine,Town,Maine,ME
+17142,Blue Hill,Hancock,Blue Hill,Town,Maine,ME
+17143,Boothbay,Lincoln,Boothbay,Town,Maine,ME
+17144,Boothbay Harbor,Lincoln,Boothbay Harbor,Town,Maine,ME
+17145,Bowdoinham,Sagadahoc,Bowdoinham,Town,Maine,ME
+17146,Bowerbank,Piscataguis,Bowerbank,Town,Maine,ME
+17147,Bradford,Penobscot,Bradford,Town,Maine,ME
+17148,Bradley,Penobscot,Bradley,Town,Maine,ME
+17149,Bremen,Lincoln,Bremen,Town,Maine,ME
+17150,Brewer,Penobscot,Brewer,Town,Maine,ME
+17151,Bridgewater,Aroostook,Bridgewater,Town,Maine,ME
+17152,Bridgton,Cumberland,Bridgton,Town,Maine,ME
+17153,Bristol,Lincoln,Bristol,Town,Maine,ME
+17154,Brooklin,Hancock,Brooklin,Town,Maine,ME
+17155,Brooks,Waldo,Brooks,Town,Maine,ME
+17156,Brooksville,Hancock,Brooksville,Town,Maine,ME
+17157,Brookton Township,Washington,Brookton,Township,Maine,ME
+17158,Brownfield,Oxford,Brownfield,Town,Maine,ME
+17159,Brownville,Piscataguis,Brownville,Town,Maine,ME
+17160,Brunswick,Cumberland,Brunswick,Town,Maine,ME
+17161,Buckfield,Oxford,Buckfield,Town,Maine,ME
+17162,Bucksport,Hancock,Bucksport,Town,Maine,ME
+17163,Burlington,Penobscot,Burlington,Town,Maine,ME
+17164,Burnham,Waldo,Burnham,Town,Maine,ME
+17165,Buxton,York,Buxton,Town,Maine,ME
+17166,Byron,Oxford,Byron,Town,Maine,ME
+17167,Calais,Washington,Calais,Town,Maine,ME
+17168,Cambridge,Somerset,Cambridge,Town,Maine,ME
+17169,Camden,Knox,Camden,Town,Maine,ME
+17170,Canaan,Somerset,Canaan,Town,Maine,ME
+17171,Cape Elizabeth,Cumberland,Cape Elizabeth,Town,Maine,ME
+17172,Caratunk,Somerset,Caratunk,Town,Maine,ME
+17173,Caribou,Aroostook,Caribou,Town,Maine,ME
+17174,Carmel,Penobscot,Carmel,Town,Maine,ME
+17175,Carrabassett Valley,Franklin,Carrabassett Valley,Town,Maine,ME
+17176,Carthage,Oxford,Carthage,Town,Maine,ME
+17177,Cary Plantation,Aroostook,Cary,Plantation,Maine,ME
+17178,Casco,Cumberland,Casco,Town,Maine,ME
+17179,Castine,Hancock,Castine,Town,Maine,ME
+17180,Castle Hill,Aroostook,Castle Hill,Town,Maine,ME
+17181,Caswell,Aroostook,Caswell,Town,Maine,ME
+17182,Chapman,Aroostook,Chapman,Town,Maine,ME
+17183,Charleston,Penobscot,Charleston,Town,Maine,ME
+17184,Charlotte,Washington,Charlotte,Town,Maine,ME
+17185,Chebeague Island,Cumberland,Chebeague Island,Town,Maine,ME
+17186,Chelsea,Kennebec,Chelsea,Town,Maine,ME
+17187,Cherryfield,Washington,Cherryfield,Town,Maine,ME
+17188,Chester,Penobscot,Chester,Town,Maine,ME
+17189,Chesterville,Franklin,Chesterville,Town,Maine,ME
+17190,China,Kennebec,China,Town,Maine,ME
+17191,Clifton,Penobscot,Clifton,Town,Maine,ME
+17192,Clinton,Kennebec,Clinton,Town,Maine,ME
+17193,Codyville Plantation,Washington,Codyville,Plantation,Maine,ME
+17194,Columbia,Washington,Columbia,Town,Maine,ME
+17195,Columbia Falls,Washington,Columbia Falls,Town,Maine,ME
+17196,Connor Township,Aroostook,Connor,Township,Maine,ME
+17197,Cooper,Washington,Cooper,Town,Maine,ME
+17198,Coplin Plantation,Franklin,Coplin,Plantation,Maine,ME
+17199,Corinna,Penobscot,Corinna,Town,Maine,ME
+17200,Corinth,Penobscot,Corinth,Town,Maine,ME
+17201,Cornish,York,Cornish,Town,Maine,ME
+17202,Cornville,Somerset,Cornville,Town,Maine,ME
+17203,Cranberry Isles,Hancock,Cranberry Isles,Town,Maine,ME
+17204,Crawford,Washington,Crawford,Town,Maine,ME
+17205,Cross Lake Township ,Aroostook,Cross Lake,Township,Maine,ME
+17206,Crystal,Aroostook,Crystal,Town,Maine,ME
+17207,Cumberland,Cumberland,Cumberland,Town,Maine,ME
+17208,Cushing,Cushing,Cushing,Town,Maine,ME
+17209,Cutler,Washington,Cutler,Town,Maine,ME
+17210,Cyr Plantation,Aroostook,Cyr,Plantation,Maine,ME
+17211,Danforth,Washington,Danforth,Town,Maine,ME
+17212,Dayton,York,Dayton,Town,Maine,ME
+17213,Deblois,Washington,Deblois,Town,Maine,ME
+17214,Dedham,Hancock,Dedham,Town,Maine,ME
+17215,Deer Isle,Hancock,Deer Isle,Town,Maine,ME
+17216,Denmark,Oxford,Denmark,Town,Maine,ME
+17217,Dennistown Plantation,Somerset,Dennistown,Plantation,Maine,ME
+17218,Dennysville,Washington,Dennysville,Town,Maine,ME
+17219,Dexter,Penobscot,Dexter,Town,Maine,ME
+17220,Dixfield,Oxford,Dixfield,Town,Maine,ME
+17221,Dixmont,Penobscot,Dixmont,Town,Maine,ME
+17222,Dover-Foxcroft,Piscataguis,Dover-Foxcroft,Town,Maine,ME
+17223,Dresden,Lincoln,Dresden,Town,Maine,ME
+17224,Drew Plantation,Aroostook,Drew,Plantation,Maine,ME
+17225,Durham,Androscroggin,Durham,Town,Maine,ME
+17226,Dyer Brook,Aroostook,Dyer Brook,Town,Maine,ME
+17227,Eagle Lake,Aroostook,Eagle Lake,Town,Maine,ME
+17228,East Machias,Washington,East Machias,Town,Maine,ME
+17229,East Millinocket,Penobscot,East Millinocket,Town,Maine,ME
+17230,Eastbrook,HANCOCK,Eastbrook,Town,Maine,ME
+17231,Easton,Aroostook,Easton,Town,Maine,ME
+17232,Eastport,Washington,Eastport,Town,Maine,ME
+17233,Eddington,Penobscot,Eddington,Town,Maine,ME
+17234,Edgecomb,Lincoln,Edgecomb,Town,Maine,ME
+17235,Edinburg,Penobscot,Edinburg,Town,Maine,ME
+17236,Edmunds Township,Washington,Edmunds,Township,Maine,ME
+17237,Eliot,York,Eliot,Town,Maine,ME
+17238,Ellsworth,Hancok,Ellsworth,Town,Maine,ME
+17239,Embden,Somerset,Embden,Town,Maine,ME
+17240,Enfield,Penobscot,Enfield,Town,Maine,ME
+17241,Etna,Penobscot,Etna,Town,Maine,ME
+17242,Eustis,Franklin,Eustis,Town,Maine,ME
+17243,Exeter,Penobscot,Exeter,Town,Maine,ME
+17244,Fairfield,Kennebec,Fairfield,Town,Maine,ME
+17245,Falmouth,Cumberland,Falmouth,Town,Maine,ME
+17246,Farmingdale,Kennebec,Farmingdale,Town,Maine,ME
+17247,Farmington,Franklin,Farmington,Town,Maine,ME
+17248,Fayette,Kennebec,Fayette,Town,Maine,ME
+17249,Fort Fairfield,Aroostook,Fort Fairfield,Town,Maine,ME
+17250,Fort Kent,Aroostook,Fort Kent,Town,Maine,ME
+17251,Frankfort,Waldo,Frankfort,Town,Maine,ME
+17252,Franklin,Hancock,Franklin,Town,Maine,ME
+17253,Freedom,Waldo,Freedom,Town,Maine,ME
+17254,Freeport,CUMBERLAND,Freeport,Town,Maine,ME
+17255,Frenchboro,Hancock,Frenchboro,Town,Maine,ME
+17256,Frenchville,Aroostook,Frenchville,Town,Maine,ME
+17257,Friendship,Knox,Friendship,Town,Maine,ME
+17258,Frye Island,Cumberland,Frye Island,Town,Maine,ME
+17259,Fryeburg,Oxford,Fryeburg,Town,Maine,ME
+17260,Gardiner,Kennebec,Gardiner,Town,Maine,ME
+17261,Garland,Penobscot,Garland,Town,Maine,ME
+17262,Georgetown,Sagadahoc,Georgetown,Town,Maine,ME
+17263,Gilead,Oxford,Gilead,Town,Maine,ME
+17264,Glenburn,Penobscot,Glenburn,Town,Maine,ME
+17265,Glenwood Plantation,Aroostook,Glenwood,Plantation,Maine,ME
+17266,Gorham,Cumberland,Gorham,Town,Maine,ME
+17267,Gouldsboro,HancocK,Gouldsboro,Town,Maine,ME
+17268,Grand Lake Stream Plantation,Washington,Grand Lake Stream,Plantation,Maine,ME
+17269,Gray,Cumberland,Gray,Town,Maine,ME
+17270,Great Pond,Hancock,Great Pond,Town,Maine,ME
+17271,Greenbush,Penobscot,Greenbush,Town,Maine,ME
+17272,Greene,Androscroggin,Greene,Town,Maine,ME
+17273,Greenville,Piscataguis,Greenville,Town,Maine,ME
+17274,Greenwood,Oxford,Greenwood,Town,Maine,ME
+17275,Guilford,Piscataguis,Guilford,Town,Maine,ME
+17276,Hallowell,Kennebec,Hallowell,Town,Maine,ME
+17277,Hampden,Penobscot,Hampden,Town,Maine,ME
+17278,Hancock,Hancock,Hancock,Town,Maine,ME
+17279,Hanover,Oxford,Hanover,Town,Maine,ME
+17280,Harmony,Somerset,Harmony,Town,Maine,ME
+17281,Harpswell,Cumberland,Harpswell,Town,Maine,ME
+17282,Harrington,Washington,Harrington,Town,Maine,ME
+17283,Harrison,Cumberland,Harrison,Town,Maine,ME
+17284,Hartford,Oxford,Hartford,Town,Maine,ME
+17285,Hartland,Somerset,Hartland,Town,Maine,ME
+17286,Haynesville,Aroostook,Haynesville,Town,Maine,ME
+17287,Hebron,Oxford,Hebron,Town,Maine,ME
+17288,Hermon,Penobscot,Hermon,Town,Maine,ME
+17289,Hersey,Aroostook,Hersey,Town,Maine,ME
+17290,Hiram,Oxford,Hiram,Town,Maine,ME
+17291,Hodgdon,Aroostook,Hodgdon,Town,Maine,ME
+17292,Holden,Penobscot,Holden,Town,Maine,ME
+17293,Hollis,York,Hollis,Town,Maine,ME
+17294,Hope,Knox,Hope,Town,Maine,ME
+17295,Houlton,Aroostook,Houlton,Town,Maine,ME
+17296,Howland,Penobscot,Howland,Town,Maine,ME
+17297,Hudson,Penobscot,Hudson,Town,Maine,ME
+17298,Industry,Franklin,Industry,Town,Maine,ME
+17299,Island Falls,Aroostook,Island Falls,Town,Maine,ME
+17300,Islesboro,Waldo,Islesboro,Town,Maine,ME
+17301,Jackman,somerset,Jackman,Town,Maine,ME
+17302,Jackson,Waldo,Jackson,Town,Maine,ME
+17303,Jay,Franklin,Jay,Town,Maine,ME
+17304,Jefferson,Lincoln,Jefferson,Town,Maine,ME
+17305,Jonesboro,Washington,Jonesboro,Town,Maine,ME
+17306,Kenduskeag,Penobscot,Kenduskeag,Town,Maine,ME
+17307,Kennebunk,York,Kennebunk,Town,Maine,ME
+17308,Kennebunkport,York,Kennebunkport,Town,Maine,ME
+17309,Kingfield,Franklin,Kingfield,Town,Maine,ME
+17310,Kingsbury Plantation,Piscataguis,Kingsbury,Plantation,Maine,ME
+17311,Kittery,York,Kittery,Town,Maine,ME
+17312,Knox,Waldo,Knox,Town,Maine,ME
+17313,Lagrange,Penobscot,Lagrange,Town,Maine,ME
+17314,Lake View Plantation,Piscataguis,Lake View,Plantation,Maine,ME
+17315,Lakeville,Penobscot,Lakeville,Town,Maine,ME
+17316,Lamoine,Hancock,Lamoine,Town,Maine,ME
+17317,Lebanon,York,Lebanon,Town,Maine,ME
+17318,Lee,Penobscot,Lee,Town,Maine,ME
+17319,Leeds,Androscroggin,Leeds,Town,Maine,ME
+17320,Levant,Penobscot,Levant,Town,Maine,ME
+17321,Lewiston,Androscroggin,Lewiston,Town,Maine,ME
+17322,Liberty,Waldo,Liberty,Town,Maine,ME
+17323,Limerick,York,Limerick,Town,Maine,ME
+17324,Limestone,Aroostook,Limestone,Town,Maine,ME
+17325,Limington,York,Limington,Town,Maine,ME
+17326,Lincoln,Penobscot,Lincoln,Town,Maine,ME
+17327,Lincoln Plantation,Oxford,Lincoln,Plantation,Maine,ME
+17328,Lincolnville,Waldo,Lincolnville,Town,Maine,ME
+17329,Linneus,Aroostook,Linneus,Town,Maine,ME
+17330,Lisbon,Androscroggin,Lisbon,Town,Maine,ME
+17331,Litchfield,Kennebec,Litchfield,Town,Maine,ME
+17332,Littleton,Aroostook,Littleton,Town,Maine,ME
+17333,Livermore,Androscroggin,Livermore,Town,Maine,ME
+17334,Livermore Falls,Androscroggin,Livermore Falls,Town,Maine,ME
+17335,Long Island,Cumberland,Long Island,Town,Maine,ME
+17336,Lovell,Oxford,Lovell,Town,Maine,ME
+17337,Lubec,Washington,Lubec,Town,Maine,ME
+17338,Lyman,York,Lyman,Town,Maine,ME
+17339,Machias,Washington,Machias,Town,Maine,ME
+17340,Machiasport,Washington,Machiasport,Town,Maine,ME
+17341,Macwahoc Plantation,Penobscot,Macwahoc,Plantation,Maine,ME
+17342,Madawaska,Aroostook,Madawaska,Town,Maine,ME
+17343,Madawaska Lake Township,Aroostook,Madawaska Lake,Township,Maine,ME
+17344,Madison,somerset,Madison,Town,Maine,ME
+17345,Magalloway Plantation,Oxford,Magalloway,Plantation,Maine,ME
+17346,Manchester,Kennebec,Manchester,Town,Maine,ME
+17347,Mapleton,Aroostook,Mapleton,Town,Maine,ME
+17348,Mariaville,Hancock,Mariaville,Town,Maine,ME
+17349,Mars Hill,Aroostook,Mars Hill,Town,Maine,ME
+17350,Marshfield,Washington,Marshfield,Town,Maine,ME
+17351,Masardis,Aroostook,Masardis,Town,Maine,ME
+17352,Mattawamkeag,Penobscot,Mattawamkeag,Town,Maine,ME
+17353,Maxfield,Penobscot,Maxfield,Town,Maine,ME
+17354,Mechanic Falls,Androscroggin,Mechanic Falls,Town,Maine,ME
+17355,Meddybemps,Washington,Meddybemps,Town,Maine,ME
+17356,Medford,Piscataguis,Medford,Town,Maine,ME
+17357,Medway,Penobscot,Medway,Town,Maine,ME
+17358,Mercer,Somerset,Mercer,Town,Maine,ME
+17359,Merrill,Aroostook,Merrill,Town,Maine,ME
+17360,Mexico,Oxford,Mexico,Town,Maine,ME
+17361,Milbridge,Washington,Milbridge,Town,Maine,ME
+17362,Milford,Penobscot,Milford,Town,Maine,ME
+17363,Millinocket,Penobscot,Millinocket,Town,Maine,ME
+17364,Milo,Piscataguis,Milo,Town,Maine,ME
+17365,Minot,Androscroggin,Minot,Town,Maine,ME
+17366,Monhegan Island Plantation,Lincoln,Monhegan Island,Plantation,Maine,ME
+17367,Monmouth,Kennebec,Monmouth,Town,Maine,ME
+17368,Monroe,Waldo,Monroe,Town,Maine,ME
+17369,Monson,Piscataguis,Monson,Town,Maine,ME
+17370,Monticello,Aroostook,Monticello,Town,Maine,ME
+17371,Montville,Waldo,Montville,Town,Maine,ME
+17372,Moose River,somerset,Moose River,Town,Maine,ME
+17373,Moro Plantation,Aroostook,Moro,Plantation,Maine,ME
+17374,Morrill,Waldo,Morrill,Town,Maine,ME
+17375,Mount Chase,Penobscot,Mount Chase,Town,Maine,ME
+17376,Mount Desert,Hancock,Mount Desert,Town,Maine,ME
+17377,Mount Vernon,Kennebec,Mount Vernon,Town,Maine,ME
+17378,Naples,Cumberland,Naples,Town,Maine,ME
+17379,Nashville Plantation,Aroostook,Nashville,Plantation,Maine,ME
+17380,New Canada,Aroostook,New Canada,Town,Maine,ME
+17381,New Gloucester,Cumberland,New Gloucester,Town,Maine,ME
+17382,New Limerick,Aroostook,New Limerick,Town,Maine,ME
+17383,New Sharon,Franklin,New Sharon,Town,Maine,ME
+17384,New Sweden,Aroostook,New Sweden,Town,Maine,ME
+17385,New Vineyard,Franklin,New Vineyard,Town,Maine,ME
+17386,Newburgh,Penobscot,Newburgh,Town,Maine,ME
+17387,Newcastle,Lincoln,Newcastle,Town,Maine,ME
+17388,Newfield,York,Newfield,Town,Maine,ME
+17389,Newport,Penobscot,Newport,Town,Maine,ME
+17390,Newry,Oxford,Newry,Town,Maine,ME
+17391,No 21 Township,Washington,No. 21,Township,Maine,ME
+17392,Nobleboro,Lincoln,Nobleboro,Town,Maine,ME
+17393,Norridgewock,somerset,Norridgewock,Town,Maine,ME
+17394,North Berwick,York,North Berwick,Town,Maine,ME
+17395,North Haven,Knox,North Haven,Town,Maine,ME
+17396,North Yarmouth,Cumberland,North Yarmouth,Town,Maine,ME
+17397,Northfield,Washington,Northfield,Town,Maine,ME
+17398,Northport,Waldo,Northport,Town,Maine,ME
+17399,Norway,Oxford,Norway,Town,Maine,ME
+17400,Oakfield,Aroostook,Oakfield,Town,Maine,ME
+17401,Oakland,Kennebec,Oakland,Town,Maine,ME
+17402,Ogunquit,York,Ogunquit,Town,Maine,ME
+17403,Old Orchard Beach,York,Old Orchard Beach,Town,Maine,ME
+17404,Old Town,Penobscot,Old Town,Town,Maine,ME
+17405,Orient,Aroostook,Orient,Town,Maine,ME
+17406,Orland,Hancock,Orland,Town,Maine,ME
+17407,Orono,Penobscot,Orono,Town,Maine,ME
+17408,Orrington,Penobscot,Orrington,Town,Maine,ME
+17409,Otis,Hancock,Otis,Town,Maine,ME
+17410,Otisfield,Oxford,Otisfield,Town,Maine,ME
+17411,Owls Head,Knox,Owls Head,Town,Maine,ME
+17412,Oxbow Plantation,Aroostook,Oxbow,Plantation,Maine,ME
+17413,Oxford,Oxford,Oxford,Town,Maine,ME
+17414,Palmyra,somerset,Palmyra,Town,Maine,ME
+17415,Paris,Oxford,Paris,Town,Maine,ME
+17416,Parkman,Piscataguis,Parkman,Town,Maine,ME
+17417,Parsonsfield,York,Parsonsfield,Town,Maine,ME
+17418,Passadumkeag,Penobscot,Passadumkeag,Town,Maine,ME
+17419,Patten,Penobscot,Patten,Town,Maine,ME
+17420,Pembroke,Washington,Pembroke,Town,Maine,ME
+17421,Penobscot,Hancock,Penobscot,Town,Maine,ME
+17422,Penobscot Nation Voting District,Hancock,Penobscot Nation,Voting District,Maine,ME
+17423,Perham,Aroostook,Perham,Town,Maine,ME
+17424,Perry,Washington,Perry,Town,Maine,ME
+17425,Peru,Oxford,Peru,Town,Maine,ME
+17426,Phillips,FRanklin,Phillips,Town,Maine,ME
+17427,Phippsburg,Sagadahoc,Phippsburg,Town,Maine,ME
+17428,Pittsfield,somerset,Pittsfield,Town,Maine,ME
+17429,Pittston,Kennebec,Pittston,Town,Maine,ME
+17430,Pleasant Point Voting District,Washington,Pleasant Point ,Voting District,Maine,ME
+17431,Pleasant Ridge Plantation,Somerset,Pleasant Ridge,Plantation,Maine,ME
+17432,Plymouth,Penobscot,Plymouth,Town,Maine,ME
+17433,Poland,Androscroggin,Poland,Town,Maine,ME
+17434,Portage Lake,Aroostook,Portage Lake,Town,Maine,ME
+17435,Porter,Oxford,Porter,Town,Maine,ME
+17436,Portland,Cumberland,Portland,Town,Maine,ME
+17437,Pownal,Cumberland,Pownal,Town,Maine,ME
+17438,Presque Isle,Aroostook,Presque Isle,Town,Maine,ME
+17439,Princeton,Washington,Princeton,Town,Maine,ME
+17440,Prospect,Waldo,Prospect,Town,Maine,ME
+17441,Randolph,Kennebec,Randolph,Town,Maine,ME
+17442,Rangeley,Franklin,Rangeley,Town,Maine,ME
+17443,Rangeley Plantation,Franklin,Rangeley,Plantation,Maine,ME
+17444,Raymond,Cumberland,Raymond,Town,Maine,ME
+17445,Readfield,Kennebec,Readfield,Town,Maine,ME
+17446,Reed Plantation,Aroostook,Reed,Plantation,Maine,ME
+17447,Richmond,Sagadahoc,Richmond,Town,Maine,ME
+17448,Ripley,Penobscot,Ripley,Town,Maine,ME
+17449,Robbinston,Washington,Robbinston,Town,Maine,ME
+17450,Rockland,Knox,Rockland,Town,Maine,ME
+17451,Rockport,Knox,Rockport,Town,Maine,ME
+17452,Rockwood Strip Township,Somerset,Rockwood Strip,Township,Maine,ME
+17453,Rome,Kennebec,Rome,Town,Maine,ME
+17454,Roxbury,Oxford,Roxbury,Town,Maine,ME
+17455,Rumford,Oxford,Rumford,Town,Maine,ME
+17456,Sabattus,Androscroggin,Sabattus,Town,Maine,ME
+17457,Saco,York,Saco,Town,Maine,ME
+17458,Saint Agatha,Aroostook,Saint Agatha,Town,Maine,ME
+17459,Saint Albans,Somerset,Saint Albans,Town,Maine,ME
+17460,Saint Francis,Aroostook,Saint Francis,Town,Maine,ME
+17461,Saint George,Knox,Saint George,Town,Maine,ME
+17462,Saint John Plantation,Aroostook,Saint John,Plantation,Maine,ME
+17463,Sanford,York,Sanford,Town,Maine,ME
+17464,Sangerville,Piscataguis,Sangerville,Town,Maine,ME
+17465,Scarborough,Cumberland,Scarborough,Town,Maine,ME
+17466,Searsmont,Waldo,Searsmont,Town,Maine,ME
+17467,Searsport,WAldo,Searsport,Town,Maine,ME
+17468,Sebago,Cumberland,Sebago,Town,Maine,ME
+17469,Sebec,Piscataguis,Sebec,Town,Maine,ME
+17470,Seboeis Plantation,Penobscot,Seboeis,Plantation,Maine,ME
+17471,Sedgwick,Hancock,Sedgwick,Town,Maine,ME
+17472,Shapleigh,York,Shapleigh,Town,Maine,ME
+17473,Sherman,Aroostook,Sherman,Town,Maine,ME
+17474,Shirley,Piscataguis,Shirley,Town,Maine,ME
+17475,Sidney,Kennebec,Sidney,Town,Maine,ME
+17476,Silver Ridge Township,Aroostook,Silver Ridge,Township,Maine,ME
+17477,Sinclair ,Aroostook,Sinclair,Town,Maine,ME
+17478,Skowhegan,somerset,Skowhegan,Town,Maine,ME
+17479,Smithfield,somerset,Smithfield,Town,Maine,ME
+17480,Smyrna,Aroostook,Smyrna,Town,Maine,ME
+17481,Solon,somerset,Solon,Town,Maine,ME
+17482,Somerville,Lincoln,Somerville,Town,Maine,ME
+17483,Sorrento,Hancock,Sorrento,Town,Maine,ME
+17484,South Berwick,York,South Berwick,Town,Maine,ME
+17485,South Bristol,Lincoln,South Bristol,Town,Maine,ME
+17486,South Portland,Cumberland,South Portland,Town,Maine,ME
+17487,South Thomaston,Knox,South Thomaston,Town,Maine,ME
+17488,Southport,Lincoln,Southport,Town,Maine,ME
+17489,Southwest Harbor,Hancock,Southwest Harbor,Town,Maine,ME
+17490,Springfield,Penobscot,Springfield,Town,Maine,ME
+17491,Stacyville,,Stacyville,Town,Maine,ME
+17492,Standish,Cumberland,Standish,Town,Maine,ME
+17493,Starks,somerset,Starks,Town,Maine,ME
+17494,Stetson,Penobscot,Stetson,Town,Maine,ME
+17495,Steuben,Washington,Steuben,Town,Maine,ME
+17496,Stockholm,Aroostook,Stockholm,Town,Maine,ME
+17497,Stockton Springs,Waldo,Stockton Springs,Town,Maine,ME
+17498,Stoneham,Oxford,Stoneham,Town,Maine,ME
+17499,Stow,Oxford,Stow,Town,Maine,ME
+17500,Strong,FRanklin,Strong,Town,Maine,ME
+17501,Sullivan,Hancock,Sullivan,Town,Maine,ME
+17502,Sumner,Oxford,Sumner,Town,Maine,ME
+17503,Surry,Hancock,Surry,Town,Maine,ME
+17504,Swans Island,Hancock,Swans Island,Town,Maine,ME
+17505,Swanville,WALDO,Swanville,Town,Maine,ME
+17506,Sweden,Cumberland,Sweden,Town,Maine,ME
+17507,Temple,FRanklin,Temple,Town,Maine,ME
+17508,The Forks Plantation,Somerset,The Forks,Plantation,Maine,ME
+17509,Thomaston,Knox,Thomaston,Town,Maine,ME
+17510,Thorndike,Waldo,Thorndike,Town,Maine,ME
+17511,Topsfield,Washington,Topsfield,Town,Maine,ME
+17512,Topsham,Sagadahoc,Topsham,Town,Maine,ME
+17513,Trenton,Hancock,Trenton,Town,Maine,ME
+17514,Troy,Waldo,Troy,Town,Maine,ME
+17515,Turner,Androscroggin,Turner,Town,Maine,ME
+17516,Union,Knox,Union,Town,Maine,ME
+17517,Unity,Waldo,Unity,Town,Maine,ME
+17518,Van Buren,Aroostook,Van Buren,Town,Maine,ME
+17519,Vanceboro,Washington,Vanceboro,Town,Maine,ME
+17520,Vassalboro,Kennebec,Vassalboro,Town,Maine,ME
+17521,Veazie,Penobscot,Veazie,Town,Maine,ME
+17522,Verona Island,Hancock,Verona Island,Town,Maine,ME
+17523,Vinalhaven,Knox,Vinalhaven,Town,Maine,ME
+17524,Wade,Aroostook,Wade,Town,Maine,ME
+17525,Waldo,Waldo,Waldo,Town,Maine,ME
+17526,Waldoboro,Lincoln,Waldoboro,Town,Maine,ME
+17527,Wales,Androscroggin,Wales,Town,Maine,ME
+17528,Wallagrass,Aroostook,Wallagrass,Town,Maine,ME
+17529,Waltham,Hancock,Waltham,Town,Maine,ME
+17530,Warren,Knox,Warren,Town,Maine,ME
+17531,Washburn,Aroostook,Washburn,Town,Maine,ME
+17532,Washington,Knox,Washington,Town,Maine,ME
+17533,Waterboro,York,Waterboro,Town,Maine,ME
+17534,Waterford,Oxford,Waterford,Town,Maine,ME
+17535,Waterville,Kennebec,Waterville,Town,Maine,ME
+17536,Wayne,Kennebec,Wayne,Town,Maine,ME
+17537,Weld,FRanklin,Weld,Town,Maine,ME
+17538,Wellington,somerset,Wellington,Town,Maine,ME
+17539,Wells,York,Wells,Town,Maine,ME
+17540,West Bath,Sagadahoc,West Bath,Town,Maine,ME
+17541,West Forks Plantation,Somerset,West Forks,Plantation,Maine,ME
+17542,West Gardiner,Kennebec,West Gardiner,Town,Maine,ME
+17543,West Paris,Oxford,West Paris,Town,Maine,ME
+17544,Westbrook,Cumberland,Westbrook,Town,Maine,ME
+17545,Westmanland,Aroostook,Westmanland,Town,Maine,ME
+17546,Weston,Weston,Weston,Town,Maine,ME
+17547,Westport Island,Lincoln,Westport Island,Town,Maine,ME
+17548,Whitefield,Lincoln,Whitefield,Town,Maine,ME
+17549,Whiting,Washington,Whiting,Town,Maine,ME
+17550,Willimantic,Piscataguis,Willimantic,Town,Maine,ME
+17551,Wilton,FRanklin,Wilton,Town,Maine,ME
+17552,Windham,Cumberland,Windham,Town,Maine,ME
+17553,Windsor,Kennebec,Windsor,Town,Maine,ME
+17554,Winn,Penobscot,Winn,Town,Maine,ME
+17555,Winslow,Kennebec,Winslow,Town,Maine,ME
+17556,Winter Harbor,Hancock,Winter Harbor,Town,Maine,ME
+17557,Winterport,Waldo,Winterport,Town,Maine,ME
+17558,Winterville Plantation,Aroostook,Winterville,Plantation,Maine,ME
+17559,Wiscasset,Lincoln,Wiscasset,Town,Maine,ME
+17560,Woodland,Aroostook,Woodland,Town,Maine,ME
+17561,Woodstock,Oxford,Woodstock,Town,Maine,ME
+17562,Woodville,Penobscot,Woodville,Town,Maine,ME
+17563,Woolwich,Sagadahoc,Woolwich,Town,Maine,ME
+17564,Yarmouth,Cumberland,Yarmouth,Town,Maine,ME
+17565,York,York,York,Town,Maine,ME
+17566,Amity,Aroostook,Amity,Town,Maine,ME
+17567,Bowdoin,Sagadahoc,Bowdoin,Town,Maine,ME
+17568,Brighton Plantation,Somerset,Brighton Plt,Plantation,Maine,ME
+17569,Canton,Oxford,Canton,Town,Maine,ME
+17570,Carroll Plantation,Penobscot,Carroll,Plantation,Maine,ME
+17571,Dallas Plantation,Franklin,Dallas,Plantation,Maine,ME
+17572,Damariscotta,Lincoln,Damariscotta,Town,Maine,ME
+17573,Detroit,somerset,Detroit,Town,Maine,ME
+17574,Garfield Plantation,Aroostook,Garfield,Plantation,Maine,ME
+17575,Grand Isle,Aroostook,Grand Isle,Town,Maine,ME
+17576,Hamlin,Aroostook,Hamlin,Town,Maine,ME
+17577,Hammond,Aroostook,Hammond,Town,Maine,ME
+17578,Highland Plantation,Somerset,Highland,Plantation,Maine,ME
+17579,Indian Township,Washington,Indian,Township,Maine,ME
+17580,Isle Au Haut,Knox,Isle Au Haut,Town,Maine,ME
+17581,Jonesport,Washington,Jonesport,Town,Maine,ME
+17582,Kingman Township,Penobscot,Kingman,Township,Maine,ME
+17583,Lowell,Penobscot,Lowell,Town,Maine,ME
+17584,Winthrop,Kennebec,Winthrop,Town,Maine,ME
+17585,Whitneyville,Washington,Whitneyville,Town,Maine,ME
+17586,Ludlow,Aroostook,Ludlow,Town,Maine,ME
+17587,Matinicus Isle Plantation,Knox,Matinicus Isle,Plantation,Maine,ME
+17588,New Portland,somerset,New Portland,Town,Maine,ME
+17589,Osborn,Hancock,Osborn,Town,Maine,ME
+17590,Palermo,Waldo,Palermo,Town,Maine,ME
+17591,Prentiss Township,Penobscot,Prentiss,Township,Maine,ME
+17592,Roque Bluffs,Washington,Roque Bluffs,Town,Maine,ME
+17593,Sandy River Plantation,Franklin,Sandy River,Plantation,Maine,ME
+17594,"Stonington, Hancock County",Hancock,Stonington,Town,Maine,ME
+,"Stonington, Knox County",Knox,Stonington,Town,Maine,ME
+17595,Talmadge,Washington,Talmadge,Town,Maine,ME
+17596,Tremont,Hancock,Tremont,Town,Maine,ME
+17597,Upton,Oxford,Upton,Town,Maine,ME
+17598,Vienna,Kennebec,Vienna,Town,Maine,ME
+17599,Waite,Washington,Waite,Town,Maine,ME
+17600,Webster Plantation,Penobscot,Webster,Plantation,Maine,ME
+17601,Wesley,Washington,Wesley,Town,Maine,ME
+17602,Big Lake Township,Washington,Big Lake,Township,Maine,ME
+17603,Westfield,Aroostook,Westfield,Town,Maine,ME
+17604,Moscow,somerset,Moscow,Town,Maine,ME
+17636,Alcona County,Alcona County,,,Michigan,MI
+17637,Alger County,Alger County,,,Michigan,MI
+17638,Allegan County,Allegan County,,,Michigan,MI
+17639,Alpena County,Alpena,,,Michigan,MI
+17640,City of Ann Arbor,Washtenaw,City Ann Arbor,City,Michigan,MI
+17641,Antrim County,Antrim,,,Michigan,MI
+17642,Arenac County,Arenac,,,Michigan,MI
+17643,Baraga County,Baraga,,,Michigan,MI
+17644,Barry County,Barry,,,Michigan,MI
+17645,City of Battle Creek,Calhoun,City  Battle Creek,City,Michigan,MI
+17646,City of Bay City,Bay county,City Bay Bay City,City,Michigan,MI
+17647,Bay County,Bay,,,Michigan,MI
+17648,Benzie County,Benzie,,,Michigan,MI
+17649,Berrien County,Berrien,,,Michigan,MI
+17650,Branch County,Branch,,,Michigan,MI
+17651,Calhoun County,Calhoun,,,Michigan,MI
+17652,Cass County,Cass,,,Michigan,MI
+17653,Charlevoix County,Charlevoix,,,Michigan,MI
+17654,Cheboygan County,Cheboygan,,,Michigan,MI
+17655,Chippewa County,Chippewa,,,Michigan,MI
+17656,Clare County,Clare,,,Michigan,MI
+17657,Clinton County,Clinton,,,Michigan,MI
+17658,Crawford County,Crawford,,,Michigan,MI
+17659,City of Dearborn,Wayne,City of Dearborn,City,Michigan,MI
+17660,City of Dearborn Heights,Wayne,City Dearborn Dearborn Heights,City,Michigan,MI
+17661,Delta County,Delta,,,Michigan,MI
+17662,"Detroit City, Oakland County",Oakland,Detroit City,,Michigan,MI
+,"Detroit City, Wayne County",Wayne,Detroit City,,Michigan,MI
+17663,Dickinson County,Dickinson,,,Michigan,MI
+17664,City of East Lansing,Ingham,East Lansing,City,Michigan,MI
+17665,Eaton County,Eaton,,,Michigan,MI
+17666,Emmet County,Emmet,,,Michigan,MI
+17667,City of Farmington Hills,Oakland,Farmington Hills,City,Michigan,MI
+17668,City of Flint,Genesee,Flint,City,Michigan,MI
+17669,Genesee County,Genesee,,,Michigan,MI
+17670,Gladwin County,Gladwin,,,Michigan,MI
+17671,Gogebic County,Gogebic,,,Michigan,MI
+17672,Grand Rapids City,Kent,Grand Rapids,City,Michigan,MI
+17673,Grand Traverse County,Grand Traverse,,,Michigan,MI
+17674,Gratiot County,Gratiot,,,Michigan,MI
+17675,Hillsdale County,Hillsdale,,,Michigan,MI
+17676,Houghton County,Houghton,,,Michigan,MI
+17677,Huron County,Huron,,,Michigan,MI
+17678,Ingham County,Ingham,,,Michigan,MI
+17679,Ionia County,Ionia,,,Michigan,MI
+17680,Iosco County,Iosco,,,Michigan,MI
+17681,Iron County,Iron,,,Michigan,MI
+17682,Isabella County,Isabella,,,Michigan,MI
+17683,Jackson County,Jackson,,,Michigan,MI
+17684,City of Kalamazoo,Kalamazoo,Kalamazoo,City,Michigan,MI
+17685,Kalamazoo County,Kalamazoo,,,Michigan,MI
+17686,Kalkaska County,Kalkaska,,,Michigan,MI
+17687,Kent County,Kent,,,Michigan,MI
+17688,Keweenaw County,Keweenaw,,,Michigan,MI
+17689,Lake County,Lake,,,Michigan,MI
+17690,"City of Lansing, Eaton County",Eaton,Lansing,City,Michigan,MI
+,"City of Lansing, Ingham County",Ingham,Lansing,City,Michigan,MI
+17691,Lapeer County,Lapeer,,,Michigan,MI
+17692,Leelanau County,Leelanau,,,Michigan,MI
+17693,Lenawee County,Lenawee,,,Michigan,MI
+17694,City of Lincoln Park,Wayne,Lincoln Park,City,Michigan,MI
+17695,Livingston County,Livingston,,,Michigan,MI
+17696,City of Livonia,Wayne,Livonia,City,Michigan,MI
+17697,Luce County,Luce,,,Michigan,MI
+17698,Mackinac County,Mackinac,,,Michigan,MI
+17699,Macomb County,Macomb,,,Michigan,MI
+17700,Manistee County,Manistee,,,Michigan,MI
+17701,Marquette County,Marquette,,,Michigan,MI
+17702,Mason County,Mason,,,Michigan,MI
+17703,Mecosta County,Mecosta,,,Michigan,MI
+17704,Menominee County,Menominee,,,Michigan,MI
+17705,Midland County,Midland,,,Michigan,MI
+17706,Missaukee County,Missaukee,,,Michigan,MI
+17707,Monroe County,Monroe,,,Michigan,MI
+17708,Montcalm County,Montcalm,,,Michigan,MI
+17709,Montmorency County,Montmorency,,,Michigan,MI
+17710,Muskegon County,Muskegon,,,Michigan,MI
+17711,Newaygo County,Newaygo,,,Michigan,MI
+17712,Oakland County,Oakland,,,Michigan,MI
+17713,Oceana County,Oceana,,,Michigan,MI
+17714,Ogemaw County,Ogemaw,,,Michigan,MI
+17715,Ontonagon County,Ontonagon,,,Michigan,MI
+17716,Osceola County,Osceola,,,Michigan,MI
+17717,Oscoda County,Oscoda,,,Michigan,MI
+17718,Otsego County,Otsego,,,Michigan,MI
+17719,Ottawa County,Ottawa,,,Michigan,MI
+17720,City of Pontiac,Oakland,Pontiac,City,Michigan,MI
+17721,Presque Isle County,Presque Isle,,,Michigan,MI
+17722,Roscommon County,Roscommon,,,Michigan,MI
+17723,City of Roseville,macomb,Roseville,City,Michigan,MI
+17724,City of Royal Oak,Oakland,Royal Oak,City,Michigan,MI
+17725,City of Saginaw,Saginaw,Saginaw,City,Michigan,MI
+17726,Saginaw County,Saginaw,,,Michigan,MI
+17727,Sanilac County,Sanilac,,,Michigan,MI
+17728,Schoolcraft County,Schoolcraft,,,Michigan,MI
+17729,Shiawassee County,Shiawassee,,,Michigan,MI
+17730,City of Southfield,Oakland,Southfield,City,Michigan,MI
+17731,Saint Clair County,Saint Clair,,,Michigan,MI
+17732,City of Saint Clair Shores,,Saint Clair Shores,City,Michigan,MI
+17733,Saint Joseph County,Saint Joseph,,,Michigan,MI
+17734,City of Sterling Heights,Macomb,Sterling Heights,City,Michigan,MI
+17735,City of Taylor,Wayne,Taylor,City,Michigan,MI
+17736,City of Troy,Oakland,Troy,City,Michigan,MI
+17737,Tuscola County,Tuscola,,,Michigan,MI
+17738,Van Buren County,Van Buren,,,Michigan,MI
+17739,City of Warren,Macomb,Warren,City,Michigan,MI
+17740,Washtenaw County,Washtenaw,,,Michigan,MI
+17741,Wayne County,Wayne,,,Michigan,MI
+17742,City of Westland,Wayne,Westland,City,Michigan,MI
+17743,Wexford County,Wexford,,,Michigan,MI
+17744,City of Wyoming,Kent,Wyoming,City,Michigan,MI

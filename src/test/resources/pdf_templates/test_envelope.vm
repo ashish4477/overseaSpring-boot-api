@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+
+
+    <form-id>186A (Rev. 10-2005)</form-id>
+
+
+
+    <page master="envelope">
+        <security-envelope>
+        <title>SECURITY ENVELOPE FOR SPECIAL FEDERAL</title>
+        <front-block>
+            <p><font size="12pt"><b>BALLOT ENVELOPE FOR SPECIAL FEDERAL VOTER - AFFIRMATION</b></font></p>
+            <p>I swear or affirm, under penalty of perjury, that:</p>
+            <ol type="a.">
+                #if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER")
+                    <li>I am a member of the Uniformed Services or merchant marine on active duty or an eligible spouse or dependent of such a member, or a U.S. citizen temporarily residing outside the U.S., or other U.S. citizen residing outside the U.S., and</li>
+                    <li>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
+                #else
+                    <li>I am a United States citizen residing outside the United States, and</li>
+                    <li>I am at least eighteen years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
+                #end
+                <li>I have not been convicted of a felony or other disqualifying offense or been adjudicated mentally incompetent, or if so, my voting rights have been reinstated, and</li>
+                <li>I am not registering, requesting a ballot, or voting in any other jurisdiction in the U.S., and</li>
+                <li>My signature and date below indicate when I completed this document, and</li>
+                <li>The information on this form is true and complete to the best of my knowledge.</li>
+            </ol>
+            <p>I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of a crime.</p>
+            <p>Date __________ 20_______ _________________________________________________</p>
+            <p margin-top="-2px" margin-left="5cm">Signature or mark of voter</p>
+            <p>_________________________________________________________________________________________</p>
+            <p margin-top="-2px">Signature of Witness (required only if voter does not sign his or her own name)</p>
+            <p>__________________________________________________________________________________________</p>
+            <p margin-top="-2px">Address of Witness to Mark (Street and number, or R.F.D.)</p>
+            <p>__________________________________________________________________________________________</p>
+            <p margin-top="-2px">(City, Village or Town)</p>
+            <p>__________________________________________________________________________________________</p>
+            <p margin-top="-2px">(County, State, ZIP)</p>
+        </front-block>
+        <rear-block>
+            <p text-align="center"><font size="12pt">BALLOT ENVELOPE FOR SPECIAL FEDERAL VOTER</font></p>
+            <rear-table>
+                <rear-cell>
+                    <p  text-align="center">IMPORTANT TO FEDERAL VOTER:</p>
+                    <p  text-align="center">YOU MUST SIGN THE AFFIRMATION ON THIS ENVELOPE</p>
+                    <p>This envelope with ballot enclosed must reach the Board of Elections not later
+                        than 9 p.m. on Election Day, if delivered in person, OR be postmarked not
+                        later than the day before election and received at the Board of Elections not
+                        later than seven days after a primary election or 13 days after a general or
+                        special election, for your vote to be counted. Do not enclose an application for
+                        a special federal ballot in this inner ballot envelope that contains your voted ballot.</p>
+                </rear-cell>
+                <rear-cell border="1px solid">
+                    <p>TO BE FILLED IN BY THE BOARD OF ELECTIONS:</p>
+                    <p>For__________ Election __________ 20______</p>
+                    <p>Name of</p>
+                    <p>voter__________________________________________________________</p>
+                    <p>Voting Residence:</p>
+                    <p>Street and number _____________________________</p>
+                    <p>City or town __________________________________</p>
+                    <p>County _______________________________________</p>
+                    <p>Assembly District or Ward _________________ Election District___________</p>
+                </rear-cell>
+            </rear-table>
+        </rear-block>
+        </security-envelope>
+    </page>
+
+    <page master="envelope">
+        <return-envelope>
+            <title>#if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER")MILITARY#end BALLOT RETURN ENVELOPE</title>
+            <mail-front>
+                <p>Name and Complete Address</p>
+                <p>$!ufFullName</p>
+                $!ufMailingFormattedAddress
+                <envelope-address>$!envelope_address</envelope-address>
+            </mail-front>
+            <mail-rear>
+                <p text-align="center" margin-bottom="8px">
+                    <font size="12px"><b>TAPE HERE</b></font>
+                </p>
+                #if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER")
+                    <p>This ballot was mailed on _______________(date) which is not later than the day before the election.</p>
+                    <p margin-top="20px">_________________________________________ _____________________</p>
+                    <p margin-top="-2px">Signed (Witness) Date</p>
+                    <p margin-top="10px">
+                        If you are submitting an application for a military ballot with your voted ballot, COMPLETE the application AND ENCLOSE IT IN THIS OUTER
+                        MAILING ENVELOPE, NOT IN THE INNER BALLOT ENVELOPE THAT CONTAINS YOUR VOTED BALLOT.
+                    </p>
+                #end
+            </mail-rear>
+        </return-envelope>
+    </page>
+</form>

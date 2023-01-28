@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common" >
+    <class name="FaceConfig" table="faces_config" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="urlPath" type="string" column="url_path" />
+        <property name="relativePrefix" type="string" column="path_prefix" />
+        <property name="defaultPath" type="boolean" column="`default`" />
+        <property name="scytlIntegration" type="boolean" column="scytl_integration" />
+        <property name="useEnvelope" type="boolean" column="envelope" />
+        <property name="useFaxPage" type="boolean" column="fax_page" />
+        <property name="useNotarizationPage" type="boolean" column="notarization_page" />
+        <property name="useBlankAddendumPage" type="boolean" column="blank_addendum_page" />
+        <property name="externalContentUrl" type="string" column="external_content_url" />
+        <property name="userValidationSkipFields" type="string" column="user_validation_skip_fields" />
+        <property name="drupalUrl" type="string" column="drupal_url"/>
+        <property name="useCaptcha" type="boolean" column="use_captcha" />
+        <property name="loginAllowed" type="boolean" column="login_allowed" />
+        <property name="autoCreateAccount" type="boolean" column="auto_create_account" />
+    </class>
+</hibernate-mapping>

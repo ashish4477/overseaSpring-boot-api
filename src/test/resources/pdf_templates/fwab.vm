@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+<form-id>186A (Rev. 10-2005)</form-id>
+
+<!-- additional text pages -->
+    $parsed_instructions
+
+<page master="questionary_page">
+    <form-title>VOTER'S DECLARATION/AFFIRMATION - FEDERAL WRITE-IN ABSENTEE BALLOT (FWAB)</form-title>
+
+    <skip number="2"/>
+
+    <question columns="10">
+        <title>I AM <i>(Mark only one)</i></title>
+        <values>
+            <value
+                #if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER" || $ufVoterType == "SPOUSE_OR_DEPENDENT" || $ufVoterType == "NATIONAL_GUARD_MEMBER")
+                    checked="true"
+                #end
+            >(a) A MEMBER OF THE UNIFORMED SERVICES OR MERCHANT MARINE ON ACTIVE DUTY, OR AN ELIGIBLE SPOUSE OR DEPENDENT</value>
+            <value
+                #if ($ufVoterType == "CITIZEN_OVERSEAS_TEMPORARILY")
+                    checked="true"
+                #end
+            >(b) A U.S. CITIZEN RESIDING OUTSIDE THE U.S. TEMPORARILY</value>
+            <value
+                #if ($ufVoterType == "CITIZEN_OVERSEAS_INDEFINITELY" || $ufVoterType == "CITIZEN_NEVER_RESIDED" )
+                    checked="true"
+                #end
+            >(c) A U.S. CITIZEN RESIDING OUTSIDE THE U.S. INDEFINITELY</value>
+        </values>
+    </question>
+    <question columns="10" one-line="true" title-columns="6">
+        <title><nb>I ALSO REQUEST VOTER REGISTRATION
+            <i>
+                (where permitted by state law)
+            </i>:</nb></title>
+        <values>
+            <value checked="true"> </value>
+        </values>
+    </question>
+    <question columns="30">
+        <title>MY INFORMATION (Required)</title>
+        <row>
+            <field colspan="18" field-number="1">
+                <title>TYPED OR PRINTED NAME <i>(Last, First, Middle)</i></title>
+                <value>$!ufFullName</value>
+            </field>
+            <field colspan="3">
+                <title>SUFFIX <i>(Jr., Sr., III, etc.)</i></title>
+                <value>$!ufSuffix</value>
+            </field>
+            <field colspan="9" field-number="2">
+                <title>PREVIOUS NAME <i>(if applicable)</i></title>
+                <value>$!ufPreviousName</value>
+            </field>
+        </row>
+        <row>
+            <field colspan="4" field-number="3">
+                <title>SEX</title>
+                <values>
+                    <value
+                        #if ($ufGender == "M")
+                                checked="true"
+                        #end
+                            >M</value>
+                    <value
+                        #if ($ufGender == "F")
+                                checked="true"
+                        #end
+                            >F</value>
+                </values>
+            </field>
+            <field colspan="2" field-number="4">
+                <title>RACE</title>
+                <value>$!ufEthnicity</value>
+            </field>
+            <field colspan="6" field-number="5">
+                <title>DATE OF BIRTH <i>(MMDDYYYY)</i></title>
+                <value no-margin="true">$!ufBirthMonth/$!ufBirthDate/$!ufBirthYear</value>
+            </field>
+            <field colspan="9" field-number="6">
+                <title>SOCIAL SECURITY NUMBER</title>
+                <value>$!ufSSN</value>
+            </field>
+            <field colspan="9" field-number="7">
+                <title>STATE DRIVER'S LICENSE OR I.D. NUMBER</title>
+                <value>$!ufDriverLicense</value>
+            </field>
+        </row>
+        <row>
+            <field colspan="15" field-number="8">
+                <title>TELEPHONE NUMBER <i>(No DSN number; include all international prefixes)</i></title>
+                <value>$!ufPhone</value>
+            </field>
+            <field colspan="15" field-number="9">
+                <title>FAX NUMBER <i>(No DSN number; include all international prefixes)</i></title>
+                <value>$!ufForwardingFax</value>
+            </field>
+        </row>
+        <row>
+            <field colspan="30"  field-number="10">
+                <title>EMAIL ADDRESS</title>
+                <value>$!ufEmail</value>
+            </field>
+        </row>
+    </question>
+    <question columns="14">
+        <title>MY VOTING RESIDENCE ADDRESS (Required)
+            <i><nb>
+                (Military, use legal residence. Overseas citizens, use last legal residence in U.S.)
+            </nb></i>
+        </title>
+        <row>
+            <field colspan="14" field-number="1">
+                <title>NUMBER AND STREET <i>(Cannot be a P.O. Box)</i></title>
+                <value>$!ufVotingAddress</value>
+            </field>
+        </row>
+        <row>
+            <field colspan="6" field-number="2">
+                <title>CITY, TOWN OR VILLAGE</title>
+                <value>$!ufVotingCity</value>
+            </field>
+            <field colspan="4" field-number="3">
+                <title>COUNTY</title>
+                <value>$!ufVotingRegion</value>
+            </field>
+            <field colspan="1" field-number="4">
+                <title>STATE</title>
+                <value>$!ufVotingState</value>
+            </field>
+            <field colspan="3" field-number="5">
+                <title>ZIP CODE</title>
+                <value>$!ufVotingZipCode</value>
+            </field>
+        </row>
+    </question>
+    <question columns="2">
+        <title>WHERE TO SEND MY VOTING MATERIALS</title>
+        <row>
+            <field field-number="1">
+                <title min-height="14">MY CURRENT ADDRESS <i>(Where I live now)</i> <b>(Required)</b></title>
+                <value min-height="80" template-name="out-address">$!ufCurrentFormattedAddress</value>
+            </field>
+            <field field-number="2">
+                <title>MY FORWARDING ADDRESS <i>(NOTE: Complete 4b. only if you do not want your ballot mailed to the address in Block 4a.)</i></title>
+                <value min-height="80" template-name="out-address">#if ($ufForwardingFormattedAddress) $!ufForwardingFormattedAddress #else <p></p>#end</value>
+            </field>
+        </row>
+    </question>
+    <question columns="10" one-line="true" title-columns="5">
+        <title>MY POLITICAL PARTY PREFERENCE
+            <i><nb>
+                (Optional, but may be required by states to register to vote in primary elections):
+            </nb></i></title>
+        <value min-height="15">$!ufPoliticalParty</value>
+    </question>
+    <question columns="10">
+        <title>
+            ADDITIONAL INFORMATION
+            <i><nb>
+                (Designate the period for which you want to receive ballots - see instructions for Block 6, paragraph (3). Consult the Voting Assistance Guide for other specific state instructions.)
+            </nb></i>
+        </title>
+        <value min-height="60">$!ufAdditionalInfo</value>
+    </question>
+    <affirmation>
+        <title>AFFIRMATION (Required)</title>
+        <sub-title>I swear or affirm, under penalty of perjury, that:</sub-title>
+        <date>$!date</date>
+        <signed>$!ufSigned</signed>
+        <items>
+            <item>I am a member of the Uniformed Services or merchant marine on active duty or an eligible spouse or dependent of such a member, or a U.S. citizen temporarily residing outside the U.S., or other U.S. citizen residing outside the U.S., and</item>
+            <item>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</item>
+            <item>I have not been convicted of a felony or other disqualifying offense or been adjudicated mentally incompetent, or if so, my voting rights have been reinstated, and</item>
+            <item>I am not registering, requesting a ballot, or voting in any other jurisdiction in the U.S., and</item>
+            <item>My signature and date below indicate when I completed this document, and</item>
+            <item>The information on this form is true and complete to the best of my knowledge.</item>
+        </items>
+        <bottom-line>I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury.</bottom-line>
+    </affirmation>
+</page>
+
+    #if( $include_blank_addendum_page eq "true" || $!ufAddendum ne "")
+    <page master="rava_addendum">
+        <form-title>VOTER'S DECLARATION/AFFIRMATION - FEDERAL WRITE-IN ABSENTEE BALLOT (FWAB)</form-title>
+        <name>$!ufFullName</name>
+        <e-mail>$!ufEmail</e-mail>
+        <country>$!ufVotingRegion</country>
+        <state>$!ufVotingState</state>
+        <date>$!date</date>
+        <signed>$!ufSigned</signed>
+
+        <value>
+            #if($!ufAddendum ne "")
+                $!ufAddendum
+            #else
+                DO NOT SUBMIT IF BLANK
+            #end
+        </value>
+    </page>
+    #end
+
+<page>
+    <font family="times">
+        <p text-align="center" border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="5px">
+            <font size="18"><b>OFFICIAL FEDERAL WRITE-IN ABSENTEE BALLOT</b></font>
+        </p>
+    <p border-top="1px solid" border-left="2px solid" border-right="2px solid" padding-bottom="5px" padding-left="5px">
+        <font size="10"><b>PRESIDENT/VICE PRESIDENT</b></font>
+        #if ($!ufPresident ne "")
+            <p padding-left="5px"><font size="12"> $!ufPresident</font></p>
+        #else
+            <p></p>
+        #end
+        </p>
+    <p border-top="1px solid" border-left="2px solid" border-right="2px solid" padding-bottom="5px" padding-left="5px">
+        <font size="10"><b>U.S. SENATOR*</b></font>
+        #if ($!ufSenator ne "")
+            <p padding-left="5px"><font size="12"> $!ufSenator</font></p>
+        #else
+            <p></p>
+        #end
+        </p>
+    <p border-top="1px solid" border-left="2px solid" border-right="2px solid" padding-bottom="5px" padding-left="5px">
+        <font size="10"><b>U.S. REPRESENTATIVE/DELEGATE**/RESIDENT COMMISSIONER**</b></font>
+        #if ($!frepresentative ne "")
+            <p padding-left="5px"><font size="12"> $!frepresentative</font></p>
+        #else
+            <p></p>
+        #end
+        </p>
+        <font size="8">
+            <p border-top="1px solid" border-left="2px solid" border-right="2px solid" padding-left="5px">
+                * Legal residents of the District of Columbia may vote only for President/Vice President and Delegate.
+            </p>
+            <p border-left="2px solid" border-right="2px solid" padding-left="5px">
+                ** Legal residents of American Samoa, Guam, Puerto Rico and the U.S. Virgin Islands may vote only for Delegate or Resident Commissioner to the Congress.
+            </p>
+        </font>
+        <p border-top="2px solid" border-left="2px solid" border-right="2px solid" text-align="center" padding="5px">
+            <font size="12"><b>ADDENDUM</b></font>
+        </p>
+        <p border-left="2px solid" border-right="2px solid" padding="5px">
+            <font size="9">
+                Some states allow the Federal Write-In Absentee Ballot to be used by military and overseas civilian voters in elections other than general elections or
+                for offices other than Federal offices. Consult your state section in the <i>Voting Assistance Guide</i> to determine your state's policy.
+                <i>If you are eligible to use this ballot to vote for offices/candidates other than those listed above</i>, please indicate in the spaces
+                provided below, the office for which you wish to vote (for example: Governor, Attorney General, Mayor, State Senator, etc.),
+                and the name and/or party affiliation of the candidate for whom you wish to vote.
+            </font>
+        </p>
+        <p border-left="2px solid" border-right="2px solid" border-bottom="2px solid" padding-bottom="20px">
+            <lines-header textL="OFFICE" textR="CANDIDATE NAME or PARTY AFFILIATION"/>
+          #set( $empty_lines = 16)
+          #macro( oneline $add_candidate )
+            #if ( $empty_lines == 0 )
+            </p>
+            </font>
+                <bottom-form-id/>
+            </page>
+            <page>
+            <font family="times">
+                <p text-align="center" border-top="2px solid" border-left="2px solid" border-right="2px solid" border-bottom="2px solid" padding="5px">
+                    <font size="12"><b>OFFICIAL FEDERAL WRITE-IN ABSENTEE BALLOT</b><i>(continuation)</i></font>
+                </p>
+            <p border-left="2px solid" border-right="2px solid" border-bottom="2px solid" padding-bottom="20px">
+                <lines-header textL="OFFICE" textR="CANDIDATE NAME or PARTY AFFILIATION"/>
+              #set( $empty_lines = 27)
+            #end
+            #set ( $delim_indx = $add_candidate.indexOf('|') )
+            #set ( $left_part = $add_candidate.substring(0, $delim_indx) )
+            #set ( $delim_indx = $delim_indx + 1 )
+            #set ( $right_part = $add_candidate.substring( $delim_indx ) )
+              <lines number="1" textL="$!left_part" textR="$!right_part"/>
+            #set( $empty_lines = $empty_lines - 1 )
+          #end
+
+          #if ( $ufAdditionalCandidate1 and $ufAdditionalCandidate1 ne "")
+            #oneline( $ufAdditionalCandidate1 )
+          #end
+          #if ( $ufAdditionalCandidate2 and $ufAdditionalCandidate2 ne "")
+            #oneline( $ufAdditionalCandidate2 )
+          #end
+          #if ( $ufAdditionalCandidate3 and $ufAdditionalCandidate3 ne "")
+            #oneline( $ufAdditionalCandidate3 )
+          #end
+          #if ( $ufAdditionalCandidate4 and $ufAdditionalCandidate4 ne "")
+            #oneline( $ufAdditionalCandidate4 )
+          #end
+          #if ( $ufAdditionalCandidate5 and $ufAdditionalCandidate5 ne "")
+            #oneline( $ufAdditionalCandidate5 )
+          #end
+          #if ( $ufAdditionalCandidate6 and $ufAdditionalCandidate6 ne "")
+            #oneline( $ufAdditionalCandidate6 )
+          #end
+          #if ( $ufAdditionalCandidate7 and $ufAdditionalCandidate7 ne "")
+            #oneline( $ufAdditionalCandidate7 )
+          #end
+          #if ( $ufAdditionalCandidate8 and $ufAdditionalCandidate8 ne "")
+            #oneline( $ufAdditionalCandidate8 )
+          #end
+          #if ( $ufAdditionalCandidate9 and $ufAdditionalCandidate9 ne "")
+            #oneline( $ufAdditionalCandidate9 )
+          #end
+          #if ( $ufAdditionalCandidate10 and $ufAdditionalCandidate10 ne "")
+            #oneline( $ufAdditionalCandidate10 )
+          #end
+          #if ( $ufAdditionalCandidate11 and $ufAdditionalCandidate11 ne "")
+            #oneline( $ufAdditionalCandidate11 )
+          #end
+          #if ( $ufAdditionalCandidate12 and $ufAdditionalCandidate12 ne "")
+            #oneline( $ufAdditionalCandidate12 )
+          #end
+          #if ( $ufAdditionalCandidate13 and $ufAdditionalCandidate13 ne "")
+            #oneline( $ufAdditionalCandidate13 )
+          #end
+          #if ( $ufAdditionalCandidate14 and $ufAdditionalCandidate14 ne "")
+            #oneline( $ufAdditionalCandidate14 )
+          #end
+          #if ( $ufAdditionalCandidate15 and $ufAdditionalCandidate15 ne "")
+            #oneline( $ufAdditionalCandidate15 )
+          #end
+          #if ( $ufAdditionalCandidate16 and $ufAdditionalCandidate16 ne "")
+            #oneline( $ufAdditionalCandidate16 )
+          #end
+          #if ( $ufAdditionalCandidate17 and $ufAdditionalCandidate17 ne "")
+            #oneline( $ufAdditionalCandidate17 )
+          #end
+          #if ( $ufAdditionalCandidate18 and $ufAdditionalCandidate18 ne "")
+            #oneline( $ufAdditionalCandidate18 )
+          #end
+          #if ( $ufAdditionalCandidate19 and $ufAdditionalCandidate19 ne "")
+            #oneline( $ufAdditionalCandidate19 )
+          #end
+          #if ( $ufAdditionalCandidate20 and $ufAdditionalCandidate20 ne "")
+            #oneline( $ufAdditionalCandidate20 )
+          #end
+          #if ( $ufAdditionalCandidate21 and $ufAdditionalCandidate21 ne "")
+            #oneline( $ufAdditionalCandidate21 )
+          #end
+          #if ( $ufAdditionalCandidate22 and $ufAdditionalCandidate22 ne "")
+            #oneline( $ufAdditionalCandidate22 )
+          #end
+          #if ( $ufAdditionalCandidate23 and $ufAdditionalCandidate23 ne "")
+            #oneline( $ufAdditionalCandidate23 )
+          #end
+          #if ( $ufAdditionalCandidate24 and $ufAdditionalCandidate24 ne "")
+            #oneline( $ufAdditionalCandidate24 )
+          #end
+          #if ( $ufAdditionalCandidate25 and $ufAdditionalCandidate25 ne "")
+            #oneline( $ufAdditionalCandidate25 )
+          #end
+          #if ( $ufAdditionalCandidate26 and $ufAdditionalCandidate26 ne "")
+            #oneline( $ufAdditionalCandidate26 )
+          #end
+          #if ( $ufAdditionalCandidate27 and $ufAdditionalCandidate27 ne "")
+            #oneline( $ufAdditionalCandidate27 )
+          #end
+          #if ( $ufAdditionalCandidate28 and $ufAdditionalCandidate28 ne "")
+            #oneline( $ufAdditionalCandidate28 )
+          #end
+          #if ( $ufAdditionalCandidate29 and $ufAdditionalCandidate29 ne "")
+            #oneline( $ufAdditionalCandidate29 )
+          #end
+          #if ( $ufAdditionalCandidate30 and $ufAdditionalCandidate30 ne "")
+            #oneline( $ufAdditionalCandidate30 )
+          #end
+          #if ( $ufAdditionalCandidate31 and $ufAdditionalCandidate31 ne "")
+            #oneline( $ufAdditionalCandidate31 )
+          #end
+          #if ( $ufAdditionalCandidate32 and $ufAdditionalCandidate32 ne "")
+            #oneline( $ufAdditionalCandidate32 )
+          #end
+          #if ( $ufAdditionalCandidate33 and $ufAdditionalCandidate33 ne "")
+            #oneline( $ufAdditionalCandidate33 )
+          #end
+          #if ( $ufAdditionalCandidate34 and $ufAdditionalCandidate34 ne "")
+            #oneline( $ufAdditionalCandidate34 )
+          #end
+          #if ( $ufAdditionalCandidate35 and $ufAdditionalCandidate35 ne "")
+            #oneline( $ufAdditionalCandidate35 )
+          #end
+          #if ( $ufAdditionalCandidate36 and $ufAdditionalCandidate36 ne "")
+            #oneline( $ufAdditionalCandidate36 )
+          #end
+          #if ( $ufAdditionalCandidate37 and $ufAdditionalCandidate37 ne "")
+            #oneline( $ufAdditionalCandidate37 )
+          #end
+          #if ( $ufAdditionalCandidate38 and $ufAdditionalCandidate38 ne "")
+            #oneline( $ufAdditionalCandidate38 )
+          #end
+          #if ( $ufAdditionalCandidate39 and $ufAdditionalCandidate39 ne "")
+            #oneline( $ufAdditionalCandidate39 )
+          #end
+          #if ( $ufAdditionalCandidate40 and $ufAdditionalCandidate40 ne "")
+            #oneline( $ufAdditionalCandidate40 )
+          #end
+          #if ( $ufAdditionalCandidate41 and $ufAdditionalCandidate41 ne "")
+            #oneline( $ufAdditionalCandidate41 )
+          #end
+          #if ( $ufAdditionalCandidate42 and $ufAdditionalCandidate42 ne "")
+            #oneline( $ufAdditionalCandidate42 )
+          #end
+          #if ( $ufAdditionalCandidate43 and $ufAdditionalCandidate43 ne "")
+            #oneline( $ufAdditionalCandidate43 )
+          #end
+            <lines number="$empty_lines"/>
+        </p>
+    </font>
+    <bottom-form-id/>
+</page>
+<page master="fwab_privacy_statement" columns="2">
+    <form-title>FEDERAL WRITE-IN ABSENTEE BALLOT INSTRUCTIONS</form-title>
+    <row>
+        <cell colspan="2">
+            <font size="9px" family="times">
+                <p margin-top="10px" text-align="center"><b>PRIVACY ACT STATEMENT</b></p>
+                <p margin="10px">
+                    <b>AUTHORITY:</b>
+                    42 USC 1973ff, "Title 1 - Registration and Voting By Absent Uniformed Services
+                    Voters and Overseas Voters in Elections for Federal Office."
+                </p>
+                <p margin="10px">
+                    <b>PRINCIPAL PURPOSE:</b>
+                    Serves as a Federal Write-In Absentee Ballot for general elections or other elections provided by
+                    law or special provisions for all persons covered by the Uniformed and Overseas Citizens Absentee Voting Act (UOCAVA).
+                </p>
+                <p margin="10px">
+                    <b>DISCLOSURE:</b>
+                    Voluntary; however failure to furnish requested personal information may result in the Federal
+                    Write-In Absentee Ballot not being recognized and therefore not counted.
+                </p>
+            </font>
+        </cell>
+    </row>
+    <row no-border="true">
+        <cell colspan="2">
+            <font size="9px" family="times">
+                <p margin="10px">
+                    Please read instructions before completion. If you have any questions, consult your Unit Voting Assistance Officer or Embassy/Consulate
+                    Voting Assistance Officer, the Voting Assistance Guide, or http://www.fvap.gov. Type or print legibly.
+                </p>
+            </font>
+        </cell>
+    </row>
+    <row>
+        <cell>
+            <font size="9px" family="times">
+                <p margin="10px"><b>
+                    1. INSTRUCTIONS FOR COMPLETING THE VOTER'S DECLARATION/AFFIRMATION:
+                </b></p>
+                <p margin="10px">
+                    <b>Block 1b.</b>
+                    Some states may accept the Voter's Declaration/Affirmation as a registration form if you have not registered
+                    previously in that jurisdiction. See <i>the Voting Assistance Guide</i>. For those states that do not accept the Voter's
+                    Declaration/Affirmation as a request form and you have not previously submitted a Federal Post Card Application, your
+                    ballot may not be counted.
+                </p>
+                <p margin="10px">
+                    <b>Block 2. MY INFORMATION. Block 2d. RACE.</b>
+                    This information is requested from some states for statistical purposes by the
+                    Department of Justice in its enforcement of the Voting Rights Act and the National Voter Registration Act.
+                </p>
+                <p margin="10px">
+                    <b>Block 3. MY VOTING RESIDENCE ADDRESS.</b> Enter the complete legal voting residence address where you
+                    ACTUALLY LIVED in the state or territory. Your right to vote in your state and determination of
+                    your voting precinct depend on the physical location of your residence while you were in the state.
+                    DO NOT USE A POST OFFICE BOX NUMBER. In an area with no street names, indicate route name and
+                    number and box number. Also provide any additional information necessary to physically describe
+                    your residence location. This voting residence address must be the same as the voting residence on the
+                    application for your regular absentee ballot previously submitted.
+                </p>
+                <p margin="10px">
+                    <b>Block 4. WHERE TO SEND MY VOTING MATERIALS. Block 4a.</b>
+                    Enter the complete mailing address where you are now living. <b>Block 4b.</b>
+                    If you have an alternate address or an address of a mail forwarding service that delivers your
+                    mail more quickly, enter that address here.
+                </p>
+                <p margin="10px">
+                    <b>Block 5. MY POLITICAL PARTY PREFERENCE.</b> This is an optional entry, however, this information is required
+                    by most states in order to vote in primary elections. Consult the <i>Voting Assistance Guide</i> for any
+                    specific state information required.
+                </p>
+                <p margin="10px">
+                    <b>Block 6. ADDITIONAL INFORMATION.</b> Provide any information that may assist the local election official in accepting this ballot.
+                </p>
+                <p margin-bottom="40px">
+
+                </p>
+            </font>
+        </cell>
+        <cell>
+            <font size="9px" family="times">
+                <p margin="10px">
+                    <b>Block 7. AFFIRMATION. Ensure that you read the oath,sign, and enter the date you completed the
+                        form in the spaces provided.</b> Not all states require a witness or notary, and state laws vary
+                    regarding the voting of convicted felons. Consult your state section of the Voting Assistance
+                    Guide or your Voting Assistance Officer for your state's requirements.
+                </p>
+                <p margin="10px"><b>
+                    2. INSTRUCTIONS FOR COMPLETING AND SUBMITTING THE OFFICIAL FEDERAL WRITE-IN ABSENTEE BALLOT:
+                </b></p>
+                <p margin="10px">
+                    <b>a.</b> For each office for which you vote, write in either a candidate's name or political party designation.
+                    If your state permits, you may vote for other offices in the spaces provided under the "ADDENDUM" section.
+                </p>
+                <p margin="10px">
+                    <b>b.</b> Once the ballot is complete, fold and place it in a blank envelope and seal - this will be the security envelope for the ballot.
+                    <b>PLACE ONLY THE VOTED BALLOT IN THE SECURITY ENVELOPE AND DO NOT WRITE ON THE SECURITY ENVELOPE.</b>
+                </p>
+                <p margin="10px">
+                    <b>c.</b> Insert the sealed Security Envelope and the Voter's Declaration/Affirmation into another envelope and seal.
+                </p>
+                <p margin="10px">
+                    <b>d.</b> If mailed in U.S. Mail, APO/FPO or Diplomatic Pouch,affix proper postage. If mailed in a foreign postal system,
+                    international airmail postage must be affixed. In the return address section in the upper left hand corner of the mailing envelope,
+                    enter your name and current complete military or overseas mailing address. In the "TO" section in the center of the mailing envelope,
+                    enter the name and mailing address of your city, township, village, county or state election official. Consult the <i>Voting Assistance
+                    Guide</i> for correct address. This must be the same election official where you sent your application for an absentee ballot.
+                </p>
+                <p margin="10px">
+                    <b>e.</b> Some states allow the electronic transmission of FWABs. Consult the <i>Voting Assistance Guide</i> for your state or territory's
+                    procedures. Consult the Voting Assistance Guide for specific state and territorial procedures.
+                </p>
+            </font>
+        </cell>
+    </row>
+</page>
+
+    #if ( $include_notarization_page eq "true" )
+    <page>
+        <font  size="12px" family="TrebuchetMS" line-height="5mm">
+            <p text-align="center" border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="5px">
+                <font size="15"><b>FWAB Notarization, Oath and Witness Requirements</b></font>
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Alabama</b> - Must be sworn to by a notary public, commissioned officer or other authorized person, or two witnesses.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Alaska</b> - Must be sworn to by a notary public, commissioned officer or other authorized person, or one witness.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>American Samoa</b> - Must be sworn to by a notary public, commissioned officer or other authorized person.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Guam</b> - Must be sworn to by a notary public, commissioned officer or other authorized person.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Hawaii</b> - A self-subscribing oath is required to affirm the information entered on the voter's declaration is true and correct.  If you are unable to sign, your mark must be witnessed by another individual 18 years of age or older.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Louisiana</b> - Must be signed and dated in presence of two witnesses, 18 years of age or older.  Witness signature must include printed name and address.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Mississippi</b> - Must be sworn by a commissioned officer, non-commissioned officer, petty officer or other person authorized to administer oaths.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>North Carolina</b> - Must be signed and dated in presence of two witnesses, 18 years of age or older.  Witness signatures must include printed names and addresses.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Puerto Rico</b> - Civilian Voters: Students must obtain the signature of an official in the school's registrar's office; Dependents, agricultural workers and airline crew members must swear an oath before a notary public or person authorized by law to administer the oath; Overseas electors must obtain the signature of a consular officer.
+            <p margin-top="12px">Military members, their spouses and children:  The signature of a commissioned officer must be obtained. Merchant Marine members must obtain the signature of the highest officer on board.</p>
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>South Carolina</b> - Must be signed and dated in the presence of one witness.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Vermont</b> - The Vermont Constitution requires each voter to take the Vermont Voter’s oath the first time that a person registers to vote in Vermont.  State law now allows a person to attest for him or herself that the oath has been taken by signing an attestation. Please add to your form or the signed addendum:  “I attest that I have taken the Vermont voter’s oath” and your signature.
+            </p>
+            <p border-top="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Virginia</b> - Must be signed and dated in presence of one witness, 18 years of age or older.  Witness signature must include printed name and address on the signature line or ballot may not be accepted..
+            </p>
+            <p border-top="2px solid" border-bottom="2px solid" border-left="2px solid" border-right="2px solid" padding="7px">
+                <b>Wisconsin</b> - Must be signed in the presence of one adult U.S. citizen (18 years of age or older).  Include complete address of Witness (street, city, postal code, and country).
+            </p>
+            <p>
+                <b>* If your state is not on this list, it has no notarization, oath or witness requirements for the FWAB.</b>
+            </p>
+        </font>
+    </page>
+    #end
+
+    #if ( $include_fax_page eq "true" )
+    <page master="fwab_fax_form">
+        <form-title>Official Election Materials - Electronic Transmission Sheet</form-title>
+        <form-sub-title>Transmittal (Cover) Sheet from Absentee Voter to Local Election Official</form-sub-title>
+        <question columns="40">
+            <title>TO:</title>
+            <row>
+                <field colunms="38">
+                    <title>City/County Board of Elections</title>
+                    <value>#if(!$leo.lovc.firstName.equals(""))$!leo.lovc.firstName $!leo.lovc.lastName#end #if($leo.lovc.firstName.equals("") && !$leo.leo.firstName.equals(""))$!leo.leo.firstName $!leo.leo.lastName#end </value>
+                </field>
+                <field colunms="2">
+                    <title>State</title>
+                    <value>$!leo.mailing.state</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="40">
+                    <title>Telephone Number</title>
+                    <value>#if(!$leo.lovcPhone.equals(""))$!leo.lovcPhone#end #if($leo.lovcPhone.equals("") && !$leo.leoPhone.equals(""))$!leo.leoPhone#end</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="40">
+                    <title>Fax Number</title>
+                    <value>#if(!$leo.lovcFax.equals(""))$!leo.lovcFax#end #if($leo.lovcFax.equals("") && !$leo.leoFax.equals(""))$!leo.leoFax#end</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="28">
+                    <title>City</title>
+                    <value>$!leo.mailing.city</value>
+                </field>
+                <field colunms="2">
+                    <title>State</title>
+                    <value>$!leo.mailing.state</value>
+                </field>
+                <field colunms="10">
+                    <title>Zip Code</title>
+                    <value>$!leo.mailing.zip#if(!$leo.mailing.zip4.equals(""))-$!leo.mailing.zip4#end</value>
+                </field>
+            </row>
+        </question>
+        <question columns="40">
+            <title>From:</title>
+            <row>
+                <field colunms="40">
+                    <title>Last name</title>
+                    <value>$!ufLastName</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="25">
+                    <title>First Name</title>
+                    <value>$!ufFirstName</value>
+                </field>
+                <field colunms="15">
+                    <title>Middle Name</title>
+                    <value>$!ufMiddleName</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="40">
+                    <title>Telephone Number</title>
+                    <value>$!ufPhone</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="40">
+                    <title>Fax Number</title>
+                    <value>$!ufForwardingFax</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="40">
+                    <title>Mailing Address</title>
+                    <value>$!ufMailingAddress</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="25">
+                    <title>City</title>
+                    <value>$!ufMailingCity</value>
+                </field>
+                <field colunms="15">
+                    <title>State or Country</title>
+                    <value>$!ufMailingCountry</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="25">
+                    <title>Unit/Ship</title>
+                    <value><!-- ?? TODO --></value>
+                </field>
+                <field colunms="15">
+                    <title>Postal Code/APO/FPO/DPO</title>
+                    <value>$!ufMailingPostalCode</value>
+                </field>
+            </row>
+            <row>
+                <field colunms="40">
+                    <title>Email Address</title>
+                    <value>$!ufEmail</value>
+                </field>
+            </row>
+        </question>
+
+        <bottom>
+            <font size="10">
+                <p margin-top="10px"  text-align="center">
+                    ATTENTION VOTERS - YOU MUST ALSO SEND IN YOUR PAPER FWAB:  Faxing your FWAB in advance of mailing is optional. Your hardcopy/paper, original, signed FWAB must be sent to your election office to be valid.
+                </p>
+                <p margin-top="10px"  text-align="center">
+                    Before faxing please verify your state's Voter Materials Transmission Options in the State Information Directory on the Overseas Vote Foundation, or partner website, that you visited.
+                </p>
+                <p margin-top="10px"  text-align="center">
+                    Service (Circle One): Army Navy Air Force Marine Corps Coast Guard Other _______________________________
+                </p>
+                <p margin-top="10px"  text-align="center">
+                    <b>Number of pages being transmitted, including this sheet ____________</b>
+                </p>
+                <p border-top="1px solid"  border-left="1px solid"  border-bottom="1px solid"  border-right="1px solid"  text-align="center" padding="10px">
+                <p>If a VOTED BALLOT is being faxed or emailed as a scanned document, sign below:</p>
+                <p><i>"I understand that by faxing/emailing my voted ballot I am voluntarily waiving my right to a secret ballot."</i></p>
+                <p margin-top="10px">Signature ___________________________________________ Date ______________________</p>
+                </p>
+
+                <p margin-top="70px">
+                <p>This Federal Write-in Absentee Ballot was prepared with online assistance from Overseas Vote Foundation:</p>
+                <p><a href="www.overseasvotefoundation.org">www.overseasvotefoundation.org</a></p>
+                </p>
+            </font>
+        </bottom>
+    </page>
+    #end
+    #if ( $include_envelope_page eq 'true' )
+    <page master="envelope">
+        <security-envelope>
+            <title>SECURITY ENVELOPE FOR SPECIAL FEDERAL</title>
+            <front-block>
+                <p><font size="12pt"><b>BALLOT ENVELOPE FOR SPECIAL FEDERAL VOTER - AFFIRMATION</b></font></p>
+                <p>I swear or affirm, under penalty of perjury, that:</p>
+                <ol type="a.">
+                    #if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER")
+                        <li>I am a member of the Uniformed Services or merchant marine on active duty or an eligible spouse or dependent of such a member, or a U.S. citizen temporarily residing outside the U.S., or other U.S. citizen residing outside the U.S., and</li>
+                        <li>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
+                    #else
+                        <li>I am a United States citizen residing outside the United States, and</li>
+                        <li>I am at least eighteen years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</li>
+                    #end
+                    <li>I have not been convicted of a felony or other disqualifying offense or been adjudicated mentally incompetent, or if so, my voting rights have been reinstated, and</li>
+                    <li>I am not registering, requesting a ballot, or voting in any other jurisdiction in the U.S., and</li>
+                    <li>My signature and date below indicate when I completed this document, and</li>
+                    <li>The information on this form is true and complete to the best of my knowledge.</li>
+                </ol>
+                <p>I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of a crime.</p>
+                <p>Date __________ 20_______ _________________________________________________</p>
+                <p margin-top="-2px" margin-left="5cm">Signature or mark of voter</p>
+                <p>_________________________________________________________________________________________</p>
+                <p margin-top="-2px">Signature of Witness (required only if voter does not sign his or her own name)</p>
+                <p>__________________________________________________________________________________________</p>
+                <p margin-top="-2px">Address of Witness to Mark (Street and number, or R.F.D.)</p>
+                <p>__________________________________________________________________________________________</p>
+                <p margin-top="-2px">(City, Village or Town)</p>
+                <p>__________________________________________________________________________________________</p>
+                <p margin-top="-2px">(County, State, ZIP)</p>
+            </front-block>
+            <rear-block>
+                <p text-align="center"><font size="12pt">BALLOT ENVELOPE FOR SPECIAL FEDERAL VOTER</font></p>
+                <rear-table>
+                    <rear-cell>
+                        <p  text-align="center">IMPORTANT TO FEDERAL VOTER:</p>
+                        <p  text-align="center">YOU MUST SIGN THE AFFIRMATION ON THIS ENVELOPE</p>
+                        <p>This envelope with ballot enclosed must reach the Board of Elections not later
+                            than 9 p.m. on Election Day, if delivered in person, OR be postmarked not
+                            later than the day before election and received at the Board of Elections not
+                            later than seven days after a primary election or 13 days after a general or
+                            special election, for your vote to be counted. Do not enclose an application for
+                            a special federal ballot in this inner ballot envelope that contains your voted ballot.</p>
+                    </rear-cell>
+                    <rear-cell border="1px solid">
+                        <p>TO BE FILLED IN BY THE BOARD OF ELECTIONS:</p>
+                        <p>For__________ Election __________ 20______</p>
+                        <p>Name of</p>
+                        <p>voter__________________________________________________________</p>
+                        <p>Voting Residence:</p>
+                        <p>Street and number _____________________________</p>
+                        <p>City or town __________________________________</p>
+                        <p>County _______________________________________</p>
+                        <p>Assembly District or Ward _________________ Election District___________</p>
+                    </rear-cell>
+                </rear-table>
+            </rear-block>
+        </security-envelope>
+    </page>
+
+    <page master="envelope">
+        <return-envelope>
+            <title>#if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER")MILITARY#end BALLOT RETURN ENVELOPE</title>
+            <mail-front>
+                <p>Name and Complete Address</p>
+                <p>$!ufFullName</p>
+                $!ufMailingFormattedAddress
+                <envelope-address>$!envelope_address</envelope-address>
+            </mail-front>
+            <mail-rear>
+                <p text-align="center" margin-bottom="8px">
+                    <font size="12px"><b>TAPE HERE</b></font>
+                </p>
+                #if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER")
+                    <p>This ballot was mailed on _______________(date) which is not later than the day before the election.</p>
+                    <p margin-top="20px">_________________________________________ _____________________</p>
+                    <p margin-top="-2px">Signed (Witness) Date</p>
+                    <p margin-top="10px">
+                        If you are submitting an application for a military ballot with your voted ballot, COMPLETE the application AND ENCLOSE IT IN THIS OUTER
+                        MAILING ENVELOPE, NOT IN THE INNER BALLOT ENVELOPE THAT CONTAINS YOUR VOTED BALLOT.
+                    </p>
+                #end
+            </mail-rear>
+        </return-envelope>
+    </page>
+    #end
+</form>

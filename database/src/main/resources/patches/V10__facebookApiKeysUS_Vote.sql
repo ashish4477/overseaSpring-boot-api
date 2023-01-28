@@ -1,0 +1,3 @@
+INSERT INTO `facebook_api` (`id`, `app_key`, `app_secret`, `domain`, `updated`, `active`) VALUES (4, '346635388698661', '87c7c99298c8be1d6217fce4930b9ba2', 'www.usvote', '2012-01-23 14:41:54', 1);
+INSERT INTO `facebook_api` (`id`, `app_key`, `app_secret`, `domain`, `updated`, `active`) VALUES (5, '228164027265210', '4919cf3b0e0f1631a94f1315a7f5b465', 'usvotefoundation.org', '2012-01-23 14:45:06', 1);
+INSERT INTO `facebook_api` (`id`, `app_key`, `app_secret`, `domain`, `updated`, `active`) VALUES (6, '281771861884716', '66984631368d8ef2f878ba267994d2be', 'staging.usvotefoundation.org', '2012-01-23 14:45:06', 1);

@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<dataset>
+	<rd_scheduled_reports id="1" user_id="1" report_id="1" duration="MONTHLY" repeat_interval="MONTHLY" next_execution_date="2912-03-06" last_sent_date="2012-03-06" /> 
+</dataset>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common">
+    <class name="Address" table="addresses" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="addressTo" type="string" column="address_to" />
+        <property name="street1" type="string" />
+        <property name="street2" type="string" />
+        <property name="city" type="string" />
+        <property name="state" type="string" />
+        <property name="zip" type="string" />
+        <property name="zip4" type="string" />
+    </class>
+
+</hibernate-mapping>

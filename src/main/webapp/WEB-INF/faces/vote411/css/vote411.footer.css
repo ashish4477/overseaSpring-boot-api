@@ -1,0 +1,181 @@
+@import url("https://use.typekit.net/ogt3gzp.css");
+
+/* GENERIC */
+
+.container {
+    margin: auto;
+    max-width: 1280px;
+}
+
+.container::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+img {
+    height: auto;
+    vertical-align: top;
+}
+
+/* TYPOGRAPHY */
+
+.small-text {
+    font-size: 0.75em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+body {
+    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0 0 0.6875em 0;
+}
+
+a {
+    line-height: 1.285;
+    text-decoration: none;
+    transition: color 150ms ease;
+    background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: rift, sans-serif;
+    margin: 0 0 0.6875em 0;
+    font-weight: bold;
+}
+
+/* TOP SECTION */
+
+.uvf-footer {
+    font-size: .8rem;
+}
+
+.election-day-problem-footer-outer {
+    background: linear-gradient(142deg, #43A875, #09718A);
+    padding: 2rem 1rem;
+    color: white;
+}
+
+.election-day-problem-footer-outer .row div h2 {
+    margin-bottom: 0.25rem;
+}
+
+.election-day-problem-footer-outer .row div div {
+    margin-bottom: 0.25rem;
+}
+
+.election-day-problem-footer-outer .election-day-problem-footer-content h2 {
+    font-size: 2rem;
+}
+
+.election-day-problem-footer-outer .election-day-title {
+    display: flex;
+    align-items: center;
+}
+
+.election-day-problem-footer-outer .election-day-title svg {
+    display: block;
+    margin-left: .5rem;
+    width: 20px;
+    height: 20px;
+}
+
+/* BOTTOM SECTION */
+
+.main-footer-outer {
+    text-align: center;
+    background-color: #023150;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.main-footer-outer .align-left {
+    text-align: left;
+}
+
+.main-footer-outer .main-footer-content {
+    color: #FBFBFB;
+}
+
+.main-footer-outer .main-footer-content > .row:first-of-type {
+    border-bottom: 1px solid #174B6B;
+}
+
+.main-footer-outer .main-footer-content > .row {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.main-footer-outer .main-footer-content .votelogo {
+    max-width: 150px;
+    padding-bottom: 15px;
+}
+
+.main-footer-outer .main-footer-content .webby-award-logo {
+    margin: 20px 0;
+}
+
+.main-footer-outer .main-footer-content .main-footer-list {
+    font-size: .875rem;
+    line-height: 1.571;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-footer-outer .main-footer-content .main-footer-list li {
+    padding-bottom: .625em;
+}
+
+.main-footer-outer .main-footer-content a {
+    color: #FBFBFB;
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.main-footer-outer .main-footer-content h2 {
+    color: #94a8b2;
+    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.571;
+}
+
+.main-footer-outer .main-footer-content .main-footer-list__facebook::before {
+    vertical-align: middle;
+    margin-right: .5rem;
+    content: url("images/fb-share.svg");
+}
+
+.main-footer-outer .main-footer-content .main-footer-list__instagram::before {
+    vertical-align: middle;
+    margin-right: .5rem;
+    content: url("images/ig-share.svg");
+}
+
+.main-footer-outer .main-footer-content .main-footer-list__twitter::before {
+    vertical-align: middle;
+    margin-right: .5rem;
+    content: url("images/twitter-share.svg");
+}
+
+.main-footer-outer .main-footer-content .main-sponsor {
+    max-width: 340px;
+}
+
+.main-footer-outer .main-footer-content a.link-legal {
+    font-weight: normal;
+    font-size: .75em;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+    .main-footer-outer {
+        text-align: left;
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.migration">
+    <class name="MigrationId" table="migration_ids" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="objectId" type="long" column="object_id"/>
+        <property name="migrationId" type="long" column="migration_id"/>
+        <property name="version" type="int" column="version"/>
+        <property name="className" type="string" column="class_name"/>
+    </class>
+
+</hibernate-mapping>

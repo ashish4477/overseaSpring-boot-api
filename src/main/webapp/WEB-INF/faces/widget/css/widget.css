@@ -1,0 +1,253 @@
+/*
+red: #b20837;
+blue: #002e62;
+*/
+
+/* Core Bootstrap overrides */
+
+.center-block{float:none;}
+.btn {
+	text-transform:uppercase;
+	background-color:#002e62;
+	border-radius:0;
+	border:none;
+	color:#fff;
+}
+
+.jumbotron .btn{background-color:#b20837;}
+
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {color:#002e62;}
+
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary{ background-color:#128ac3;}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:active {background-color: #128AC3;}
+
+.navbar-inverse .navbar-toggle{ border-color:#fff;}
+
+/* Admin Menu */
+
+
+body {
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px){ 	
+	#navbar.nav>li a:after{
+		content: "";
+		position: absolute;	
+		left:0;
+		height: 60%;
+		width: 1px;
+		max-width: 1px;
+		background-color: #fff;
+		top: 20%;
+		padding:0
+		border:none;
+	}
+
+	#navbar li:first-child a:after{background-color:transparent;}
+
+	#navbar.navbar-nav > li > a {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+@media (min-width: 850px){ 
+	#navbar.navbar-nav > li > a {
+		padding-left:25px;
+		padding-right:25px;
+	}
+}
+
+.header {padding-top:12px;}
+
+.logo {
+  margin-right: 20px;
+  margin-left:-10px;
+  width: 130px;
+  position: relative;
+  top: 8px;
+}
+
+.header h2 {
+	margin-top:2%;
+	font-size:28px;
+}
+
+.header h2 a {color:#002e62;}
+
+.social-header .navbar-nav>li>a{ 
+	margin-top:13px;
+	padding:5px;
+}
+
+.navbar-fixed-top.header .container{padding-top:5px;}
+
+.second-navbar {top:110px;}
+.navbar-inverse {
+	background-color:#002e62;
+	border:none;
+  	z-index: 10;
+}
+
+#navbar.nav>li>a {
+	color: #fff;
+	font-size:15px;
+}
+
+#navbar a {white-space: nowrap;}
+
+#navbar a:hover, #navbar a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    cursor: pointer;
+    color: #337ab7 !important;
+    background-color: #D8EEFB;
+}
+
+.main-navigation {max-width:1100px;}
+
+.navbar-toggle.collapse {text-align: center;}
+
+.header .nav-pills.nav-stacked.nav>li>a{
+	background-color:#b20837;
+	color:#fff;
+	border-radius:0;
+	padding-top:5px !important;
+	padding-bottom:5px !important;
+	margin-bottom:10px;
+	text-transform:uppercase;
+	font-size:12px;
+}
+
+.header .account {
+	margin-top:4px;
+	padding-right:0;
+}
+
+.jumbotron {
+	margin-top:-8px;
+	margin-bottom:0;
+	padding-top:0;
+	background:url(../img/overseas.jpg) no-repeat top center;
+	min-height:475px;
+	height:auto;
+}
+
+.container-fluid.registration{background-color:#b20837;}
+
+.container-fluid h1{
+	text-transform:uppercase;
+	color:#fff;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-right:10px;
+	font-size:24px;
+}
+
+.container-fluid.registration .form-control{ margin-top:23px;}
+
+.container-fluid.registration .col-sm-1{
+	padding-left:0;
+	margin-top:23px;
+}
+
+.services .col-xs-12 {text-align:center;}
+
+
+/* Screen adjustments */
+
+@media (min-width: 766px) AND (max-width: 1198px) {
+	.header h2{font-size: 20px;}
+	.header h3{position:relative; top:-12px;}
+
+}
+
+@media (min-width: 768px) {
+	.container {
+    width: auto;
+    padding:0;
+  }
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+	}
+
+  /*.jumbotron [class*='col-']{padding-top: 75px;} */
+}
+
+@media (max-width: 768px) {
+	.row.first{margin-right:0; margin-left:0;}
+	.navbar .navbar-collapse {text-align: center !important;}
+	.header h2{
+		font-size:125%;
+		margin-top:2%;
+	}
+
+	.container-fluid.registration .form-control,
+	.container-fluid.registration .col-sm-1{margin-top:0;}
+	.container-fluid.registration .col-sm-1{margin-bottom:15px;}
+
+	.registration .col-xs-10 {padding-left:0;}
+	.registration [class*='col-'] label{float:none !important;}
+
+	.jumbotron{margin-top: -25px;}
+}
+
+@media (max-width: 480px) {
+	.row{
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
+	.header h2{
+		font-size:100%;
+		margin-top:2%;
+	}
+	
+	.header .col-xs-12{padding:0;}
+	
+	.jumbotron{
+		min-height: 307px;
+		background-size: 1000px auto;
+		background-position-x: -375px;
+    	margin-top: -25px;
+	}
+	
+	.jumbotron .container{
+		padding-left: 0;
+		width: 238px;
+		float: left;
+	}
+	
+	.container-fluid h1{
+		font-size:130%;
+		text-align:center;
+	}
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+}
+

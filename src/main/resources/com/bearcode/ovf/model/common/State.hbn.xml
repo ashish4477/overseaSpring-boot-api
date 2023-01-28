@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common" >
+    <class name="State" table="states" lazy="false">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string" />
+        <property name="abbr" type="string" column="abbr" />
+        <property name="fipsCode" type="int" column="fips_code" />
+    </class>
+</hibernate-mapping>

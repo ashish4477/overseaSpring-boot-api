@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common">
+    <class name="UserAddress" table="user_addresses" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="addressTo" type="string" column="address_to" />
+        <property name="street1" type="string" />
+        <property name="street2" type="string" />
+        <property name="city" type="string" />
+        <property name="state" type="string" />
+        <property name="zip" type="string" />
+        <property name="zip4" type="string" />
+        <property name="country" type="string" />
+        <property name="county" type="string" />
+        <property name="description" type="string"/>
+		<property name="type" column="type">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.common.AddressType</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+			</type>
+		</property>
+    </class>
+
+    <class name="WizardResultAddress" table="wizard_result_addresses" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="addressTo" type="string" column="address_to" />
+        <property name="street1" type="string" />
+        <property name="street2" type="string" />
+        <property name="city" type="string" />
+        <property name="state" type="string" />
+        <property name="zip" type="string" />
+        <property name="zip4" type="string" />
+        <property name="country" type="string" />
+        <property name="county" type="string" />
+        <property name="description" type="string"/>
+		<property name="type" column="type">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.common.AddressType</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+			</type>
+		</property>
+    </class>
+
+</hibernate-mapping>

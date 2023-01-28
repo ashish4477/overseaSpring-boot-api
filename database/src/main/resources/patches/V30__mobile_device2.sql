@@ -1,0 +1,1 @@
+ALTER TABLE `pdf_answers` ADD COLUMN `mobile` TINYINT(4) NOT NULL DEFAULT "0" AFTER `party`;

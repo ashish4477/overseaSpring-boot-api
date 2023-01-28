@@ -1,0 +1,46 @@
+footer.footer {
+  padding: 130px 0 0 0;
+  margin: 0 -15px;
+  text-align: center;
+
+  #block-menu-menu-footer {
+    margin: 0 auto;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+
+        a {
+          padding: 5px 25px;
+          font-size: 13px;
+          color: $secondary-font-color;
+          text-decoration: none;
+
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  #block-block-2 {
+    background: $primary-font-color;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+
+    .copyright {
+      margin: 0 auto;
+      font-size: 14px;
+      font-weight: normal;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

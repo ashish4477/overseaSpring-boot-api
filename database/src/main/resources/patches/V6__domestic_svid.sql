@@ -1,0 +1,31 @@
+ALTER TABLE `state_voter_info`
+   ADD COLUMN `domestic_notes` text AFTER `citizen_notes`,
+   ADD COLUMN `absentee_requirements` text AFTER `domestic_notes`,
+   ADD COLUMN `absentee_id_req` text AFTER `absentee_requirements`,
+   ADD COLUMN `early_requirements` text AFTER `absentee_id_req`,
+   ADD COLUMN `early_id_req` text AFTER `early_requirements`,
+   ADD COLUMN `registration_requirements` text AFTER `early_id_req`,
+   ADD COLUMN `registration_id_req` text AFTER `registration_requirements`,
+   ADD COLUMN `inperson_id_req` text AFTER `registration_id_req`,
+   ADD COLUMN `domestic_reg_email` tinyint(4) DEFAULT "0" AFTER `military_return_tel`,
+   ADD COLUMN `domestic_reg_fax` tinyint(4) DEFAULT "0" AFTER `domestic_reg_email`,
+   ADD COLUMN `domestic_reg_inperson` tinyint(4) DEFAULT "0" AFTER `domestic_reg_fax`,
+   ADD COLUMN `domestic_reg_post` tinyint(4) DEFAULT "0" AFTER `domestic_reg_inperson`,
+   ADD COLUMN `domestic_reg_tel` tinyint(4) DEFAULT "0" AFTER `domestic_reg_post`,
+   ADD COLUMN `domestic_ballot_email` tinyint(4) DEFAULT "0" AFTER `domestic_reg_tel`,
+   ADD COLUMN `domestic_ballot_fax` tinyint(4) DEFAULT "0" AFTER `domestic_ballot_email`,
+   ADD COLUMN `domestic_ballot_inperson` tinyint(4) DEFAULT "0" AFTER `domestic_ballot_fax`,
+   ADD COLUMN `domestic_ballot_post` tinyint(4) DEFAULT "0" AFTER `domestic_ballot_inperson`,
+   ADD COLUMN `domestic_ballot_tel` tinyint(4) DEFAULT "0" AFTER `domestic_ballot_post`,
+   ADD COLUMN `domestic_return_email` tinyint(4) DEFAULT "0" AFTER `domestic_ballot_tel`,
+   ADD COLUMN `domestic_return_fax` tinyint(4) DEFAULT "0" AFTER `domestic_return_email`,
+   ADD COLUMN `domestic_return_inperson` tinyint(4) DEFAULT "0" AFTER `domestic_return_fax`,
+   ADD COLUMN `domestic_return_post` tinyint(4) DEFAULT "0" AFTER `domestic_return_inperson`,
+   ADD COLUMN `domestic_return_tel` tinyint(4) DEFAULT "0" AFTER `domestic_return_post`;
+   
+ALTER TABLE `elections`
+   ADD COLUMN `type_of_election` VARCHAR(32) NOT NULL DEFAULT 'FEDERAL' AFTER `title`,
+   ADD COLUMN `domestic_reg_str` VARCHAR(255) NOT NULL DEFAULT '' AFTER `military_return_str`,
+   ADD COLUMN `domestic_request_str` VARCHAR(255) NOT NULL DEFAULT '' AFTER `domestic_reg_str`,
+   ADD COLUMN `domestic_return_str` VARCHAR(255) NOT NULL DEFAULT '' AFTER `domestic_request_str`,
+   ADD COLUMN `domestic_early_str` VARCHAR(255) NOT NULL DEFAULT '' AFTER `domestic_return_str`;

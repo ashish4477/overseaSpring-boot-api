@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.encryption">
+	<class name="EncryptionKeyStatus" table="encryption_key_statuses"
+		dynamic-insert="true">
+		<composite-id name="id" class="EncryptionKeyStatusId">
+			<key-property name="date" type="string" column="date_string" />
+			<key-property name="state" type="string" column="state_abbr" />
+			<key-property name="votingRegion" type="string" column="voting_region_name" />
+		</composite-id>
+		
+		<property name="status" type="boolean" column="status" />
+	</class>
+</hibernate-mapping>

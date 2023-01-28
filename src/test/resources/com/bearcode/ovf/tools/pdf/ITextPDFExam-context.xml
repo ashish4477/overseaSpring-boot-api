@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config/>
+	<context:component-scan base-package="com.bearcode.ovf.actions.questionnaire" />
+    <context:component-scan base-package="com.bearcode.ovf.tools" />
+    <context:component-scan base-package="com.bearcode.ovf.DAO" />
+    <context:component-scan base-package="com.bearcode.ovf.service" />
+    <context:component-scan base-package="com.bearcode.ovf.utils" />
+    <context:component-scan base-package="com.bearcode.ovf.editor" />
+    <context:component-scan base-package="com.bearcode.ovf.validators" />
+
+    <bean id="regionDAO" class="com.bearcode.ovf.DAO.VotingRegionDAO" />
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://127.0.0.1/overseas_foundation?autoReconnect=true" />
+        <property name="username" value="overseas" />
+        <property name="password" value="v0t!n9_4ud" />
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mappingResources">
+            <list>
+                <value>com/bearcode/ovf/model/common/State.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Country.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/County.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Municipality.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Address.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/UserAddress.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/VotingRegion.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Person.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/LocalOfficial.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/CorrectionsLeo.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/StateSpecificDirectory.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/Election.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/Officer.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/mail/MailingAddress.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingList.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingLink.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/questionnaire/FieldType.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/FieldDictionaryItem.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/questionnaire/Question.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionnairePage.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionField.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionVariant.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionDependency.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/FieldDependency.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/Answer.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/WizardResults.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/UserRole.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/OverseasUser.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/FaceConfig.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/reportingdashboard/Report.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportColumn.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportField.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportAnswer.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ScheduledReport.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/express/CountryDescription.hbn.xml</value>
+                <value>com/bearcode/ovf/model/express/FedexLabel.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/FaceFlowInstruction.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/FaceFlowLogo.hbn.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+                <prop key="hibernate.max_fetch_depth">6</prop>
+                <prop key="hibernate.default_batch_fetch_size">16</prop>
+                <prop key="hibernate.default_entity_mode">pojo</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.use_sql_comments">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+				input.encoding=UTF-8
+				output.encoding=UTF-8
+			</value>
+		</property>
+	</bean>
+	
+	<!--<bean id="candidatePageAddon" class="com.bearcode.ovf.actions.questionnaire.CandidatePageAddon" />-->
+
+	<bean id="districtLookupService" class="com.bearcode.ovf.webservices.DistrictLookupService">
+		<property name="melissaDataUrl" value="http://xml.melissadata.com/xml.asp" />
+		<property name="cacheDir"
+			value="/var/www/www.overseasvotefoundation.org/districtlookup_cache" />
+		<!-- production and staging -->
+		<property name="cacheTime" value="2592000000" />
+		<!-- 1 month = 30d*24h*60m*60s*1000ms, time in milliseconds -->
+	</bean>
+
+    <bean id="smartyStreetService" class="com.bearcode.ovf.webservices.SmartyStreetService">
+
+    </bean>
+
+	<bean id="voteSmartService" class="com.bearcode.ovf.webservices.votesmart.VoteSmartService">
+		<!--<property name="votesmartKey"><value>452c72e3e154b5bfd19c28994fd6ff48</value> 
+			</property> --><!-- Moscow key -->
+		<property name="votesmartKey" value="85eae45d5933b89d74f00eed8544b3db" />
+		<!-- Bear Code office key -->
+		<!--<property name="votesmartKey"><value>cde92dc5c95aa1f1217f136ed5d0eb67</value> 
+			</property> --><!-- staging key -->
+		<property name="votesmartCacheDir"
+			value="/var/www/www.overseasvotefoundation.org/votesmart_cache" />
+		<!-- production and staging -->
+		<property name="votesmartCacheTime" value="60000" />
+		<!-- time in milliseconds -->
+
+		<property name="useVotesmartPresidental" value="true" />
+		<property name="useVotesmartSenate" value="true" />
+		<property name="useVotesmartRepresentatives" value="true" />
+	</bean>
+
+	<!-- Annotation driven validator factory. Default implementation of JSR-303 
+		bean validation API -->
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="mailService" class="com.bearcode.ovf.service.email.EmailService">
+		<property name="bccEmail" value=""/>
+		<property name="fromEmail" value="info@system.overseasvotefoundation.org"/>
+		<!--<property name="mailSender" ref="mailSender" />-->
+		<property name="velocityEngine" ref="velocityEngine"/>
+		<property name="hostName" value="127.0.0.1"/>
+		<property name="hostLogin" value="info@system.overseasvotefoundation.org"/>
+		<property name="hostPassword" value="1nf0a0vF"/>
+	</bean>
+</beans>

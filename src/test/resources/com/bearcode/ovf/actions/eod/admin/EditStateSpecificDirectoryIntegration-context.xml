@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config/>
+    <context:component-scan base-package="com.bearcode.ovf.actions.eod" />
+    <context:component-scan base-package="com.bearcode.ovf.tools" />
+    <context:component-scan base-package="com.bearcode.ovf.validators" />
+
+	<bean id="localOfficialService" class="com.bearcode.ovf.service.LocalOfficialService" />
+	
+	<bean id="mailService" class="com.bearcode.ovf.service.email.EmailService">
+		<property name="bccEmail" value="ibrown@bear-code.com"/>
+		<property name="fromEmail" value="test@bear-code.com"/>
+		<!--<property name="mailSender" ref="mailSender" />-->
+		<property name="velocityEngine" ref="velocityEngine"/>
+		<property name="hostName" value="127.0.0.1"/>
+		<property name="hostLogin" value="test@bear-code.com"/>
+		<property name="hostPassword" value="test"/>
+	</bean>
+
+    <bean id="districtLookupService" class="com.bearcode.ovf.webservices.DistrictLookupService">
+        <property name="melissaDataUrl" value="http://xml.melissadata.com/xml.asp"/>
+        <property name="cacheDir" value="/var/www/www.overseasvotefoundation.org/districtlookup_cache"/>
+        <!-- production and staging -->
+        <property name="cacheTime" value="2592000000"/>
+        <!-- 1 month = 30d*24h*60m*60s*1000ms, time in milliseconds -->
+    </bean>
+
+	<bean id="imageCaptchaService" class="com.octo.captcha.service.image.DefaultManageableImageCaptchaService">
+		<!-- <property name="captchaEngine" ref="captchaEngine"/>-->
+		<property name="captchaEngine" ref="imageEngine"/>
+	</bean>
+	
+	<bean id="localOfficialDAO" class="com.bearcode.ovf.DAO.LocalOfficialDAO" />
+	<bean id="correctionsDAO" class="com.bearcode.ovf.DAO.CorrectionsDAO" />
+	
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+				input.encoding=UTF-8
+				output.encoding=UTF-8
+			</value>
+		</property>
+	</bean>
+	
+	<bean id="imageEngine" class="com.octo.captcha.engine.GenericCaptchaEngine">
+		<constructor-arg index="0">
+			<list>
+				<ref bean="captchaFactory"/>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="captchaFactory" class="com.octo.captcha.image.gimpy.GimpyFactory">
+		<constructor-arg ref="wordgen"/>
+		<constructor-arg ref="wordtoimage"/>
+	</bean>
+
+	<bean id="wordgen" class="com.octo.captcha.component.word.wordgenerator.ComposeDictionaryWordGenerator">
+		<constructor-arg ref="filedict"/>
+	</bean>
+
+	<bean id="filedict" class="com.octo.captcha.component.word.FileDictionary">
+		<constructor-arg index="0" value="toddlist"/>
+	</bean>
+
+	<bean id="wordtoimage" class="com.octo.captcha.component.image.wordtoimage.ComposedWordToImage">
+		<constructor-arg index="0" ref="fontGenRandom"/>
+		<constructor-arg index="1" ref="backGenUni"/>
+		<constructor-arg index="2" ref="simpleWhitePaster"/>
+	</bean>
+	
+	<bean id="fontGenRandom" class="com.octo.captcha.component.image.fontgenerator.RandomFontGenerator">
+		<constructor-arg index="0" value="40"/>
+		<constructor-arg index="1" value="50"/>
+		<constructor-arg index="2">
+			<list>
+				<ref bean="fontArial"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="fontArial" class="java.awt.Font">
+		<constructor-arg index="0" value="Arial"/>
+		<constructor-arg index="1" value="0"/>
+		<constructor-arg index="2" value="10"/>
+	</bean>
+	
+	<bean id="backGenUni" class="com.octo.captcha.component.image.backgroundgenerator.UniColorBackgroundGenerator">
+		<constructor-arg index="0" value="200"/>
+		<constructor-arg index="1" value="70"/>
+	</bean>
+	
+	<bean id="simpleWhitePaster" class="com.octo.captcha.component.image.textpaster.SimpleTextPaster">
+		<constructor-arg type="java.lang.Integer" index="0" value="3"/>
+		<constructor-arg type="java.lang.Integer" index="1" value="5"/>
+		<constructor-arg type="java.awt.Color" index="2" ref="colorBlack"/>
+	</bean>
+
+	<bean id="colorBlack" class="java.awt.Color">
+		<constructor-arg index="0" value="0"/>
+		<constructor-arg index="1" value="0"/>
+		<constructor-arg type="int" index="2" value="0"/>
+	</bean>
+
+
+	<!-- Excel port beans -->
+	<bean id="eodExcelPortConfig" class="com.bearcode.commons.config.Environment" init-method="buildConfiguration">
+		<property name="configFilename" value="eod_excel_config.xml"/>
+	</bean>
+
+	<bean id="eodExcelPort" class="com.bearcode.ovf.eodcommands.ExcelPort">
+		<property name="config" ref="eodExcelPortConfig"/>
+	</bean>
+</beans>

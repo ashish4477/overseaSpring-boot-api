@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+	 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.bearcode.ovf.DAO" />
+    <context:component-scan base-package="com.bearcode.ovf.service" />
+    <context:component-scan base-package="com.bearcode.ovf.webservices.factcheck" />
+    <context:component-scan base-package="com.bearcode.ovf.config"/>
+    <!--<context:property-placeholder ignore-unresolvable="true" location="classpath:ovf.properties" />-->
+    <context:property-override ignore-resource-not-found="true" ignore-unresolvable="true"
+                               location="file:${catalina.base}/conf/ovf.properties"/>
+    <context:property-override ignore-resource-not-found="true" ignore-unresolvable="true"
+                               location="file:${catalina.home}/conf/ovf.properties"/>
+
+
+    <aop:config>
+        <aop:pointcut id="persistentLevel" expression=
+                "	execution(* com.bearcode.ovf.service.*Service.*(..)) or
+        	execution(* com.bearcode.ovf.service.email.*Service.*(..))"/>
+
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="persistentLevel"/>
+        <aop:aspect id="deadlockAspect" ref="deadlockDealer">
+            <aop:around method="handleDeadlock" pointcut-ref="persistentLevel"/>
+        </aop:aspect>
+
+        <aop:aspect id="emailSynchro" ref="emailSynchroManager">
+            <aop:around method="synchronizedSending" arg-names="pjp,rawEmail" pointcut="execution(* com.bearcode.ovf.service.email.EmailService.sendEmail(*)) and args(rawEmail)"/>
+        </aop:aspect>
+
+<!--
+        <aop:aspect id="rateLimiter" ref="rateLimiterAspect">
+            <aop:around method="aroundHtmlEmailSend" pointcut="execution(* org.apache.commons.mail.Email+.send())"/>
+        </aop:aspect>
+-->
+    </aop:config>
+
+    <bean id="deadlockDealer" class="com.bearcode.ovf.service.DeadlockManager">
+        <property name="maxRetries" value="3"/>
+        <property name="order" value="100"/>
+    </bean>
+
+<!--
+    <bean id="rateLimiterAspect" class="com.bearcode.ovf.utils.RateLimiterAdvise" init-method="initialize">
+        &lt;!&ndash;<constructor-arg type="int" value="70"/> &lt;!&ndash; number of calls &ndash;&gt;&ndash;&gt;
+        &lt;!&ndash;<constructor-arg type="long" value="1"/> &lt;!&ndash; per seconds &ndash;&gt;&ndash;&gt;
+        <property name="propertyService" ref="ovfPropertyService"/>
+
+    </bean>
+-->
+
+    <!--data source -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="#{systemEnvironment['DB_URL']}"/>
+        <property name="username" value="#{systemEnvironment['DB_USER']}"/>
+        <property name="password" value="#{systemEnvironment['DB_PASS']}"/>
+    </bean>
+
+	<!-- session factory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="mappingResources">
+			<list>
+				<value>com/bearcode/ovf/model/common/State.hbn.xml</value>
+				<value>com/bearcode/ovf/model/common/Country.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/County.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Municipality.hbn.xml</value>
+				<value>com/bearcode/ovf/model/common/Address.hbn.xml</value>
+				<value>com/bearcode/ovf/model/common/UserAddress.hbn.xml</value>
+				<value>com/bearcode/ovf/model/common/VotingRegion.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/ExtendedProfile.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Person.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/LocalOfficial.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/CorrectionsLeo.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/StateSpecificDirectory.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/Election.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/Officer.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/StateVotingLaws.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/email/RawEmail.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingAddress.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingList.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingLink.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingTask.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailTemplate.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/FaceMailingList.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/SendGridLogMessage.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/questionnaire/FieldType.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/FaceBookApi.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/FieldDictionaryItem.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/questionnaire/Question.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionnairePage.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionField.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionVariant.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionDependency.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/FieldDependency.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/Answer.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/WizardResults.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/PdfFormTrack.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/UserRole.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/OverseasUser.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/FaceConfig.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/reportingdashboard/Report.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportColumn.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportField.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportAnswer.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ScheduledReport.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/express/CountryDescription.hbn.xml</value>
+                <value>com/bearcode/ovf/model/express/FedexLabel.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/FaceFlowInstruction.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/FaceFlowLogo.hbn.xml</value>
+                <value>com/bearcode/ovf/model/formtracking/TrackedForm.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/vip/VIPBallot.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPBallotCandidate.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPBallotResponse.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCandidate.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCandidateBio.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPContest.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCustomBallot.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCustomBallotResponse.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPDetailAddress.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPElection.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPElectoralDistrict.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPLocality.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPPrecinct.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPPrecinctSplit.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPReferendum.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPReferendumBallotResponse.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPReferendumDetail.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPState.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPSource.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPStreetSegment.hbm.xml</value>
+
+                <value>com/bearcode/ovf/model/migration/MigrationId.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/svrproperties/SvrProperty.hbm.xml</value>
+
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterAddress.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterAnswer.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterName.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterRegistration.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterRegistrationStatus.hbm.xml</value>
+
+                <value>com/bearcode/ovf/model/encryption/EncryptionKeyStatus.hbm.xml</value>
+
+                <value>com/bearcode/ovf/model/registrationexport/DataExportConfiguration.hbn.xml</value>
+                <value>com/bearcode/ovf/model/registrationexport/DataExportHistory.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/system/OvfProperty.hbn.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <!--
+				<prop key="hibernate.connection.driver_class">net.bull.javamelody.JdbcDriver</prop>
+				<prop key="hibernate.connection.driver">com.mysql.jdbc.Driver</prop>
+				-->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+                <prop key="hibernate.max_fetch_depth">6</prop>
+                <prop key="hibernate.default_batch_fetch_size">16</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- transaction manager -->
+    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="make*" read-only="false" propagation="REQUIRES_NEW"/>
+            <tx:method name="save*" read-only="false" propagation="REQUIRES_NEW"/>
+            <tx:method name="delete*" read-only="false" propagation="REQUIRES_NEW"/>
+            <tx:method name="update*" read-only="false" propagation="REQUIRES_NEW"/>
+            <tx:method name="sync*" read-only="false" propagation="REQUIRES_NEW"/>
+
+            <tx:method name="queue" read-only="false" propagation="REQUIRES_NEW" rollback-for="java.lang.Exception" />
+            <tx:method name="sendEmails" read-only="true" propagation="SUPPORTS" />
+            <tx:method name="sendEmail" read-only="false" propagation="REQUIRES_NEW" rollback-for="java.lang.Exception" />
+
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="count*" read-only="true"/>
+            <tx:method name="check*" read-only="true"/>
+            <tx:method name="build*" read-only="true"/>
+            <tx:method name="convert*" read-only="false" propagation="REQUIRES_NEW" />
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- Services -->
+
+    <!-- Excel port beans -->
+    <bean id="eodExcelPortConfig" class="com.bearcode.commons.config.Environment" init-method="buildConfiguration">
+        <property name="configFilename" value="eod_excel_config.xml"/>
+    </bean>
+
+    <bean id="eodExcelPort" class="com.bearcode.ovf.eodcommands.ExcelPort">
+        <property name="config" ref="eodExcelPortConfig"/>
+    </bean>
+
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <value>
+                resource.loader=class
+                class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+                input.encoding=UTF-8
+                output.encoding=UTF-8
+            </value>
+        </property>
+    </bean>
+
+
+    <!-- This bean do some work on application shutdown instead of CleanupListener in web.xml -->
+    <bean id="lifetimeListener" class="com.bearcode.commons.filter.ApplicationLifetimeListener"/>
+
+    <!--
+     *************** SECURITY BEANS ************************
+    -->
+    <!--<security:global-method-security secured-annotations="enabled"/>-->
+
+    <security:http pattern="/Login.htm" security="none"/>
+    <security:http pattern="/img/**" security="none"/>
+    <security:http pattern="/css/**" security="none"/>
+    <security:http pattern="/scripts/**" security="none"/>
+    <security:http pattern="/js/**" security="none"/>
+    <security:http pattern="/flash/**" security="none"/>
+
+    <security:http auto-config='false' use-expressions="false">
+
+        <!-- define the URL patterns for access control -->
+        <security:intercept-url pattern="/admin/exportUsers.htm" access="ROLE_USER_EXPORT"/>
+        <security:intercept-url pattern="/service/exportMailingList.htm" access="ROLE_USER_EXPORT"/>
+
+        <security:intercept-url pattern="/MyProfile.htm" access="ROLE_VOTER,ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/MyKeyContacts.htm" access="ROLE_VOTER,ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/MyReps.htm" access="ROLE_VOTER,ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/InTheNews.htm" access="ROLE_VOTER,ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/CandidateVoting.htm" access="ROLE_VOTER,ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/KeyVotes.htm" access="ROLE_VOTER,ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/MyDates.htm" access="ROLE_VOTER,ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/ChangePassword.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/UpdateAccount.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/scytlLogin.htm" access="ROLE_VOTER"/>
+        <security:intercept-url pattern="/ExpressGetLabel.htm" access="ROLE_VOTER, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/MyVotingInformation.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/MyDemocracyProfile.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/ManageSubscription.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/UpcomingElections.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/AmIRegistered.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/MyStateVotingTools.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+        <security:intercept-url pattern="/ElectionOfficeAndContacts.htm" access="ROLE_VOTER, ROLE_REPORTING_DASHBOARD, ROLE_ADMIN"/>
+
+        <security:intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
+
+        <security:intercept-url pattern="/report/**" access="ROLE_ADMIN"/>
+        <security:intercept-url pattern="/reportingdashboard/**" access="ROLE_ADMIN, ROLE_REPORTING_DASHBOARD"/>
+        <security:intercept-url pattern="/mail/**" access="ROLE_ADMIN"/>
+
+        <security:intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+
+        <!-- login form URLs -->
+        <security:form-login
+                login-page='/Login.htm'
+                login-processing-url="/user_login"
+                authentication-failure-url="/Login.htm?login_error=1"
+                authentication-success-handler-ref="loginSuccessHandler"/>
+        <security:logout logout-url="/logout" logout-success-url="/home.htm?logout=1" />
+        <security:remember-me key="ovfRememberMeKey" user-service-ref="overseasUserDAO" />
+    </security:http>
+
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider user-service-ref='overseasUserDAO'>
+            <security:password-encoder hash="md5" />
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean id="usernamePasswordAuthenticationFilter" class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+        <property name="authenticationManager" ref="authenticationManager"/>
+        <property name="filterProcessesUrl" value="/user_login"/>
+    </bean>
+
+    <bean id="loginSuccessHandler" class="com.bearcode.ovf.actions.commons.LoginSuccessHandler">
+        <property name="defaultTargetUrl" value="/MyVotingInformation.htm"/>
+        <property name="targetUrlParameter" value="spring-security-redirect"/>
+        <property name="excludePagePatterns">
+            <list>
+                <value>home\.htm</value>
+                <value>Login</value>
+                <value>Password</value>
+                <value>VoterInformation</value>
+                <value>/w/</value>
+            </list>
+        </property>
+
+        <!-- Use to override the default target URL on a per-role basis -->
+        <property name="roleTargetUrl">
+            <map>
+                <entry key="reporting_dashboard" value="/reportingdashboard/ReportingDashboard.htm" />
+            </map>
+        </property>
+    </bean>
+
+    <!-- Custom property editors -->
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="javax.xml.datatype.Duration" value="com.bearcode.ovf.editor.DurationEditor"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- Pending voter registrations -->
+
+    <!-- A separate configuration is needed for each SHS. -->
+    <!--
+    EXAMPLE
+    <bean id="sampleDefaultPendingVoterRegistrationConfiguration" class="com.bearcode.ovf.tools.pendingregistration.PendingVoterRegistrationConfiguration">
+        <property name="enabled" value="false" />
+        <property name="requireShs" value="true" />   if option is set only shs questions will be retained
+        <property name="facePrefix" value="faces/default" />
+        <property name="votingState" value="MN" />
+        <property name="votingRegion" value="Cottonwood County" />
+        <property name="zipPassword" value="Password" />  password on zip file
+        <property name="timeout" value="P1M" />
+        <property name="exportLevel" value="FACE"/>  Possible values are : ALL (default), STATE & FACE
+    </bean>
+     -->
+    <bean id="votefromabroadPendingVoterRegistrationConfiguration" class="com.bearcode.ovf.tools.pendingregistration.PendingVoterRegistrationConfiguration">
+        <property name="enabled" value="true" />
+        <property name="requireShs" value="true" />
+        <property name="facePrefix" value="faces/votefromabroad" />
+        <property name="zipPassword" value="VFAfac454" />
+        <property name="timeout" value="P1M" />
+        <property name="exportLevel" value="FACE"/>
+        <property name="deliverySchedule" value="HOURLY"/>
+    </bean>
+    <bean id="ivoteisraelPendingVoterRegistrationConfiguration" class="com.bearcode.ovf.tools.pendingregistration.PendingVoterRegistrationConfiguration">
+        <property name="enabled" value="true" />
+        <property name="requireShs" value="true" />
+        <property name="facePrefix" value="faces/ivoteisrael" />
+        <property name="zipPassword" value="IVOTEfac106" />
+        <property name="timeout" value="P1M" />
+        <property name="exportLevel" value="FACE"/>
+        <property name="deliverySchedule" value="WEEKLY"/>
+    </bean>
+    <bean id="aviPendingVoterRegistrationConfiguration" class="com.bearcode.ovf.tools.pendingregistration.PendingVoterRegistrationConfiguration">
+        <property name="enabled" value="true" />
+        <property name="requireShs" value="true" />
+        <property name="facePrefix" value="faces/avi" />
+        <property name="zipPassword" value="aviGetMyBallot16" />
+        <property name="timeout" value="P1M" />
+        <property name="exportLevel" value="FACE"/>
+        <property name="deliverySchedule" value="DAILY"/>
+    </bean>
+    <bean id="avaazPendingVoterRegistrationConfiguration" class="com.bearcode.ovf.tools.pendingregistration.PendingVoterRegistrationConfiguration">
+        <property name="enabled" value="true" />
+        <property name="requireShs" value="true" />
+        <property name="facePrefix" value="faces/avaaz" />
+        <property name="zipPassword" value="avaazFAC16reg" />
+        <property name="timeout" value="P1M" />
+        <property name="exportLevel" value="FACE"/>
+        <property name="deliverySchedule" value="HOURLY"/>
+    </bean>
+    <bean id="globalvotePendingVoterRegistrationConfiguration" class="com.bearcode.ovf.tools.pendingregistration.PendingVoterRegistrationConfiguration">
+        <property name="enabled" value="true" />
+        <property name="requireShs" value="true" />
+        <property name="facePrefix" value="faces/globalvote" />
+        <property name="zipPassword" value="globalvoteFAC16reg" />
+        <property name="timeout" value="P1M" />
+        <property name="exportLevel" value="FACE"/>
+        <property name="deliverySchedule" value="HOURLY"/>
+    </bean>
+
+    <bean id="clearFormSandboxJob" class="com.bearcode.ovf.tools.pdf.ClearFormSandboxJob"/>
+
+    <bean id="sendEmailThreadPool" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="10" />
+        <property name="maxPoolSize" value="20" />
+        <property name="queueCapacity" value="10000" />
+    </bean>
+
+
+
+</beans>

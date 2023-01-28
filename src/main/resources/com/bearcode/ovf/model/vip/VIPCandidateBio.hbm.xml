@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.vip">
+	<class name="VipCandidateBio" table="vip_candidate_bios" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        
+        <property name="biography" type="string" column="biography" />
+        
+        <many-to-one name="candidate" class="VipCandidate" column="candidate_id" lazy="false" cascade="all" not-null="true" fetch="join" />
+        
+        <property name="candidateUrl" type="string" column="candidate_url" />
+        
+        <property name="email" type="string" column="email" />
+        
+        <many-to-one name="filedMailingAddress" class="com.bearcode.ovf.model.common.UserAddress" column="filed_mailing_address_id" lazy="false" cascade="all" />
+        
+        <property name="phone" type="string" column="phone" />
+        
+        <property name="photoUrl" type="string" column="photo_url" />
+	</class>
+</hibernate-mapping>

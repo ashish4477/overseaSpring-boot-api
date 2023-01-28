@@ -1,0 +1,87 @@
+.ui-accordion-header {
+  span {
+    padding-left: 18px;
+    background: url('../img/icons/arrow.png') 0 24px no-repeat;
+
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+
+  &.ui-state-active {
+    span {
+      background-image: url('../img/icons/down_arrow.png');
+    }
+  }
+}
+
+.panel-group {
+  .panel {
+    background-color: transparent;
+    border: 1px solid $vote411-border-background-gray;
+    margin-bottom: 0;
+    margin-top: 5px;
+    border-radius: 4px;
+
+    & > .panel-heading {
+      background-color: transparent;
+      color: $vote411-text-action;
+      border-bottom: 0;
+      padding: 10px 15px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+
+      .panel-title {
+        margin-left: 15px;
+        font-size: 18px;
+        margin-bottom: 0;
+
+        a {
+          text-decoration: none;
+          color: $vote411-text-base;
+        }
+
+        &:after {
+          float: right;
+          content: "";
+          border: solid $vote411-accents-darkblue;
+          border-width: 0 5px 5px 0;
+          display: inline-block;
+          padding: 4px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+      }
+
+      &.collapsed {
+        .panel-title {
+          &:after {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    .panel-body {
+      background-color: $vote411-border-background-xxlightgray;
+      border-top: 1px solid $vote411-border-background-gray;
+      padding: 15px 30px;
+      word-break: break-word;
+
+      .address-type, .markdown h1 {
+        font-weight: bold;
+        color: $vote411-text-heading;
+      }
+
+      h5, h4, .markdown h3 {
+        font-size: 18px;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

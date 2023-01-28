@@ -1,0 +1,31 @@
+// general reset styles from usvotefoundation stylesheet
+
+.row {
+  background: #fff;
+
+  .container {
+    padding-right: 15px;
+  }
+}
+
+.not-front .row.content, .not-front .row.navigation {
+  background: #fff;
+}
+
+.table {
+  thead {
+    tr {
+      th {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        vertical-align: middle;
+      }
+    }
+  }
+}

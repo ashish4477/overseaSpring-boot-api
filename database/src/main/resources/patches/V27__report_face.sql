@@ -1,0 +1,2 @@
+ALTER TABLE `rd_report_faces`
+   MODIFY COLUMN `face` VARCHAR(255) NOT NULL;

@@ -1,0 +1,655 @@
+/* Bootstrap overrides */
+body {
+	padding-top: 105px;
+	padding-bottom: 40px;
+	background:#e8ebeb url('../img/backgrounds/bg.jpg') repeat-x;
+}
+/* fixed with sites*/
+body.fixed { padding-top:12px; }
+
+.container.wrapper {
+	width:970px;
+	background-color:#fff;
+	margin-bottom:25px;
+	padding-bottom:16px;
+}
+
+.fixed .navbar {
+	padding:0;
+	margin-bottom:0;
+}
+
+.navbar-fixed-top .navbar-inner {
+	color:#fff;
+	padding:5px;
+	height:102px;
+	background:#004a7a url('../img/backgrounds/header-bg.jpg') repeat-x;
+	box-shadow:none;
+}
+
+.navbar-inner h1 {
+	text-transform: uppercase;
+	font-weight:700;
+	font-size: 46px;
+    letter-spacing: 2px;
+}
+
+.navbar-inner a h2 {
+	  color: #C3DAEA;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-left: 2px;
+    margin-top:5px;
+}
+
+.navbar-inner h1,
+.navbar-inner h2,
+.navbar-inner .heading>a:hover {
+	color:#fff;
+}
+
+.navbar .brand { margin-left:12px; } 
+
+.navbar .heading { padding-top:12px; }
+
+.nav.site-tools  > li > a {display:inline}
+
+.nav.site-tools .mva a.logout-link { padding:0; }
+.nav.site-tools .mva a { padding-right:0; }
+
+.site-tools { height:35px; top:11px; }
+
+.site-tools .mva {
+	background: url("../img/sidebar/mva.png") no-repeat scroll 6px center transparent;
+	padding-left: 12px;
+  padding-right: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  behavior: url('PIE.htc');
+}
+
+.site-tools .mva.active { background-color:#fff; }
+
+.caret-override {
+  border-top-color: #3496b6 !important;
+  border-bottom-color: #3496b6 !important;
+}
+
+.site-tools .vhd {
+	background: url("../img/sidebar/vhd.png") no-repeat scroll 0 center transparent;
+	padding-left:12px;
+}
+
+.fixed .site-tools {
+    padding-bottom: 6px;
+    padding-right: 5px;
+    padding-top: 6px;
+    height:auto;
+    top:0;
+}
+
+.navbar .nav > li > a {
+	padding-top: 0;
+	padding-bottom: 0;
+	text-shadow:none;
+	color:#333333;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover { color:#333333; }
+
+.navbar .divider-vertical {
+    background-color:#333333;
+    border: none;
+    height: 14px;
+    margin: 3px 9px 0;
+    padding: 0;
+    width: 1px;
+}
+
+.navbar .container.footer .divider-vertical { margin: 3px 2px 0; }
+
+.navbar .container.footer{ width:620px; }
+
+
+/* sidebar */
+
+.sidebar-nav { min-height: 402px; }
+
+.sidebar-nav {
+    background:#fff url('../img/backgrounds/featured-bg.jpg') repeat-x;
+    border: none;
+    border-top:solid #d6d6d6 1px;
+    border-radius:0;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+    -moz-box-shadow: 0 5px 5px #C3C3C3;
+    -webkit-box-shadow: 0 5px 5px #C3C3C3;
+    box-shadow: 0 5px 5px #C3C3C3, 0 -1px 0 #C3C3C3 inset;
+    behavior: url('/vote/js/PIE.htc');
+    font-weight:700;
+    padding: 9px 1px;
+    position:relative;
+}
+
+.nav-list > li > a {
+    border-bottom: 1px solid #EDECEC;
+    font-size: 13px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 5px 36px;
+}
+
+.nav-list .rava {
+	background: transparent url('../img/sidebar/rava.png') 6px 6px no-repeat;
+	white-space: nowrap;
+}
+
+.nav-list .fwab {
+	background: url('../img/sidebar/fwab.png') 4px 5px no-repeat;
+}
+
+.nav-list .ballot-status {
+	background: url('../img/sidebar/ballot-status.png') 4px 5px no-repeat;
+}
+
+.nav-list span { white-space: nowrap; }
+
+.nav-list .vhd {
+	background: url('../img/sidebar/vhd.png') 6px 6px no-repeat;
+}
+
+.nav-list .eod {
+	background: url('../img/sidebar/eod.png') no-repeat 4px 5px;
+	white-space: nowrap; 
+}
+
+.nav-list .svid {
+	background: url('../img/sidebar/svid.png') no-repeat 4px 8px;
+}
+
+.nav-list .mva {
+	background: url('../img/sidebar/mva.png') no-repeat 8px 5px;
+}
+
+.nav-list .womb {
+	background: url('../img/sidebar/womb.png') no-repeat 7px 5px;
+}
+
+.nav-list .candidate-finder {
+    background: url("../img/sidebar/candidate-finder.png") no-repeat 4px 2px;
+}
+
+.sidebar-bottom {
+	text-align:center;
+	font-weight:normal;
+	padding-top:10px;
+}
+
+.sidebar-bottom h3 {
+    font-size:13px;
+    line-height:18px;
+}
+
+.sidebar-bottom img { margin:6px 0; }
+
+hr { border:solid #dbdbdb 2px; }
+
+/* home */
+
+.featured {
+    border: 1px solid #C9CDD2;
+    border-radius: 5px;
+    background-position:0px -10px;
+    background:#fff url('../img/backgrounds/featured-bg.jpg') repeat-x;
+    box-shadow: 0 1px 5px #C3C3C3, 0 -1px 0 #C3C3C3 inset;
+    behavior: url('/vote/js/PIE.htc');
+    position:relative;
+}
+
+.home.voterType { text-align:center; }
+
+
+
+.home.voterType .container {
+	width:535px; 
+	text-align: left;
+}
+
+.home.voterType h1 {
+    font-size: 170%;
+    letter-spacing: 1px;
+    word-spacing: -1px;
+    line-height: 16px;
+    margin-top:16px;
+    white-space:nowrap;
+}
+
+.home.voterType fieldset {
+    background: url("../img/home/rava-large-icon.png") no-repeat scroll -35px 10px transparent;
+    line-height: 10px;
+    padding-top:50px;
+}
+
+.home.voterType label {
+    background: url("../img/home/checkbox.gif") no-repeat scroll 116px -1px transparent;
+    display: block;
+    font-size: 14px;
+    left: -14px;
+    padding: 3px 0 10px 140px;
+    position: relative;
+    top:-18px;
+    line-height: 10px;
+}
+
+.home.voterType select {
+	width:342px;
+	position:relative;
+	margin:0 2px 0 108px;
+	border-color:#a3c2d5;
+    box-shadow: 0 0px 3px #C3C3C3, 0 -1px 0 #C3C3C3 inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+
+.home .featured h2 {
+    font-size: 13px;
+    font-weight:700;
+    line-height: 14px;
+    height: 26px;
+}
+
+.home .featured h2 {
+    padding-left: 50px;
+}
+
+.home .featured ul {
+	list-style-type: none;
+	padding:10px 0 0 25px;
+}
+
+.span3 .featured {
+    margin-top:-15px;
+}
+
+.span3 .featured li {
+	font-size:12px;
+	white-space:nowrap;
+	font-style: italic; 
+}
+
+.span3.home.first {
+    width: 230px;
+	margin-left:0;
+}
+
+.span3.home.second, 
+.span3.home.third {
+    width: 230px;
+    margin-left: 5px;
+}
+
+.featured.fwab .inner {
+    background: url("../img/home/fwab-front-page-icon.png") no-repeat;
+}
+
+.featured.eod .inner {
+    background: url("../img/home/eod-front-page-icon.png") no-repeat;
+}
+
+.featured.svid .inner {
+    background: url("../img/home/svid-front-page-icon.png") no-repeat;
+}
+
+.featured.last {
+	background:#fff url('../img/backgrounds/featured-bg.jpg') repeat-x;
+	border: 3px solid #dcdcdc;
+  border-radius: 30px 30px 30px 30px;
+}
+
+h1, h2.title {
+	font-size:22px;
+	color:#004377;
+}
+
+h2 { font-size:20px; }
+h3 { font-size:16px; }
+
+/* content level styles */
+a,
+.no-input a { color:#4B4C54; }
+
+.no-input a { text-decoration: underline; }
+
+a:hover { text-decoration:underline; }
+
+.navbar .nav > li > a:hover,
+.navbar .nav li.dropdown.active > .dropdown-toggle:hover {
+  color:#333;
+  text-decoration:underline;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  color:#333;
+  text-decoration:underline;
+  background-color: #E9E9E9;
+}
+
+.btn { padding:4px 14px; }
+
+.footerLine { margin-top:0; }
+
+/*Bootstrap conflicts*/
+.body-content,
+.wide-content,
+.column-form {
+	margin:0;
+	width:660px;
+}
+
+.mva.account.nav {
+	padding-right:25px;
+}
+
+label input, label textarea, label select {
+	display:inline;
+}
+
+/* Rava */
+
+.rava .content { margin-left:8px; }
+
+.break,
+.clearfix { height:0; }
+
+.additional.questions .one-line.multiple-field .label {
+	text-align:right;
+     width: 40%;
+}
+
+.one-line.multiple-field span select{ min-width:300px; }
+
+.rava-intro .bd { padding:0 0 0 8px; }
+.rava-intro p { padding:12px; }
+.rava.video {
+	float:right;
+	text-align:center;
+	margin-top:10px;
+	position:relative;
+	left:12px;
+}
+
+.rava.video img { padding:5px; }
+
+/*login*/
+
+#credentials label { width: 255px; }
+
+/* EOD SVID */
+
+.accordian,
+#eod-form .hd h2 {
+	padding:3px;
+	padding-left:25px;
+}
+
+.accordian .ctrl {
+	background-position: right -2px;
+	color:#7d0501;
+}
+
+.rava .hd h1 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -2px transparent;
+	padding-left:55px;
+	padding-bottom: 12px;
+}
+
+.fwab .hd h1 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -58px transparent;
+	padding-left:55px;
+	padding-bottom: 12px;
+}
+
+#eod-form .hd h1 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -106px transparent;
+	padding-left:55px;
+	padding-bottom: 12px;
+}
+
+#eod-form.svid .hd h2 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -158px transparent;
+    padding-left:55px;
+    padding-bottom: 12px;
+}
+
+#eod-form h3 {
+    color: #4B4C54;
+    margin-left: 5px;
+    margin-bottom:12px;
+    padding:0;
+}
+
+p.list-head {
+	color: #4B4C54;
+	font-size:18px;
+	font-weight:700;
+	padding-top:12px;
+}
+
+table.accordian-content .r0 .first-col {
+	color:#7d0501;
+}
+
+.g-recaptcha{ 
+  display:inline-block; 
+  text-align:center; 
+  margin-top:16px;
+}
+
+#eod-form h5, #eod-form h4 {
+ padding:3px;
+ margin-left: 3px;
+}
+
+
+#eod-form .oneline {
+    margin: 0;
+    font-weight: 700;
+}
+
+.bd { padding:0 25px 0 55px; }
+
+#create-account .bd { padding:0; }
+
+.large-overlay .hd h2 {
+    background: url("../img/icons/rava-icon.gif") no-repeat scroll 8px 5px transparent;
+    color:#7C0500;
+}
+
+#cms-content { width:625px; padding-left:25px; }
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 12px;
+}
+
+/* See variant_default.tag for details */
+
+.transmission_method_option {
+	position:relative;
+	width:425px;
+	background:#F9F9F9 url('../img/buttons/transmission-bg.jpg') repeat-x;
+    border: 1px solid #cbd3d9;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin:0 auto 20px;
+    cursor:pointer;
+    behavior: url('/vote/js/PIE.htc');
+}
+
+.transmission_method_option .label h3 {
+	font-size:18px;
+	line-height:24px;
+}
+
+.one-line.transmission_method_option span.label {
+    padding:12px 0 12px 80px;
+    width:275px;
+}
+
+.transmission_method_option span.label div{
+	font-size:12px;
+}
+
+.transmission_method_option_1 .label{ background:url(../img/buttons/email-bg.png) no-repeat 9px 20px; }
+.transmission_method_option_2 .label{ background:url(../img/buttons/fax-bg.png) no-repeat 7px 12px; }
+.transmission_method_option_3 .label{ background:url(../img/buttons/post-bg.png) no-repeat 0 21px; }
+
+.one-line.transmission_method_option span.radio {
+	width:auto;
+	position:relative;
+	top:32px;
+}
+
+/* Bootstrap Overides for EOD SVID */
+
+#eod-form fieldset.state-select { padding: 20px 0 20px 41px;}
+
+.accordian,
+#eod-form .hd h2{
+	padding:3px;
+	padding-left:25px;
+}
+
+.accordian .ctrl{
+	background-position: right -2px;
+	color:#7d0501;
+}
+
+.accordian { margin:10px 0; }
+
+.hd h1 { padding:10px 0 12px 55px; }
+
+.rava .hd h1{
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -2px transparent;
+}
+
+.fwab .hd h1{
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -58px transparent;
+}
+
+#eod-form .hd h1 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -106px transparent;
+}
+
+#eod-form.svid .hd h1 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -158px transparent;
+}
+
+#candidateFinder .hd h1 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -279px transparent;
+}
+
+#eod-form h3 {
+    color: #4B4C54;
+    margin-left: 5px;
+    margin-bottom:12px;
+    padding:0;
+}
+
+p.list-head{
+	color: #4B4C54;
+	font-size:18px;
+	font-weight:700;
+	padding-top:12px;
+}
+
+table.accordian-content .r0 .first-col {
+	color:#7d0501;
+}
+
+#eod-form #eodCaptchaImg {
+    margin-left: 108px;
+}
+
+#eod-form h5, #eod-form h4 {
+ padding:3px;
+ margin-left: 3px;
+}
+
+
+#eodForm #eodCaptcha input {
+    display: inline;
+    float: none;
+    margin:0;
+}
+
+#eod-form .oneline {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* stand alone shs theme */
+.standAlone .body-content, 
+.standAlone .wide-content, 
+.standAlone .column-form,
+.standAlone .navbar, 
+.standAlone .row,
+.standAlone .container,
+.standAlone #eod-form  {
+	margin:0 auto;
+	float:none;
+}
+
+.standAlone .spacer{height:5px;}
+
+/* What's on My Ballot */
+#whatsOnMyBallot fieldset label { display:inline; } 
+
+#whatsOnMyBallot .content { 
+ 	text-align:right;
+	width:450px;
+	padding-top:5px;
+}
+
+#whatsOnMyBallot .description { 
+ 	text-align:left;
+	width:500px;
+}
+
+.rava #userForm .container { width:auto;}
+.rava #userForm fieldset { padding:15px;}
+
+.ui-accordion-header span {
+  padding-left:16px;
+  background: url('../img/icons/arrow.png') 0 3px no-repeat;
+  cursor: pointer;
+}
+
+.ui-accordion-header.ui-state-active span {
+  padding-left:16px;
+  background: url('../img/icons/down_arrow.png') 0 6px no-repeat;
+  cursor: pointer;
+}
+
+.accordion { margin-bottom: 0; }
+
+.offscreen {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+.boter {
+display: none;
+}
+
+.login-option { text-align:right; }
+

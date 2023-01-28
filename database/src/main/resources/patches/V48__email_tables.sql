@@ -1,0 +1,33 @@
+CREATE TABLE `email` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`created_time` DATETIME NOT NULL, 
+	`updated_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	`from_addr` VARCHAR(1024) DEFAULT NULL,
+	`to_addr` VARCHAR(1024) DEFAULT NULL,
+	`reply_to_addr` VARCHAR(1024) DEFAULT NULL,
+  	`is_bcc` BOOLEAN NOT NULL,
+	`subject` VARCHAR(1024) DEFAULT NULL,
+	`body` TEXT,
+	`template_path` VARCHAR(1024) DEFAULT NULL,
+	`attempt_number` INT(11) NOT NULL DEFAULT 0,
+	`status` VARCHAR(32) NOT NULL DEFAULT "INITIAL",
+	`error` TEXT,
+	PRIMARY KEY (`id`),
+	KEY `status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `email_log` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`email_id` INT(11) NOT NULL,
+	`created_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	`status` VARCHAR(32) NOT NULL DEFAULT "INITIAL",
+	`error` TEXT,
+	PRIMARY KEY (`id`),
+	KEY `email_id` (`email_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+
+--
+ALTER TABLE `email_log`
+  ADD CONSTRAINT `email_log_email_fk` FOREIGN KEY (`email_id`) REFERENCES `email` (`id`);

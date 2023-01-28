@@ -1,0 +1,174 @@
+.home .main-content { background:#004071; }
+
+.main-content { border-bottom:solid #99a7b6 1px; }
+.main-content p, .main-content div{ font-family:"Lucida Grande", Tahoma, Verdana, Arial, sans-serif;}
+.home .main-content a { color:#001938; }
+.pull-left {
+  display:inline;
+  float:left;
+}
+
+h1{
+	font-family:"HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight:600; 
+	font-stretch:normal;
+	text-align:center;
+	font-size:31px;
+	padding-top:18px;
+	position:relative;
+  color:#fff;
+}
+
+/* flash overlap issue for heading - i thought i was done with star hacks too. */
+* + html h1{width:475px;}
+* + html h1 span{top:9px;}
+
+ul.voter-type { text-align: center; }
+
+ul.voter-type li {
+  display: inline-block;
+  background: url('../img/icons/checkbox.png') 0 2px no-repeat;
+  padding: 9px 0 2px 30px;
+  margin-left:12px;
+  color:#bdd1dd;
+  text-transform: uppercase;
+}
+
+ul.voter-type li:last-child {
+  background: none;
+  text-transform:none;
+}
+
+.home .submit.registration { width:116px; }
+.home .submit a { color:#fff; }
+
+.home .features.outer {
+  background: #fff;
+  top:125px;
+}
+
+.home .features .inner{
+  position:relative;
+  top: -125px;
+  left:7%;
+  background-color:#fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -moz-border-top-left-radius: 15px;
+  -moz-border-top-right-radius: 15px;
+  padding:25px 12px;
+  height:auto;
+  min-height:175px;
+}
+
+.home .grid_4 {
+  height:auto;
+  text-align:center;
+}
+
+.home .features .eod {
+  background:#5f8295 url('../img/icons/eod.png') center 12px no-repeat;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -moz-border-top-left-radius: 15px;
+  -moz-border-bottom-left-radius: 15px;
+}
+.home .features .svid { background:#61cae7 url('../img/icons/svid.png') center 12px  no-repeat; }
+
+.home .features .mva {
+  background:#3b5997 url('../img/icons/candidate-finder.png') center 12px no-repeat;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -moz-border-top-right-radius: 15px;
+  -moz-border-bottom-right-radius: 15px;
+}
+
+ .home .features a {
+    display: inline-block;
+    background:#8D1021 url('../img/icons/home-arrow.png') no-repeat right center;
+    color: #fff;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    padding: 7px 45px 7px 15px;
+    padding: 7px 45px 7px 15px;
+ }
+
+
+.home .features .grid_4 {
+  margin:0;
+  width:263px; /* override to std grid width */
+}
+
+.home .features .grid_4 h2 {
+  color:#fff;
+  text-transform:UPPERCASE;
+  font-size: 20px;
+  padding-top: 70px;
+}
+
+.home .features .grid_4  p {
+  padding: 12px;
+  color:#222;
+}
+
+.main-content p.ovf-link{
+	font-size:13px;
+	background:url('../img/icons/overseas-voting-globe.gif') no-repeat left center;
+	padding:15px 0 15px 47px;
+	margin-top:-33px
+}
+.ovf-link a { text-decoration:underline; }
+
+.map object {
+  position:relative;
+  top:1px;
+  right:46px;
+}
+
+.content-bottom object {
+  position:relative;
+  top:60px;
+}
+
+/* Content Bottom */
+.content-bottom {
+  background-color:#e4ebef;
+  border-bottom:solid #fff 8px;
+  border-top: solid #8596A7 1px;
+  padding:50px 0 30px;
+}
+
+.content-bottom h2{font-size:40px; font-family:"HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight: normal;  font-stretch:normal; color:#123154; margin-top:0;}
+
+.content-bottom .video { text-align: center;}
+
+.content-bottom .content{padding:7px 0;}
+.content-bottom h3 {font-size:14px; color:#123154;}
+.content-bottom {font-size:12px;}
+.content-bottom .tools{position:relative; left:33px; top:-10px;}
+.content-bottom .tools .grid_5{margin:0; width:295px;}
+.content-bottom .grid_5 div{padding-left:52px; padding-top:5px;}
+.eod, .cf{margin-left:-16px;}
+/*.eod{background:url('../img/icons/election-official-directory-icon.gif') no-repeat;}
+.svid{background:url('../img/icons/state-voter-information-icon.gif') no-repeat 3px 0;}
+.cf{background:url('../img/icons/candidate-finder-icon.gif') no-repeat 5px -7px;}
+.vhd{background:url('../img/icons/voter-help-desk-icon.gif') no-repeat 10px 0;} */
+
+.content-bottom .statesList select {width:auto;}
+
+.mapChoice {border:1px solid #ccc; position:absolute;}
+.mapChoice .stateName{text-align:center; padding:0 0 5px;}
+.mapChoice .close{padding:0;margin-top:2px;}
+.pop-container {width:244px;}
+.stateName {font-size:14px; font-weight:bold;}
+
+.survey {
+    left: 93px;
+    margin-top: -12px;
+    padding: 0;
+    position: relative;
+    top: 13px;
+    height: 86px;
+}
+
+.footer { background-color:#FEFFFE; }

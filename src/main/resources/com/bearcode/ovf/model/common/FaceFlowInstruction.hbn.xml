@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common" >
+    <class name="FaceFlowInstruction" table="face_flow_instructions" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="flowType" column="face_flow" >
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.questionnaire.FlowType</param>
+                <param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+            </type>
+        </property>
+        <property name="text" type="text" column="`text`" />
+        <property name="updatedTime" type="java.util.Date" column="updated_time" />
+
+        <many-to-one name="faceConfig" column="face_config_id" fetch="join"/>
+        <many-to-one name="updatedBy" column="user_id"/>
+    </class>
+</hibernate-mapping>

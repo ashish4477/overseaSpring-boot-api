@@ -1,0 +1,33 @@
+/**
+ * override for usvote stuff
+ */
+
+footer {
+  .container-fluid {
+    .container {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/**
+ * not-front is a drupal class, meaning not the home page. ovf just copied this class over and put it everywhere
+ * including home page
+ */
+.not-front {
+  .row {
+    &.navigation {
+      background: #fff;
+    }
+
+    &.content {
+      background: #fff;
+    }
+  }
+}
+
+.row {
+  .container {
+    padding-right: 15px;
+  }
+}

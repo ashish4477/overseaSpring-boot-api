@@ -1,0 +1,645 @@
+
+fieldset .container {margin:0;}
+
+html > body input.btn_continue,html > body  dd .last-row input, html > body #eodForm #continue input  {width:75px; height:32px;}
+
+/** Overlay stuff **/
+.progress-bar {
+	position: absolute;
+	top: 0px; left:415px;
+	width: 176px; height: 25px;
+	padding-top: 7px;
+	display:none;
+}
+.progress-bar img {
+	display: block; float: left;
+}
+.break { clear:both; }
+/*.wide-content .ft { display:none;}*/
+
+.progress-text {
+	text-align: center;
+	font-style: italic;
+	line-height: 11px;
+}
+
+.security-recommendation {
+	padding-top: 5px;
+	font-size: 10px; font-style: italic;
+}
+
+#overseas-vote-foundation-short h1 {
+	font-size: 16px;
+	line-height: 18px;
+	padding: 6px 0px 8px 0px;
+}
+
+#overseas-vote-foundation-short h2 {
+	color: #333;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 500;
+	padding:15px 0;
+	margin:0;
+}
+
+#overseas-vote-foundation-short h2.subtitle{
+	font-size: 24px;
+	color: #A60028;
+	font-weight: normal;
+	padding: 0;
+}
+
+/* OVR options */
+#overseas-vote-foundation-short .ovr-options h2{
+	color:#9c1f2f;
+	font-size:20px;
+	font-weight:bold;
+}		
+
+.ovr-options .panel-body>div { margin-bottom:8px; }
+
+.ovr-options div>strong{
+	font-size:18px;
+	color:#042447;	
+}
+
+#overseas-vote-foundation-short.bd{padding:0;}
+
+.bd h2{font-size:18px;}
+.bd h4{font-size:16px;}
+
+.bd h2,
+.bd h4{color:#128ac3;}
+
+.bd .currentAddress h4{color:#333;}
+
+#rava-edit-question .bd {
+	min-height: 300px;
+	padding: 20px 100px;
+}
+
+.continue #back-button {
+	display: block;
+	height: 30px; width: 54px;
+	text-align: right;
+	margin-left: 165px;
+	line-height: 30px;
+	float: left;
+	color: #b20837;
+}
+.fwab-last-page .continue #back-button {margin-left: 215px;}
+
+.fwab-start .column-right { float:right; }
+.fwab-start h2{ margin-top:0; }
+
+* html .continue #back-button,
+* html .continue input,
+* html .continue .spacer {
+	display: inline;
+}
+.continue input,
+.continue #cancel-button {
+	float: left;
+	padding-left: 10px;
+}
+.continue #dead-button {
+	float: left;
+	padding-left: 10px;
+}
+.continue .spacer {
+	float: left;
+	width: 267px; height: 30px;
+}
+
+.question-group { padding: 20px; }
+
+.question-group, .question {
+	clear: both;
+}
+
+.question {	padding-left:5px; }
+
+.one-line {
+	display: block;
+	margin: 7px 0px;
+  padding-left: 16px;
+	clear: both;
+}
+
+.radio-group .one-line {padding-left:40px}
+
+.one-line span { margin-left:0; }
+
+.one-line span.label {margin-bottom:11px; }
+.one-line span.label em {
+	font-style: normal;
+	color: #b20837;
+	font-weight: bold;
+}
+.one-line span input {
+	width: 50%;
+}
+.one-line span select {
+	overflow: hidden;
+	width: 99%;
+	font-family: "Trebuchet MS", sans-serif;
+	line-height: 24px;
+}
+
+.single-field span.has-rava-bubble {
+	width: 50%;
+	padding-right: 5px;
+}
+
+.multiple-field span.has-rava-bubble {
+	width: 25%;
+	padding-right: 5px;
+}
+
+
+.checkbox span.label, .radio-group .one-line span.label {
+    display: inline;
+    float: none;
+    margin-bottom: 5px;
+    padding: 1px 0 0 1px;
+    text-align: left;
+    vertical-align: middle;
+    width: 88%;
+    font-weight:normal;
+ }
+
+.radio-group .one-line .break {
+	height: 0px; overflow: hidden;
+}
+
+.checkbox span.checkbox input,
+.radio-group .one-line span.radio input {
+	width: auto; margin-top: 6px;
+}
+
+div.one-line span.required {
+	display: inline;
+	width: auto;
+	float: none;
+}
+
+div.one-line .rava-bubble,
+div.radio-field-title .rava-bubble,
+label.textarea .rava-bubble {
+	float:left;
+	height: 21px; width: 20px;
+	overflow: hidden;
+}
+
+div.radio-field-title .rava-bubble,
+label.textarea .rava-bubble {
+	margin: 3px 0px;
+}
+
+.no-input ul{ margin: 20px; }
+
+.no-input li{
+	list-style-type:square;
+	margin-bottom:10px;
+}
+
+label.textarea {
+	width: 382px;
+}
+label.textarea .textarea-label {
+	display: block;
+	width: 100%; height: 21px;
+	margin: 3px 0px;
+	line-height: 21px;
+}
+label.has-rava-bubble .textarea-label {
+	float: left;
+	width: 35%;
+}
+
+div.textarea textarea {
+	display: block;
+	width: 98.4%;
+	clear: both;
+}
+div.textarea .textarea-label {
+	position: relative;
+	height: 21px;
+	margin: 3px 0px;
+}
+div.textarea .textarea-label .rava-bubble {
+	position: absolute;
+	top: 0px; right: 0px;
+}
+
+/*.error { display: none; }*/
+.error {
+	color: #b20837;
+}
+.error-indicator .label {
+	color: #b20837;
+}
+.error-indicator .label .required {
+	color: #b20837;
+}
+.error-indicator .one-line span select{color:#b20837;}
+
+.ie6-tooltip {
+	position: relative;
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+}
+.ie6-tooltip .tooltip {
+	position: static;
+	width: 246px;
+	margin: 3px 0px 10px 120px;
+	border: 2px solid #fff;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title {
+	padding: 5px 5px 0px 5px;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title .close-tooltip {
+	top: 5px; right: 5px;
+}
+.ie6-tooltip .tooltip-text {
+	background: #F3F9FB;
+	padding: 5px;
+}
+
+.tooltip {
+	position: absolute;
+	width: 290px;
+    z-index:50;
+}
+.tooltip-icon {
+	cursor: pointer;
+}
+.tooltip-title {
+	position: relative;
+	padding: 45px 15px 0px 20px;
+	height: 19px;
+	background: transparent url(../img/backgrounds/rava-bubble-hd.png) top center no-repeat;
+}
+.tooltip-title .close-tooltip {
+	position: absolute;
+	top: 45px; right: 15px;
+	cursor: pointer;
+}
+.tooltip-text {
+	line-height: 1.2;
+	padding: 5px 15px 35px 20px;
+	background: transparent url(../img/backgrounds/rava-bubble-ft.png) bottom center no-repeat;
+}
+
+.last-page .note {
+	background-color:#FFFFAA;
+	margin:5px 25px 20px;
+	padding:10px;
+}
+
+.last-page .note label, .note input, .note a {  display: inline-block; }
+.last-page .note label { width: 100px; text-align: right; }
+.last-page .note input {  width: 200px; margin: 3px; }
+.last-page .note a { font-size: .8em }
+
+.last-page .instruction {
+    border-top: solid 1px #ccc;
+	margin:25px 0 0;
+    padding: 10px 100px;
+    text-align: center;
+}
+
+.last-page p {
+	padding-bottom: 10px;
+	position: relative;
+}
+.last-page p a {
+	text-decoration: underline;
+}
+
+
+.last-page .note p {
+	float:none;
+	font-size:1.1em;
+	line-height:1.2em;
+	padding:0 0 5px;
+	width:90%;
+}
+
+.last-page .note p b {
+    color: #b20837;
+}
+
+#aligned-finish-button, #continue-button {
+	margin-left:102px;
+}
+
+.download-box h3{
+	padding-left:25px;
+	color:#A60028;
+}
+
+.download-box ol {
+	color:#333;
+	padding-left:55px;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+
+.download-box ol li { margin-bottom:12px; }
+
+/* Global Columns */
+.column.left{float:left;}
+.columnDivider{background-color:#8795A8; width:1px; height:150px; float:left; position:relative; left:10px; top:10px;}
+.column.right{float:right; }
+
+/*Login info*/
+.rava.login .column{width:250px;}
+.rava.login .column.left{width:270px;}
+.rava.login .column.right{margin-left:-5px;}
+.rava.login .column.left h2{margin-left:50px;}
+.rava.login .continue.btn{float:right;}
+.rava .column.right #userForm fieldset{text-align:left;}
+.noAccount{position: relative; top: 57px; text-align: center;}
+
+
+.accordion :focus {outline: none;}
+
+/*User Fields form
+.rava .column.left,.rava .column.right{width:48%;}/*was 275
+.rava .section{float:left; padding:5px 0; width:100%;}
+.rava .section.three{border:none; padding-top:0;}
+.rava .userFields .required{color:#333;}
+
+.rava .body-content .legend {padding:10px 0 5px; font-size:18px;}
+.rava .body-content .legend span{font-size:18px; color:#333; }
+.rava .userFields fieldset label{display:block; margin-left:2px;}
+
+.rava .userFields .split{float:left;}
+.rava .userFields .split.right{margin-left:9px;}
+.rava .userFields .clear{clear:both;}
+.rava .userFields .tiny{width:65px;}
+.rava .userFields .small{width:75px;}
+.rava .userFields select.small{width:160px; overflow:hidden; }
+.rava .userFields .firstName .medium{width:140px;}
+.rava .userFields .medium{width:145px;}
+.rava .large{width:255px;}
+.rava .userFields input, .rava .userFields .large{width:295px;}
+.rava .userFields .checkbox{width:auto; margin:0;}
+.rava .userFields select{width:304px; margin-bottom:6px; margin-right:3px;}
+.rava input.submit-button{width:75px; float: right;}
+
+.rava form div input, .rava form div textarea{margin-bottom:5px; }
+.rava .userFields fieldset.voterInfo label{display:inline;}
+
+*/
+
+
+
+/*calendar display */
+.rava form div .datefield input { margin: 2px 0; }
+
+label.datefield .text-label { margin-left:0 }
+
+.rava .voterInfo div{
+  margin-left: auto;
+  margin-right: auto;
+  width:95%;
+}
+
+.rava .voterInfo div .errorMsg {text-align:left; width:auto;}
+.rava .confirmPassword{white-space: nowrap;}
+
+.rava #forwardingAddress{display:none;}
+.rava .errorMsg{display:block; padding:2px; color:#b20837; font-size: 16px;}
+
+#change-password form{width:295px;}
+
+.rava .rava-bubble{
+	width:20px;
+	display:inline;
+	position:relative;
+	top:4px;
+	left:4px;
+}
+
+/* Domestic */
+.rava .domestic_registration .homeAddress.home { padding-bottom:36px; }
+.rava .domestic_absentee .homeAddress.home { padding-bottom:9px; }
+
+.rava .previousAddress .addressOptions{margin-top:2px; font-size:12px;}
+
+/* My Voter Account */
+.mva.account.nav{float:right; margin-top:-20px; font-size:13px;}
+.mva.account.nav li{display:inline; margin:0;}
+
+.voter-account-page .bd p{padding:0;}
+.voter-account-page .bd-inner ul{line-height:30px; padding-left:5px;}
+.voter-account-page .bd-inner li{display:block; background:url("../img/icons/admin_arrow.gif") no-repeat 0 11px; padding-left:9px;}
+.voter-account-page a{color: #b20837;}
+.voter-account-page .bd h2{font-size:25px; color:#b20837; margin-bottom:16px;}
+.voter-account-page .bd h2.eod{
+	background: url("../img/icons/sidebar-icons.gif") no-repeat 0 -43px;
+	padding-left: 30px;
+	}
+.voter-account-page .bd h3.mva{
+	background: url("../img/icons/my-voter-account-icon.png") no-repeat;
+	padding-left: 30px;
+	}
+.voter-account-page .bd h3{font-size:14px; color:#1E4678;}
+
+.voter-account-page .votingAddress p,
+.voter-account-page .previousAddress p,
+.voter-account-page .forwardingAddress p{
+	margin:0;
+	padding:0;
+}
+
+.votingAddressDescription{display:none;}
+
+fieldset {
+	background-color: #f4fafd;
+  padding: 15px;
+}
+
+fieldset.question-group { margin: 25px 0; }
+
+.ui-accordion-header span {
+  padding-left:12px;
+  background: url('../img/icons/arrow.png') 0 6px no-repeat;
+  cursor: pointer;
+}
+
+fieldset.continue,
+#credentials,
+#remember-me,
+#create-password fieldset{
+	border:none;
+	background:none;
+}
+/*bootstrap overides*/
+.label, .badge {
+	border:none;
+	color: #212B38;
+    font-weight: bold;
+    line-height: 22px;
+    vertical-align: baseline;
+    white-space: normal;
+    font-size:14px;
+}
+
+html > body .question label#date {
+	margin-bottom:0px;
+	border-radius:3px;
+}
+
+html > body .label {
+	border-radius:3px 3px 0 0;
+	-webkit-border-radius:3px 3px 0 0;
+  color: inherit;
+  white-space: normal;
+}
+
+html > body  #userForm label.label {
+	 border:none;
+	 padding:2px 0;
+	 font-size:15px;
+}
+
+div.datefield {
+	display:inline-block;
+	background:#ECEEEF;
+	padding:7px;
+	border: 1px solid #CCC;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	margin:5px;
+	color:#8D1021;
+	font-size:14px;
+}
+
+html > body .ui-widget-header {
+  border: 1px solid #ccc;
+  background-color:#012348 ;
+  color: white;
+  font-weight: bold;
+}
+
+.form-type > div:first-child  { min-height:140px; }
+
+.form-type img {
+  margin:0 auto;
+  display: block;
+}
+
+.overseas.form-type > div:first-child { padding-top:8%; }
+.military.form-type > div:first-child { padding-top:12%; }
+
+.form-type .radio-container { text-align: center; }
+
+.form-type .radio {
+  display: inline-block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.domestic.form-type  .radio.registration { min-width:12.75em; }
+
+.radio-container.domestic-absentee .radio {margin-top:0;}
+
+.transmission_method_option {
+	position:relative;
+	width:90%;
+  max-width:500px;
+	background:#eeeff1 url('../img/buttons/transmission-bg.jpg') repeat-x;
+  border: 1px solid #cbd3d9;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+  margin:0 auto 20px;
+  padding-left: 4em;
+  cursor:pointer;
+}
+
+.transmission_method_option .label h3 {
+	font-size:18px;
+	line-height:24px;
+}
+
+.one-line.transmission_method_option span.label {
+    padding:12px 0 12px 80px;
+}
+
+.transmission_method_option span.label div{ line-height: normal; }
+
+.transmission_method_option_1 .label{ background:url(../img/buttons/email-bg.png) no-repeat 9px 20px; }
+.transmission_method_option_2 .label{ background:url(../img/buttons/fax-bg.png) no-repeat 7px 12px; }
+.transmission_method_option_3 .label{ background:url(../img/buttons/post-bg.png) no-repeat 0 21px; }
+
+.radio-group .transmission_method_option.one-line span.radio {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  width: 20px;
+  text-align: center;
+}
+
+.radio-group .transmission_method_option.one-line span.label {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin-bottom: 0;
+  line-height:15px;
+}
+
+.login-option { text-align:right; }
+
+.rava .rava-bubble{display:none;}/* this thing just needs to be replaced. */
+
+#progressbar .ui-progressbar-value {
+	background-color: #F6F6F6;
+	margin:0;border: none;
+}
+
+#progressbar .ui-progressbar .ui-progressbar-value{margin:0; }
+
+.tooltip-inner { background-color:#004377;}
+
+.glyphicon.tooltip-icon {font-size:16px;}
+
+.phone .intl-tel-input,
+.alternatePhone .intl-tel-input {display:block;}
+
+@media only screen and (max-width : 480px) { 
+	.phone .intl-tel-input,
+	.alternatePhone .intl-tel-input {margin-bottom:15px;}
+}
+
+/* Used to style the fwab */
+.representatives-group {
+	width: 100%;  
+	display: table;
+	background-color:#fff;
+}
+
+.representatives-group th {
+	text-align: left; 
+	vertical-align: bottom;
+	padding: 4px 8px 2px;
+	background-color: #D8EEFB;
+	border: solid #fff 2px;
+	font-weight: normal;
+	color: #128ac3;
+ }
+
+ .representatives-group td {padding: 5px 12px;}
+
+ .representatives-group  td {border-bottom:solid #d8ebf5 2px;}
+ 
+ .select2-container {min-width:100% !important;} /* to fix voting region select when it does not pass validation */
+

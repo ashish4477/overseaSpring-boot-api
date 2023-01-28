@@ -1,0 +1,213 @@
+th,td {
+    padding:4px;
+}
+th {
+	vertical-align:top;
+}
+
+td ol {
+	margin-left:20px;
+}
+
+#EditQueryForm .columnLabel {
+    border-top: solid 1px #ccc;
+    padding: 5px 10px 5px 0px;
+}
+
+#EditQueryForm .columnQuestions {
+    border-top: solid 1px #ccc;
+    padding: 5px 0px 5px 0px;
+}
+
+/*  Faces Config Section*/
+
+.faces table{margin:12px 0; border-collapse:separate; border-spacing:5px 0;}
+.faces table td, .faces table th{padding:5px 5px 0; vertical-align:top;}
+.faces a, a.btn{color:#c70000; display:block; background:url("../img/icons/admin_arrow.gif") no-repeat 0 6px; padding-left:8px;}
+.faces a.btn{display:block; margin:8px 0;}
+.back.btn{display:inline-block;}
+
+.faces input.text{ width:275px;}
+.faces .upload{margin-top:5px;}
+
+.faces.list th {text-align:left; padding-bottom:5px; font-weight:bold; font-size:13px; border-bottom:solid #BCC0C6 2px;}
+
+.faces .CodeMirror {border-color:#BCC0C7;}
+
+#overseas-vote-foundation .hd h2 {background-image:none;}
+#overseas-vote-foundation #admin-menu .hd h2,
+#overseas-vote-foundation #eod-admin-page .hd h2, 
+#overseas-vote-foundation.admin .hd h2{background-image:none;}
+
+/* Overview Section */
+.overview .filters{
+	background-color:#ffffdc;
+	margin:10px 0;
+	padding:12px;
+	border:solid #c9ccd1 3px;
+	}
+
+.overview .filters .all{padding-bottom:15px; border-bottom:solid #c9ccd1 1px}
+.overview .filters div{margin:10px 0;}
+
+.overview .filters label{
+	font-weight:bold;
+	font-size:12px;
+}
+
+.overview .filters select{margin-right:8px;}
+
+.overview h4 {font-size:18px; padding-bottom:8px;}
+.overview h5 {font-size:15px; padding-bottom:8px;}
+
+.overview a {text-decoration:underline; color:#1E4678;}
+
+.view-page, .view-question {
+    padding: 4px;
+    margin-bottom:4px;
+}
+.view-page {
+    border:solid #c9ccd1 1px;
+    border-bottom-width:3px;
+    border-right-width:3px;
+    background-color:#fff;
+    padding:25px;
+}
+
+.view-question dl{padding:10px;}
+.view-question dt{font-weight:bold; font-size:13px;}
+.view-question dt, .view-question dd{ display:inline;}
+
+.view-question {
+    padding-left:25px;
+}
+.view-question td,  .view-question th {
+    border: black solid 1px;
+}
+.view-question th {
+    background-color:#e6e6fa;
+    font-weight:bold;
+    text-align:left;
+}
+
+.status-message{
+	border:solid #BDC0C7 1px;
+    color: #CC0000;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    padding:5px 5px 5px 10px;
+}
+
+/* States List*/
+#dependencyGroup{width:550px;}
+
+#dependencyGroup span {
+    display: block;
+    float: left;
+    padding: 5px 3px;
+}
+
+#dependencyGroup input {
+    margin-right: 5px;
+}
+
+.admin #title {display: block;}
+
+.admin #title,
+.admin #generic-options input, 
+#add-generic-option,
+#exportCofiguration input[type=text]{ width: 300px;}
+
+#eod-corrections.EodEditElection input,
+#eod-corrections.EodEditElection textarea { padding:.35em; }
+
+#eod-corrections.EodEditElection input {
+  width:75%;
+  display:inline-block;
+}
+
+#eod-corrections.EodEditElection h3  { display:block; }
+#eod-corrections.EodEditElection .reset { height: auto; }
+
+#eod-corrections.EodEditElection .sect > fieldset {
+  background-color: #f1f1f1;
+  margin-bottom: 12px;
+  padding: 0 1.25em 1.25em 1.25em;
+}
+
+.changed {
+  color: green;
+  font-weight: bold;
+}
+
+#eod-corrections.EodEditElection .navbar-nav {
+  margin:12px 0;
+  text-align:right;
+}
+#eod-corrections.EodEditElection .navbar-nav li { display:inline; }
+#eod-corrections.EodEditElection .navbar-nav li.first.leaf { float:left; }
+
+.pull-left { float:left; }
+.pull-right { float:right; }
+
+#eod-corrections .last-updated {text-align:right;}
+#eod-corrections.EodEditElection button a,
+.button a{color:#fff;}
+
+.button{
+  -webkit-box-shadow:rgba(0,0,0,0.0.1) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.0.1) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.0.1) 0 1px 0 0;
+	background:#226091;
+  background:-moz-linear-gradient(top,#226091 0%,#172A61 100%);
+  background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#226091),color-stop(100%,#172A61));
+  background:-webkit-linear-gradient(top,#226091 0%,#172A61 100%);
+  background:-o-linear-gradient(top,#226091 0%,#172A61 100%);
+  background:-ms-linear-gradient(top,#226091 0%,#172A61 100%);
+  background:linear-gradient(top,#226091 0%,#172A61 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#226091',endColorstr='#172A61',GradientType=0);
+	border:none;
+	font-weight:700;
+  font-size:12px;
+	height:25px;
+	color:#fff;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+  cursor:pointer;
+  padding: 0 10px;
+  color:#fff;
+}
+
+.admin-page-nav button,
+.admin-page-nav select {
+  display: inline-block;
+  float:right;
+  color:#333;
+}
+
+
+.election-title {
+  background:#173971;
+  padding: 6px;
+  margin-top:12px;
+}
+.election-title h2 {
+  color:#fff;
+  display:inline;
+}
+
+.election-title a{
+  margin-top:6px;
+  float:right;
+  color:#fff;
+}
+
+.sect.deadlines .dates-deadlines { background:#f8f9fb; }
+
+.admin .caches ul{margin-left:18px;}
+.admin .caches li {
+  margin-bottom:8px;
+  list-style-type: disc !important;
+}

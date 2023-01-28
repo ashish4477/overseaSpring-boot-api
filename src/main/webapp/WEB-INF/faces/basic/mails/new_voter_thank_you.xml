@@ -1,0 +1,38 @@
+<email>
+    <subject>Your U.S. Vote Foundation Voter Account</subject>
+    <from>US Vote - Voter Help Desk &lt;voterhelp@usvotefoundation.org&gt;</from>
+    <reply_to>voterhelpdesk@usvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+	<p ><strong>Dear $!firstName,</strong></p>
+
+<p>U.S. Vote Foundation congratulates you on opening your new Voter Account. This will be the hub of your voting activity. You can login now using the following link: <a href="https://www.usvotefoundation.org/vote/Login.htm?newAccount">Access My Voter Account</a></p>
+
+<p>Your Voter Account is a personal voting dashboard where you can access all the information you need to stay informed and take voting action. It’s designed to personalize and revitalize your voting experience.</p>
+
+<p>Once you have logged into your Voter Account you will have instant access to:</p>
+
+<ul>
+ <li>Edit your profile and subscribe to Voter Alerts
+ <li>Quick access to registration and absentee ballot request services
+ <li>View your state election information on identification, eligibility and more
+ <li>Your upcoming election dates and deadlines
+ <li>Contact information for your local election officials
+ <li>Access to our detailed FAQs and Voter Help Desk
+ <li>Quick link to <a href="https://usvotefoundation.networkforgood.com">donate</a> to the Foundation
+ </ul>
+
+<p>...and many more features that make it easy to be an informed and engaged voter. We are excited to have you as a new Voter Account holder.</p>
+
+<p>Please don’t hesitate to <a href="https://voterhelpdesk.usvotefoundation.org">contact our Voter Help Desk</a> with any questions you may have!</p>
+
+<p>And don’t forget – US Vote is a nonpartisan, nonprofit, public charity. You are what makes it possible for US Vote to continue to provide these services. <a href="https://usvotefoundation.networkforgood.com/">Please give back with a donation.</a></p>
+
+<p>Thank you, and happy voting!</p>
+
+    <p>Your U.S. Vote Foundation Team</p>
+
+	<p style="font-size:smaller;color:gray;">&copy;2005-$!year All rights reserved. U.S. Vote Foundation, and Overseas Vote, an initiative of <a href="https://www.usvotefoundation.org">U.S. Vote Foundation</a>.</p>
+</div>
+    ]]></body_template>
+</email>

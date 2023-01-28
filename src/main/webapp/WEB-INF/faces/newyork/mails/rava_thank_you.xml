@@ -1,0 +1,17 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office</subject>
+    <from>voterhelpdesk@overseasvotefoundation.org </from>
+    <reply_to>newyork@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+    <p><strong>Dear $!firstName,</strong></p>
+
+    <p>Your voter registration and/or ballot request is NOT complete until you submit it to your election office. <b>Remember to print, sign and send in your form</b> to your election official who needs your signature on file. You can check your <a href="https://newyork.overseasvotefoundation.org/vote/svid.htm?stateId=35&submission=true">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+
+	<p>Thank you for using this New York Overseas and Military Voter Services site to register to vote and request your ballots for $!year.</p> 
+
+	<p>Wishing you a great voting experience this year!</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif; font-size: smaller; color:gray; ">&copy;2005-$!year Overseas Vote. All Rights Reserved.</p>
+</div>
+    ]]></body_template>
+</email>

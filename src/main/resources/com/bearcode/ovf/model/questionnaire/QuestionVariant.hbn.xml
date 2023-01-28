@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.questionnaire" >
+    <class name="Related" table="dependents" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+
+        <joined-subclass name="QuestionVariant" table="question_variants" lazy="false" dynamic-insert="true">
+            <key column="id" />
+
+            <property name="title" type="string" />
+            <property name="active" type="boolean" column="active" />
+            <property name="description" type="string" column="description" />
+            <bag lazy="false" name="fields" inverse="true" order-by="order_number"> <!-- fetch="join" -->
+                <key column="question_variant_id"/>
+                <one-to-many class="QuestionField" />
+            </bag>
+            <many-to-one name="question" column="question_id" cascade="persist"/>
+            <bag name="keys" inverse="true" order-by="`kind`,`depends_on_id`,`field_name`,`field_value`" lazy="false">
+                <key column="variant_id" />
+                <one-to-many class="BasicDependency" />
+            </bag>
+        </joined-subclass>
+
+        <joined-subclass name="PdfFilling" table="pdf_fillings" lazy="false" dynamic-insert="true">
+            <key column="id" />
+
+            <property name="name" type="string"/>
+            <property name="inPdfName" type="string" column="in_pdf_name"/>
+            <property name="text" type="string" column="text" />
+            <bag name="keys" inverse="true" order-by="`kind`,`depends_on_id`" lazy="false" >
+                 <key column="variant_id" />
+                 <one-to-many class="BasicDependency" />
+             </bag>
+         </joined-subclass>
+    </class>
+
+
+</hibernate-mapping>

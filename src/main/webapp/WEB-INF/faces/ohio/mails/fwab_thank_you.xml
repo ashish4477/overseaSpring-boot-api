@@ -1,0 +1,17 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office from Ohio Overseas and Military Voter Services</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+    <reply_to>ohio@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+    <p><strong>Dear $!firstName,</strong></p>
+    <p>Your voter registration and/or ballot request is NOT complete until you submit it to your election office. Remember to print, sign and send in your form to your election official who needs your signature on file. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+	<p>We're glad you've got your Write-in Ballot now and can cast your vote in this important election! <strong>Remember to sign your cover page form</strong> and send it with your Write-in Ballot to your election official who needs your original signature.</p>
+	<p>If your ballot arrives from your election office after you have sent the Write-in Ballot in,&nbsp;please complete it and send it in to replace the Write-in Ballot.</p>
+	<p>Here's to you for casting your ballot!<br />
+	<em>From the team at the Office of the Ohio Secretary of State, Frank Larose</em></p>
+	<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;">Contact us at <a href="mailto:ohio@overseasvotefoundation.org">ohio@overseasvotefoundation.org</a> at anytime with questions and comments<br />
+	&copy;2005-$!year Overseas Vote. All Rights Reserved.</p>
+</div>
+    ]]></body_template>
+</email>

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<dataset>
+    <facebook_api id="1" app_secret="secret1" app_key="key1" domain="domain1" active="1" />
+    <facebook_api id="2" app_secret="secret2" app_key="key2" domain="sub1.domain1" active="1" />
+    <facebook_api id="3" app_secret="secret3" app_key="key3" domain="sub2.domain1" active="1" />
+</dataset>

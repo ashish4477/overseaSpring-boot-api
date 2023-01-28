@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.questionnaire" >
+    <class name="BasicDependency" table="question_dependencies" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <discriminator column="kind" type="string" />
+
+        <many-to-one name="dependent" class="Related" column="variant_id" fetch="join" cascade="persist"/>
+
+        <subclass name="QuestionDependency" discriminator-value="REG" dynamic-insert="true">
+            <many-to-one name="dependsOn" class="Question" column="depends_on_id" lazy="false" cascade="persist" />
+            <many-to-one name="condition" column="condition_id" class="FieldDictionaryItem" lazy="false" cascade="persist" />
+        </subclass>
+
+        <subclass name="FaceDependency" discriminator-value="FACE" dynamic-insert="true">
+            <many-to-one name="dependsOn" column="face_id" class="com.bearcode.ovf.model.common.FaceConfig" cascade="persist"/>
+        </subclass>
+
+        <subclass name="UserFieldDependency" discriminator-value="USER" dynamic-insert="true">
+            <property name="fieldName" column="field_name" />
+            <property name="fieldValue" column="field_value" />
+        </subclass>
+
+        <subclass name="FlowDependency" discriminator-value="FLOW" dynamic-insert="true">
+            <property name="flowType" column="field_value" not-null="true">
+				<type name="org.hibernate.type.EnumType">
+				 	<param name="enumClass">com.bearcode.ovf.model.questionnaire.FlowType</param>
+					<param name="type">12<!--value of java.sql.Types.VARCHAR--></param> 
+				</type>
+			</property>
+        </subclass>
+
+        <subclass name="com.bearcode.ovf.model.questionnaire.QuestionCheckboxDependency" discriminator-value="CHCK" dynamic-insert="true">
+            <many-to-one name="dependsOn" class="Question" column="depends_on_id" lazy="false" cascade="persist" />
+            <property name="fieldValue" column="field_value" />
+        </subclass>
+    </class>
+</hibernate-mapping>

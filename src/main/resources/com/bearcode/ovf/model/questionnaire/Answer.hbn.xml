@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.questionnaire">
+    <class name="Answer" table="answers" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <discriminator column="type" />
+
+        <many-to-one name="wizardResults" column="pdf_answers_id" not-null="true" cascade="persist" />
+        <many-to-one name="field" column="field_id" not-null="true" fetch="join" cascade="persist"/>
+
+        <subclass name="EnteredAnswer" discriminator-value="ENTER"  dynamic-insert="true">
+            <property name="value" type="string" />
+        </subclass>
+
+        <subclass name="EnteredDateAnswer" discriminator-value="DATE"  dynamic-insert="true">
+            <property name="value" type="string" />
+        </subclass>
+
+        <subclass name="PredefinedAnswer" discriminator-value="FIXED"  dynamic-insert="true">
+            <many-to-one name="selectedValue" column="selected_value"  fetch="join" cascade="persist"/>
+        </subclass>
+
+    </class>
+
+    <sql-query name="byStateStats">
+        <return alias="states" class="com.bearcode.ovf.model.common.State"/>
+        <return-scalar column="user_count" type="integer"/>
+        SELECT {states.*}, COUNT(pdf.user_id) AS user_count FROM pdf_answers pdf
+        INNER JOIN states ON states.abbr = pdf.voting_region_state
+        where voting_region_state != ''
+        AND pdf.created > :fromDate
+        AND :toDate >= pdf.created
+        GROUP BY states.id
+        ORDER BY states.name ASC
+    </sql-query>
+
+    <sql-query name="userAnswers">
+        <return alias="users" class="com.bearcode.ovf.model.common.OverseasUser"/>
+        <return alias="answers" class="com.bearcode.ovf.model.questionnaire.Answer"/>
+        <return alias="qf" class="com.bearcode.ovf.model.questionnaire.QuestionField"/>
+        SELECT {users.*}, {answers.*}, {qf.*}
+        FROM `users`
+        INNER JOIN `answers` ON `answers`.`user_id` = users.`id`
+        INNER JOIN `question_fields` qf ON qf.id = `answers`.field_id
+		WHERE users.id in ( :userIds )
+		ORDER BY users.id
+
+    </sql-query>
+
+</hibernate-mapping>

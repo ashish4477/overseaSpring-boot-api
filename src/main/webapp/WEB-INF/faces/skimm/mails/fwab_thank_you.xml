@@ -1,0 +1,48 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office</subject>
+    <from>US Vote Helpdesk &lt;voterhelpdesk@usvotefoundation.org&gt;</from>
+   <reply_to>voterhelpdesk@usvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+		<style type="text/css">
+			p { font-family: 'Trebuchet MS', Arial, sans-serif; }
+			strong { font-weight: bold; }
+			a { color: #c00; }
+
+			.comments { color: #888; font-size: smaller; }
+		</style>
+		<div>
+    <p>
+	    <a href="https://vote.theskimm.com"><img src="https://usvotefoundation-drupal.s3.amazonaws.com/prod/s3fs-public/theskimm_email_banner.png" alt="SKIMM 2020"/></a>
+		<hr style="width: auto; max-width: 695px;margin: 0 auto 0 0;"/>
+	</p>
+		    <p><strong>Dear $!firstName,</strong></p>
+
+			<p>We're glad you've been able to use the Vote-Print-Mail system to generate your Federal Write-in Absentee Ballot (FWAB) and that you can cast your vote in this important election! Please read the instruction letter carefully.</p>
+
+			<p>You must download, print, sign and send in your FWAB. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+
+			<p><strong>Remember to check the witness requirements and then sign your cover page form</strong> and send it with your ballot to your election official who needs your original signature.</p>
+			<p>If the ballot from your election office arrives after you have sent in your FWAB, please complete it and send it in to replace the FWAB.</p>
+
+			<p>US Vote is a nonprofit,  nonpartisan public charity powered by a dedicated team of volunteers. Please help us - <a href="https://www.usvotefoundation.org/donate">Make a Donation Today!</a></p>
+
+			<p>Here's to you for casting your ballot!<br/>
+			<em>- From the volunteer team at U.S. Vote Foundation</em></p>
+
+
+      <p><strong>P.S.  <a href="https://www.usvotefoundation.org/voter-reward-badge">Get your Voter Reward Badge!</strong></a></p>
+      <p>Choose from a selection of Voter Reward Badges - spiff up your social media profile and spread the word to other voters!  Go here to get your badge: <a href="https://www.usvotefoundation.org/voter-reward-badge">https://www.usvotefoundation.org/voter-reward-badge</a></p>
+      <p><strong>P.P.S. <a href="https://www.usvotefoundation.org/donate">Please give back</a> to Help Us to Help More Voters:</strong></p>
+      <p>We work hard to make sure that you can vote. And when you give to us, you can be sure – Every Dollar Counts. And your voting effort goes further.</p>
+      <p>$1 x 1 helps assure another voter gets their ballot.</p>
+      <p>$1/month has 12 times the impact.</p>
+      <p>$3/month has 36 times the impact.</p>
+      <p>$10/month has 120 times the impact every year!</p>
+      <p><strong>Please Join Us as a Foundation Member - a small monthly contribution will make a major difference – it will change everything about what we can do for you and other voters. Go to <a href="https://www.usvotefoundation.org/donate">https://www.usvotefoundation.org/donate</a></p>
+
+			<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;">Contact us at <a href="mailto:voterhelpdesk@usvotefoundation.org">voterhelpdesk@usvotefoundation.org</a> anytime with questions or comments.<br />
+
+			&copy;2005-$!year Overseas Vote. All Rights Reserved.</p>
+		</div>
+    ]]></body_template>
+</email>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.questionnaire">
+    <class name="FieldDictionaryItem" table="field_dictionaries" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <discriminator column="type" />
+
+        <subclass name="FixedStringItem" discriminator-value="FIXED" dynamic-insert="true">
+            <property name="value" type="string" column="string_value" />
+            <many-to-one name="fieldType" column="type_id" />
+        </subclass>
+
+        <subclass name="FieldStateItem" discriminator-value="STATE" dynamic-insert="true">
+            <many-to-one name="fieldType" column="type_id" />
+            <many-to-one name="state" column="external_id" fetch="join"/>
+        </subclass>
+
+        <subclass name="GenericStringItem" discriminator-value="GENERIC" dynamic-insert="true">
+            <property name="value" type="string" column="string_value" />
+            <many-to-one name="forField" column="field_id" cascade="persist" />
+        </subclass>
+
+
+    </class>
+
+</hibernate-mapping>

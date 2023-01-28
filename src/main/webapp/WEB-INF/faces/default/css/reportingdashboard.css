@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+th {
+	text-align:right;
+	vertical-align:top;
+}
+
+.report th {
+	text-align:left;
+	vertical-align:top;
+    padding: 3px 5px 3px 5px;
+    vertical-align: top;
+    margin:0;
+}
+
+.report td {
+    border-top: solid 1px #ccc;
+    padding: 3px 5px 3px 5px;
+    vertical-align: top;
+    margin:0;
+}
+
+td ol {
+	margin-left:20px;
+}
+
+
+tr.odd {
+    background-color: #ddd
+}
+
+tr.even {
+    background-color: #fff
+}
+
+.rightAlign {
+    text-align:right;
+}
+
+.leftAlign {
+    text-align:left;
+}

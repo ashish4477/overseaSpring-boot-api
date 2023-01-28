@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.eod">
+    <class name="Officer" entity-name="Officer" table="officers" lazy="true" dynamic-insert="true">
+        <id column="id" type="long" name="id">
+            <generator class="native"/>
+        </id>
+        <property name="orderNumber" type="int" column="order_number"/>
+        <property name="officeName" type="string" column="office_name"/>
+        <property name="title" type="string" column="title"/>
+        <property name="firstName" type="string" column="first_name"/>
+        <property name="initial" type="string" column="initial"/>
+        <property name="lastName" type="string" column="last_name"/>
+        <property name="suffix" type="string" column="suffix"/>
+        <property name="phone" type="string" column="phone"/>
+        <property name="fax" type="string" column="fax"/>
+        <property name="email" type="string" column="email"/>
+    </class>
+
+    <class name="Officer" entity-name="CorrectionOfficer" table="corrections_officers" lazy="true" dynamic-insert="true">
+        <id column="id" type="long" name="id">
+            <generator class="native"/>
+        </id>
+        <property name="orderNumber" type="int" column="order_number"/>
+        <property name="officeName" type="string" column="office_name"/>
+        <property name="title" type="string" column="title"/>
+        <property name="firstName" type="string" column="first_name"/>
+        <property name="initial" type="string" column="initial"/>
+        <property name="lastName" type="string" column="last_name"/>
+        <property name="suffix" type="string" column="suffix"/>
+        <property name="phone" type="string" column="phone"/>
+        <property name="fax" type="string" column="fax"/>
+        <property name="email" type="string" column="email"/>
+    </class>
+</hibernate-mapping>

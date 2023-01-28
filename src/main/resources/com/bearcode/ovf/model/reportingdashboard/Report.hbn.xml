@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.reportingdashboard">
+    <class name="Report" table="rd_reports" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <many-to-one name="owner" column="owner_id" class="com.bearcode.ovf.model.common.OverseasUser" not-found="ignore" not-null="false"/>
+        <property name="title" type="string" not-null="true" />
+        <property name="description" type="string" />
+		<property name="flowType" column="flow_type" not-null="false">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.questionnaire.FlowType</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+			</type>
+		</property>
+        <property name="dateFrom" column="date_from" type="java.util.Date" />
+        <property name="dateTo" column="date_to" type="java.util.Date" />
+        <property name="standard" type="boolean" />
+        
+        <property name="applyFaces" column="apply_faces" type="boolean" />
+        <set name="faces" table="rd_report_faces" lazy="false">
+ 			<key column="report_id"/>
+ 			<element column="face" type="string" />
+        </set>
+          
+        <list name="columns" inverse="true" cascade="all-delete-orphan" table="rd_report_columns" lazy="false">
+        	<key column="report_id" />
+        	<list-index column="column_number" />
+        	<one-to-many class="ReportColumn" />
+        </list>
+    </class>
+</hibernate-mapping>

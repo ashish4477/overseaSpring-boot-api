@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.pendingregistration">
+	<class name="PendingVoterAddress" table="pending_voter_addresses"
+		dynamic-insert="true">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+
+		<!-- city is encrypted -->
+
+		<!-- country is encrypted -->
+
+		<!-- description is encrypted -->
+
+		<property name="encrypted" type="binary" column="encrypted"
+			not-null="true" />
+
+		<!-- postal code is encrypted -->
+
+		<!-- stateOrRegion is encrypted -->
+
+		<!-- street1 is encrypted -->
+
+		<!-- street2 is encrypted -->
+	</class>
+</hibernate-mapping>

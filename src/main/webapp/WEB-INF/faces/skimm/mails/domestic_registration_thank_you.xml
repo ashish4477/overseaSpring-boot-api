@@ -1,0 +1,35 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office</subject>
+    <from>US Vote Helpdesk &lt;voterhelpdesk@usvotefoundation.org&gt;</from>
+   <reply_to>voterhelpdesk@usvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+    <p>
+	    <a href="https://vote.theskimm.com"><img src="https://usvotefoundation-drupal.s3.amazonaws.com/prod/s3fs-public/theskimm_email_banner.png" alt="SKIMM 2020"/></a>
+		<hr style="width: auto; max-width: 695px;margin: 0 auto 0 0;"/>
+	</p>
+	<p><strong>Dear $!firstName,</strong></p>
+	<p>You are not registered until you submit your Voter Registration form. Print, sign and send in your form to your election office. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to see the various options for transmitting your form.</p>
+
+	<p>Thanks for choosing the U.S. Vote Foundation (US Vote) site to register to vote and request your ballots for $!year.</p>
+
+	<p>US Vote is a nonprofit, nonpartisan public charity powered by a dedicated team of volunteers. We need your support: <a href="https://www.usvotefoundation.org/donate">please consider a monthly contribution</a> - It is how we will be able to continue to work every day to make sure that <strong>Every Citizen is a Voter.</strong></p>
+
+	<p><strong>Wishing you a great voting experience this year,</strong><br/>
+	<em>- From the volunteer team at U.S. Vote Foundation</em></p>
+
+  <p><strong>P.S.  <a href="https://www.usvotefoundation.org/voter-reward-badge">Get your Voter Reward Badge!</strong></a></p>
+  <p>Choose from a selection of Voter Reward Badges - spiff up your social media profile and spread the word to other voters!  Go here to get your badge: <a href="https://www.usvotefoundation.org/voter-reward-badge">https://www.usvotefoundation.org/voter-reward-badge</a></p>
+  <p><strong>P.P.S. <a href="https://www.usvotefoundation.org/donate">Please give back</a> to Help Us to Help More Voters:</strong></p>
+  <p>We work hard to make sure that you can vote. And when you give to us, you can be sure – Every Dollar Counts. And your voting effort goes further.</p>
+  <p>$1 x 1 helps assure another voter gets their ballot.</p>
+  <p>$1/month has 12 times the impact.</p>
+  <p>$3/month has 36 times the impact.</p>
+  <p>$10/month has 120 times the impact every year!</p>
+  <p><strong>Please Join Us as a Foundation Member - a small monthly contribution will make a major difference – it will change everything about what we can do for you and other voters. Go to <a href="https://www.usvotefoundation.org/donate">https://www.usvotefoundation.org/donate</a></p>
+
+	<p style="font-size:smaller;color:gray;"><a href="https://www.usvotefoundation.org/contact">Contact us</a> at anytime with questions and comments<br />
+	&copy;2005-$!year U.S. Vote Foundation, All rights reserved.</p>
+</div>
+    ]]></body_template>
+</email>

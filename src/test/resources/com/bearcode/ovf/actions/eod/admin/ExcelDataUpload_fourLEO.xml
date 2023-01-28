@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<dataset>
+	<faces_config id="1" url_path="localhost" path_prefix="faces/basic" default="1" />
+
+	<states id="1" name="State Name" abbr="SN" fips_code="9999" />
+
+    <counties id="1" name="County" county_type="County" state_id="1" />
+    <counties id="2" name="Wrong" county_type="County" state_id="1" />
+    
+    <municipalities id="1" name="City" municipality_type="City" state_id="1" />
+    <municipalities id="2" name="Wrong" municipality_type="Township" state_id="1" />
+
+    <voting_regions id="1" state_id="1" name="All Regions" />
+    <voting_regions id="2" state_id="1" name="County County" county_id="1" />
+    <voting_regions id="3" state_id="1" name="City City" municipality_id="1" />
+    <voting_regions id="4" state_id="1" name="Town Town, Town County" county_id="1" municipality_id="2"/>
+
+    <addresses id="1" address_to="LEO 1" street1="1 Street" city="State" state="SN" zip="00101" zip4="0000" />
+    <addresses id="2" address_to="LEO 1" street1="1 Street" city="State" state="SN" zip="00101" zip4="0000" />
+    <addresses id="3" address_to="LEO 2" street1="2 Street" city="County County" state="SN" zip="00102" zip4="0000" />
+    <addresses id="4" address_to="LEO 2" street1="2 Street" city="County County" state="SN" zip="00102" zip4="0000" />
+    <addresses id="5" address_to="LEO 3" street1="3 Street" city="City City" state="SN" zip="00103" zip4="0000" />
+    <addresses id="6" address_to="LEO 3" street1="3 Street" city="City City" state="SN" zip="00103" zip4="0000" />
+    <addresses id="7" address_to="LEO 4" street1="5 Wrong Street" city="Wrong Township" state="SN" zip="00105" zip4="0001" />
+    <addresses id="8" address_to="LEO 4" street1="6 Different Wrong Street" city="Another Wrong City" state="SN" zip="00106" zip4="0002" />
+
+    <local_officials id="1" region_id="1" physical_address_id="1" mailing_address_id="2" general_email="general-email-1@SN.gov" website="leo-1.SN.gov" hours="8AM to 4PM" further_instruction="Go see 1" status="1" />
+    <local_officials id="2" region_id="2" physical_address_id="3" mailing_address_id="4" general_email="general-email-2@SN.gov" website="leo-2.SN.gov" hours="9AM to 5PM" further_instruction="Go see 2" status="1" />
+    <local_officials id="3" region_id="3" physical_address_id="5" mailing_address_id="6" general_email="general-email-3@SN.gov" website="leo-3.SN.gov" hours="10AM to 6PM" further_instruction="Go see 3" status="1" />
+    <local_officials id="4" region_id="4" physical_address_id="7" mailing_address_id="8" general_email="general-email-4@SN.gov" website="leo-4-wrong.SN.gov" hours="12PM to 8PM" further_instruction="Go see 4 wrong" status="1" />
+
+    <officers id="1" order_number="1" office_name="All Regions, SN #1.1" first_name="1-1" last_name="All-Regions_-SN" phone="1-999-001-0001" fax="1-999-001-1001" email="officer-1-1@SN.gov" />
+    <officers id="2" order_number="1" office_name="County County, SN #2.1" first_name="2-1" last_name="County-County_-SN" phone="1-999-002-0001" fax="1-999-002-1001" email="officer-2-1@SN.gov" />
+    <officers id="3" order_number="1" office_name="City City, SN #3.1" first_name="3-1" last_name="City-City_-SN" phone="1-999-003-0001" fax="1-999-003-1001" email="officer-3-1@SN.gov" />
+    <officers id="4" order_number="1" office_name="Wrong City" first_name="5-1" last_name="Wrong-City_-SN" phone="1-999-005-0002" fax="1-999-005-2001" email="officer-5-2@SN.gov" />
+
+    <local_officials_to_officers local_official_id="1" officer_id="1" />
+    <local_officials_to_officers local_official_id="2" officer_id="2" />
+    <local_officials_to_officers local_official_id="3" officer_id="3" />
+    <local_officials_to_officers local_official_id="4" officer_id="4" />
+
+	<state_voter_info id="1" state_id="1" />
+	<elections id="1" svid_id="1" order_ticket="1" />
+</dataset>

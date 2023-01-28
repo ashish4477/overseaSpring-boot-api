@@ -1,0 +1,22 @@
+<email>
+    <subject>Reminder: Mail your absentee ballot request</subject>
+    <from>Vote411 &lt;voterinformation@vote411.org&gt;</from>
+    <reply_to>voterinformation@vote411.org</reply_to>
+    <body_template><![CDATA[
+    <div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+    <div style="width: auto; max-width: 700px;margin: 0 auto 0 0;background-color: #0A3A5A;padding:15px 20px;">
+	    <a href="https://absentee.vote411.org/vote/eoddomestic.htm?submission=true&stateId=1&regionId=430370">
+	        <img src="https://usvotefoundation-drupal.s3.amazonaws.com/prod/s3fs-public/vote411_logo.png" alt="vote411" style="height:50px;"/>
+	    </a>
+	</div>
+	<p><strong>Hey $!firstName,</strong></p>
+	<p>Congrats, you’re on your way to getting an absentee ballot, but one step is left. You have to print, sign, and mail it to your election office. That address is in the letter we included when you downloaded your form or you can find your <a href="https://www.vote411.org/election-official">election official here</a>. Check out VOTE411.org for more election info, including your <a href="https://www.vote411.org/ballot">candidate and ballot information</a>. We've got you covered with all the info and tools you need to vote confidently, no matter how or where you cast your ballot. Wishing you a great voting experience this year!</p>
+
+	<p><strong>Happy voting,</strong><br/>
+	VOTE411.org team</p>
+	<p>
+        PS. Please share this critical election resource with your friends and family and follow us on <a href="https://facebook.com/vote411">Facebook</a> | <a href="https://twitter.com/vote411">Twitter</a>.
+	</p>
+</div>
+    ]]></body_template>
+</email>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.vip">
+	<class name="VipContest" table="vip_contests" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        
+        <property name="vipId" type="long" column="vip_id" />
+        
+        <many-to-one name="source" class="VipSource" column="source_id" lazy="no-proxy" />
+      
+      	<many-to-one name="election" class="VipElection" column="election_id" />
+
+        <many-to-one name="electoralDistrict" class="VipElectoralDistrict" column="electoral_district_id" lazy="no-proxy" />
+        
+        <property name="type" type="string" column="contest_type" />
+
+        <property name="partisan" type="boolean" column="partisan" />
+
+        <property name="primaryParty" type="string" column="primary_party" />
+
+		<property name="special" type="boolean" column="special" />
+                  
+        <property name="office" type="string" column="office" />       
+        
+        <property name="numberElected" type="integer" column="number_elected" not-null="false" />
+        
+        <property name="numberVotingFor" type="integer" column="number_voting_for" not-null="false" />
+
+        <many-to-one name="ballot" class="VipBallot" column="ballot_id" lazy="false" cascade="all" />
+        
+        <property name="ballotPlacement" type="integer" column="ballot_placement" not-null="false" />
+	</class>
+</hibernate-mapping>

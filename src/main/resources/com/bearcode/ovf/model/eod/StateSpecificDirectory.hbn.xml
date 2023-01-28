@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.eod">
+    <class name="StateSpecificDirectory" table="state_voter_info" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <many-to-one name="state" column="state_id" cascade="all" not-null="true"/> <!--class="State"-->
+
+        <component name="stateContact" class="com.bearcode.ovf.model.common.Person">
+            <property name="title" type="string" column="contact_title" />
+            <property name="firstName" type="string" column="contact_first_name" />
+            <property name="initial" type="string" column="contact_initial" />
+            <property name="lastName" type="string" column="contact_last_name" />
+            <property name="suffix" type="string" column="contact_suffix" />
+        </component>
+        <property name="statePhone" type="string" column="contact_phone"/>
+        <property name="stateEmail" type="string" column="contact_email" />
+        <property name="stateFax" type="string" column="contact_fax" />
+        <property name="website" type="string" column="website" />
+        <property name="overseasVoterServicesSite" type="string" column="overseas_site" />
+        <property name="militaryVoterServicesSite" type="string" column="military_site" />
+        <property name="registrationFinderSite" type="string" column="finder_site" />
+        <property name="onlineVoterRegistrationSite" type="string" column="registration_site" />
+        <property name="ballotTrackingSite" type="string" column="ballot_site" />
+        <property name="earlyVotingInformationSite" type="string" column="early_voting_site" />
+        <property name="militaryNotes" type="string" column="military_notes" />
+        <property name="citizenNotes" type="string" column="citizen_notes" />
+        <property name="domesticNotes" type="string" column="domestic_notes" />
+        <property name="adminNotes" type="string" column="admin_notes" />
+        <property name="contactNotes" type="string" column="contact_notes" />
+		<property name="absenteeBallotRequestRequirements" type="string" column="absentee_requirements" />
+		<property name="absenteeBallotRequestIdentificationRequirements" type="string" column="absentee_id_req" />
+		<property name="earlyVotingRequirements" type="string" column="early_requirements" />
+		<property name="earlyVotingIdentificationRequirements" type="string" column="early_id_req" />
+		<property name="voterRegistrationRequirements" type="string" column="registration_requirements" />
+		<property name="voterRegistrationIdentificationRequirements" type="string" column="registration_id_req" />
+		<property name="votingInPersonIdentificationRequirements" type="string" column="inperson_id_req" />
+
+        <many-to-one name="mailing" column="mailing_address_id" class="com.bearcode.ovf.model.common.Address" cascade="all" lazy="false"/>
+        <many-to-one name="physical" column="physical_address_id" class="com.bearcode.ovf.model.common.Address" cascade="all" lazy="false"/>
+
+        <property name="confirmationOrStatus" type="string" column="confirmation" />
+        <!--<property name="registrationDeadline" type="string" column="deadline" />-->
+
+        <component name="citizenRegistration" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="citizen_reg_post"/>
+            <property name="email" type="boolean" column="citizen_reg_email"/>
+            <property name="fax" type="boolean" column="citizen_reg_fax"/>
+            <property name="tel" type="boolean" column="citizen_reg_tel"/>
+        </component>
+        <component name="citizenBallotRequest" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="citizen_ballot_post"/>
+            <property name="email" type="boolean" column="citizen_ballot_email"/>
+            <property name="fax" type="boolean" column="citizen_ballot_fax"/>
+            <property name="tel" type="boolean" column="citizen_ballot_tel"/>
+        </component>
+        <component name="citizenBlankBallot" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="citizen_blank_post"/>
+            <property name="email" type="boolean" column="citizen_blank_email"/>
+            <property name="fax" type="boolean" column="citizen_blank_fax"/>
+            <property name="tel" type="boolean" column="citizen_blank_tel"/>
+        </component>
+        <component name="citizenBallotReturn" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="citizen_return_post"/>
+            <property name="email" type="boolean" column="citizen_return_email"/>
+            <property name="fax" type="boolean" column="citizen_return_fax"/>
+            <property name="tel" type="boolean" column="citizen_return_tel"/>
+        </component>
+        <component name="militaryRegistration" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="military_reg_post"/>
+            <property name="email" type="boolean" column="military_reg_email"/>
+            <property name="fax" type="boolean" column="military_reg_fax"/>
+            <property name="tel" type="boolean" column="military_reg_tel"/>
+        </component>
+        <component name="militaryBallotRequest" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="military_ballot_post"/>
+            <property name="email" type="boolean" column="military_ballot_email"/>
+            <property name="fax" type="boolean" column="military_ballot_fax"/>
+            <property name="tel" type="boolean" column="military_ballot_tel"/>
+        </component>
+        <component name="militaryBlankBallot" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="military_blank_post"/>
+            <property name="email" type="boolean" column="military_blank_email"/>
+            <property name="fax" type="boolean" column="military_blank_fax"/>
+            <property name="tel" type="boolean" column="military_blank_tel"/>
+        </component>
+        <component name="militaryBallotReturn" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="military_return_post"/>
+            <property name="email" type="boolean" column="military_return_email"/>
+             <property name="fax" type="boolean" column="military_return_fax"/>
+            <property name="tel" type="boolean" column="military_return_tel"/>
+        </component>
+        <component name="domesticRegistration" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="domestic_reg_post"/>
+            <property name="email" type="boolean" column="domestic_reg_email"/>
+            <property name="inPerson" type="boolean" column="domestic_reg_inperson"/>
+            <property name="fax" type="boolean" column="domestic_reg_fax"/>
+            <property name="tel" type="boolean" column="domestic_reg_tel"/>
+        </component>
+        <component name="domesticBallotRequest" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="domestic_ballot_post"/>
+            <property name="email" type="boolean" column="domestic_ballot_email"/>
+            <property name="inPerson" type="boolean" column="domestic_ballot_inperson"/>
+            <property name="fax" type="boolean" column="domestic_ballot_fax"/>
+            <property name="tel" type="boolean" column="domestic_ballot_tel"/>
+        </component>
+        <component name="domesticBallotReturn" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="domestic_return_post"/>
+            <property name="email" type="boolean" column="domestic_return_email"/>
+            <property name="inPerson" type="boolean" column="domestic_return_inperson"/>
+            <property name="fax" type="boolean" column="domestic_return_fax"/>
+            <property name="tel" type="boolean" column="domestic_return_tel"/>
+        </component>
+        
+		<!--
+        <component name="domesticEarlyVoter" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="domestic_early_post"/>
+            <property name="email" type="boolean" column="domestic_early_email"/>
+            <property name="inPerson" type="boolean" column="domestic_early_inperson"/>
+            <property name="fax" type="boolean" column="domestic_early_fax"/>
+            <property name="tel" type="boolean" column="domestic_early_tel"/>
+        </component>
+        -->
+        <component name="domesticBlankBallot" class="com.bearcode.ovf.model.eod.DeliveryOptions">
+            <property name="post" type="boolean" column="domestic_blank_post"/>
+            <property name="email" type="boolean" column="domestic_blank_email"/>
+            <property name="inPerson" type="boolean" column="domestic_blank_inperson"/>
+            <property name="fax" type="boolean" column="domestic_blank_fax"/>
+            <property name="tel" type="boolean" column="domestic_blank_tel"/>
+        </component>
+
+        <component name="newVoterRegistrationWitnessesOrNotarization" class="com.bearcode.ovf.model.eod.WitnessNotarizationRequirements">
+        	<property name="notarizationWitnessRequirements" type="string" column="new_voter_notwit_reqs" />
+        </component>
+        <component name="absenteeBallotAffidavitWitnessesOrNotarization" class="com.bearcode.ovf.model.eod.WitnessNotarizationRequirements">
+        	<property name="notarizationWitnessRequirements" type="string" column="absentee_ballot_notwit_reqs" />
+        </component>
+        <component name="earlyVotingWitnessesOrNotarization" class="com.bearcode.ovf.model.eod.WitnessNotarizationRequirements">
+        	<property name="notarizationWitnessRequirements" type="string" column="early_voting_notwit_reqs" />
+        </component>
+
+        <property name="updated" type="java.util.Date" column="updated" />
+
+        <bag name="elections" inverse="true" cascade="all-delete-orphan" order-by="`order_ticket`" lazy="false" >
+            <key column="svid_id"/>
+            <one-to-many class="Election"/>
+        </bag>
+
+    </class>
+</hibernate-mapping>

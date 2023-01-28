@@ -1,0 +1,19 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office</subject>
+    <from>voterhelpdesk@overseasvotefoundation.org</from>
+   <reply_to>voterhelpdesk@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+	<p><strong>Dear $!firstName,</strong></p>
+	<p>Thanks for choosing the Overseas Vote site to register to vote and request your ballots for $!year. <strong>Remember to sign and send in your form</strong> to your election official who needs your original signature on file.</p>
+	<p>Your voter registration and/or ballot request is NOT complete until you submit it to your election office. Remember to print, sign and send in your form to your election official who needs your signature on file. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+	<p>Our foundation is a nonprofit, nonpartisan public charity powered by a dedicated team of volunteers. Please help us &mdash; <a href="https://www.usvotefoundation.org/donate">Make a Donation Today!</a></p>
+	<p>Wishing you a great voting experience this year,<br />
+	<em>From the volunteer team at at Overseas Vote – an initiative of U.S. Vote Foundation</em></p>
+	<p>P.S. <strong>Spread the word</strong> about how easy it is to register and to vote from overseas by liking us on <a href="https://www.facebook.com/USVote">Facebook</a>.</p>
+	<p>And please, <strong><a href="https://www.usvotefoundation.org/donate">Make your donation today!</a></strong></p>
+	<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;"><a href="https://www.usvotefoundation.org/contact">Contact us</a> at anytime with questions and comments<br />
+	&copy;2005-$!year U.S. Vote Foundation, All rights reserved.</p>
+</div>
+    ]]></body_template>
+</email>

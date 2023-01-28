@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.registrationexport">
+    <class name="DataExportConfiguration" table="data_export_configs"  lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="deliverySchedule" column="delivery_schedule">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.registrationexport.DeliverySchedule</param>
+                <param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+            </type>
+        </property>
+        <property name="exportAnswersLevel" column="export_level">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.registrationexport.ExportLevel</param>
+                <param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+            </type>
+        </property>
+        <property name="serverAddress" column="server_address" type="string"/>
+        <property name="serverPort" column="server_port" type="string"/>
+        <property name="sftpDir" column="sftp_dir" type="string"/>
+        <property name="sftpUserName" column="sftp_user" type="string"/>
+        <property name="sftpPassword" column="sftp_password" type="string"/>
+        <property name="sftpPrivateKey" column="sftp_private_key" type="string"/>
+        <property name="sftpPassphrase" column="sftp_passphrase" type="string"/>
+        <property name="zipPassword" column="zip_password" type="string"/>
+        <property name="enabled" column="enabled" type="boolean"/>
+
+        <!--<many-to-one name="faceConfig" column="face_config_id"/>-->
+        <many-to-one name="state" column="state_id" not-null="false"/>
+        <many-to-one name="votingRegion" column="region_id" not-null="false"/>
+
+        <bag name="faceConfigs" table="export_to_face_configs" lazy="false" cascade="all-delete-orphan">
+            <key column="export_config_id"/>
+            <many-to-many  class="com.bearcode.ovf.model.common.FaceConfig" column="face_config_id" />
+        </bag>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office from iVoteIsrael</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+    <reply_to>iVoteIsrael@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+	<p><strong>Dear $!firstName,</strong></p>
+
+	<p>Your voter registration and/or ballot request is NOT complete until you submit it to your election office. Remember to print, sign and send in your form to your election official who needs your signature on file. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+
+	<p>Thanks for choosing the iVoteIsrael site to register to vote and request your ballots for $!electionYear. iVoteIsrael works with Overseas Vote Overseas Vote,
+   a non-profit, non-partisan organization, to find ways to improve the voting process for overseas voters.</p>
+
+	<p><strong>Remember to sign and send in your form</strong> to your election official who needs your original signature on file.</p>
+
+	<p>Wishing you a great voting experience this year,<br />
+	<em>- From our team at iVoteIsrael</em></p>
+
+	<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;">Contact us at <a href="mailto:iVoteIsrael@overseasvotefoundation.org">iVoteIsrael@overseasvotefoundation.org</a> anytime with questions or comments.<br />
+	&copy;2005-$!year Overseas Vote. All Rights Reserved.</p>
+</div>
+    ]]></body_template>
+</email>

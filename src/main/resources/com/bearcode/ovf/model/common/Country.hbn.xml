@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common" >
+    <class name="Country" table="countries" lazy="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string" />
+        <property name="abbreviation" type="string" column="abbreviation" />
+        <property name="active" type="boolean" column="active" />
+    </class>
+</hibernate-mapping>

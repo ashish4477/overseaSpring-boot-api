@@ -1,0 +1,1 @@
+INSERT INTO roles (`id`, `name`) VALUES (10, 'reporting_dashboard');

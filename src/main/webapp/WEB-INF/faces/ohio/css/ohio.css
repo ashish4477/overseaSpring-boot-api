@@ -1,0 +1,184 @@
+/* Bootstrap overrides */
+body { 
+	padding-top: 20px;
+}
+a:hover { color:#05214a; }
+
+h1, h2.title { color:#05214a; }
+
+.header .brand h1, 
+.header .brand h2 { 
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+	font-weight:normal;
+}
+
+.container.wrapper {
+	margin-bottom: 25px;
+	padding: 8px;
+	width: 940px;
+}
+
+a.brand h1,
+a.brand h2 {
+	 padding: 5px 0 0 12px;
+	 text-shadow: 1px 1px 1px #000000;
+	 filter: dropshadow(color=#000000, offx=1, offy=1);
+	 font-weight: normal;
+}
+
+.navbar .brand { 
+	padding:0;
+	position:relative;
+	margin-left:0;
+	left:0;
+	right:0;
+	height:72px;
+}
+
+.navbar-inner a h1{ margin-top:-10px; }
+
+.navbar-inner a h2 {
+	color: #fff;
+	font-size: 23px;
+	margin-left:4px;
+	margin-top:-15px;
+}
+
+.navbar .navbar-inner .tagline{
+	padding:0;
+	background-color:#0D204A;
+	margin-left:16px;
+	margin-top:-4px;
+}
+
+.navbar .navbar-inner .tagline h4 {
+	padding:5px 16px;
+	padding:5px 13px;
+	letter-spacing: 2px;
+	font-weight: normal;
+	font-size: 15px; 
+}
+
+.navbar>h4{   
+	margin-top: 7px;
+	margin-left: 12px;
+	color:#fff;
+	letter-spacing: 1px;
+	font-weight: normal;
+}
+
+.logo{
+	margin-left: 11px;
+    margin-bottom: 6px;
+}
+
+.container.nav{background-color: #0d204a;}
+
+.navbar .navbar-inner {
+	color:#fff;
+	padding:2px 4px;
+	height:73px;
+	background:#fff;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-bottom:1px solid #333;}
+
+.container.tools .navbar .nav.pull-right { margin-right:10px; }
+.container.tools .navbar { margin-bottom:0; }
+
+.container.tools .navbar { background-color:#fff; }
+
+.navbar .divider-vertical {background-color:#fff;}
+
+.navbar-inner h1 {
+	text-transform: none;
+    font-size:30px;
+    letter-spacing: 1px;
+    margin-bottom:4px; 
+}
+
+.featured.last { 
+	margin-top:-14px; 
+	padding-bottom: 0;
+}
+
+.featured.last p {
+   background: url("../img/home/ballot-status.png") no-repeat scroll 20px -1px transparent;
+   height: 10px;
+   padding-bottom: 21px;
+   padding-left: 79px;
+   padding-top: 9px;
+   position: relative;
+   top: -6px;
+   width: 484px;
+}
+
+.featured.last a {
+    color: #004478;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.navbar .heading { padding-top:10px; }
+
+
+/* sidebar */
+.sidebar-nav { min-height: 438px; }
+.span3 .featured li { line-height:20px; }
+
+.home .voterType, 
+.login .voterType { height: 205px; }
+
+
+.transmission.method {
+	background:#F9F9F9 url('../img/buttons/transmission-bg.jpg') repeat-x;
+}
+
+.navbar .container.footer { 
+	width: 878px;
+	text-align:center;
+}
+.container.footer { margin-bottom: 12px; }
+
+/*remove fwab*/
+.span3.home.first {display:none;  }
+.span3.home.second, .span3.home.third {
+    margin-left: 2px;
+    width: 348px;
+}
+
+.span3 .featured {
+    height: 85px;
+    margin-top: -15px;
+}
+
+.home .featured h3 { 
+ 	position: relative;
+    top: 8px;
+}
+
+.featured .inner {
+    background: url("../img/home/svid-front-page-icon.png") no-repeat scroll 0 0 transparent;
+    left: 15px;
+    position: relative;
+    top: 15px;
+}
+
+.featured.eod .inner { left:34px;}
+
+.home .featured ul {
+    list-style-type: none;
+    padding: 2px 0 0 25px;
+}
+
+.navbar .nav > li > a,
+.navbar .nav > li > a:hover{color:#fff;}
+.navbar .footer .nav > li > a {color:#333;}
+
+/* Used to display browser incompatibility */
+.message {
+  background-color:#95001B !important;
+  top: 0;
+}

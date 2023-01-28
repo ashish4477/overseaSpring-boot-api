@@ -1,0 +1,18 @@
+<email>
+    <subject>Overseas Vote: your login has not been changed.</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+    <reply_to>iVoteIsrael@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+    <p><strong>Dear $!firstName,</strong></p>
+    <p>While filling out your Register to Vote information, you entered an email address that was different from the email address that you entered before (that was used as your login for My Voter Account).</p>
+
+    <p>Unfortunately <strong>$!newLogin</strong> already exists in our database and belongs to another user. Therefore your login <strong>$!oldLogin</strong> has not been changed. You can still use it as login for My Vote Account.</p>
+    <p>If there are any inaccuracies or mistakes,&nbsp;feel free to <a href="mailto:iVoteIsrael@overseasvotefoundation.org">Contact us</a>  at any time. </p>
+
+    <p>iVoteIsrael works with Overseas Vote Overseas Vote,
+   a non-profit, non-partisan organization, to find ways to improve the voting process for overseas voters.</p>
+    <p style="font-size:smaller;color:gray;">&copy;2005-2010 Overseas Vote. All Rights Reserved.</p>
+</div>
+    ]]></body_template>
+</email>

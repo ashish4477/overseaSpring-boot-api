@@ -1,0 +1,17 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+    <reply_to>newyork@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+    <p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Dear $!firstName,</strong></p>
+    <p>Your voter registration and/or ballot request is NOT complete until you submit it to your election office. Remember to print, sign and send in your form to your election official who needs your signature on file. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">We're glad you've been able to use New York’s Vote-Print-Mail system to generate your Federal Write-in Absentee Ballot (FWAB) and that you can cast your vote in this important election! Please read the instruction letter carefully.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Remember to sign your cover page form</strong> and send it with your ballot to your election official who needs your original signature.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">If the ballot from your election office arrives after you have sent in your FWAB, please complete it and send it in to replace the FWAB.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Here's to you for casting your ballot!</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>To spread the word</strong> about how easy it is to register and to vote from overseas. Use the <a href="https://www.overseasvotefoundation.org/tell-a-friend">Tell-a-Friend</a> tool at Overseas Vote to inform other American voters overseas.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif; font-size: smaller; color:gray; ">&copy;2005-$!year Overseas Vote. All Rights Reserved.</p>
+</div>
+    ]]></body_template>
+</email>

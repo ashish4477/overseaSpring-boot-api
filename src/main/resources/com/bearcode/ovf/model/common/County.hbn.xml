@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common">
+    <class name="County" table="counties" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id" unsaved-value="0" >
+            <generator class="identity"/>
+        </id>
+        <property name="name" type="string" column="name"/>
+        <property name="type" type="string" column="county_type"/>
+        <many-to-one name="state" column="state_id" class="State" not-null="true" lazy="false"/>
+     </class>
+</hibernate-mapping>

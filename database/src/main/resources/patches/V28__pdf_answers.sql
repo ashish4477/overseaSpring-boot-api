@@ -1,0 +1,1 @@
+ALTER TABLE `pdf_answers` ADD COLUMN `reportable` TINYINT(4) NOT NULL DEFAULT '1' AFTER `email_sent`;

@@ -1,0 +1,360 @@
+body {
+	background-color:#4A5072;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+* {
+ 	padding: 0px;
+}
+a, a:visited {
+	color: #fff;
+}
+
+table {
+	width: 548px;
+	margin: 5px 20px 20px 20px;
+	border-collapse: collapse;
+	background: #fff;
+	empty-cells: show;
+}
+table td, table thead th {
+	padding: 2px 5px;
+}
+table thead th {
+	color: #333;
+	text-align: left;
+	border-bottom: 1px solid #e7e7e7;
+}
+table td {
+	vertical-align: top;
+}
+table .even td {
+	background-color: #f8f8f8;
+}
+
+#logo {
+ 	background-color: #fff;
+ 	height: 72px;
+}
+
+#logo div {
+	width: 540px;
+	overflow: hidden;
+	margin: 0 auto;
+ 	height: 72px;
+}
+
+#wrapper {
+ 	width: 1000px;
+ 	background-image: url(http://canivote.org/images/background.jpg);
+	margin: 0 auto;
+}
+
+#wrapper #body {
+	margin: 0 auto;
+	width: 540px;
+	min-height: 945px;
+}
+
+#continue a {
+	color: #c00;
+}
+
+.column-form .hd h2, .column .hd h2 {	
+	background-position: 3px -41px;
+}
+
+.column-form .bd h5, .column .bd h5 {
+	font-size: 1em;
+}
+
+.column-form .bd .last-updated, .column .bd .last-updated {	
+	float: right;
+	line-height: 30px;
+}
+
+.error, #eod-corrections .instr {
+	margin: 10px 41px;
+}
+
+h3, .last-updated, .bd > h4, #eod-corrections .sect {
+}
+
+.sect {
+	background: transparent url(../img/backgrounds/506-w-col-bd.gif) left repeat-y;
+}
+
+.sect h4, .sect dl dt {
+	float: left;
+	display: block;
+	font-weight: bold;
+	width: 190px; height: 1%;
+	margin: 0px; padding: 8px 10px 2px 10px;
+	font-size: 13px;
+}
+.sect p, .sect dl dd {
+	float: left;
+	display: block;
+	width: 275px;
+	margin: 0px; padding: 8px 10px 2px;
+}
+
+.sect p.note {
+	font-size: 75%;
+}
+.sect dl {
+	display: block;
+	float: left;
+	margin: 0px; padding: 0px 0px 0px 0px;
+}
+
+.sect .break {
+	overflow: hidden;
+	height: 0px;
+	width: 504px;
+	line-height: 0px;
+	padding: 0px 0px 0px 0px; margin: 0px 1px;
+	border-bottom: 1px solid #ddd;
+	background: none !important;
+}
+
+.bd ul {
+	font-style: italic;
+	padding: 0px 40px 10px 40px;
+}
+
+.bd p {
+	padding: 0px 20px 25px 20px;
+}
+
+.sect.first {
+	padding-top: 3px;
+	background: transparent url(../img/backgrounds/506-w-col-hd.gif);
+}
+.corrections {
+	font-style: italic;
+	text-align: right;
+}
+.corrections a {
+	text-decoration: underline;
+}
+
+.region-list .website a {
+	display: block;
+	width: 300px;
+	overflow: hidden;
+}
+
+table td.correction {
+	background-color: #FDEEB9;
+}
+table td.correction em {
+	color: #c00;
+	font-weight: bold;
+	font-style: normal;
+}
+
+/** Specific styles per page **/
+
+.oneline select {
+	width: 200px;
+}
+
+#select_state{margin-left:10px;}
+
+#continue input, #continue a {
+	margin-left: 215px;
+}
+p.list-head {
+	padding-bottom: 5px;
+	font-size: 1.3em;
+	color: #000078;
+	font-weight: bold;
+}
+
+.ft, #eod-form .bd {
+	background-color: #fff;		
+	color:#333;
+	border: solid 1px #000;
+}
+
+ #eod-form .ft {
+	border: none;
+}
+
+form {
+	width: 370px;
+	margin: 20px auto;
+}
+
+.oneline span {
+	display: inline-block;
+}
+
+.oneline select {
+	width: 210px;
+}
+
+#continue input {
+	width: 75px;
+	margin: 10px 0px 0px 140px;
+}
+
+fieldset {
+	border: none;
+	padding: 0px;
+}
+
+#eodCaptchaImg, #eodCaptcha {
+	position: relative;
+	width: 201px;
+	display: block;
+	margin: 20px 0px 0px 130px;
+	font-size: .8em;
+	line-height: 1;
+}
+
+#eodCaptchaImgTag  {
+	border: solid 1px #ccc;
+}
+
+#eodCaptchaImgRefresh, #eodCaptchaImgRefresh2 { cursor: pointer; 
+	position: absolute;
+	left: 205px;
+	bottom: 48px;
+	border: none;
+}
+
+#eodCaptchaImgRefresh2 { 
+	bottom:44px;
+	color:#4483E0;
+	display:block;
+	font-size:0.9em;
+	left:233px;
+	line-height:0.85em;
+	width:6em;
+}
+
+#eodCaptcha input{
+	display: block;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	width: 195px;
+}
+
+.sect table {
+	float: none;
+	display: block;
+    clear: both;
+    background:transparent;
+    width: 100%;
+	margin: 0px; padding: 8px 10px 2px;
+}
+
+.sect td.first-col {
+    width: 190px;
+}
+
+/* accordian overrides */
+.accordian, .accordian-content {
+	overflow: hidden;
+}
+
+.accordian {
+	background-color:#fff;
+	border-bottom:1px solid #000000;
+	border-top:1px solid #4A4A4A;
+	color:#999999;
+	display:block;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.accordian .ctrl{
+	cursor: pointer;
+	margin: 0;
+	background-color:#30354B;
+	background-image:url(http://canivote.org/p7ap/images/p7ap_east_med_gray.gif);
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding:4px 8px 4px 18px;
+  color:#fff;
+  font-size: 14px;
+}
+
+.accordian.YAHOO-bc-ExpandingPanel-visible .ctrl{
+	background-image:url(http://canivote.org/p7ap/images/p7ap_south_med_gray.gif);
+}
+
+.accordian .pnl{
+	margin:0;
+}
+
+.accordian.YAHOO-bc-ExpandingPanel-hidden .pnl{
+	visibility: none;
+}
+
+
+.accordian-content {
+	color: #333;
+	margin: 10px 0px;
+}
+
+.accordian-sect {
+	padding-bottom: 8px;
+}
+
+.accordian-sect.last,
+.accordian-sect.empty{
+    border-bottom: none;
+}
+
+.accordian .break, .accordian-sect.last {
+	border: none;
+	width: 100%;
+}
+
+.accordian-sect h4, .accordian-sect dl dt {
+	float: left;
+	margin: 0px; padding: 8px 10px 2px 10px;
+	width: 40%; height: 1%;
+}
+
+.accordian-sect dl dt,
+table.accordian-content .first-col {padding-left:25px;}
+
+.accordian-sect p, .accordian-sect dl dd {
+	float: left;
+	width: 45%;
+	margin: 0px; padding: 8px 10px 2px 10px;
+}
+
+#poweredby {
+	text-align: right;
+}
+
+#leoEmailFeedback,
+.accordian-sect dt { font-weight:700; }
+
+.accordian-sect {
+  display:inline-table;
+  width:100%;
+  min-width: 486px;
+  border-bottom:solid #ABADC3 2px;
+}
+
+.accordian-sect.officer { border:none; }
+.accordian-sect dl { display:table-row; }
+
+dd { min-width:243px; }
+
+dd, dt {
+	width:40%;
+	display:table-cell;
+	max-width:290px;
+  padding: 8px 10px 2px 10px;
+  font-size: 14px;
+}

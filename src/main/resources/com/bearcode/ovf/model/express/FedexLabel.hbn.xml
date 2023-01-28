@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.express">
+    <class name="FedexLabel" table="fedex_labels" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="trackingNumber" column="tracking_number" type="string" />
+        <property name="paymentStatus" column="payment" type="boolean" />
+        <property name="fileName" column="filename" type="string"  not-null="false"/>
+        <property name="message" column="message" type="string" not-null="false"/>
+        <property name="created" column="created" type="java.util.Date"  not-null="false"/>
+        <property name="transaction" column="transaction" type="string" not-null="false"/>
+
+        <many-to-one name="owner" column="user_id" not-null="false" />
+    </class>
+
+</hibernate-mapping>

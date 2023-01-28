@@ -1,0 +1,16 @@
+<email>
+    <subject>New York State Board of Elections Military and Overseas Voter Registration: your voter registration site login has not been changed.</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+    <reply_to>newyork@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+    <p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Dear $!firstName,</strong></p>
+    <p style="font-family: 'Trebuchet MS', Arial, sans-serif;">While filling out your Register to Vote information, you entered an email address that was different from the email address that you entered before (that was used as your login for My Voter Account).</p>
+    <p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Unfortunately <strong>$!newLogin</strong> already exists in our database and belongs to another user. Therefore your login <strong>$!oldLogin</strong> has not been changed. You can still use it as login for My Vote Account.</p>
+    <p style="font-family: 'Trebuchet MS', Arial, sans-serif;">If there are any inaccuracies or mistakes, feel free to <a href="https://newyork.overseasvotefoundation.org">Contact us</a>  at any time. </p>
+    <p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Thank you</strong> for choosing the Overseas Citizen Absentee Voter Registration site and services to register to vote and request your ballot for the upcoming elections!</p>
+
+	<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;"><a href="https://newyork.overseasvotefoundation.org">Contact us</a> at anytime with questions and comments<br /></p>
+</div>
+    ]]></body_template>
+</email>

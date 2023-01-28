@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.vip">
+	<class name="VipCustomBallot" table="vip_custom_ballots" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        
+        <property name="vipId" type="long" column="vip_id" />
+        
+        <many-to-one name="source" class="VipSource" column="source_id" lazy="no-proxy" />
+        
+        <property name="heading" type="string" column="heading" not-null="false" />
+        
+        <list name="ballotResponses" cascade="all" lazy="false">
+        	<key column="custom_ballot_id" not-null="true" />
+        	<list-index column="sort_order" />
+        	<one-to-many class="VipCustomBallotResponse" />
+        </list>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+@import url("rava.css");
+@import url("eod.css");
+
+.womb .page-form .hd h2 {
+    background: url("../img/icons/page-icons.png") no-repeat scroll -5px -216px transparent;
+    padding-bottom: 12px;
+    padding-left: 55px;
+}
+
+.womb .body-content .legend {  padding: 12px 0; }
+
+.womb .body-content .legend span {
+    color: #333333;
+    font-size: 16px;
+}
+
+.womb .candidate-list a,
+.womb .question-group a {
+  text-decoration: underline;
+  color:#004377;
+}
+
+.womb .question-group h4 {
+    border-bottom: 3px solid #CCD3D9;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.womb .question-group h4 span { font-weight: normal; }

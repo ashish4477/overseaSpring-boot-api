@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<dataset>
+    <faces_config id="1" url_path="localhost" path_prefix="faces/basic" default="1" />
+
+    <user_names id="1" title="" first_name="Joe" last_name="Smith" middle_name="" suffix="" />
+    <user_names id="2" title="" first_name="" last_name="" middle_name="" suffix="" />
+
+    <user_addresses
+        id="1"
+        address_to=""
+        street1="main st."
+        street2="unit 1"
+        city="Montpelier"
+        state="VT"
+        zip="05602"
+        zip4="1234"
+        country="US"
+        county="Washington"
+        type="STREET"
+        description="This is a Montpelier address"
+    />
+
+    <user_addresses
+        id="2"
+        address_to=""
+        street1="main st."
+        street2="unit 1"
+        city="Montpelier"
+        state="VT"
+        zip="05602"
+        zip4="1234"
+        country="US"
+        county="Washington"
+        type="STREET"
+        description="This is a Montpelier address"
+    />
+
+    <user_addresses
+        id="3"
+        address_to=""
+        street1="main st."
+        street2="unit 1"
+        city="Montpelier"
+        state="VT"
+        zip="05602"
+        zip4="1234"
+        country="US"
+        county="Washington"
+        type="STREET"
+        description="This is a Montpelier address"
+    />
+
+    <user_addresses
+        id="4"
+        address_to=""
+        street1="main st."
+        street2="unit 1"
+        city="Montpelier"
+        state="VT"
+        zip="05602"
+        zip4="1234"
+        country="US"
+        county="Washington"
+        type="STREET"
+        description="This is a Montpelier address"
+    />
+
+    <states id="1" name="Vermont" abbr="VT" fips_code="50" />
+    <voting_regions id="1" name="A Region" state_id="1" />
+
+    <roles id="1" name="admin" />
+    <roles id="2" name="voter" />
+    <roles id="3" name="face_admin" />
+    <roles id="4" name="user_export" />
+
+    <users
+        id="1"
+        username="joe@example.com"
+        password="098f6bcd4621d373cade4e832627b4f6"
+        name_id="1"
+        previous_name_id="2"
+        phone="123-123-1234"
+        alternate_email=""
+        alternate_phone=""
+        voting_address="1"
+        current_address="2"
+        previous_address="3"
+        forwarding_address="4"
+        voting_region="1"
+        voter_type="CITIZEN_OVERSEAS_INDEFINITELY"
+
+        birth_year="0"
+        birth_month="0"
+        race=""
+        ethnicity=""
+        gender="M"
+        face_name=""
+     />
+    <!--
+	<users
+        id="1"
+        username="joe@example.com"
+        password="098f6bcd4621d373cade4e832627b4f6"
+        name_id="1"
+        previous_name_id="2"
+        phone="123-123-1234"
+        alternate_email=""
+        alternate_phone=""
+        current_address=""
+        voting_address=""
+        previous_address=""
+        forwarding_address=""
+        voting_region=""
+        voter_type=""
+
+        birth_year="0"
+        birth_month="0"
+        race=""
+        ethnicity=""
+        gender="male"
+        face_name=""
+
+    />
+    -->
+
+
+    <users_roles user_id="1" role_id="2" />
+
+</dataset>
+

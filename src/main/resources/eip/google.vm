@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<eip_object xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="election spec v1.1.xsd" schemaVersion="1.1">
+
+    <source id="0">
+        <name>Overseas Vote Foundation</name>
+        <eip_id>101</eip_id>
+        <datetime>$!datetime</datetime>
+        <description>Nonpartisan Voter Services for US Citizens Overseas and Uniformed Services Members.</description>
+        <organization_url>http://www.overseasvotefoundation.org</organization_url>
+    </source>
+
+#foreach( $state in $states )
+    <state id="$state.fipsCode">
+        <name>$state.name</name>
+    </state>
+#end
+
+#set ( $eo_id = 100 )
+
+#foreach( $local in $locals )
+    <locality id="$eo_id">
+#set ( $eo_id = $eo_id + 1 )
+        <name>$escaper.escapeXml( $local.region.name )</name>
+        <state_id>$local.region.state.fipsCode</state_id>
+        <type>$local.region.type</type>
+        <election_administration_id>$eo_id</election_administration_id>
+    </locality>
+
+    <election_administration id="$eo_id">
+#set ( $eo_id = $eo_id + 1 )
+#if ( !$local.leo.empty )
+#set ( $inner_eo_id = $eo_id )
+#set ( $eo_id = $eo_id + 1 )
+        <eo_id>$inner_eo_id</eo_id>
+#end
+#if ( !$local.lovc.empty )
+#set ( $inner_ovc_id = $eo_id )
+#set ( $eo_id = $eo_id + 1 )
+        <ovc_id>$inner_ovc_id</ovc_id>
+#end
+        <physical_address>$!escaper.escapeXml( $local.physical.addressTo) $!escaper.escapeXml( $local.physical.street1) $!escaper.escapeXml( $local.physical.street2) $!local.physical.city#if(!$local.physical.state.equals("")),#end $!local.physical.state $!{local.physical.zip}#if(!$local.physical.zip4.equals(""))-$!{local.physical.zip4}#end</physical_address>
+        <mailing_address>$!escaper.escapeXml( $local.mailing.addressTo) $!escaper.escapeXml( $local.mailing.street1) $!escaper.escapeXml( $local.mailing.street2) $!local.mailing.city#if(!$local.mailing.state.equals("")),#end $!local.mailing.state $!{local.mailing.zip}#if(!$local.mailing.zip4.equals(""))-$!{local.mailing.zip4}#end</mailing_address>
+#if ($local.website)
+        <elections_url>$!escaper.escapeXml( $local.website )</elections_url>
+#end
+##<hours>M-F 9am-6pm Sat 9am-Noon</hours>
+    </election_administration>
+
+#if ( !$local.leo.empty )
+    <election_official id="$inner_eo_id">
+        <name>$!local.leo.firstName $!local.leo.lastName </name>
+        <phone>$!local.leoPhone</phone>
+        <fax>$!local.leoFax</fax>
+        <email>$!local.leoEmail</email>
+    </election_official>
+#end
+
+#if ( !$local.lovc.empty )
+    <election_official id="$inner_ovc_id">
+        <name>$!local.lovc.firstName $!local.lovc.lastName </name>
+        <phone>$!local.lovcPhone</phone>
+        <fax>$!local.lovcFax</fax>
+        <email>$!local.lovcEmail</email>
+    </election_official>
+#end
+
+#end
+
+</eip_object>

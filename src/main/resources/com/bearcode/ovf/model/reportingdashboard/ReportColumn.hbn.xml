@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.reportingdashboard">
+    <class name="ReportColumn" table="rd_report_columns" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+       	<many-to-one name="report" column="report_id" class="Report" not-null="true" />
+       	<property name="name" type="string" not-null="true" />
+       	<property name="columnNumber" column="column_number" type="int" />
+       	<bag name="fields" inverse="true" cascade="all-delete-orphan" lazy="false">
+            <key column="column_id"/>
+            <one-to-many class="ReportField"/>
+        </bag>
+    </class>
+</hibernate-mapping>

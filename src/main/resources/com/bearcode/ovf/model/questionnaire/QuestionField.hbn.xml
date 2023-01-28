@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.questionnaire" >
+    <class name="QuestionField" table="question_fields" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="title" type="string" />
+        <property name="order" type="integer" column="order_number" />
+        <many-to-one name="type" column="type_id" not-null="true" lazy="false" cascade="persist"/>
+        <many-to-one name="question" column="question_variant_id" not-null="true" cascade="persist"/>
+        <property name="encoded" type="boolean" />
+        <property name="security" type="boolean" />
+        <property name="required" type="boolean" />
+        <property name="verificationPattern" type="string" column="verification_pattern" />
+        <property name="helpText" type="string" column="help_text" />
+        <property name="additionalHelp" type="string" column="additional_help" />
+        <property name="inPdfName" type="string" column="in_pdf_name" />
+        <property name="dataRole" type="string" column="data_role"/>
+        <bag name="genericOptions" lazy="false" inverse="true" order-by="string_value" cascade="all,delete-orphan"><!-- fetch="join"  -->
+            <key column="field_id"/>
+            <one-to-many class="FieldDictionaryItem" />
+        </bag>
+        <bag name="fieldDependencies" lazy="true" inverse="true">
+            <key column="field_id"/>
+            <one-to-many class="FieldDependency"/>
+        </bag>
+    </class>
+</hibernate-mapping>

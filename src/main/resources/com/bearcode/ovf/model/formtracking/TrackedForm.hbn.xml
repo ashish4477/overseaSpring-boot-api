@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.formtracking">
+	<class name="TrackedForm" table="tracked_forms" lazy="false"
+		dynamic-insert="true">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="firstName" type="string" column="first_name" />
+		<property name="lastName" type="string" column="last_name" />
+		<property name="emailAddress" type="string" column="email_address" not-null="true" />
+
+		<property name="flowType" column="flow_type" not-null="true">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.questionnaire.FlowType</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR --></param>
+			</type>
+		</property>
+		<many-to-one lazy="false" name="face" column="face_id" not-null="true" />
+
+		<property name="lastEmailDate" type="java.util.Date">
+			<column name="last_email_date" sql-type="datetime" />
+		</property>
+
+		<property name="numberOfEmailSent" type="integer" column="number_email" />
+	</class>
+</hibernate-mapping>

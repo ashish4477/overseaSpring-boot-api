@@ -1,0 +1,87 @@
+#content {
+	float: left;
+	width: 608px;
+	margin: 2px 0px 0px 2px;
+}
+
+#content .hd {
+	background: transparent url(../img/backgrounds/608-w-col-hd.png) top left no-repeat;
+	height: 40px;		
+}
+#content .hd h2 {	
+	color: #c00;
+	height: 30px;
+	padding: 10px 0px 0px 12px;
+	line-height: 20px; letter-spacing: 1px; word-spacing: -1px;
+}
+
+#content .hd.breadcrumbs {
+	height: 50px;
+}
+#content .hd.breadcrumbs h2 {
+	padding: 0px 12px;
+}
+#content .breadcrumbs p {
+	padding: 5px 12px 0px 12px;
+	height: 15px;
+	line-height: 15px;
+}
+
+#content .bd {
+	font-size: 13px; line-height: 18px;
+	padding: 10px 96px 10px 12px;
+	text-align: justify;
+	background: transparent url(../img/backgrounds/608-w-col-bd.gif) left repeat-y;
+}
+#content .bd h3 {
+	font-style: italic;
+	font-size: 14px;
+	margin-top: 10px;
+}
+#content .bd p {
+	margin: 0px 0px 18px 0px;
+}
+#content .bd p a {
+	font-style: italic;
+	color: #c00;
+}
+#content .bd p a:hover {
+	color: #f00;
+}
+#content .bd img.large {
+	display: block;
+	margin: 0px 0px 18px 0px;
+}
+#content .bd img.small, #content .bd img.portrait {
+	display: block;
+	float: left;
+	margin: 0px 18px 9px 0px;
+}
+#content .bd img.portrait {
+	position: relative;
+}
+
+#content .bd ul, #content .bd ol {
+	padding: 10px 30px;
+	margin: 10px 60px;
+	border-width: 1px 0px;
+	border-style: dashed;
+	border-color: #ccc;
+}
+#content .bd li {
+	padding: 2px 0px;
+}
+#content .bd .links {
+	text-align: right;
+}
+
+#content .ft {
+	line-height: 5px; font-size: 5px;
+	height: 10px;
+	background: transparent url(../img/backgrounds/608-w-col-ft.png) bottom left no-repeat;
+}
+
+
+/** IE6 fallback **/
+* html #content .hd {	background-image: url(../img/backgrounds/608-w-col-hd.gif); }
+* html #content .ft { background-image: url(../img/backgrounds/608-w-col-ft.gif); }

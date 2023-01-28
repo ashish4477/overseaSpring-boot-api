@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<mvc:annotation-driven/>
+	<context:annotation-config />
+	<context:component-scan base-package="com.bearcode.ovf.actions.questionnaire" />
+	<context:component-scan base-package="com.bearcode.ovf.actions.mobile" />
+	<context:component-scan base-package="com.bearcode.ovf.actions.votingprecinct" />
+	<context:component-scan base-package="com.bearcode.ovf.editor" />
+	<context:component-scan base-package="com.bearcode.ovf.tools" />
+	<context:component-scan base-package="com.bearcode.ovf.validators" />
+	<context:component-scan base-package="com.bearcode.ovf.utils" />
+	<!--<context:component-scan base-package="com.bearcode.ovf.webservices.localelections" />-->
+	<!--<context:component-scan base-package="com.bearcode.ovf.webservices.eod" />-->
+
+	<!--<bean id="mobileService" class="com.bearcode.ovf.service.MobileService" />  defined in applicationContext by annotation driven config-->
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
+	<!--To enable @RequestMapping process on type level and method level -->
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
+
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="mobileJsonConverter" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mobileJsonConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+		<property name="supportedMediaTypes" value="application/json" />
+	</bean>
+
+	<bean id="districtLookupService" class="com.bearcode.ovf.webservices.DistrictLookupService">
+		<property name="melissaDataUrl" value="http://xml.melissadata.com/xml.asp" />
+		<property name="cacheDir"
+			value="/var/www/www.overseasvotefoundation.org/districtlookup_cache" />
+		<!-- production and staging -->
+		<property name="cacheTime" value="2592000000" />
+		<!-- 1 month = 30d*24h*60m*60s*1000ms, time in milliseconds -->
+	</bean>
+
+    <bean id="smartyStreetService" class="com.bearcode.ovf.webservices.SmartyStreetService">
+
+    </bean>
+
+
+	<bean id="voteSmartService" class="com.bearcode.ovf.webservices.votesmart.VoteSmartService">
+		<!--<property name="votesmartKey"><value>452c72e3e154b5bfd19c28994fd6ff48</value>
+			</property> --><!-- Moscow key -->
+		<property name="votesmartKey" value="#{systemEnvironment['VOTE_SMART_KEY']}" />
+		<!-- Bear Code office key -->
+		<!--<property name="votesmartKey"><value>cde92dc5c95aa1f1217f136ed5d0eb67</value>
+			</property> --><!-- staging key -->
+		<property name="votesmartCacheDir"
+			value="/var/www/www.overseasvotefoundation.org/votesmart_cache" />
+		<!-- production and staging -->
+		<property name="votesmartCacheTime" value="60000" />
+		<!-- time in milliseconds -->
+
+		<property name="useVotesmartPresidental" value="true" />
+		<property name="useVotesmartSenate" value="true" />
+		<property name="useVotesmartRepresentatives" value="true" />
+	</bean>
+
+    <!-- adding messages -->
+   	<bean id="messageSource"
+   		class="org.springframework.context.support.ResourceBundleMessageSource">
+   		<property name="basenames">
+   			<list>
+   				<value>messages</value>
+   			</list>
+   		</property>
+   	</bean>
+
+	<!-- Enables state level FWAB and what's on my ballot. -->
+	<import resource="voting-precinct.xml" />
+</beans>

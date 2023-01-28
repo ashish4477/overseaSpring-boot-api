@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.pendingregistration">
+	<class name="PendingVoterName" table="pending_voter_names"
+		dynamic-insert="true">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+
+		<!-- all values are encrypted or no values are encrypted -->
+
+		<property name="encrypted" type="binary" column="encrypted"
+			not-null="false" />
+
+		<property name="firstName" type="string" column="first_name"
+			not-null="false" />
+
+		<property name="lastName" type="string" column="last_name"
+			not-null="false" />
+
+		<property name="middleName" type="string" column="middle_name"
+			not-null="false" />
+
+		<property name="suffix" type="string" column="suffix"
+			not-null="false" />
+
+		<property name="title" type="string" column="title" not-null="false" />
+	</class>
+</hibernate-mapping>

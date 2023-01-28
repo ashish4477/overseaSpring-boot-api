@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.questionnaire">
+    <class name="FieldDependency" table="field_dependencies" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <many-to-one lazy="false" name="dependent" column="field_id" cascade="persist"/>
+        <many-to-one lazy="false" name="dependsOn" column="depends_on"  cascade="persist"/>
+
+    </class>
+</hibernate-mapping>

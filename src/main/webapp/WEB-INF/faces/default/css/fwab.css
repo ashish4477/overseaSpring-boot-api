@@ -1,0 +1,396 @@
+/** Overlay stuff **/
+.progress-bar {
+	position: static;
+	float: right;
+	width: 176px; height: 25px;
+	padding-top: 10px;
+}
+.progress-bar img {
+	display: block; float: left;
+}
+.progress-bar div { clear:both; zoom: 1; }
+
+.progress-text {
+	text-align: center;
+	font-style: italic;
+}
+
+.large-overlay {
+	float: left; display: inline;
+	margin: 2px 0 0 2px;
+	width: 608px;
+}
+.large-overlay .hd {
+	position: static;
+	background: transparent url(../img/backgrounds/608-w-col-hd.png) no-repeat scroll left top;
+}
+.large-overlay .hd h2 { width: 380px; }
+.large-overlay .bd {
+	min-height: 325px;
+	background: transparent url(../img/backgrounds/608-w-col-bd.gif) repeat-y scroll right center;
+}
+.large-overlay .ft {
+	background: transparent url(../img/backgrounds/608-w-col-nograd-ft.png) no-repeat scroll right top;
+}
+
+.fwab-start { line-height: 18px; }
+.fwab-start .column-left { float: left; width: 370px; }
+.fwab-start .column-right { float: right; width: 185px; }
+.fwab-start .column-right h2 { text-align: center;}
+.fwab-start .bd h2 { font-size: 13px; color:#c00; line-height: 16px; }
+.fwab-start p { padding-bottom: 5px; }
+.fwab-start .go-button-container {
+	margin: 5px auto; display:block; width: 57px; height: 27px;
+	background: transparent url(../img/buttons/start-button-gray.jpg) no-repeat;
+}
+.fwab-start .go-button-container .go-button {
+	height: 27px; width: 57px; display: block;
+}
+.fwab-start .who-can-use-fwab h2 { padding-bottom: 10px; line-height: 1.1;}
+.fwab-start .who-can-use-fwab h2 em { color: #787878; font-weight: normal; font-style: italic; font-size: 92%; }
+.fwab-start .who-can-use-fwab p { padding-top: 5px; padding-left: 2em; }
+
+.fwab-start .column-right a img {
+}
+.fwab-start .caption { font-style: italic; text-align: center; }
+.fwab-start .what-is-fwab,
+.fwab-start .who-can-use-fwab { padding-bottom: 15px; }
+.fwab-start .notes { font-size: 10px; }
+.fwab-start .who-can-use-fwab label {
+	display: block; clear:both; padding: 3px 0; height: 1%;
+}
+.fwab-start .who-can-use-fwab label .field {
+	width: 2em; text-align:center; padding-top: 0.15em; height: 1.27em;
+	float: left; display: block; border: 0; background:transparent;
+}
+.fwab-start .who-can-use-fwab label .label {
+	margin-left: 2em; display: block;
+}
+.fwab-start #ready-box {
+	padding-top: 1em; padding-left: 2em;
+}
+.fwab-start p.em { color: #c00;}
+
+.fwab .fwabAddon #ravaForm {
+	width: 100%;
+}
+
+.fwab .fwabAddon .representatives-group {
+	width: 100%; background-color: #e5e5e5; display: table;
+}
+.fwab .fwabAddon .representatives-group th {
+	text-align: left; vertical-align: bottom;
+	padding: 4px 8px 2px; font-size: 13px;
+}
+.fwab .fwabAddon .representatives-group td {
+	 padding: 5px 12px;
+}
+.fwab .fwabAddon .representatives-group .odd td {
+	background: #fff;
+}
+
+.fwab-last-page p { font-weight: normal !important; }
+.fwab-last-page h2 { font-weight: bold !important; }
+.fwab-last-page h3 { padding: 10px 0px 5px 0px; }
+.fwab-last-page #ravaForm { width: 100% !important; }
+.fwab-last-page .continue { padding: 15px 0px 0px 0px;}
+
+.fwab-last-page .download-box {
+	padding: 10px; background: #fff; font-style: italic;
+}
+.fwab-last-page .download-box h3 { color: #c00; }
+.fwab-last-page .question {
+	padding: 10px; background: #fff; 
+}
+.fwab-last-page .express-your-vote {
+	padding: 10px 10px 0; background: #fff; margin: 10px 0px 10px 0px;
+}
+.fwab-last-page .express-your-vote a {
+	display: block; padding: 5px 110px; font-size: 25px; font-weight: lighter;
+	color: #c00; text-decoration: none; height: 39px; line-height: 39px;
+	background: transparent url(../img/icons/express-your-vote-letters.png) 330px center no-repeat;
+}
+.security-recommendation {
+	padding-top: 5px;
+	font-size: 10px; font-style: italic;
+}
+.fwab-last-page .security-recommendation h2 {
+	font-size: 10px !important; font-style: italic; font-weight: normal; padding-bottom: 0;
+}
+
+.fwab-last-page #download-link {margin:20px auto; margin-bottom:20px; width:207px; }
+
+.fwab #ravaForm {
+	width: 100%;	
+}
+
+ol {
+	padding: 0px 0px 0px 30px;
+}
+blockquote {
+	margin: 0px;
+}
+
+#overseas-vote-foundation-short h1 {
+	font-size: 15px;
+	line-height: 18px;
+	padding: 6px 0px 8px 0px;
+}
+#overseas-vote-foundation-short h2 {
+	color: #c00;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: normal;
+}
+
+#rava-edit-question .bd {
+	min-height: 300px;
+	padding: 20px 100px;
+}
+
+.continue #back-button {
+	display: block;
+	height: 30px; width: 54px;
+	text-align: right;
+	margin-left: 165px;
+	line-height: 30px;
+	float: left;
+	color: #c00;
+}
+.fwab-last-page .continue #back-button {
+	margin-left: 215px;
+}
+* html .continue #back-button,
+* html .continue input,
+* html .continue .spacer {
+	display: inline;
+}
+.continue input,
+.continue #cancel-button {
+	float: left;
+	padding-left: 10px;
+}
+.continue #dead-button {
+	float: left;
+	padding-left: 10px;
+}
+.continue .spacer {
+	float: left;
+	width: 267px; height: 30px;
+}
+
+.question-group {
+	padding-bottom: 14px;
+}
+.question-group, .question {
+	clear: both;
+}
+.question {
+	font-size: 13px;
+	padding: 0px 0px 0px 0px;
+}
+
+.one-line {
+	display: block;
+	height: 21px;
+	margin: 3px 0px;
+	clear: both;
+}
+.one-line span {
+	display: block;
+	float: left;
+	width: 235px;
+	line-height: 21px;
+}
+.one-line span.label {
+	width: 174px;
+	font-size: 13px;
+	text-align: right;
+	padding-right: 8px;
+}
+.one-line span.label em {
+	font-style: normal;
+	color: #c00;
+	font-weight: bold;
+}
+.one-line span input {
+	width: 50%;
+	color: #787878;
+}
+.one-line span select {
+	overflow: hidden;
+	width: 99%;
+	color: #787878;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+.single-field span {
+	width: 420px;
+}
+.single-field span.has-rava-bubble {
+	width: 420px;
+	padding-right: 5px;
+	
+}
+.multiple-field span.has-rava-bubble {
+	width: 235px;
+	padding-right: 5px;
+}
+
+.radio-group p {
+	width: 362px;
+	float: left;
+	line-height: 21px;
+	margin: 3px 0px;
+}
+.checkbox span.label,
+.radio-group .one-line span.label {
+	width: 532px;
+	text-align: left;
+	padding-right: 0px; padding-left: 4px;
+}
+.checkbox span.checkbox,
+.radio-group .one-line span.radio {
+	width: 20px;
+	text-align: center;
+}
+.radio-group .one-line .break {
+	height: 0px; overflow: hidden;
+}
+.checkbox span.checkbox input,
+.radio-group .one-line span.radio input {
+	width: auto;
+	position: relative;
+}
+
+div.one-line span.required,
+.required {
+	display: inline;
+	width: auto;
+	float: none;
+	color: #c00;
+}
+
+div.one-line .rava-bubble,
+div.radio-field-title .rava-bubble,
+label.textarea .rava-bubble {
+	float:left;
+	height: 21px; width: 20px;
+	overflow: hidden;
+}
+
+div.radio-field-title .rava-bubble,
+label.textarea .rava-bubble {
+	margin: 3px 0px;
+}
+
+label.textarea {
+	width: 382px;
+}
+label.textarea .textarea-label {
+	display: block;
+	width: 100%; height: 21px;
+	margin: 3px 0px;
+	line-height: 21px;
+}
+label.has-rava-bubble .textarea-label {
+	float: left;
+	width: 362px;
+}
+
+div.textarea textarea {
+	display: block;
+	width: 98.4%;
+	clear: both;
+}
+div.textarea .textarea-label {
+	position: relative;
+	height: 21px;
+	margin: 3px 0px;
+}
+div.textarea .textarea-label .rava-bubble {
+	position: absolute;
+	top: 0px; right: 0px;
+}
+
+/*.error { display: none; }*/
+.error {
+	color: #000;
+	text-align: left;
+	border: 0;
+	padding: 0;
+    margin: 3px;
+	background: #fdc;
+}
+.error-indicator .label {
+	background-color: #fdc;
+	font-weight: bold;
+	color: #000;
+}
+.error-indicator .label .required {
+	color: #000;
+}
+.error-indicator .single-field select {
+	background-color: #fdc;
+	font-weight: bold;
+}
+
+.ie6-tooltip {
+	position: relative;
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+}
+.ie6-tooltip .tooltip {
+	position: static;
+	width: 246px;
+	margin: 3px 0px 10px 120px;
+	border: 2px solid #fff;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title {
+	padding: 5px 5px 0px 5px;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title .close-tooltip {
+	top: 5px; right: 5px;
+}
+.ie6-tooltip .tooltip-text {
+	background: #F3F9FB;
+	padding: 5px;
+}
+
+.tooltip {
+	position: absolute;
+	width: 290px;
+    z-index:50;
+}
+.tooltip-icon {
+	cursor: pointer;
+}
+.tooltip-title {
+	position: relative;
+	padding: 45px 15px 0px 20px;
+	height: 19px;
+	background: transparent url(../img/backgrounds/rava-bubble-hd.png) top center no-repeat;
+}
+.tooltip-title .close-tooltip {
+	position: absolute;
+	top: 45px; right: 15px;
+	cursor: pointer;
+}
+.tooltip-text {
+	padding: 5px 15px 35px 20px;
+	background: transparent url(../img/backgrounds/rava-bubble-ft.png) bottom center no-repeat;
+}
+
+.last-page p {
+	font-weight: bold;
+	padding-bottom: 10px;
+	position: relative;
+}
+.last-page p a {
+	text-decoration: underline;
+}
+
+#ravaForm #download-link {margin:40px auto; margin-bottom:40px; width:207px; }

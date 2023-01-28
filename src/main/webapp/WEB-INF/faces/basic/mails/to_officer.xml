@@ -1,0 +1,87 @@
+<email>
+    <subject>Election Official Data Record Update Request</subject>
+    <from>U.S. Vote Foundation <![CDATA[ <eod@usvotefoundation.org> ]]></from>
+   	<reply_to>eod@usvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<p>Dear $greeting,</p>
+
+<p>The following information is from your contact data record, which is currently online in the <a href="https://www.overseasvotefoundation.org/vote/eod.htm">Overseas Vote</a> and <a href="https://usvotefoundation.org/vote/eod.htm">U.S. Vote Foundation</a> Election Official Directory database. This data serves Domestic, Military and Overseas Voters, and many organizations that serve them.</p>
+
+<p><strong>Please take the following steps to Update or Confirm your data record:</strong></p>
+<ol style="padding-bottom:10px;">
+<li>Review your jurisdiction contact information, as follows</li>
+<li>Click the data record update/confirm link provided at the bottom of this email</li>
+<li>Edit your record as needed and hit "Submit"</li>
+<li>Or, if no edits/changes are needed, indicate that the record is correct and hit “Submit” </li>
+</ol>
+
+<table cellpadding="25" cellspacing="5" border="1" bordercolor="#666666">
+<tr>
+<td bgcolor="#dddddd" border="none">
+<p><b>$leo.region.name, $leo.region.state.name</b></p>
+
+<p>Local Elections Website: <b> #if ($leo.website != '') <a href="$leo.website">$leo.website</a> #else <span style="color:red;">none on record, please provide if applicable</span> #end </b></p>
+
+<p>Mailing Address:<br /><b>
+#if ( $leo.mailing && !$leo.mailing.isEmpty() )
+    $!leo.mailing.addressTo <br/>
+    $!leo.mailing.street1 <br/>
+    #if ( $leo.mailing.street2 != '' ) $leo.mailing.street2 <br/> #end
+    $!leo.mailing.city, $!leo.mailing.state $!leo.mailing.zip#if ( $leo.mailing.zip4 != '')-$!leo.mailing.zip4 <br/> #end
+#else <span style="color:red;">please provide</span> #end</b></p>
+
+<p>Office Address / Express Mail Delivery :<br /><b>
+#if ( $leo.physical && !$leo.physical.isEmpty() )
+    $!leo.physical.addressTo <br/>
+    $!leo.physical.street1 <br/>
+    #if ( $leo.physical.street2 != '' ) $leo.physical.street2 <br/> #end
+    $!leo.physical.city, $!leo.physical.state $!leo.physical.zip#if ( $leo.physical.zip4 != '')-$!leo.physical.zip4 <br/> #end
+#else <span style="color:red;">please provide</span> #end</b></p>
+
+#foreach( $extAddress in $leo.additionalAddresses )
+<p>$extAddress.type.name:<br /><b>
+#if ( $extAddress.address && !$extAddress.address.isEmpty() )
+    $!extAddress.address.addressTo <br/>
+    $!extAddress.address.street1 <br/>
+    #if ( $extAddress.address.street2 != '' ) $extAddress.address.street2 <br/> #end
+    $!extAddress.address.city, $!extAddress.address.state $!extAddress.address.zip#if ( $extAddress.address.zip4 != '')-$!extAddress.address.zip4 #end <br/>
+    #if ( $extAddress.email != '' )Email: $extAddress.email <br/>#end
+    #if ( $extAddress.website != '' )Website: $extAddress.website <br/>#end
+#else <span style="color:red;">please provide</span> #end</b></p>
+#end
+
+<p>Election Office Email Address:<br/><b>#if ( $leo.generalEmail != '' ) $!leo.generalEmail #else <span style="color:red;">please provide</span> #end</b></p>
+
+#foreach( $officer in $leo.officers )
+<p>$!officer.officeName: <br />
+<b>#if ( $officer.firstName != '' || $officer.lastName != '' ) $!officer.firstName $!officer.lastName #else <span style="color:red;">please provide</span> #end<br/>
+Phone: #if ( $officer.phone != '') $officer.phone #else <span style="color:red;">please provide</span> #end<br/>
+Fax: #if ( $officer.fax != '') $officer.fax #else <span style="color:red;">please provide</span> #end<br/>
+Email Address: #if ( $officer.email != '' ) $officer.email #else <span style="color:red;">please provide</span> #end </b></p>
+#end
+
+<p>Office Hours: <b>#if ( $leo.hours != '' ) $leo.hours #else <span style="color:red;">please provide</span> #end </b></p>
+
+<p>Further instructions: <b>#if ( $leo.furtherInstruction != '' ) $leo.furtherInstruction #else <span style="color:red;">please add any additional information intended for voters from your jurisdiction</span> #end </b></p>
+</td>
+</tr>
+</table>
+
+<p><strong>To update any of this information, and/or to inform us that it is correct, please click your data record Update / Confirmation link:</strong> <a href="https://www.usvotefoundation.org/vote/eodCorrections.htm?leoId=${leo.id}">https://www.usvotefoundation.org/vote/eodCorrections.htm?leoId=${leo.id}</a></p>
+
+<p><b>PLEASE NOTE:</b> Your changes will NOT show up on the site immediately. They will be reviewed within 48 hours of submission before being published to the site. You can view your <a href="https://www.usvotefoundation.org/vote/election-official-directory/${leo.region.state.abbr}/${leo.region.name}">live record</a> and update it at any time.</p>
+
+<p>I personally value your input, your communication with our office, your questions and your collaboration. Please know, I am here to serve the purpose of helping to keep your data record current, and I enjoy hearing from you. Please contact me directly any time at <a href="mailto:eod@usvotefoundation.org">eod@usvotefoundation.org</a></p>
+
+<p>Thank you,</p>
+
+<p>Jane Scheiring<br />
+Election Official Directory Content Manager<br />
+U.S. Vote Foundation and Overseas Vote <br />
+
+<p style="font-size:smaller; color:gray; font-family:'Trebuchet MS', Arial, sans-serif;"><a href="https://www.usvotefoundation.org/contact">Contact us</a> at anytime with questions and comments<br />
+	&copy;2005-$!year U.S. Vote Foundation. All Rights Reserved.</p>
+
+<p>Trouble viewing this email? <a href="https://www.usvotefoundation.org/vote/eodCorrections.htm?leoId=${leo.id}">Click here to view this email in a browser.</a></p>
+    ]]></body_template>
+</email>

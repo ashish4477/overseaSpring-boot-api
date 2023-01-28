@@ -1,0 +1,168 @@
+body.fixed { padding-top: 3px; }
+
+.container.wrapper { 
+	background-color:#fff; 
+	box-shadow: 0 1px 5px #C3C3C3, 0 -1px 0 #C3C3C3 inset;
+}
+
+.navbar.header .navbar-inner {
+    background: #fff;
+    border-radius:0;
+    box-shadow:none;    
+    padding:0;
+}
+
+.navbar .heading { 
+   background: url("../img/backgrounds/header-bg.jpg") no-repeat scroll 13px center transparent;
+    height: 160px;
+    margin-left: 2px;
+    padding-top: 8px;
+}
+
+.logo {
+	width:100%; 	
+	height:100%;
+	display:block;
+}
+
+.home .voterType,
+.login .voterType { height:170px; }
+
+.home .voterType .container,
+.login .voterType .container  {
+  margin-top: -6px;
+  padding-top: 0;
+}
+
+.sos-tools{
+	float:left; 
+	width:675px;
+	margin-left:80px;
+}
+
+
+.featured.last .ballot-status{
+	background: url("../img/home/ballot-status.png") no-repeat scroll 3px 5px transparent;
+	padding-left: 27px;
+  height:35px;
+}
+
+.featured.last a{
+	font-size:14px;
+	position: relative;
+    top: 6px;
+    left:32px;	
+}
+
+.transmission.method {
+	background:#F9F9F9 url('../img/buttons/transmission-bg.jpg') repeat-x;
+}
+
+.nav-list .ballot-access{ background: transparent url('../img/sidebar/ballot-access.png') 3px 1px no-repeat; }
+
+.sidebar-bottom { padding:28px 0; }
+
+.navbar-inner h1 {
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 1px;
+	text-transform: none;
+	color:#082a53;
+	position: relative;
+	top: 16px;
+	left: -58px;
+}
+
+.navbar-inner h2 {
+	color:#082a53;
+	font-weight: normal;
+	position: relative;
+	top: 12px;
+	left: -57px;
+}
+
+h1,
+h2.title, 
+a:hover { color:#082A53; }
+
+hr { border: 2px solid #BFC5CD; }
+
+.featured.last {
+	background:#fff url('../img/backgrounds/featured-bg.jpg') repeat-x;
+	border: 3px solid #dcdcdc;
+    border-radius: 30px 30px 30px 30px;
+    height:35px;
+    border-top-width:1px;
+    position:relative;
+    top:-14px;
+    left:-55px;
+    margin-left:70px;
+    box-shadow: 0 -1px 3px #C3C3C3, -1px -1px 1px #C3C3C3 inset;
+    behavior: url('/vote/js/PIE.htc');
+}
+
+.featured.last div {
+	position:relative;
+	float:left;
+	left: -50px; 
+	top: -10px;
+}
+
+
+.ballot.access{min-height: 142px;}
+.ballot.access h3{margin-bottom:16px;}
+
+.ballot.access p {
+  background: url("../img/home/ballot-access.png") no-repeat scroll 5px 4px transparent;
+  padding-left:85px
+}
+
+.navbar .container.footer {
+    width: 842px;
+}
+
+.navbar .footer .nav {
+    left:30px
+}
+
+/* County Page */
+.countyCorner .hd h1 {
+  background: url("../img/icons/ny-map.png") no-repeat scroll -5px center transparent;
+  padding-top: 10px;
+}
+
+.countyCorner .featured h3 { font-size: 16px; }
+
+.officers,
+.officers .well {
+  margin-left:0;
+}
+
+.officers .well {
+   background-color: #F1F4F6;
+   border-color: #B6BEC6;
+   border-radius: 0 0 0 0;
+   box-shadow: none;
+}
+
+.officers h4 { margin-bottom:4px; }
+.officers p { font-size: 13px; }
+
+.officers a,
+address a {
+  color:#002F5C;
+  text-decoration:underline;
+}
+
+address { margin-bottom:12px; }
+
+.field-content p a,
+.node .content a { text-decoration: underline; }
+
+/* Used to display browser incompatibility */
+.message {
+  background-color:#95001B !important;
+  top: 0;
+}
+
+  

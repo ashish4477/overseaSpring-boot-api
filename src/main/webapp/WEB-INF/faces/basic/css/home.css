@@ -1,0 +1,154 @@
+.home-block {
+	margin-left:4px;
+}
+
+#main-columns {
+	width:603px;	
+	height:274px;
+}
+#main-columns .main-column {
+	float:left;	
+	width:197px;
+	height:274px;
+	background-image:url('../img/home/main-column-bg.png');
+	background-repeat:no-repeat;
+	background-color: #fff;
+	color:inherit; 
+	background-position: bottom center;
+	position: relative;
+}
+
+#main-columns .main-column h2 {
+	height:50px;
+	line-height:40px;
+	font-size:16px;
+	background-image:url('../img/home/main-column-head.png');
+	background-repeat:no-repeat;
+	background-position:top;
+	color: #c80000;
+	text-align: center;
+	letter-spacing: 1px; 
+	word-spacing: -1px;
+}
+
+#main-columns .main-column fieldset {
+	padding-top: 120px;
+	background-repeat: no-repeat;
+	background-position:30px 0;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+}
+#main-columns #rava fieldset {
+	background-image: url('../img/home/rava-large-icon.png');
+}
+#main-columns #rava label {
+	display: block;
+	padding-top:20px;
+	padding-bottom:15px;
+}
+#main-columns #eod fieldset {
+	background-image: url('../img/home/eod-large-icon.png');
+}
+#main-columns #eod h2 { line-height: 16px; height: 40px; padding-top: 10px; }
+#main-columns #eod label {
+	display: block;
+	padding-top:20px;
+	padding-bottom:15px;
+}
+
+#main-columns #vhd fieldset {
+	background-image: url('../img/home/vhd-large-icon.png');
+}
+#main-columns #vhd select {
+	margin-top:5px;
+	margin-bottom:2px;
+	overflow:hidden;
+}
+
+#main-columns #vhd input {
+	margin-top:3px;
+	margin-bottom:3px;
+}
+#vhd select {
+	width:190px;
+}
+
+#bottom-items {
+	width:603px;	
+	margin-top:4px;
+}
+
+#fwab {
+	float: left; width: 197px; height: 106px;
+	background: transparent url(../img/home/mva-bg.png) no-repeat;
+}
+#fwab h2 {
+	margin: 2px 0 0 0; padding: 1px 0 11px 35px;
+	line-height: 1; font-size: 13px; height: 26px;
+	background: transparent url(../img/sidebar/sidebar-fwab.png) no-repeat 5px 3px;
+}
+#fwab p {
+	margin: 0; padding: 0 0 0 24px;
+	font-style: italic;
+	line-height:16px;
+	height: 48px;
+}
+
+#svid {
+	float:left; width:197px; height:106px;
+	background: transparent url(../img/home/mva-bg.png) no-repeat;
+}
+
+#svid h3 {
+	margin: 2px 0 0 0; padding: 1px 0 11px 35px;
+	line-height: 1; font-size: 13px; height: 26px;
+	background: transparent url(../img/sidebar/sidebar-svid.png) no-repeat 6px 5px;
+}
+
+#svid p {
+	margin: 0; padding: 0 0 0 24px;
+	font-style: italic;
+	line-height:16px;
+	height: 48px;
+}
+
+#bottom-items #home-login {
+	float:left;
+	width:197px;
+	height:106px;
+	background-image:url('../img/home/mva-bg.png');
+	background-repeat:no-repeat;
+	color:inherit; 
+}
+
+#bottom-items #home-login h3 {
+	margin: 2px 0 0 2px;
+	padding: 0 0 0 25px;
+	background-image: url('../img/sidebar/sidebar-mva.png');
+	background-repeat: no-repeat;
+	background-position: 4px 2px;
+}
+
+#bottom-items #home-login form {
+	padding-left: 6px;
+}
+
+#bottom-items #home-login #user-name {
+	width: 177px;
+}
+
+#learn-more {
+	font-weight: bold;
+	font-style: italic;
+	font-size:14px;
+	margin:7px;
+	float:left;
+	width: 100px;
+}
+
+#home-login-button {
+	display: block;
+	float:left;
+	margin: 3px;
+}

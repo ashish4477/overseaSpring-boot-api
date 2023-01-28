@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<fop version="1.0">
+    <base>.</base>
+    <source-resolution>72</source-resolution>
+    <target-resolution>72</target-resolution>
+    <default-page-settings height="11in" width="8.26in"/>
+    <renderers>
+        <renderer mime="application/pdf">
+            <filterList>
+                <value>flate</value>
+            </filterList>
+
+            <fonts>
+                <font metrics-url="trebuc.xml" kerning="yes" embed-url="trebuc.ttf">
+                    <font-triplet name="TrebuchetMS" style="normal" weight="normal"/>
+                </font>
+                <font metrics-url="trebucbd.xml" kerning="yes" embed-url="trebucbd.ttf">
+                    <font-triplet name="TrebuchetMS" style="normal" weight="bold"/>
+                </font>
+                <font metrics-url="trebucbi.xml" kerning="yes" embed-url="trebucbi.ttf">
+                    <font-triplet name="TrebuchetMS" style="italic" weight="bold"/>
+                </font>
+                <font metrics-url="trebucit.xml" kerning="yes" embed-url="trebucit.ttf">
+                    <font-triplet name="TrebuchetMS" style="italic" weight="normal"/>
+                </font>
+            </fonts>
+        </renderer>
+
+        <renderer mime="application/postscript">
+        </renderer>
+
+        <renderer mime="application/vnd.hp-PCL">
+        </renderer>
+
+        <renderer mime="image/svg+xml">
+            <format type="paginated"/>
+            <link value="true"/>
+            <strokeText value="false"/>
+        </renderer>
+
+        <renderer mime="application/awt">
+        </renderer>
+
+        <renderer mime="image/png">
+        </renderer>
+
+        <renderer mime="image/tiff">
+        </renderer>
+
+        <renderer mime="text/xml">
+        </renderer>
+
+        <renderer mime="text/plain">
+            <pageSize columns="80"/>
+        </renderer>
+    </renderers>
+</fop>
+

@@ -1,0 +1,1 @@
+INSERT INTO countries (`name`,`abbreviation`,`active`) VALUES ('Kosovo','',1);

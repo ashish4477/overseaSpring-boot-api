@@ -1,0 +1,201 @@
+/* 
+ * FRAME
+ */
+#fx-frame-layer {
+	z-index:20;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width:100%;
+	text-align:center;
+}
+
+#fx-frame-main {
+	width:800px;
+	margin:0 auto;
+	text-align: left;	
+}
+
+#fx-frame {
+	width:398px;
+	margin:0 201px;
+	color: rgb(120,120,120);
+}
+#fx-frame .column-form {
+	background-color: rgb(255,255,200);
+}
+
+/*
+#fx-frame-header {
+    position:relative;
+    background-color:white;
+    height:40px;
+}
+*/
+
+#fx-frame-header h2 {
+	height: 30px;
+	padding: 10px 0px 0px 33px;
+	line-height: 20px; letter-spacing: 1px; word-spacing: -1px;
+	background: transparent url(../img/icons/sidebar-icons.gif) 3px 0px no-repeat;
+}
+
+
+#fx-progress {
+    position: absolute;
+    top:0;
+    left:160px;
+    padding:11px;
+}
+
+#fx-close-frame {
+    position:absolute;
+    top:0;
+    right:0;
+    padding:10px;
+}
+/*
+#fx-frame .bd {
+	padding: 5px;
+}
+*/
+
+#fx-frame .bd fieldset {
+	border: none;
+}
+
+/*
+ * SHADOW
+ */
+ 
+#fx-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:20;
+	background-color: #000;
+	opacity:0.5;
+	-moz-opacity:0.5;
+	filter:alpha(opacity=70);
+	height: 100%;
+	width:100%;
+}
+
+/**
+ * Tooltip
+ */
+ 
+.ie6-tooltip {
+	position: relative;
+	height: 0px;
+	overflow: hidden;
+	clear: both;
+}
+.ie6-tooltip .tooltip {
+	position: static;
+	width: 246px;
+	margin: 3px 0px 10px 130px;
+	border: 2px solid #fff;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title {
+	padding: 5px 5px 0px 5px;
+	background: #F3F9FB;
+}
+.ie6-tooltip .tooltip-title .close-tooltip {
+	top: 5px; right: 5px;
+}
+.ie6-tooltip .tooltip-text {
+	background: #F3F9FB;
+	padding: 5px;
+}
+
+.tooltip {
+	position: absolute;
+	width: 290px;
+    z-index:50;
+}
+.tooltip-icon {
+	cursor: pointer;
+}
+.tooltip-title {
+	position: relative;
+	padding: 45px 15px 0px 20px;
+	height: 19px;
+	background: transparent url(../img/backgrounds/rava-bubble-hd.png) top center no-repeat;
+}
+.tooltip-title .close-tooltip {
+	position: absolute;
+	top: 45px; right: 15px;
+	cursor: pointer;
+}
+.tooltip-text {
+	padding: 5px 15px 35px 20px;
+	background: transparent url(../img/backgrounds/rava-bubble-ft.png) bottom center no-repeat;
+}
+ 
+/** Overlay stuff **/
+.progress-bar {
+	position: absolute;
+	top: 0px; left: 200px;
+	width: 176px; height: 25px;
+	padding-top: 10px;
+}
+.progress-bar img {
+	display: block; float: left;
+}
+
+.large-overlay {
+	width: 400px; height: auto;
+	margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+}
+.large-overlay .hd {
+	position: relative;
+	height: 45px;
+	background: transparent url(../img/backgrounds/400-w-col-hd.gif) top left no-repeat;
+}
+* html .large-overlay .hd {
+	background: transparent url(../img/backgrounds/400-w-col-hd.gif) top left no-repeat;
+}
+.large-overlay .hd h1 {
+	font-size: 14px;
+	height: 30px; width: 145px;
+	padding: 10px 0px 5px 35px;
+	line-height: 20px; letter-spacing: 1px; word-spacing: -1px;
+	background:transparent url(../img/icons/sidebar-icons.png) no-repeat scroll 2px -120px;
+}
+.large-overlay .hd .close {
+	position: absolute;
+	display: block;
+	top: 10px; right: 10px;
+	height: 19px; width: 19px;
+	margin: 0px;
+}
+.large-overlay .hd .close:hover {
+	cursor: pointer;
+}
+* html .large-overlay .hd .close {
+	display: inline;
+}
+.large-overlay .bd {
+	padding: 10px 10px 10px 10px;
+	min-height: 323px;
+	height: auto;
+	background:#e4ebef;
+}
+.large-overlay .ft {
+	clear: both;
+	height: 10px;
+	line-height: 5px;
+	overflow: hidden;
+	background: transparent url(../img/backgrounds/400-w-col-nograd-ft.gif) top right no-repeat;
+}
+
+.large-overlay .last-page h2 {
+	margin-top: 10px;
+}
+.large-overlay .hd h2.mva { width: 250px;}
+
+#login-form .hd h2 { width: 250px;}
+
+p.log-out { margin-bottom: 0px; }

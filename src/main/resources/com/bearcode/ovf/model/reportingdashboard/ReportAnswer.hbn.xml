@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.reportingdashboard">
+	<class name="ReportAnswer" table="rd_report_answers"
+		dynamic-insert="true">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="reportField" column="report_field_id"
+			class="ReportField" not-null="true" />
+		<property name="answer" type="string" not-null="false" />
+		<many-to-one name="predefinedAnswer" column="predefined_id"
+			class="com.bearcode.ovf.model.questionnaire.FieldDictionaryItem"
+			not-null="false" />
+	</class>
+</hibernate-mapping>

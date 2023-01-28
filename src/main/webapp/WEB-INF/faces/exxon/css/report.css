@@ -1,0 +1,54 @@
+th {
+	text-align:right;
+	vertical-align:top;
+}
+
+.result th {
+	text-align:left;
+	vertical-align:top;
+/*    border-top: solid 1px #ccc;*/
+    padding: 3px 5px 3px 5px;
+    vertical-align: top;
+    margin:0;
+}
+
+.result td {
+    border-top: solid 1px #ccc;
+    padding: 3px 5px 3px 5px;
+    vertical-align: top;
+    margin:0;
+}
+
+td ol {
+	margin-left:20px;
+}
+
+#EditQueryForm .columnLabel {
+    border-top: solid 1px #ccc;
+    padding: 5px 10px 5px 0px;
+}
+
+#EditQueryForm .columnQuestions {
+    border-top: solid 1px #ccc;
+    padding: 5px 0px 5px 0px;
+}
+
+tr.odd {
+    background-color: #ddd
+}
+
+tr.even {
+    background-color: #fff
+}
+
+.rightAlign {
+    text-align:right;
+}
+
+.leftAlign {
+    text-align:left;
+}
+
+#QueryName {
+    width:317px;
+}

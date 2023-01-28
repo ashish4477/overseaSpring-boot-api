@@ -1,0 +1,31 @@
+<email>
+    <subject>Thanks for Updating Your Election Official Directory Record</subject>
+    <from>U.S. Vote Foundation <![CDATA[ <eod@usvotefoundation.org> ]]></from>
+   	<reply_to>eod@usvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<p>Dear $greeting,</p>
+<p>Thank you very much for keeping  your jurisdiction's contact data record in the Election Official Directory (EOD) up to date.</p>
+
+<p>I've received your update and/or confirmation and processed it. All websites including U.S. Vote Foundation and our key initiative, Overseas Vote, and other sites, which rely on this data, will now show your updated record. Your collaboration and support matters so much to us, and to all who consult the EOD, election officials and voters alike.</p>
+
+<p>Please note, if your data changes, you can proactively submit edits to us at any time.</p>
+
+<p>Please feel free to contact me personally, at any time, if you have any questions or comments. I always enjoy hearing from you!</p>
+<p>Thanks again,</p>
+
+<p>Jane Scheiring<br />
+Election Official Directory Manager<br />
+Email: <a href="mailto:eod@usvotefoundation.org">eod@usvotefoundation.org</a><br />
+Overseas Vote and U.S. Vote Foundation</p>
+
+<p style="font-size:smaller; color:gray; font-family:'Trebuchet MS', Arial, sans-serif;"><a href="https://www.usvotefoundation.org/contact">Contact us</a> anytime with questions and comments<br />
+	&copy; U.S. Vote Foundation. All Rights Reserved.</p>
+
+    ]]></body_template>
+</email>
+
+    
+
+    
+
+

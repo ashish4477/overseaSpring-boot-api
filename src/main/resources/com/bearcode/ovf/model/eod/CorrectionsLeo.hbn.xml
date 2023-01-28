@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.eod">
+    <class name="CorrectionsLeo" table="leo_corrections" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <many-to-one name="correctionFor" column="leo_id" class="LocalOfficial"/>
+        <!--<many-to-one name="physical" column="physical_address_id" cascade="all"/>-->
+        <component name="physical" class="com.bearcode.ovf.model.common.Address">
+            <property name="addressTo" type="string" column="physical_address_to" />
+            <property name="street1" type="string" column="physical_street1"/>
+            <property name="street2" type="string" column="physical_street2" />
+            <property name="city" type="string" column="physical_city" />
+            <property name="state" type="string" column="physical_state" />
+            <property name="zip" type="string" column="physical_zip" />
+            <property name="zip4" type="string" column="physical_zip4" />
+        </component>
+        <!--<many-to-one name="mailing" column="mailing_address_id" cascade="all"/>-->
+        <component name="mailing" class="com.bearcode.ovf.model.common.Address">
+            <property name="addressTo" type="string" column="mailing_address_to" />
+            <property name="street1" type="string" column="mailing_street1"/>
+            <property name="street2" type="string" column="mailing_street2" />
+            <property name="city" type="string" column="mailing_city" />
+            <property name="state" type="string" column="mailing_state" />
+            <property name="zip" type="string" column="mailing_zip" />
+            <property name="zip4" type="string" column="mailing_zip4" />
+        </component>
+
+<!--
+        <component name="leo" class="com.bearcode.ovf.model.common.Person">
+            <property name="title" type="string" column="leo_title" />
+            <property name="firstName" type="string" column="leo_first_name" />
+            <property name="initial" type="string" column="leo_initial" />
+            <property name="lastName" type="string" column="leo_last_name" />
+            <property name="suffix" type="string" column="leo_suffix" />
+        </component>
+        <component name="lovc" class="com.bearcode.ovf.model.common.Person">
+            <property name="title" type="string" column="lovc_title" />
+            <property name="firstName" type="string" column="lovc_first_name" />
+            <property name="initial" type="string" column="lovc_initial" />
+            <property name="lastName" type="string" column="lovc_last_name" />
+            <property name="suffix" type="string" column="lovc_suffix" />
+        </component>
+        <property name="leoPhone" type="string" column="leo_phone"/>
+        <property name="leoFax" type="string" column="leo_fax"/>
+        <property name="leoEmail" type="string" column="leo_email"/>
+        <property name="lovcPhone" type="string" column="lovc_phone"/>
+        <property name="lovcFax" type="string" column="lovc_fax" />
+        <property name="lovcEmail" type="string" column="lovc_email" />
+
+        <component name="addContact" class="com.bearcode.ovf.model.common.Person">
+            <property name="title" type="string" column="addc_title" />
+            <property name="firstName" type="string" column="addc_first_name" />
+            <property name="initial" type="string" column="addc_initial" />
+            <property name="lastName" type="string" column="addc_last_name" />
+            <property name="suffix" type="string" column="addc_suffix" />
+        </component>
+        <property name="addPhone" type="string" column="addc_phone"/>
+        <property name="addEmail" type="string" column="addc_email"/>
+-->
+
+        <property name="dsnPhone" type="string" column="dsn_phone"/>
+        <property name="generalEmail" type="string" column="general_email"/>
+        <property name="website" type="string" column="website" />
+        <property name="hours" type="string" column="hours" />
+        <property name="furtherInstruction" type="string" column="further_instruction" />
+        <property name="status" type="int" />
+        <property name="created" type="java.util.Date"/>
+        <property name="message" type="string" />
+        <property name="submitterName" type="string" column="submitter_name" />
+        <property name="submitterEmail" type="string" column="submitter_email" />
+        <property name="submitterPhone" type="string" column="submitter_phone" />
+        <many-to-one name="editor" column="editor_id"/> <!-- class = common.OverseasUser-->
+        <property name="updated" type="java.util.Date" />
+
+        <bag name="officers" table="corrections_to_officers" lazy="false" cascade="all-delete-orphan">
+            <key column="correction_id"/>
+            <many-to-many entity-name="CorrectionOfficer" column="officer_id" order-by="order_number"/>
+        </bag>
+
+        <bag name="additionalAddresses" cascade="all-delete-orphan" lazy="false">
+            <key column="correction_id" not-null="true"/>
+            <one-to-many class="CorrectionAdditionalAddress"/>
+        </bag>
+    </class>
+
+    <class name="CorrectionAdditionalAddress" lazy="true" table="correction_additional_address">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="addressTypeName" type="string" column="address_type" />
+        <property name="addressTo" type="string" column="address_to" />
+        <property name="street1" type="string" column="street1"/>
+        <property name="street2" type="string" column="street2" />
+        <property name="city" type="string" column="city" />
+        <property name="state" type="string" column="state" />
+        <property name="zip" type="string" column="zip" />
+        <property name="zip4" type="string" column="zip4" />
+        <property name="email" type="string" column="email" />
+        <property name="website" type="string" column="website" />
+    </class>
+
+</hibernate-mapping>

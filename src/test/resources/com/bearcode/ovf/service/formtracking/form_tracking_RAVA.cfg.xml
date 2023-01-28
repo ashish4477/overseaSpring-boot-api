@@ -1,0 +1,5 @@
+<environment>
+	<template>form_tracking_RAVA_email.xml</template>
+	<timeSpan>3</timeSpan>
+	<frequency>2</frequency>
+</environment>

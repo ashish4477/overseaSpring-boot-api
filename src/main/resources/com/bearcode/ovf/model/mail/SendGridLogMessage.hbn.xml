@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.webservices.sendgrid.model">
+    <class name="SendGridLogMessage" table="send_grid_log" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="logDate" type="java.util.Date" column="log_date" />
+        <property name="logLevel" type="string" column="log_level" />
+        <property name="message" type="java.lang.String" column="message"/>
+    </class>
+
+</hibernate-mapping>

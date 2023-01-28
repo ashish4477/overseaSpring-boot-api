@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.vip">
+	<class name="VipDetailAddress" table="vip_detail_addresses" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        
+        <property name="addressDirection" type="string" column="address_direction" />
+        
+        <property name="city" type="string" column="city" />
+
+		<property name="houseNumberPrefix" type="string" column="house_number_prefix" />
+       
+        <property name="houseNumberSuffix" type="string" column="house_number_suffix" />
+        
+ 		<property name="state" type="string" column="state" />
+          
+        <property name="streetDirection" type="string" column="street_direction" />
+        
+        <property name="streetName" type="string" column="street_name" />
+        
+        <property name="streetSuffix" type="string" column="street_suffix" />
+        
+        <property name="zip" type="string" column="zip" />
+	</class>
+</hibernate-mapping>

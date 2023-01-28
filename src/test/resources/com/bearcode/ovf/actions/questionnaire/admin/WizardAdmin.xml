@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<dataset>
+	<faces_config id="1" url_path="localhost" path_prefix="faces/basic" default="1" />
+	
+	<question_field_types id="1" type="FIXED_DICT" name="type1" view_template="select" use_generic_options="0" use_pattern="0" />
+	<questionary_pages id="1" number="1" title="page1" popupBubble="" form_type="OVERSEAS" />
+	<questions id="1" page_id="1" name="group1" order="1" />
+	<dependents id="1" />
+	<question_variants id="1" question_id="1" title="variant1" />	
+	<question_fields id="1" question_variant_id="1" title="Field1" order_number="1" encoded="0" security="0" required="0" type_id="1"/>
+
+	<question_field_types id="2" type="FIXED_DICT" name="type2" view_template="no_input" use_generic_options="0" use_pattern="0" />
+	<questionary_pages id="2" number="2" title="page2" popupBubble="" form_type="OVERSEAS" />
+	<questions id="2" page_id="2" name="group2" order="1" />
+	<dependents id="2" />
+	<question_variants id="2" question_id="2" title="variant2" />
+	<question_dependencies id="2" kind="REG" variant_id="2" depends_on_id="1" />
+	<question_fields id="2" question_variant_id="2" title="Field2" order_number="1" encoded="0" security="0" required="0" type_id="2"/>
+
+	<user_names id="1" title="" first_name="" last_name="" middle_name="" suffix="" />
+	<users id="1" username="username" real_email="username@somewhere.com" name_id="1" previous_name_id="1" />
+</dataset>

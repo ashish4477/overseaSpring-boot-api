@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<dataset>
+	<faces_config id="1" url_path="localhost" path_prefix="faces/basic" default="1" />
+
+	<states id="1" name="State Name" abbr="SN" fips_code="9999" />
+
+	<state_voter_info id="1" state_id="1" />
+	<elections id="1" svid_id="1" order_ticket="1" />
+</dataset>

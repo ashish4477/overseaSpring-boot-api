@@ -1,0 +1,108 @@
+Missing Vars from Flow
+IMPORTANT NOTE "ufSSN_4 Working but outputs as missmatch"
+
+AL [ufBirthCity, ufBirthCountry, ufBirthCounty, ufBirthState]
+
+AK [ucConfidentialProgram ufThirdParty]
+
+AZ PDF OK FlOW OK
+
+AR [ufDriversLicense ufVotingAssistCity, ufVotingAssistState, ufVotingAssitAddress]
+
+CA FLOW Missing: [ufRace:"did not report on test"]  PDF OK
+
+CO FlOW OK  PDF OK
+
+CT	[ufPreviousTown] 
+
+DE	OK	
+
+DC FLOW PDF OK
+
+FL Flow Missing: [ucRaceMulti,ufRaceOther]  PDF Ok
+
+GA  Flow Missing: [ucRaceBlack, ufChangeOther, ufSSN_4] PDF OK
+ 
+HI FLOW MISSING [ufRuralCity, ufRuralZipCode, ufSSN_4] PDF OK 
+ 
+IL Flow OK  PDF OK
+
+IN Flow OK PDF OK
+
+IA OK
+
+KS Flow missing [ufAlienID] PDF OK
+
+KY FLOW MISSING [ucChangeAddress, ucChangeName, ucChangeParty, ucChangeVoterNew]
+
+LA Flow Missing: [ucForwardingConfirm,ucRaceBlack,ufBirthCity,ufBirthCountry, ufBirthLocation, ufVotingAge, ufVotingAssistDescription] *Flow Requires you to fill out Minor Party Name* PDF: OK
+
+ME FLOW OK, PDF OK
+
+MD FLOW OK, PDF OK  Test Fails SSN_4 
+
+MI Flow Missing: [ucPreviousLocationCity, ucPreviousLocationTownship, ucVotingLocationCity, ucVotingLocationTownship]
+
+MS FLOW OK, PDF OK, TEST Error: SSN_4
+
+MO FLOW MISSING: [ufBirthLocation, ufRural, ufRuralArea, ufRuralMilage, ufRuralMilageLandmark, ufRuralNeighbors] PDF OK, Test Error SSN_4 
+
+MT OK
+
+NE FLOW MISSING: [check_if_empty(ufRuralSection,ufRuralTown,ufRuralRange)]	
+
+NV FLOW MISSING: [ufVotingAssistAddress, ufVotingAssistName] PDF OK 
+
+NH PDF OK, FLOW OK 
+
+NJ  Flow Missing ufVotingAssistDate] Test Errors:[check_if_empty(ufThirdParty), ufSSN_4] PDF OUTPUT OK
+NY Flow Missing [ucAbsentee did not show up on test]  Test Error SSN_4  PDF OK
+
+NC FLOW OK PDF OK
+
+OH OK needs blank checkbox to cover checkmark
+
+OK  FLow MISSING [ufPreviousParty] PDF OK
+
+OR  FLOW OK PDF OK
+
+PA Flow Missing: [ucChangeFSRetain, ufPreviousYear, ufSSN_4, ufVoterInterpreterLanuage, ufVoterNumber, ufVotingAssistReason] PDF: OK
+
+SC Flow Missing: ["check_if_empty(ucElectionOfficalTrue) Doesn't work... don't know why...", ucRaceBlack, ufPreviousPrecinct] PDF OK 
+
+SD Flow Missing: [print_if_not_equal(ufPreviousLastName, "", ufBirthFormatted), print_if_not_equal(ufPreviousLastName, "", ufDriversLicense)]
+
+TN PDF Missing [ucVotingResidenceFalse]
+
+UT FLOW MISSING: ucAbsenteeFalse, ucAbsenteeTrue ufAlienDate, ufAlienLocation,ufBirthName, ; [check_if_empty(ucVotingAssistTrue)  Doesn't work... don't know why,  ufSSN_4]
+
+VT PDF MISSING [ucOath] Output ok  
+ 
+*****VA FLOW MISSING:[check_if_not_empty(ufMentalDateRestored), ucConfidentialProgram, ucElectionOfficial, ucRegisteredFalse, ucRegisteredTrue, ucSuffixNone, ufConfidentialLawEnforcement, ufConfidentialProtectiveOrder, ufConfidentialThreat, ufCrimeDateRestored, ufMentalDateRestored, ufStateConvicted]**********		PDF OK
+
+WA PDF OK 
+ 
+ 
+WV Flow MISSING [ucChangeVoterNew] PDF OK
+
+WI FLOW MISSING [ufDriversLicenseExpiration, ufVotingPlace flow currently has ucVotingPlace*] 
+ 
+ 
+WY FLOW MISSING [ucChangeRegistration] check_if_empty not working for ucElectionOfficalTrue,ucVotingAssistTrue
+  
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

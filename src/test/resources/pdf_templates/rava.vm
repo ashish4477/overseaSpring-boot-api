@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>       
+
+<form>
+    <form-id>76A (Rev. 10-2005)</form-id>
+
+    <!-- additional text pages -->
+    $parsed_instructions
+
+    <page master="questionary_page">
+        <form-title>REGISTRATION AND ABSENTEE BALLOT REQUEST - FEDERAL POST CARD APPLICATION (FPCA)</form-title>
+        <question columns="10">
+            <title>I REQUEST ABSENTEE BALLOTS FOR ALL ELECTIONS IN WHICH I AM ELIGIBLE TO VOTE AND I AM</title>
+            <values>
+                <value
+                    #if ($ufVoterType == "UNIFORMED_SERVICE_MEMBER" || $ufVoterType == "SPOUSE_OR_DEPENDENT" || $ufVoterType == "NATIONAL_GUARD_MEMBER")
+                        checked="true"
+                    #end
+                >(a) A MEMBER OF THE UNIFORMED SERVICES OR MERCHANT MARINE ON ACTIVE DUTY, OR AN ELIGIBLE SPOUSE OR DEPENDENT</value>
+                <value
+                    #if ($ufVoterType == "CITIZEN_OVERSEAS_TEMPORARILY")
+                        checked="true"
+                    #end
+                >(b) A U.S. CITIZEN RESIDING OUTSIDE THE U.S. TEMPORARILY</value>
+                <value
+                    #if ($ufVoterType == "CITIZEN_OVERSEAS_INDEFINITELY" || $ufVoterType == "CITIZEN_NEVER_RESIDED" )
+                        checked="true"
+                    #end
+                >(c) A U.S. CITIZEN RESIDING OUTSIDE THE U.S. INDEFINITELY</value>
+            </values>
+        </question>
+        <question columns="30">
+            <title>MY INFORMATION (Required)</title>
+            <row>
+                <field colspan="18" field-number="1">
+                    <title>TYPED OR PRINTED NAME <i>(Last, First, Middle)</i></title>
+                    <value>$!ufFullName</value>
+                </field>
+                <field colspan="3">
+                    <title>SUFFIX <i>(Jr., Sr., III, etc.)</i></title>
+                    <value>$!ufSuffix</value>
+                </field>
+                <field colspan="9" field-number="2">
+                    <title>PREVIOUS NAME <i>(if applicable)</i></title>
+                    <value>$!ufPreviousName</value>
+                </field>
+            </row>
+            <row>
+                <field colspan="4" field-number="3">
+                    <title>SEX</title>
+                    <values>
+                        <value
+                        #if ($ufGender == "M")
+                            checked="true"
+                        #end
+                        >M</value>
+                        <value
+                        #if ($ufGender == "F")
+                            checked="true"
+                        #end
+                        >F</value>
+                    </values>
+                </field>
+                <field colspan="2" field-number="4">
+                    <title>RACE</title>
+                    <value>$!ufEthnicity</value>
+                </field>
+                <field colspan="6" field-number="5">
+                    <title>DATE OF BIRTH <i>(MMDDYYYY)</i></title>
+                    <value no-margin="true">$!ufBirthMonth/$!ufBirthDate/$!ufBirthYear</value>
+                </field>
+                <field colspan="9" field-number="6">
+                    <title>SOCIAL SECURITY NUMBER</title>
+                    <value>$!ufSSN</value>
+                </field>
+                <field colspan="9" field-number="7">
+                    <title>STATE DRIVER'S LICENSE OR I.D. NUMBER</title>
+                    <value>$!ufDriverLicense</value>
+                </field>
+            </row>
+            <row>
+                <field colspan="15" field-number="8">
+                    <title>TELEPHONE NUMBER <i>(No DSN number; include all international prefixes)</i></title>
+                    <value>$!ufPhone</value>
+                </field>
+                <field colspan="15" field-number="9">
+                    <title>FAX NUMBER <i>(No DSN number; include all international prefixes)</i></title>
+                    <value>$!ufForwardingFax</value>
+                </field>
+            </row>
+            <row>
+                <field colspan="30"  field-number="10">
+                    <title>EMAIL ADDRESS</title>
+                    <value>$!ufEmail</value>
+                </field>
+            </row>
+        </question>
+        <question columns="14">
+            <title>MY VOTING RESIDENCE ADDRESS (Required)
+                <i><nb>
+                    (Military, use legal residence. Overseas citizens, use last legal residence in U.S.)
+                </nb></i>
+            </title>
+            <row>
+                <field colspan="14" field-number="1">
+                    <title>NUMBER AND STREET <i>(Cannot be a P.O. Box)</i></title>
+                    <value>$!ufVotingAddress</value>
+                </field>
+            </row>
+            <row>
+                <field colspan="6" field-number="2">
+                    <title>CITY, TOWN OR VILLAGE</title>
+                    <value>$!ufVotingCity</value>
+                </field>
+                <field colspan="4" field-number="3">
+                    <title>COUNTY</title>
+                    <value>$!ufVotingRegion</value>
+                </field>
+                <field colspan="1" field-number="4">
+                    <title>STATE</title>
+                    <value>$!ufVotingState</value>
+                </field>
+                <field colspan="3" field-number="5">
+                    <title>ZIP CODE</title>
+                    <value>$!ufVotingZipCode</value>
+                </field>
+            </row>
+        </question>
+        <question columns="2">
+            <title>WHERE TO SEND MY VOTING MATERIALS</title>
+            <row>
+                <field field-number="1">
+                    <title min-height="14">MY CURRENT ADDRESS <i>(Where I live now)</i> <b>(Required)</b></title>
+                    <value min-height="80" template-name="out-address">$!ufCurrentFormattedAddress</value>
+                </field>
+                <field field-number="2">
+                    <title>MY FORWARDING ADDRESS <i>(NOTE: Complete 4b. only if you do not want your ballot mailed to the address in Block 4a.)</i></title>
+                    <value min-height="80" template-name="out-address">#if ($ufForwardingFormattedAddress) $!ufForwardingFormattedAddress #else <p></p>#end</value>
+                </field>
+            </row>
+            <row>
+                <field colspan="2" field-number="3" one-line="true" title-columns="1">
+                    <title>I PREFER TO RECEIVE MY ABSENTEE BALLOT, AS PERMITTED BY MY STATE, BY:</title>
+                    <values>
+                        <value
+                        #if ($ucReceivingPreference_number == 1)
+                            checked="true"
+                        #end
+                        >MAIL</value>
+                        <value
+                        #if ($ucReceivingPreference_number == 2)
+                            checked="true"
+                        #end
+                        >FAX</value>
+                        <value
+                        #if ($ucReceivingPreference_number == 3)
+                            checked="true"
+                        #end
+                        >EMAIL</value>
+                    </values>
+                </field>
+            </row>
+        </question>
+        <question columns="10" one-line="true" title-columns="5">
+            <title>MY POLITICAL PARTY PREFERENCE
+                <i><nb>
+                    (Optional, but may be required by states to register to vote in primary elections):
+                </nb></i>:</title>
+            <value>$!ufPoliticalParty</value>
+        </question>
+        <question columns="10">
+            <title>
+                ADDITIONAL INFORMATION
+                <i><nb>
+                    (Designate the period for which you want to receive ballots - see instructions for Block 6, paragraph (3). Consult the Voting Assistance Guide for other specific state instructions.)
+                </nb></i>
+            </title>
+            <value min-height="60">$!ufAdditionalInfo</value>
+        </question>
+        <affirmation>
+            <title>AFFIRMATION (Required)</title>
+            <sub-title>I swear or affirm, under penalty of perjury, that:</sub-title>
+            <date>$!date</date>
+            <signed>$!ufSigned</signed>
+            <items>
+                <item>I am a member of the Uniformed Services or merchant marine on active duty or an eligible spouse or dependent of such a member, or a U.S. citizen temporarily residing outside the U.S., or other U.S. citizen residing outside the U.S., and</item>
+                <item>I am a U.S. citizen, at least 18 years of age (or will be by the day of the election), eligible to vote in the requested jurisdiction, and</item>
+                <item>I have not been convicted of a felony or other disqualifying offense or been adjudicated mentally incompetent, or if so, my voting rights have been reinstated, and</item>
+                <item>I am not registering, requesting a ballot, or voting in any other jurisdiction in the U.S., and</item>
+                <item>My signature and date below indicate when I completed this document, and</item>
+                <item>The information on this form is true and complete to the best of my knowledge.</item>
+            </items>
+            <bottom-line>I understand that a material misstatement of fact in completion of this document may constitute grounds for conviction of perjury.</bottom-line>
+        </affirmation>
+    </page>
+    <page master="rava_addendum">
+        <form-title>REGISTRATION AND ABSENTEE BALLOT REQUEST - FEDERAL POST CARD APPLICATION (FPCA)</form-title>
+        <name>$!ufFullName</name>
+        <e-mail>$!ufEmail</e-mail>
+        <country>$!ufVotingRegion</country>
+        <state>$!ufVotingState</state>
+        <date>$!date</date>
+        <signed>$!ufSigned</signed>
+
+        <value>
+            $!ufAddendum
+        </value>
+    </page>
+</form>

@@ -1,0 +1,11 @@
+<email>
+    <subject>Data ransmission failure</subject>
+    <from>Overseas Vote <![CDATA[ <info@system.overseasvotefoundation.org> ]]></from>
+   	<reply_to>info@overseasvotefoundation.org</reply_to>
+  	<to>dhughes@bear-code.com</to>
+    <body_template><![CDATA[
+<div>
+<p>$message</p>
+</div>
+    ]]></body_template>
+</email>

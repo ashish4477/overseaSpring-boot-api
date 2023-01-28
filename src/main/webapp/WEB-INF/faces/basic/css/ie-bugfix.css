@@ -1,0 +1,26 @@
+
+#rava.home-block {
+	margin-left:2px;
+}
+
+#svid.home-block  {
+	margin-left:2px;	
+}
+#left-menu li#left-menu-fwab {
+	height:40px;
+}
+
+#left-menu li#provided-by-ovf {
+	position: relative;
+	top: -1px;
+}
+
+#left-menu-footer {
+	position: relative;
+	top:-3px; /* eat the strange 2px padding in the list */
+}
+
+#footer {
+	clear:both;
+	padding:0;
+}

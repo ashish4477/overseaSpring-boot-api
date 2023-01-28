@@ -1,0 +1,17 @@
+<email>
+    <subject>Automated delivery was failed</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+    <reply_to>voterhelpdesk@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+<p>Automated delivery failed. Reason: $!reason</p>
+#if( $exception )
+<p>Exception: $!exception.class.canonicalName $!exception.message </p>
+<p>Stack trace:</p>
+<p>
+$!exceptionTrace
+#end
+</p>
+</div>
+    ]]></body_template>
+</email>

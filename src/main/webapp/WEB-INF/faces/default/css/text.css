@@ -1,0 +1,89 @@
+
+.body-content .hd div.tabs {
+	position: absolute; text-align: right;
+	top: -20px; right: 5px; width: 817px;;
+}
+.body-content .hd .tabs .tabs {
+	margin: 0; padding: 0; border-bottom: #ddd;
+}
+.body-content .hd .tabs .tabs a {
+	border-color: #ddd #ddd #fff; padding-top: 2px; margin: 0;
+	-moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0;
+}
+.body-content .hd .tabs .tabs a:hover {
+	background: #fff;
+}
+
+.body-content .hd div.tabs .primary{background-color:#fff;}
+.body-content .hd .tabs .secondary {
+	padding: 10px 0;
+}
+.body-content .hd .tabs .secondary li {
+	border: 1px solid #ddd; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	background: #ddd; padding: 2px 6px;
+}
+.body-content .hd .tabs .secondary li a {
+	-moz-border-radius: 0; -webkit-border-radius: 0;
+}
+.body-content .hd .tabs .secondary li a:hover { background: transparent; }
+.body-content .hd .tabs .secondary li.active { background: #fff; }
+.body-content .hd .tabs .secondary li.active a { border: 0; color: #c00; }
+
+.body-content dl {}
+.body-content dl dt { font-weight: bold; }
+.body-content dl dd { margin: 0 0 10px 10px; }
+
+.body-content .bd h3 {
+	font-style: italic;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.body-content .bd p a {
+	font-style: italic;
+	color: #c00;
+}
+.body-content .bd p a:hover {
+	color: #f00;
+}
+.body-content .bd img.large {
+	display: block;
+	margin: 0px 0px 18px 0px;
+}
+.body-content .bd img.small, .body-content .bd img.portrait {
+	display: block;
+	float: left;
+	margin: 0px 18px 9px 0px;
+}
+.body-content .bd img.portrait {
+	position: relative;
+}
+
+.body-content .bd ul, .body-content .bd ol {
+	padding: 5px 15px;
+	margin: 0px 20px 20px;
+	border-width: 1px 0px;
+	border-style: dashed;
+	border-color: #ccc;
+}
+.body-content .bd li {
+	padding: 2px 0px;
+}
+.body-content .bd .links {
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+.body-content .bd .links a {
+	display: inline-block;
+	margin-right: 20px;
+	color: #c00;
+}
+
+.body-content .bd p strong, .body-content .bd li em {
+	color: #000078;
+}
+
+.body-content .admin .description { padding-bottom: 9px; }
+.body-content .admin-list dt { color: #c00; font-weight: bold; }
+.body-content .admin-list dd { margin-bottom: 10px; padding-bottom: 9px; border-bottom: 1px dashed #eee; }
+.body-content .sticky-table { width: 100%; }

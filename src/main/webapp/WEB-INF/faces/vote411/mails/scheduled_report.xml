@@ -1,0 +1,18 @@
+<email>
+    <subject>Scheduled Report</subject>
+    <from>voterhelpdesk@usvotefoundation.org</from>
+    <reply_to>voterhelpdesk@usvotefoundation.org</reply_to> 
+    <body_template><![CDATA[
+<div>
+    <p>
+	    <a href="https://vote.theskimm.com"><img src="https://usvotefoundation-drupal.s3.amazonaws.com/prod/s3fs-public/theskimm_email_banner.png" alt="SKIMM 2020"/></a>
+		<hr style="width: auto; max-width: 700px;margin: 0 auto 0 0;"/>
+	</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Dear $!firstName,</strong></p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Your scheduled<a href="http://www.usvotefoundation.org/vote/reportingdashboard/ViewReport.htm?reportId=$!reportId&startDate=$!startDate&endDate=$!endDate">$!reportTitle</a> is ready for viewing.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">If the above link does not work, log onto the voting site and paste http://www.usvotefoundation.org/vote/reportingdashboard/ViewReport.htm?reportId=$!reportId&startDate=$!startDate&endDate=$!endDate into your browser.</p>
+	<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;"><a href="https://www.usvotefoundation.org/contact">Contact us</a> at anytime with questions and comments<br />
+	&copy;2012-$!year US Vote Foundation. All Rights Reserved.</p>
+</div>
+    ]]></body_template>
+</email>

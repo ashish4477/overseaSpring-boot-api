@@ -1,0 +1,1 @@
+ALTER TABLE `mailinglist` ADD `voting_postal_code` VARCHAR( 128 ) NOT NULL DEFAULT '' AFTER `voting_state_name` ;

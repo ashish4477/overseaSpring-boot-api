@@ -1,0 +1,99 @@
+
+p#note {
+	margin-bottom:30px;
+	font-weight:700;
+}
+
+#forgot-password {
+	margin-left:8px;
+	font-size:11px;
+	display:inline;
+}
+
+#forgot-password a {
+	text-decoration: underline;
+}
+
+#remember-me {
+	margin:0;
+	padding:0;
+	display:inline;
+	margin-left:67px;
+}
+
+#remember-me input.field {
+	background:transparent;
+	display:inline;
+}
+
+#remember-me label {
+	padding:5px 0 5px 0;
+	font-size:11px;
+}
+
+#login-form #create-account{margin:15px;}
+
+#remind-password .hd h2 {
+	background-position: 4px -121px;
+}
+
+#remind-password-success .hd h2 {
+	background-position: 4px -121px;
+}
+
+#remind-password .bd-inner{
+	width:300px;
+	margin:0 auto;
+}
+
+#remind-password-success .bd {
+	padding: 30px 30px;
+	min-height: 280px;
+}
+#remind-password-success p a {
+	color: #E63F40;
+}
+#remind-password .hd h2 {
+	width: 250px;
+	background-position: 5px 5px;
+}
+#create-account-success .hd h2 {
+	width: 250px;
+}
+#create-account-success .bd input {
+	float: right; margin-top: 10px;
+}
+
+#update-message {
+	color: #060;
+	padding: 12px 45px;
+	margin:12px 0;
+	border:solid #c9ccd1 1px;
+	background-color:#fff;
+}
+
+#update-message.success{
+	background:#fff url('../img/icons/checkbox.gif') no-repeat 20px center;
+}
+
+#update-message.warning{
+	background:#fff url('../img/icons/alert.gif') no-repeat 22px 14px;
+	color: #E63F40;
+	}
+
+#login-form .error{color:#E63F40; font-weight:600;}
+
+.secondary .secondary-links{display:none;}
+
+#remove-account.large-overlay .bd{height:400px; min-height:400px;}
+#remove-account.page-form .bd .bd-inner{padding:10px 24px;}
+#remove-account h4{ color:#891122; font-weight:normal; font-size:16px;}
+#remove-account p{padding-top:8px; padding-bottom:8px;}
+#remove-account .accountName{
+	text-align:center;
+	color:#444;
+	margin:12px auto;
+	padding:5px;
+	background-color:#fff;
+	border:solid #ccc 1px;
+}

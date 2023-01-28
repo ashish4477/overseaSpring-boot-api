@@ -1,0 +1,31 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office from Overseas Vote</subject>
+    <from>Overseas Vote Helpdesk &lt;voterhelpdesk@overseasvotefoundation.org&gt;</from>
+   <reply_to>voterhelpdesk@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+		<style type="text/css">
+			p { font-family: 'Trebuchet MS', Arial, sans-serif; }
+			strong { font-weight: bold; }
+			a { color: #c00; }
+
+			.comments { color: #888; font-size: smaller; }
+		</style>
+		<div>
+		    <p><strong>Dear $!firstName,</strong></p>
+			<p>We're glad you've been able to use the Vote-Print-Mail system to generate your Federal Write-in Absentee Ballot (FWAB) and that you can cast your vote in this important election! Please read the instruction letter carefully.</p>
+
+			<p>You must download, print, sign and send in your FWAB. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+
+			<p><strong>Remember to check the witness requirements and then sign your cover page form</strong> and send it with your ballot to your election official who needs your original signature.</p>
+			<p>If the ballot from your election office arrives after you have sent in your FWAB, please complete it and send it in to replace the FWAB.</p>
+			
+			<p>Overseas Vote is an initiative of U.S. Vote Foundation, a nonprofit, nonpartisan public charity powered by a dedicated team of volunteers. Please help us reach more voters like you and - <a href="https://www.usvotefoundation.org/donate">make a donation today!</a></p>
+			<p>Here's to you for casting your ballot!<br/>
+			<em>- From the volunteer team at Overseas Vote</em></p>
+			
+			<p>And please, <strong><a href="https://www.usvotefoundation.org/donate">Make your donation today!</a></strong></p>
+			<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;">Contact us at <a href="mailto:voterhelpdesk@usvotefoundation.org">voterhelpdesk@usvotefoundation.org</a> anytime with questions or comments.<br />
+			&copy;2005-$!year Overseas Vote. All Rights Reserved.</p>
+		</div>
+    ]]></body_template>
+</email>

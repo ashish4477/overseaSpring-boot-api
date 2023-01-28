@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.mail">
+    <class name="MailTemplate" table="mail_templates" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="name" type="string" column="name" />
+        <property name="subject" type="string" column="subject" />
+        <property name="from" type="string" column="from_address" />
+        <property name="replyTo" type="string" column="reply_to_address" />
+        <property name="bodyTemplate" type="string" column="body_template" />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+     http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <mvc:annotation-driven/>
+	<context:annotation-config />
+	<context:component-scan base-package="com.bearcode.ovf.actions" />
+	<context:component-scan base-package="com.bearcode.ovf.editor" />
+	<context:component-scan base-package="com.bearcode.ovf.faces" />
+	<context:component-scan base-package="com.bearcode.ovf.tools" />
+	<context:component-scan base-package="com.bearcode.ovf.validators" />
+	<context:component-scan base-package="com.bearcode.ovf.utils" />
+	<context:component-scan base-package="com.bearcode.ovf.config"/>
+	<context:component-scan base-package="com.bearcode.ovf.webservices.localelections" />
+	<context:component-scan base-package="com.bearcode.ovf.webservices.eod" />
+	<context:component-scan base-package="com.bearcode.ovf.webservices.grecaptcha" />
+	<context:component-scan base-package="com.bearcode.ovf.webservices.sendgrid" />
+	<context:component-scan base-package="com.bearcode.ovf.webservices.s3" />
+
+
+  <context:property-override ignore-resource-not-found="true" ignore-unresolvable="true"
+                            location="file:${catalina.home}/conf/ovfBeanOverrides.properties"/>
+  <context:property-override ignore-resource-not-found="true" ignore-unresolvable="true"
+                            location="file:${catalina.base}/conf/ovfBeanOverrides.properties"/>
+
+    <!--  ****  Redis cache  *************  -->
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+        p:hostName="#{systemEnvironment['JEDIS_HOST']}"
+        p:port="#{systemEnvironment['JEDIS_PORT']}"
+        p:database="#{systemEnvironment['JEDIS_DB']}"
+        p:usePool="false"
+        p:timeout="1000"/>
+
+    <bean id="redisTemplate" class="com.bearcode.ovf.tools.redis.RedisTemplate"
+        p:ignoreConnectionFailure="${redisTemplate.ignoreConnectionFailure}"
+        p:connectionFactory-ref="jedisConnectionFactory"/>
+
+    <cache:annotation-driven/>
+
+    <bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager"
+        c:template-ref="redisTemplate"
+        p:usePrefix="true"
+        p:defaultExpiration="3600">
+        <!-- override expiration for specific caches here -->
+        <property name="expires">
+            <map>
+                <!-- example
+                <entry key="findStateVoterInformation" value="60"/>
+                -->
+            </map>
+        </property>
+    </bean>
+
+    <!-- *********  Task config for execution PDF generation. ************** -->
+    <task:annotation-driven executor="executor"/>
+    <task:executor id="executor" pool-size="10" />
+
+	<!-- Annotation driven validator factory. Default implementation of JSR-303
+		bean validation API -->
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="com.bearcode.ovf.faces.FacesVew" />
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="2097152" />
+	</bean>
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.FixedLocaleResolver">
+		<property name="defaultLocale" value="en_US" />
+	</bean>
+
+	<!-- adding messages -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>messages</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- ********* Abstract	action beans *********** -->
+	<bean id="overseasForm" class="com.bearcode.ovf.actions.commons.OverseasFormController"
+		abstract="true">
+		<property name="stateService" ref="stateService" />
+		<property name="facesService" ref="facesService" />
+		<!-- placeholder for setting deployment flag for controllers that need
+			it: production, staging, testing, development -->
+		<property name="deploymentEnv" value="" />
+	</bean>
+	<!-- TODO: not used, remove -->
+	<bean id="overseasWizard"
+		class="com.bearcode.ovf.actions.commons.OverseasWizardController"
+		abstract="true">
+		<!-- placeholder for setting deployment flag for controllers that need
+			it: production, staging, testing, development -->
+		<property name="deploymentEnv" value="" />
+	</bean>
+
+	<!-- Parent bean for iframe pages TODO: not used, remove -->
+	<bean id="iframePage" class="com.bearcode.ovf.actions.commons.IframeContent"
+		parent="overseasForm" abstract="true">
+		<property name="formView">
+			<value>templates/MainTemplate</value>
+		</property>
+		<property name="contentBlock">
+			<value>/WEB-INF/pages/blocks/IframeContent.jsp</value>
+		</property>
+		<property name="iframeHeader" value="" />
+	</bean>
+
+	<!-- FedEx -->
+
+	<!-- <bean id="FedexTest" class="com.bearcode.ovf.actions.FedexTest" parent="overseasForm">
+		</bean> -->
+
+	<!-- Authorize.net -->
+	<!--<bean id="testPayment" class="com.bearcode.ovf.actions.authorizenet.CardPaymentTest"
+		parent="overseasForm"> <property name="pageTitle" value="Test Payment"/>
+		<property name="commandClass" value="com.bearcode.ovf.actions.authorizenet.forms.CardAuthorizeForm"/>
+		<property name="commandName" value="cardForm"/> <property name="formView"><value>templates/MainTemplate</value></property>
+		<property name="contentBlock"><value>/WEB-INF/pages/blocks/TestCCPayment.jsp</value>
+		</property> <property name="successContentBlock"><value>/WEB-INF/pages/blocks/TestCCPaymentSuccess.jsp</value>
+		</property> </bean> -->
+
+	<!-- *****************************************************************************
+		Express your vote ***************************************************************************** -->
+
+	<bean id="fedexLabelService" class="com.bearcode.ovf.tools.FedexGetLabelService">
+		<property name="authenticationKey" value="#{systemEnvironment['FEDEX_AUTH_KEY']}" />
+		<property name="authenticationPassword" value="#{systemEnvironment['FEDEX_AUTH_PASS']}" />
+		<property name="clientAccountNumber" value="#{systemEnvironment['FEDEX_CLIENT_NUM']}" />
+		<property name="clientMeterNumber" value="#{systemEnvironment['FEDEX_METER_NUM']}" />
+		<property name="webserviceAddress"
+			value="https://wsbeta.fedex.com:443/web-services" />
+		<property name="labelsStorageDir" value="" />
+	</bean>
+
+	<bean id="authorizeNetService" class="com.bearcode.ovf.tools.AuthorizeNetService">
+		<property name="serviceUrl"
+			value="https://test.authorize.net/gateway/transact.dll" />
+		<property name="serviceLogin" value="#{systemEnvironment['AUTHORIZE_NET_LOGIN']}" />
+		<property name="serviceKey" value="#{systemEnvironment['AUTHORIZE_NET_KEY']}" />
+		<property name="testRequest" value="true" />
+	</bean>
+
+	<bean id="expressYourVote" class="com.bearcode.ovf.actions.express.ExpressYourVoteWizard">
+		<property name="pageTitle" value="Express Your Vote" />
+		<property name="page">
+			<value>templates/ExpressYourVoteTemplate</value>
+		</property>
+		<property name="contentBlocks">
+			<list>
+				<value>/WEB-INF/pages/blocks/wizard/EyvFirst.jsp</value>
+				<value>/WEB-INF/pages/blocks/wizard/EyvCountryInfo.jsp</value>
+				<value>/WEB-INF/pages/blocks/wizard/EyvPickupLocation.jsp</value>
+				<value>/WEB-INF/pages/blocks/wizard/EyvPayment.jsp</value>
+				<value>/WEB-INF/pages/blocks/wizard/EyvTransactionSummary.jsp</value>
+			</list>
+		</property>
+		<property name="commandName" value="expressForm" />
+		<property name="commandClass"
+			value="com.bearcode.ovf.actions.express.forms.ExpressForm" />
+		<property name="bindOnNewForm" value="true" />
+		<property name="stateService" ref="stateService" />
+		<property name="facesService" ref="facesService" />
+		<property name="fedexService" ref="fedexService" />
+		<property name="questionFieldService" ref="questionFieldService" />
+		<property name="userService" ref="userService" />
+		<property name="localOfficialService" ref="localOfficialService" />
+		<property name="authenticationProcessingFilter" ref="usernamePasswordAuthenticationFilter" />
+		<property name="fedexGetLabelService" ref="fedexLabelService" />
+		<property name="authorizeNetService" ref="authorizeNetService" />
+		<property name="emailService" ref="mailService" />
+
+		<property name="validator">
+			<bean class="com.bearcode.ovf.validators.ExpressFormValidator" />
+		</property>
+		<property name="allowDirtyBack" value="true" />
+		<property name="serviceStart" value="2010-09-09" />
+		<!-- this is the date of starting EYV service. format 'year-month-day' -->
+	</bean>
+
+	<bean id="eyvGetFedexLabel" class="com.bearcode.ovf.actions.express.GetFedexLabel"
+		parent="overseasForm">
+		<property name="pageTitle" value="Fedex Air Way Bill" />
+		<property name="formView">
+			<value>templates/EyvLabelTemplate</value>
+		</property>
+		<property name="contentBlock">
+			<value>/WEB-INF/pages/blocks/EyvGetLabel.jsp</value>
+		</property>
+		<property name="commandName" value="expressForm" />
+		<property name="commandClass"
+			value="com.bearcode.ovf.actions.express.forms.ExpressForm" />
+		<property name="fedexService" ref="fedexService" />
+	</bean>
+
+	<bean id="eyvGetFedexImage" class="com.bearcode.ovf.actions.express.GetFedexLabelImage">
+		<property name="fedexService" ref="fedexService" />
+	</bean>
+
+	<bean id="eyvFedexCountries"
+		class="com.bearcode.ovf.actions.express.admin.FedexCountryListController"
+		parent="overseasForm">
+		<property name="pageTitle" value="List of FedEx Countries" />
+		<property name="formView">
+			<value>templates/MainTemplate</value>
+		</property>
+		<property name="contentBlock">
+			<value>/WEB-INF/pages/blocks/admin/EyvCountryList.jsp</value>
+		</property>
+		<property name="fedexService" ref="fedexService" />
+		<property name="sectionCss" value="/css/eod.css" />
+		<property name="sectionName" value="eod" />
+	</bean>
+
+	<bean id="eyvEditCountry"
+		class="com.bearcode.ovf.actions.express.admin.EditCountryController"
+		parent="overseasForm">
+		<property name="pageTitle" value="Edit FedEx Country Description" />
+		<property name="formView">
+			<value>templates/MainTemplate</value>
+		</property>
+		<property name="contentBlock">
+			<value>/WEB-INF/pages/blocks/admin/EyvEditCountry.jsp</value>
+		</property>
+		<property name="fedexService" ref="fedexService" />
+		<property name="sectionCss" value="/css/eod.css" />
+		<property name="sectionName" value="eod" />
+		<property name="commandClass"
+			value="com.bearcode.ovf.model.express.CountryDescription" />
+		<property name="commandName" value="fedexCountry" />
+	</bean>
+
+
+
+	<!-- *****************************************************************************
+		Third party Web Services ***************************************************************************** -->
+	<bean id="districtLookupService" class="com.bearcode.ovf.webservices.DistrictLookupService">
+		<property name="melissaDataUrl" value="http://xml.melissadata.com/xml.asp" />
+		<property name="cacheDir"
+			value="/var/www/www.overseasvotefoundation.org/districtlookup_cache" />
+		<!-- production and staging -->
+		<property name="cacheTime" value="2592000000" />
+		<!-- 1 month = 30d*24h*60m*60s*1000ms, time in milliseconds -->
+	</bean>
+
+    <bean id="smartyStreetService" class="com.bearcode.ovf.webservices.SmartyStreetService">
+
+    </bean>
+
+	<bean id="voteSmartService" class="com.bearcode.ovf.webservices.votesmart.VoteSmartService">
+    <property name="votesmartKey" value="81ba21bf2e0ee373aa1d9997233b04e7" />
+
+		<property name="votesmartCacheDir"
+			value="/var/www/www.overseasvotefoundation.org/votesmart_cache" />
+		<!-- production and staging -->
+		<property name="votesmartCacheTime" value="60000" />
+		<!-- time in milliseconds -->
+
+		<property name="useVotesmartPresidental" value="true" />
+		<property name="useVotesmartSenate" value="true" />
+		<property name="useVotesmartRepresentatives" value="true" />
+	</bean>
+
+
+	<!-- Quartz job beans -->
+	<bean id="scheduledReportsEmailJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass"
+			value="com.bearcode.ovf.tools.ScheduledReportsEmailJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="reportingDashboardService" value-ref="reportingDashboardService" />
+				<entry key="emailService" value-ref="mailService" />
+				<entry key="facesService" value-ref="facesService" />
+				<entry key="propertyService" value-ref="ovfPropertyService" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- Reporting dashboard -->
+	<bean id="scheduledReportsSimpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="scheduledReportsEmailJob" />
+		<property name="startDelay" value="10000" />
+		<property name="repeatInterval" value="5000" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="oneTimeOnly" value="true" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="scheduledReportsCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="scheduledReportsEmailJob" />
+		<!-- run every day at 12:30pm -->
+		<property name="cronExpression" value="0 30 0 * * ?" />
+	</bean>
+
+	<bean id="formTrackingJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.bearcode.ovf.tools.FormTrackingJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="formTrackingService" value-ref="formTrackingService" />
+				<entry key="emailService" value-ref="mailService" />
+				<entry key="propertyService" value-ref="ovfPropertyService" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="formTrackingSimpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="formTrackingJob" />
+		<property name="startDelay" value="10000" />
+		<property name="repeatInterval" value="5000" />
+		<!-- the following makes the service send one email (and only one) quickly
+			for testing purposes. The configured values for repeat interval and number
+			of repeats are ignored. -->
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="oneTimeOnly" value="true" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="formTrackingCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="formTrackingJob" />
+		<!-- run every day at 12:15pm -->
+		<property name="cronExpression" value="0 15 0 * * ?" />
+	</bean>
+
+    <!-- Mailing subsytem  jobs -->
+    <bean id="sendNewlettersJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.bearcode.ovf.actions.mail.SendNewsletters"/>
+        <property name="jobDataAsMap">
+            <map>
+                <entry key="mailingListService" value-ref="mailingListService"/>
+                <entry key="emailService" value-ref="mailService"/>
+				<entry key="propertyService" value-ref="ovfPropertyService" />
+            </map>
+        </property>
+    </bean>
+
+<!--
+    <bean id="lookingForBouncesJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="sendNewsletters"/>
+        <property name="targetMethod" value="findFixBounces"/>
+    </bean>
+-->
+
+<!--
+    <bean id="subscribeEodContactsJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="subscribeEodContacts"/>
+        <property name="targetMethod" value="updateMails"/>
+    </bean>
+-->
+
+    
+
+
+    <!-- for production -->
+<!--
+    <bean id="lookingForBouncesCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="lookingForBouncesJobDetail" />
+        &lt;!&ndash; run every day at 2am &ndash;&gt;
+        <property name="cronExpression" value="0 0 2 * * ?" />
+    </bean>
+-->
+
+<!--
+    &lt;!&ndash; for debug purpose &ndash;&gt;
+    <bean id="subscribeEodSimpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="subscribeEodContactsJobDetail" />
+        <property name="startDelay" value="50000" />
+        <property name="repeatInterval" value="25000"/>
+    </bean>
+
+    &lt;!&ndash; for production &ndash;&gt;
+    <bean id="subscribeEodCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="subscribeEodContactsJobDetail" />
+        &lt;!&ndash; run every day at 1am &ndash;&gt;
+        <property name="cronExpression" value="0 0 1 * * ?" />
+    </bean>
+-->
+
+
+	<!-- Enables state level FWAB and what's on my ballot. -->
+	<import resource="voting-precinct.xml" />
+	<bean id="sendEmailJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.bearcode.ovf.service.email.SendEmailJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="emailService" value-ref="mailService" />
+				<entry key="sendEmailThreadPool" value-ref="sendEmailThreadPool"/>
+                <entry key="propertyService" value-ref="ovfPropertyService" />
+			</map>
+		</property>
+	</bean>
+
+
+	<bean id="sendEmailsCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="sendEmailJob" />
+		<!-- run job every 30 seconds -->
+		<property name="cronExpression" value="0/30 * * * * ?" />
+	</bean>
+
+	<bean id="deleteEmailsJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.bearcode.ovf.service.email.DeleteEmailsJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="emailService" value-ref="mailService" />
+				<entry key="propertyService" value-ref="ovfPropertyService" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="deleteEmailsCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="deleteEmailsJob" />
+		<!-- run job every 30 seconds -->
+		<!-- <property name="cronExpression" value="0/30 * * * * ?" /> -->
+		<!-- run every day at 12:45pm -->
+		<property name="cronExpression" value="0 45 0 * * ?" />
+	</bean>
+
+	<!-- Pending voter registrations -->
+	<bean id="pendingVoterRegistrationJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.bearcode.ovf.tools.pendingregistration.PendingVoterRegistrationJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="pendingVoterRegistrationService" value-ref="pendingVoterRegistrationService" />
+				<entry key="propertyService" value-ref="ovfPropertyService" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="pendingVoterRegistrationCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="pendingVoterRegistrationJob" />
+		<!-- run job every 30 seconds -->
+		<!-- property name="cronExpression" value="0/30 * * * * ?" /-->
+		<!-- run job every day at midnight -->
+		<property name="cronExpression" value="0 0 0 * * ?" />
+	</bean>
+
+    <!--  Clear form sandbox job -->
+    <bean id="clearSandboxJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="clearFormSandboxJob"/>
+        <property name="targetMethod" value="clearSandbox"/>
+    </bean>
+
+    <bean id="clearSandboxTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="clearSandboxJobDetail" />
+        <property name="startDelay" value="20000" />
+        <property name="repeatInterval" value="300000"/>    <!-- once in 5 min-->
+    </bean>
+
+    <bean id="hourlyDeliveriesJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="automatedDataExporter"/> <!-- new SHS export-->
+		<property name="targetMethod" value="doHourlyDeliveries"/>
+    </bean>
+
+    <bean id="dailyDeliveriesJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="automatedDataExporter"/> <!-- new SHS export-->
+        <property name="targetMethod" value="doDailyDeliveries"/>
+    </bean>
+
+    <bean id="weeklyDeliveriesJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="automatedDataExporter"/> <!-- new SHS export-->
+        <property name="targetMethod" value="doWeeklyDeliveries"/>
+    </bean>
+
+    <bean id="monthlyDeliveriesJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="automatedDataExporter"/> <!-- new SHS export-->
+        <property name="targetMethod" value="doMonthlyDeliveries"/>
+    </bean>
+
+    <bean id="automatedHourlyDeliveryCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="hourlyDeliveriesJob" />
+        <property name="cronExpression" value="0 30 * * * ?" /><!-- every hour on the 1/2 hour -->
+    </bean>
+
+    <bean id="automatedDailyDeliveryCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="dailyDeliveriesJob" />
+        <property name="cronExpression" value="0 15 4 * * ?" /><!-- every day at 4:15am -->
+    </bean>
+
+    <bean id="automatedWeeklyDeliveryCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="weeklyDeliveriesJob" />
+        <property name="cronExpression" value="0 0 4 ? * MON" /><!-- every Monday at 4am -->
+    </bean>
+
+    <bean id="automatedMonthlyDeliveryCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="monthlyDeliveriesJob" />
+        <property name="cronExpression" value="0 15 3 1 * ?" /><!-- the 1st day of each month at 3:15am -->
+    </bean>
+
+	<!-- Send Grid jobs -->
+	<bean id="addNewSubscribersJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.bearcode.ovf.webservices.sendgrid.AddNewSubscribersJob"/>
+		<property name="jobDataAsMap">
+            <map>
+                <entry key="mailingListService" value-ref="mailingListService"/>
+                <entry key="sendGridService" value-ref="sendGridService"/>
+				<entry key="propertyService" value-ref="ovfPropertyService"/>
+            </map>
+        </property>
+	</bean>
+
+    <bean id="newSubscribersTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+        <property name="jobDetail" ref="addNewSubscribersJob"/>
+        <property name="startDelay" value="10000"/>
+        <property name="repeatInterval" value="300000"/> <!-- 5 min -->
+    </bean>
+
+	<bean id="getUnsubscribersJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.bearcode.ovf.webservices.sendgrid.GetGlobalUnsubscribesJob"/>
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="mailingListService" value-ref="mailingListService"/>
+				<entry key="sendGridService" value-ref="sendGridService"/>
+				<entry key="propertyService" value-ref="ovfPropertyService"/>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="getUnsubscribersCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="getUnsubscribersJob" />
+		<property name="cronExpression" value="0 0 5 * * ?" /><!-- production: every day at 5:00am -->
+		<!--<property name="cronExpression" value="0 0/5 * * * ?" />--><!-- debug every 5 min -->
+	</bean>
+
+	<bean id="mainScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="schedulerName" value="mainScheduler" />
+		<property name="triggers">
+			<list>
+				<!-- Enable below for debugging purposes -->
+				<!--
+				<ref bean="scheduledReportsSimpleTrigger" />
+				<ref bean="formTrackingSimpleTrigger" />
+                <ref bean="deleteSubscribersSimpleTrigger"/>
+                <ref bean="subscribeEodSimpleTrigger"/>
+				-->
+                <ref bean="newSubscribersTrigger"/>
+				<ref bean="getUnsubscribersCronTrigger"/>
+
+<!--
+	do not use GetResponse
+                <ref bean="newSubscribersSimpleTrigger"/>
+				<ref bean="deleteSubscribersCronTrigger"/>
+-->
+                <!-- Enable below for real purposes -->
+                <!-- Mailing list -->
+                
+                <!--<ref bean="lookingForBouncesCronTrigger"/>-->
+
+				<ref bean="scheduledReportsCronTrigger" />
+				<ref bean="formTrackingCronTrigger" />
+                <!--<ref bean="subscribeEodCronTrigger"/>-->
+				<ref bean="sendEmailsCronTrigger" />
+				<ref bean="deleteEmailsCronTrigger" />
+				<ref bean="pendingVoterRegistrationCronTrigger" />
+				<ref bean="clearSandboxTrigger"/>
+				<ref bean="automatedHourlyDeliveryCronTrigger"/>
+				<ref bean="automatedDailyDeliveryCronTrigger"/>
+				<ref bean="automatedWeeklyDeliveryCronTrigger"/>
+				<ref bean="automatedMonthlyDeliveryCronTrigger"/>
+            </list>
+		</property>
+        <!-- exposed for javamelody monitoring -->
+        <property name="exposeSchedulerInRepository" value="true" />
+	</bean>
+
+	<import resource="overseas-mappings.xml" />
+</beans>

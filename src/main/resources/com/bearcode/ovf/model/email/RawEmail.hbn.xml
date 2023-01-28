@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.email">
+    <class name="RawEmail" table="email" lazy="true" dynamic-insert="true" dynamic-update="true" select-before-update="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="created" type="java.util.Date" column="created_time" />
+        <property name="updated" type="java.util.Date" column="updated_time" />
+        <property name="retryTime" type="java.util.Date" column="retry_time" />
+
+        <property name="templatePath" type="text" column="template_path" />
+        <property name="from" type="text" column="from_addr" />
+        <property name="to" type="text" column="to_addr" />
+        <property name="replyTo" type="text" column="reply_to_addr" />
+        <property name="bcc" type="boolean" column="is_bcc" />
+		
+        <property name="subject" type="text" column="subject" />
+        <property name="body" type="text" column="body" />
+
+        <property name="attempt" type="int" column="attempt_number" />
+        <property name="priority" type="int" column="priority" />
+		<property name="status" column="status">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.email.RawEmailLogStatus</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+			</type>
+		</property>
+        <property name="error" type="text" column="error" />
+
+        <bag name="logs" inverse="true" cascade="delete">
+            <key column="email_id" />
+            <one-to-many class="RawEmailLog" />
+        </bag>
+
+    </class>
+
+    <class name="RawEmailLog" table="email_log" lazy="true" dynamic-insert="true" dynamic-update="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+
+        <property name="created" type="java.util.Date" column="created_time" />
+        
+        <many-to-one name="rawEmail" class="RawEmail" column="email_id" not-null="true" />
+
+		<property name="status" column="status">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.email.RawEmailLogStatus</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+			</type>
+		</property>
+        <property name="error" type="text" column="error" />
+    </class>
+</hibernate-mapping>

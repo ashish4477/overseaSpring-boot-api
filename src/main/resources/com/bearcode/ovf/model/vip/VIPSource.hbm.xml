@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.vip">
+	<class name="VipSource" table="vip_sources" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        
+        <property name="vipId" type="long" column="vip_id" />
+        
+        <property name="sourceId" type="long" column="source_id" />
+        
+		<property name="name" type="string" column="source_name" />
+		
+		<property name="complete" type="boolean" column="complete" />
+		
+		<property name="dateTime" type="timestamp" column="date_time" />
+		
+		<property name="lastModified" type="timestamp" column="last_modified" />
+ 	</class>
+</hibernate-mapping>

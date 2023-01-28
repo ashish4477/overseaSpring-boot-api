@@ -1,0 +1,7 @@
+.row {
+  background: #fff; }
+  .row .container {
+    padding-right: 15px; }
+
+.not-front .row.content, .not-front .row.navigation {
+  background: #fff; }

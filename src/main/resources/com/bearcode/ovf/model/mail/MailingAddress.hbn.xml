@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.mail">
+    <class name="MailingAddress" table="mailing_list_address" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="firstName" type="string" column="first_name" />
+        <property name="lastName" type="string" column="last_name" />
+        <property name="email" type="string" column="email" />
+        <property name="url" type="string" column="url" />
+
+        <property name="birthYear" type="long" column="birth_year" />
+        <property name="voterType" type="string" column="voter_type" />
+        <property name="voterClassificationType" type="string" column="voter_classification_type" />
+        <property name="phone" type="string" column="phone" />
+
+        <property name="votingCity" type="string" column="voting_city" />
+        <many-to-one name="state" column="state" class="com.bearcode.ovf.model.common.State" not-null="false" not-found="ignore"/>
+        <property name="votingStateName" type="string" column="voting_state_name" />
+        <property name="votingPostalCode" type="string" column="voting_postal_code" />
+        <property name="eodRegion" type="string" column="eod_region" />
+        <property name="votingRegionName" type="string" column="voting_region_name"/>
+        <many-to-one name="region" column="region" class="com.bearcode.ovf.model.common.VotingRegion" not-null="false" not-found="ignore"/>
+
+        <property name="currentAddress" type="string" column="current_address" />
+        <property name="currentCity" type="string" column="current_city" />
+        <property name="currentPostalCode" type="string" column="current_postal_code" />
+        <property name="currentCountry" type="long" column="country" />
+        <property name="currentCountryName" type="string" column="current_country_name" />
+    </class>
+
+</hibernate-mapping>

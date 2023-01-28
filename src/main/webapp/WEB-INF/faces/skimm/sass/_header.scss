@@ -1,0 +1,44 @@
+.row {
+  &.header {
+    padding: 30px 0 50px 0;
+    background: #fff;
+
+    @media (max-width: $screen-md-min) {
+      padding: 30px 0 0 0;
+    }
+
+    a.logo {
+      img {
+        max-width: 280px;
+      }
+    }
+
+    .lead {
+      font-family: 'Graphik';
+      color: #717877;
+      width: 275px;
+      font-size: 11px;
+      margin: 20px 0 0 auto;
+
+      @media (max-width: $screen-md-min) {
+        margin: 20px 0 25px 0;
+      }
+    }
+  }
+
+  .slogan {
+    background: #fff;
+
+    h1 {
+      background: #fff;
+      text-align: left;
+      display: block;
+      height: auto;
+
+      // override style.css
+      @media (max-width: 786px) and (min-width: 480px){
+        min-height: 1px;
+      }
+    }
+  }
+}

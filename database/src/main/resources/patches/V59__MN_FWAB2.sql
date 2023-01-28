@@ -1,0 +1,3 @@
+UPDATE `svr_properties`
+SET `property_value`='<p>To find links to additional information about the candidates and questions appearing on your ballot, as well as the names of candidates in local races in your district, go to <a class="womb" target="_blank " href="http://myballotmn.sos.state.mn.us/Default.aspx">http://myballotmn.sos.state.mn.us/Default.aspx</a>.</p>'
+WHERE `property_name`='fwab.header.text[1]';

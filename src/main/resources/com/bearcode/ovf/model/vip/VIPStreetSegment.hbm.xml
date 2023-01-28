@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.vip">
+	<class name="VipStreetSegment" table="vip_street_segments" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        
+        <property name="vipId" type="long" column="vip_id" />
+        
+        <many-to-one name="source" class="VipSource" column="source_id" lazy="no-proxy" />
+        
+        <property name="endHouseNumber" type="integer" column="end_house_number" />
+        
+        <many-to-one name="nonHouseAddress" class="VipDetailAddress" column="non_house_address_id" lazy="false" cascade="all" />
+        
+        <property name="oddEvenBoth" type="string" column="odd_even_both" />
+        
+        <many-to-one name="precinct" class="VipPrecinct" column="precinct_id" lazy="no-proxy" />
+        
+        <many-to-one name="precinctSplit" class="VipPrecinctSplit" column="precinct_split_id" lazy="no-proxy" />
+        
+        <property name="startHouseNumber" type="integer" column="start_house_number" />
+	</class>
+</hibernate-mapping>

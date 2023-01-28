@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.eod">
+    <class name="StateVotingLaws"  table="state_voting_laws" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+
+        <property name="earlyInPersonVoting" type="boolean" column="early_in_person_voting"/>
+        <property name="noExcuseAbsenteeVoting" type="boolean" column="no_excuse_absentee"/>
+        <property name="sameDayRegistration" column="same_day_registration">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.eod.SameDayRegistrationType</param>
+                <param name="type">4<!--value of java.sql.Types.INTEGER--></param>
+            </type>
+        </property>
+        <property name="allMailVoting" column="all_mail_voting">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.eod.MailVotingType</param>
+                <param name="type">4<!--value of java.sql.Types.INTEGER--></param>
+            </type>
+        </property>
+        <property name="voterId" column="voter_id">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.eod.VoterIdType</param>
+                <param name="type">4<!--value of java.sql.Types.INTEGER--></param>
+            </type>
+        </property>
+        <property name="voterIdAdditional" type="string" column="voter_id_additional"/>
+        <many-to-one name="state" column="state_id" not-null="true" lazy="false"/>
+    </class>
+</hibernate-mapping>

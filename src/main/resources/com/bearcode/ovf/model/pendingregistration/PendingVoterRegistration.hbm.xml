@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.pendingregistration">
+	<class name="PendingVoterRegistration" table="pending_voter_registrations"
+		dynamic-insert="true">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+
+		<!-- alternateEmailAddress is encrypted -->
+
+		<!-- alternatePhoneNumber is encrypted -->
+
+		<list name="answers" cascade="all-delete-orphan" lazy="false">
+			<key column="pending_voter_registration_id" not-null="false" />
+			<list-index column="sort_order" />
+			<one-to-many class="PendingVoterAnswer" />
+		</list>
+
+		<!-- birthDay is encrypted -->
+
+		<property name="createdDate" column="created_date" type="timestamp" />
+
+		<many-to-one name="currentAddress" class="PendingVoterAddress"
+			column="current_address_id" not-null="true" cascade="all-delete-orphan"
+			unique="true" lazy="false" />
+
+		<!-- emailAddress is encrypted -->
+
+		<property name="encrypted" column="encrypted" type="binary"
+			not-null="true" />
+
+		<property name="facePrefix" column="face_prefix" type="string"
+			not-null="false" />
+
+		<many-to-one name="forwardingAddress" class="PendingVoterAddress"
+			column="forwarding_address_id" not-null="false" cascade="all"
+			unique="false" lazy="false" />
+
+		<property name="gender" type="string" not-null="false" />
+
+		<many-to-one name="name" class="PendingVoterName" column="name_id"
+			not-null="true" cascade="all-delete-orphan" unique="true" lazy="false" />
+
+		<!-- phoneNumber is encrypted -->
+
+		<many-to-one name="previousAddress" class="PendingVoterAddress"
+			column="previous_address_id" not-null="false" cascade="all"
+			unique="false" lazy="false" />
+
+		<many-to-one name="previousName" class="PendingVoterName"
+			column="previous_name_id" not-null="false" cascade="all"
+			unique="false" lazy="false" />
+
+		<property name="voterHistory" type="string" column="voter_history"
+			not-null="false" />
+
+		<property name="voterType" type="string" column="voter_type"
+			not-null="false" />
+
+		<property name="voterClassificationType" type="string" column="voter_classification_type"
+				  not-null="false" />
+
+		<many-to-one name="votingAddress" class="PendingVoterAddress"
+			column="voting_address_id" not-null="true" cascade="all-delete-orphan"
+			unique="true" />
+
+		<property name="votingRegion" type="string" column="voting_region"
+			not-null="true" />
+
+		<property name="votingState" type="string" column="voting_state"
+			not-null="true" />
+	</class>
+</hibernate-mapping>

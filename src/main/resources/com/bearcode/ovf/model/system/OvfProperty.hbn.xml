@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.system">
+    <class name="OvfProperty" table="ovf_properties" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="propertyName" column="property_name" >
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.system.OvfPropertyNames</param>
+                <param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+            </type>
+        </property>
+
+        <property name="propertyValue" type="string" column="property_value" not-null="false" />
+    </class>
+</hibernate-mapping>

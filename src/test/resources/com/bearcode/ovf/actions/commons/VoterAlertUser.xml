@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<dataset>
+    <faces_config id="1" url_path="localhost" path_prefix="faces/basic" default="1" />
+    <user_names first_name="Test" username="test@gmail.com"></user_names>
+    <user_addresses
+            city="Montpelier"
+            state="VT"
+            zip="05602"
+            zip4="1234"
+            country="US"
+            county="Washington"
+    />
+
+</dataset>

@@ -1,0 +1,161 @@
+/* Rules that are completely universal - print, screen, whatever */
+html {
+	margin: 0px; padding: 0px;
+	
+	/* font styles */
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	font-size: 12px;
+	word-spacing: 0px;
+	color: #787878;
+}
+
+body,h1,h2,h3,h4,h5,h6,form,fieldset,label,input,ul,ol,li,hr,p,legend {
+	margin: 0px; padding: 0px;
+}
+hr,fieldset,a img, iframe {
+	border: 0px;
+}
+a {
+	text-decoration: none;
+	color: #787878;
+	outline: none;
+}
+a:hover {
+	color: #C00;
+}
+a:active {
+	outline: none;
+}
+img {
+	vertical-align: top;
+}
+button {
+	cursor: pointer;
+}
+select {
+	overflow: hidden;
+}
+acronym {
+	cursor: help;
+	text-decoration: underline;
+	border: 0px;
+}
+
+h1 { font-size: 16px; line-height: 30px; }
+h2 { font-size: 16px; line-height: 30px; }
+h3 { font-size: 14px; line-height: 30px; }
+
+.field {
+	color: #787878;
+	font-size: 12px;
+	font-family: "Trebuchet MS";
+	font-weight: bold;
+	font-style: normal;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+}
+
+
+/* forms */
+.aligned-fieldset {
+	padding: 0;
+	margin: 0;
+}
+
+.aligned-fieldset label {
+	display: block;
+	width: 90%;
+	text-align:right;
+	padding:3px 0 3px 0;
+}
+.aligned-fieldset input {
+	width:175px;
+	height:20px;
+	padding:0;
+	margin: 0;
+}
+
+.aligned-fieldset .error {
+	width: 274px;
+}
+
+.submit-button {	
+	margin-left: 120px;
+	padding: 0;
+}
+
+.required-label:before {
+	content:"*";
+}
+
+/* 
+ * FRAME
+ */
+
+#fx-frame-layer {
+	z-index:20;
+	position: absolute;
+	top: 90px;
+	left: 0;
+	width:100%;
+	text-align:center;
+}
+
+#fx-frame-main {
+	width:814px;
+	margin:0 auto;
+	text-align: left;	
+}
+
+#fx-frame {
+	width:404px;
+	margin:0 204px;
+	background-color:transparent;
+}
+
+#fx-frame .column-form {
+	width:404px;
+}
+
+#fx-frame-header {
+    position:relative;
+
+}
+
+#fx-progress {
+    position: absolute;
+    top:0;
+    left:160px;
+    padding:11px;
+}
+
+#fx-close-frame {
+    position:absolute;
+    top:0;
+    right:0;
+    padding:10px;
+}
+
+/*
+ * SHADOW
+ */
+ 
+#fx-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:10;
+	background-color: #000;
+	opacity:0.5;
+	-moz-opacity:0.5;
+	filter:alpha(opacity=50);
+	height: 100%;
+	width:100%;
+}
+
+
+
+/* I don't really know where to put this... */
+#create-account.large-overlay .hd h2 {
+	width: 250px;
+}

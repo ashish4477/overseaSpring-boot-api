@@ -1,0 +1,566 @@
+/**
+The basic stylesheet that all pages should load to render the screen properly.
+**/
+html { background-color: #fff; padding-bottom: 10px; }
+body { height: 100%; }
+
+/**
+Some commonly-used classes
+**/
+.break {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.error {
+	color: #c00;
+	margin: 5px;
+	background: #fff;
+}
+
+.column, .column-form {
+	float: left;
+	width: 608px;
+	margin: 2px 0px 0px 2px;
+	padding: 0px 0px 0px 0px;
+}
+.column .hd, .column-form .hd, .wide-content .hd {
+	background: transparent url(../img/backgrounds/608-w-col-hd.png) top left no-repeat;
+	height: 40px;
+}
+.column .hd h1, .column-form .hd h1, .wide-content .hd h1 {
+	color: #c00;
+	height: 30px;
+	padding: 10px 0px 0px 33px;
+	line-height: 20px; letter-spacing: 1px; word-spacing: -1px;
+	background: transparent url(../img/icons/sidebar-icons.gif) 3px 0px no-repeat;
+}
+/** IE 6 fallback **/
+* html .column .hd,		* html .column-form .hd,		* html .wide-content .hd { 
+	background-image: url(../img/backgrounds/608-w-col-hd.gif);
+}
+* html .column .hd h2,	* html .column-form .hd h2,	* html .wide-content .hd h2 {
+	background-image: url(../img/icons/sidebar-icons.gif);
+}
+* html .column .ft,		* html .column-form .ft,		* html .wide-content .ft {
+	background-image: url(../img/backgrounds/608-w-col-ft.gif);
+}
+
+.column .bd, .column-form .bd , .wide-content .bd {
+	padding: 10px 10px; margin: 0px;
+	font-size: 13px; line-height: 20px;
+	min-height: 319px;
+	background: transparent url(../img/backgrounds/608-w-col-bd.gif) left repeat-y;
+}
+.column .bd a, .column-form .bd a {
+
+}
+
+.column .bd ul, .column-form .bd ul, .wide-content .bd ul {
+	font-style:italic;
+	padding:0 40px 40px;
+}
+
+.column .bd h3, .column-form .bd h3, .wide-content .bd h3 {
+	color: #c00;
+	font-size: 16px;
+}
+.column .ft, .column-form .ft, .wide-content .ft {
+	margin: 0px; padding: 0px;
+	height: 10px;
+	overflow: hidden;
+	background: transparent url(../img/backgrounds/608-w-col-nograd-ft.png) top left no-repeat;
+}
+.unused-column-form .bd, 
+.unused-column-form .ft {
+	background-position: top right;
+}
+
+column-form .bd p.list-head {
+	padding-top:30px;
+}
+
+
+.oneline {
+	display: block;
+	padding: 5px 5px;
+	height: 20px;
+}
+.oneline span { 
+	display: block;
+	float: left;
+	font-weight: bold;
+}
+.oneline select {
+	display: block;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-icab-text-overflow: ellipsis;
+	-khtml-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+}
+.oneline input.radio {
+	display: block;
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+
+.field {
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+.button {
+	padding: 0px 10px;
+	margin: 0px 5px;
+	line-height: 20px;
+	height: 25px;
+	display: block;
+}
+
+#wrapper {
+	width: 958px;
+	margin: 20px auto;
+	margin-bottom: 40px;
+	background-color: #fff; 
+}
+
+
+/** TOP ITEM STYLES **/
+#head {
+	margin-bottom: 2px;
+	
+	width: 100%;
+	background: transparent url(../img/exxon-new-logo.jpg)  no-repeat;
+	padding: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	color: rgb(47,47,47);
+}
+
+#head #home-link{
+	display: block;
+	width: 100%;
+	height: 124px;
+}
+
+#head div {
+	margin: 0 0 25px 0;
+	padding: 0;
+}
+
+.rounded-corner-box {
+	padding: 0;
+	margin: 0;
+	width: 958px;
+	height: 27px;
+	float: left;
+}
+.rounded-corner-left {
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	height: 27px;
+	width: 4px;
+	background: transparent url(../img/backgrounds/round-box-left.png) no-repeat top left;
+}
+.rounded-corner-right {
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	width: 4px;
+	height: 27px;
+	background: transparent url(../img/backgrounds/round-box-right.png) no-repeat top right;
+}
+.rounded-corner-content { 
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	width: 950px;
+	min-height: 27px;
+	height: 27px;
+	background: transparent url(../img/backgrounds/round-box-middle.png) repeat-x top left;
+	color: #fff;
+}
+
+#head .rounded-corner-content {
+	text-transform:uppercase;
+}
+
+.rounded-corner-content h1 { 
+	margin: 0;
+	padding: 5px 0 0 5px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 16px;
+}
+
+#foot .rounded-corner-content p { 
+	margin: 0;
+	padding: 3px 5px 0 0;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 16px;
+	color: #fff;
+	text-align: center;
+}
+
+#foot .rounded-corner-content p a {
+	color: #fff;
+}
+
+#foot .rounded-corner-box {
+	margin-top: 25px;
+}
+
+#body {
+	width: 814px;
+	margin-left: 65px;
+}
+
+/** SIDEBAR STYLES **/
+#sidebar {
+	float: left;
+	width: 200px; 
+	height: 405px;
+	margin: 2px 2px 0px 0px; padding: 0px;
+	background-color: #d1d1d1;
+	background-image: url(../img/backgrounds/left-menu-bot-2.jpg);
+	background-position:  bottom left;
+	background-repeat: no-repeat;
+}
+
+
+#sidebar ul, #sidebar ol {
+	list-style-type: none;
+	margin: 0px; padding: 0px;
+}
+#sidebar ul {
+	font-size: 13px;
+	font-weight: bold;
+}
+#sidebar ul li.item {
+	height: 39px;
+	border-bottom: 1px solid rgb(187,187,187);
+	/*background: transparent url(../img/backgrounds/200-w-col-bd.gif) top left no-repeat;	*/
+}
+#sidebar ul li.highlight {
+	background-position: top right;	
+}
+#sidebar ul li a {
+	padding-left: 35px;
+	display: block;
+	color: rgb(28,51,132);
+	line-height: 19px;
+}
+
+#sidebar ul li.item a {
+	line-height: 39px;
+	height: 39px;
+}
+
+#sidebar ul li.rava-link.highlight {
+	background-position: top right;
+}
+
+#sidebar ul li.rava-link{
+	height: 48px;
+    padding-top: 3px;
+}
+
+#sidebar ul li.rava-link a {
+	background: transparent url(../img/icons/sidebar-icons.png) 5px 4px no-repeat;
+	height: 40px;
+    line-height: 16px;
+    padding-top: 8px
+}
+#sidebar ul li.eod-link a {
+	background: transparent url(../img/icons/sidebar-icons.png) 5px -40px no-repeat;
+}
+#sidebar ul li.vhd-link a {
+	background: transparent url(../img/icons/sidebar-icons.png) 5px -80px no-repeat;
+}
+#sidebar ul li.account-link a {
+	background: transparent url(../img/icons/sidebar-icons.png) 5px -120px no-repeat;
+}
+#sidebar ul li.svid-link a {
+	padding: 5px 0px 5px 35px; margin: 0px;
+	line-height: 15px;
+	height: 29px;
+	background: transparent url(../img/icons/sidebar-icons.png) 5px -160px no-repeat;
+}
+#sidebar ul li.fwab-link a {
+	padding: 5px 0px 5px 35px; margin: 0px;
+	line-height: 15px;
+	height: 29px;
+	background: transparent url(../img/icons/sidebar-icons.png) 5px -200px no-repeat;
+}
+
+#exxon-site-link {
+	padding-top: 8px;
+}
+
+
+
+/** FOOTER STUFF **/
+#foot p {
+	padding: 20px 0px 6px 0px;
+	clear: left;
+	text-align: center;
+	color: rgb(185,0,9);
+}
+#foot a {
+	color: rgb(185,0,9);
+	font-size: 12px;
+}
+#foot .footerBot{
+	height: 14px;
+	width: 100%;
+	background: transparent url(../img/exxon_bottom.gif) bottom center no-repeat;
+}
+
+
+/*
+ * CONTENT
+ */
+ #content {
+	float:left; display: inline;
+	width:608px; margin-left: 2px;
+	background-repeat:repeat-x;
+	background-position:top;
+	background-color:transparent;
+}
+
+*html #content{overflow:hidden;}
+
+/** Account panel stuff **/
+#account-panel {
+	width: 200px; height: 0px;
+	background: transparent url(../img/backgrounds/200-w-col-nograd-ft.png) bottom right no-repeat;
+	overflow: hidden;
+	position: absolute;
+}
+#account-panel form, #account-panel .logged-in-panel {
+	margin-bottom: 3px;
+	cursor: default;
+	background: transparent url(../img/backgrounds/200-w-col-bd.gif) right repeat-y;
+}
+#account-panel .logged-in-panel .info {
+	padding: 20px 7px;
+	background: transparent url(../img/backgrounds/200-w-col-bd.gif) left repeat-y;
+}
+#account-panel .logged-in-panel .info h4 {
+	color: #c00;
+}
+#account-panel .logged-in-panel .info p {
+	padding: 5px 10px;
+}
+#account-panel .logged-in-panel .log-out {
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+}
+#account-panel .log-out a {
+	color: #c00;
+}
+#account-panel .log-out a:hover {
+	text-decoration: underline;
+}
+
+#account-panel fieldset {
+	background: transparent url(../img/backgrounds/200-w-col-bd.gif) left repeat-y;
+	padding: 10px 7px 1px 7px;
+	height: 130px;	
+}
+
+#account-panel fieldset label {
+	display: block;
+	clear: both;
+	height: 20px; line-height: 20px;
+	padding: 5px 0px;
+}
+#account-panel fieldset label span {
+	float: left;
+	width: 65px;
+}
+#account-panel fieldset label .field {
+	float: left;
+	width: 118px; height: 20px;
+	background: #fffbec;
+}
+#account-panel fieldset label .checkbox {
+	float: left;
+}
+#account-panel fieldset p {
+	line-height: 20px;
+	padding: 5px 0px;
+	text-align: right;
+}
+#account-panel fieldset p a {
+	text-decoration: underline;
+}
+#account-panel fieldset #remember-me {
+	float: left;
+}
+#account-panel fieldset #remember-me span {
+	float: left;
+	display: block;
+	padding: 0px 0px 0px 5px;
+	width: 100px;
+	font-size: 12px;
+}
+#account-panel fieldset #remember-me input {
+	float: left;
+	width: auto; height: auto;
+	margin: 3px 0px;
+}
+#account-panel fieldset #login-button {
+	float: right;
+	height: auto; width: 60px;
+}
+#account-panel form .account-items {
+	padding: 10px 7px 0px 7px;
+}
+#account-panel form .account-items .register {
+	text-align: center;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: bold;
+}
+#account-panel form .account-items .register a {
+	display: block;
+	font-size: 16px;
+	line-height: 30px;
+	color: #c00;
+}
+#account-panel form .account-items ul {
+	font-weight: bold;
+	height: 75px;
+}
+#account-panel form .account-items ul li {
+	height: 25px; line-height: 25px;
+	padding: 0px 0px 0px 20px;
+	background: transparent url(../img/icons/checkbox.gif) left no-repeat;
+}
+#account-panel form .account-items .learn-more-link {
+	line-height: 20px;
+	text-align: right;
+	text-decoration: underline;
+}
+
+/** Overlay stuff **/
+.progress-bar {
+	position: absolute;
+	top: 0px; left: 200px;
+	width: 176px; height: 25px;
+	padding-top: 10px;
+}
+.progress-bar img {
+	display: block; float: left;
+}
+
+
+.large-overlay {
+	width: 404px; height: auto;
+	margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+}
+.large-overlay .hd {
+	position: relative;
+	height: 45px;
+	background: transparent url(../img/backgrounds/404-w-col-hd.png) top left no-repeat;
+}
+* html .large-overlay .hd {
+	background: transparent url(../img/backgrounds/404-w-col-hd.gif) top left no-repeat;
+}
+.large-overlay .hd h2 {
+	color: #c00;
+	height: 30px; 
+	width: 200px;
+	padding: 10px 0px 5px 48px;
+	line-height: 20px; letter-spacing: 1px; word-spacing: -1px;
+	background: transparent url(../img/icons/rava-icon.gif) 8px 5px no-repeat;
+}
+.large-overlay .hd .close {
+	position: absolute;
+	display: block;
+	top: 10px; right: 10px;
+	height: 19px; width: 19px;
+	margin: 0px;
+}
+.large-overlay .hd .close:hover {
+	cursor: pointer;
+}
+* html .large-overlay .hd .close {
+	display: inline;
+}
+.large-overlay .bd {
+	padding: 10px 16px 0px 16px;
+	min-height: 334px;
+	height: auto;
+	background: transparent url(../img/backgrounds/404-w-col-bd.gif) right repeat-y;
+}
+.large-overlay .ft {
+	height: 10px;
+	line-height: 5px;
+	overflow: hidden;
+	background: transparent url(../img/backgrounds/404-w-col-ft.png) top right no-repeat;
+}
+
+/* Admin Menu */
+#admin-menu {
+	margin: 0px 0px 2px 204px; padding: 0px 0px 10px 0px;
+	width: 608px;
+	background: transparent url(../img/backgrounds/608-w-col-ft.gif) bottom left no-repeat;
+}
+#admin-menu h2 {
+	height: 28px;
+	padding: 0px 10px;
+	color: #c00;
+	background: transparent url(../img/backgrounds/608-w-col-hd.gif) top left no-repeat;
+}
+#admin-menu .bd {
+	background: transparent url(../img/backgrounds/608-w-col-bd.gif) top left;	
+}
+#admin-menu .col {
+	float: left;
+	width: 180px;
+	padding: 0px 10px;
+}
+#admin-menu .col h3 {
+	font-size: 12px;
+	line-height: 14px;
+	margin: 0px;
+	height: 14px;
+	padding: 0px 0px 0px 10px;
+	border-bottom: 1px dashed #e7e7e7;
+	color: #000;
+}
+#admin-menu ul {
+	padding: 2px 0px 0px 20px;
+}
+#admin-menu li {
+	font-style: normal;
+}
+
+#overseas-vote-foundation #fx-frame-layer {
+	top: 194px;
+}
+
+#overseas-vote-foundation #fx-frame {
+	margin:0 196px;
+}
+/*** IE 6 Fallback is in ie-bugfix.css **/
+
+/* Used to display browser incompatibility */
+.message {
+  background-color:#95001B !important;
+  top: 0;
+}

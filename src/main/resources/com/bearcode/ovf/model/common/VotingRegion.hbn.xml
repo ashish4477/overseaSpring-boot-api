@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common">
+    <class name="VotingRegion" table="voting_regions" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id" unsaved-value="0" >
+            <generator class="identity"/>
+        </id>
+        <property name="name" type="string" column="name"/>
+        <many-to-one name="state" column="state_id" class="State" not-null="true" lazy="false"/>
+        <many-to-one name="county" column="county_id" class="County" not-null="false" lazy="false" cascade="save-update"/>
+        <many-to-one name="municipality" column="municipality_id" class="Municipality" not-null="false" lazy="false" cascade="save-update"/>
+    </class>
+</hibernate-mapping>

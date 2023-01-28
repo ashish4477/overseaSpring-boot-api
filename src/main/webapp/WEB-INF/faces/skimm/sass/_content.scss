@@ -1,0 +1,28 @@
+.row {
+  &.content {
+    .main-container {
+      padding: 0;
+      margin: 0 auto;
+
+      .row.main-content {
+        padding-top: 3em;
+      }
+
+      .main-column {
+        .content {
+          border: 1px solid #d1dad9;
+          padding: 5px 20px;
+          margin: 20px 0;
+
+          &:after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+
+
+        }
+      }
+    }
+  }
+}

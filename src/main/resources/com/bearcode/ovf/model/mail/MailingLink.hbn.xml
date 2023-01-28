@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.mail">
+    <class name="MailingLink" table="mailing_list_link" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="status" column="status" >
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.mail.MailingLinkStatus</param>
+                <param name="type">4<!--value of java.sql.Types.INTEGER--></param>
+            </type>
+        </property>
+        <property name="lastUpdated" type="java.util.Date" column="last_updated" />
+        <property name="errorCount" type="int" column="error_count" />
+        <property name="errorMessage" type="java.lang.String" column="error_message"/>
+
+        <many-to-one name="mailingAddress" column="mailing_address_id" not-null="true" lazy="false"/>
+        <many-to-one name="mailingList" column="mailing_list_id" not-null="true" lazy="false"/>
+    </class>
+
+    <class name="SendGridMark" table="send_grid"  lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="lastRun" type="java.util.Date" column="last_run" />
+        <property name="numberOfUnsubscribes" type="int" column="num_of_unsubscr" />
+
+    </class>
+
+</hibernate-mapping>

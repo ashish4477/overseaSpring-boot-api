@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.registrationexport">
+    <class name="DataExportHistory" table="data_export_history" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="status" column="export_status">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">com.bearcode.ovf.model.registrationexport.ExportHistoryStatus</param>
+                <param name="type">12<!--value of java.sql.Types.VARCHAR--></param>
+            </type>
+        </property>
+        <property name="creationDate" column="creation_date" type="java.util.Date"/>
+        <property name="exportDate" column="export_date" type="java.util.Date"/>
+        <property name="lastModification" column="last_modification" type="java.util.Date"/>
+
+        <many-to-one name="wizardResults" column="wizard_results_id"/>
+        <many-to-one name="exportConfig" column="export_config_id"/>
+
+    </class>
+</hibernate-mapping>

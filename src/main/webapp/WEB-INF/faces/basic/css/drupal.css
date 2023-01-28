@@ -1,0 +1,132 @@
+body, h1, h2, h3, h4, h5, h6, form, fieldset, label, input, ul, ol, li, hr, p, legend {
+	margin:0px;
+	padding:0px;
+}
+hr, fieldset, a img, iframe {
+	border:0px none;
+}
+a {
+	color:#787878;
+	outline-color:invert;
+	outline-style:none;
+	outline-width:medium;
+	text-decoration:none;
+}
+a:hover {
+	color:#CC0000;
+}
+a:active {
+	outline-color:invert;
+	outline-style:none;
+	outline-width:medium;
+}
+img {
+	vertical-align:top;
+}
+button {
+	cursor:pointer;
+}
+select {
+	overflow:hidden;
+}
+acronym {
+	border:0px none;
+	cursor:help;
+	text-decoration:underline;
+}
+h1 {
+	font-size:22px;
+	line-height:30px;
+}
+h2 {
+	font-size:16px;
+	line-height:30px;
+}
+h3 {
+	font-size:14px;
+	line-height:30px;
+}
+.field {
+	border:1px solid #ECECEC;
+	color:#787878;
+	font-family:"Trebuchet MS";
+	font-size:12px;
+	font-style:normal;
+	font-weight:bold;
+	vertical-align:middle;
+}
+
+
+/**
+Some commonly-used classes
+**/
+.break { clear: both; }
+.error {
+	color: #c00;
+	text-align: center;
+	border: 1px solid #ccc;
+	margin: 5px; padding: 10px;
+	background: #fff;
+}
+
+.oneline {
+	display: block;
+	padding: 5px 5px;
+	height: 20px;
+}
+.oneline span { 
+	display: block;
+	float: left;
+	font-weight: bold;
+}
+.oneline select {
+	display: block;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-icab-text-overflow: ellipsis;
+	-khtml-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+}
+.oneline input.radio {
+	display: block;
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+
+.field {
+	background-color: #fff;
+}
+.button {
+	padding: 0px 10px;
+	margin: 0px 5px;
+	line-height: 20px;
+	height: 25px;
+	display: block;
+}
+
+
+#cms-content ul,
+#cms-content ol {
+	padding: 0.5em 0;
+	margin: 0 0 0 2em;
+}
+
+#cms-content ul li { list-style-type: disc; list-style-position: outside; }
+
+#cms-content .bd { padding: 0 10px; }
+#cms-content label { display: block; }
+#cms-content label span { 
+	display: block; float: left; width: 24%; 
+	padding-right: 1%; text-align: right;
+	line-height: 17px; height: 17px;
+}
+#cms-content label select { display: block; float: left; }
+#cms-content p { clear: both; padding: 0.5em 0; }
+
+#cms-content #svid-continue {
+	margin-left: 25%; display: block; text-align: center;
+	line-height: 30px;clear: both; height: 30px; width: 75px;
+}

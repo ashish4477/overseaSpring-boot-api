@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common" >
+    <class name="FaceBookApi" table="facebook_api" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="domain" type="string" />
+        <property name="appKey" type="string" column="app_key" />
+        <property name="appSecret" type="string" column="app_secret" />
+        <property name="updated" type="java.util.Date" />
+        <property name="active" type="boolean" />
+    </class>
+</hibernate-mapping>

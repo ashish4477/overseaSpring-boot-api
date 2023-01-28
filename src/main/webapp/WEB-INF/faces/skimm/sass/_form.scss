@@ -1,0 +1,31 @@
+form {
+  & > .row {
+    & > [class^=col-]{
+      fieldset {
+        border: 1px solid #d1dad9;
+        padding: 15px 15px 10px 15px;
+        overflow: hidden;
+        background: #fff;
+      }
+    }
+  }
+
+  .question-group{
+    border: 1px solid #d1dad9;
+    padding: 15px 15px 10px 15px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .rava-bubble {
+    display: inline-block;
+  }
+
+  .ui-accordion {
+    .ui-accordion-header {
+      h3:before {
+
+      }
+    }
+  }
+}

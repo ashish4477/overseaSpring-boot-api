@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.bearcode.ovf.DAO" />
+    <context:component-scan base-package="com.bearcode.ovf.service" />
+    <context:component-scan base-package="com.bearcode.ovf.config"/>
+    <!--<context:property-placeholder ignore-unresolvable="true" location="classpath:ovf.properties"/>-->
+
+<!--
+    <bean id="facesService" class="com.bearcode.ovf.service.FacesService" />
+    <bean id="questionnaireService" class="com.bearcode.ovf.service.QuestionnaireService" />
+    <bean id="questionFieldService" class="com.bearcode.ovf.service.QuestionFieldService" />
+    <bean id="reportingDashboardService" class="com.bearcode.ovf.service.ReportingDashboardService" />
+    <bean id="stateService" class="com.bearcode.ovf.service.StateService" />
+
+    <bean id="answerDAO" class="com.bearcode.ovf.DAO.AnswerDAO" />
+    <bean id="countryDAO" class="com.bearcode.ovf.DAO.CountryDAO" />
+    <bean id="faceConfigDAO" class="com.bearcode.ovf.DAO.FaceConfigDAO" />
+    <bean id="fieldTypeDAO" class="com.bearcode.ovf.DAO.FieldTypeDAO" />
+    <bean id="overseasUserDAO" class="com.bearcode.ovf.DAO.OverseasUserDAO" />
+    <bean id="pdfAnswersDAO" class="com.bearcode.ovf.DAO.PdfAnswersDAO" />
+    <bean id="questionFieldDAO" class="com.bearcode.ovf.DAO.QuestionFieldDAO" />
+    <bean id="questionDAO" class="com.bearcode.ovf.DAO.QuestionDAO" />
+    <bean id="regionDAO" class="com.bearcode.ovf.DAO.VotingRegionDAO" />
+    <bean id="reportingDashboardDAO" class="com.bearcode.ovf.DAO.ReportingDashboardDAO" />
+    <bean id="stateDAO" class="com.bearcode.ovf.DAO.StateDAO" />
+-->
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://127.0.0.1/test_overseas?autoReconnect=true" />
+        <property name="username" value="testoverseas" />
+        <property name="password" value="testoverseas" />
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mappingResources">
+            <list>
+                <value>com/bearcode/ovf/model/common/State.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Country.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/County.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Municipality.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Address.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/UserAddress.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/VotingRegion.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/Person.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/LocalOfficial.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/CorrectionsLeo.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/StateSpecificDirectory.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/Election.hbn.xml</value>
+                <value>com/bearcode/ovf/model/eod/Officer.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/mail/MailingAddress.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingList.hbn.xml</value>
+                <value>com/bearcode/ovf/model/mail/MailingLink.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/questionnaire/FieldType.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/FieldDictionaryItem.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/questionnaire/Question.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionnairePage.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionField.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionVariant.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/QuestionDependency.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/FieldDependency.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/Answer.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/WizardResults.hbn.xml</value>
+                <value>com/bearcode/ovf/model/questionnaire/PdfFormTrack.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/UserRole.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/OverseasUser.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/FaceConfig.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/reportingdashboard/Report.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportColumn.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportField.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ReportAnswer.hbn.xml</value>
+                <value>com/bearcode/ovf/model/reportingdashboard/ScheduledReport.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/express/CountryDescription.hbn.xml</value>
+                <value>com/bearcode/ovf/model/express/FedexLabel.hbn.xml</value>
+
+                <value>com/bearcode/ovf/model/common/FaceFlowInstruction.hbn.xml</value>
+                <value>com/bearcode/ovf/model/common/FaceFlowLogo.hbn.xml</value>
+                <value>com/bearcode/ovf/model/formtracking/TrackedForm.hbn.xml</value>
+                
+                <value>com/bearcode/ovf/model/vip/VIPBallot.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPBallotCandidate.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPBallotResponse.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCandidate.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCandidateBio.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPContest.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCustomBallot.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPCustomBallotResponse.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPDetailAddress.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPElection.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPElectoralDistrict.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPLocality.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPPrecinct.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPPrecinctSplit.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPReferendum.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPReferendumBallotResponse.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPReferendumDetail.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPState.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPSource.hbm.xml</value>
+                <value>com/bearcode/ovf/model/vip/VIPStreetSegment.hbm.xml</value>
+
+                <value>com/bearcode/ovf/model/migration/MigrationId.hbn.xml</value>
+                
+                <value>com/bearcode/ovf/model/svrproperties/SvrProperty.hbm.xml</value>
+                
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterAddress.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterAnswer.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterName.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterRegistration.hbm.xml</value>
+                <value>com/bearcode/ovf/model/pendingregistration/PendingVoterRegistrationStatus.hbm.xml</value>
+                
+                <value>com/bearcode/ovf/model/encryption/EncryptionKeyStatus.hbm.xml</value>
+             </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+                <prop key="hibernate.max_fetch_depth">6</prop>
+                <prop key="hibernate.default_batch_fetch_size">16</prop>
+                <prop key="hibernate.default_entity_mode">pojo</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.use_sql_comments">true</prop>
+            </props>
+        </property>
+    </bean>
+    
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+				input.encoding=UTF-8
+				output.encoding=UTF-8
+			</value>
+		</property>
+	</bean>
+    
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <bean id="smartyStreetService" class="com.bearcode.ovf.webservices.SmartyStreetService">
+    </bean>
+
+</beans>

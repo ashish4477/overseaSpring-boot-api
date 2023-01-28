@@ -1,0 +1,29 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office</subject>
+    <from>US Vote Helpdesk &lt;voterhelpdesk@usvotefoundation.org&gt;</from>
+   <reply_to>voterhelpdesk@usvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+	<p><strong>Dear $!firstName,</strong></p>
+	<p>One step left! You must submit your signed Registration / Absentee Ballot Request form to your election office. Print, sign and send to the address provided in the instructions, or look up the address in the <a href="https://www.usvotefoundation.org/vote/eoddomestic.htm">Election Official Directory</a></p>
+
+	<p>You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to see the various options for returning your form. </p>
+
+
+<p>Your signature is part of your voter identity, so keep your signature consistent on all voting materials. </p>
+
+  <p><strong><a href="https://www.usvotefoundation.org/voter-reward-badge">Get your Voter Reward Badge!</strong></a><br/>
+Choose your favorite Voter Reward Badge to share on social media. Spread the word to other voters!  Go here to get your badge: <a href="https://www.usvotefoundation.org/voter-reward-badge">https://www.usvotefoundation.org/voter-reward-badge</a>
+</p>
+
+
+<p><strong>Wishing you a great voting experience this year & thank you!</strong> <br/>
+ <em>- The team at U.S. Vote Foundation</em></p>
+
+<p><strong>P.S.</strong>  Help us to help other voters. Your contribution makes a difference!</p>
+
+<p>As a nonpartisan, not-for-profit, civic organization, we rely on donations from engaged citizens like you. Please donate now and consider making a recurring donation – a small monthly donation sustains our operations and changes everything about what we can do for you and other voters. <a href="https://www.usvotefoundation.org/donate">www.usvotefoundation.org/donate</a>  </p>
+
+</div>
+    ]]></body_template>
+</email>

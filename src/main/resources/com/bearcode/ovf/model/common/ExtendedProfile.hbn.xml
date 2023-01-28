@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.common" >
+    <class name="ExtendedProfile" table="extended_profile" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="user" column="user_id" class="com.bearcode.ovf.model.common.OverseasUser" lazy="false" cascade="none"/>
+        <property name="politicalParty" type="string" column="political_party"/>
+        <property name="votingMethod" type="string" column="voting_method"/>
+        <property name="voterType" type="string" column="voter_type"/>
+        <property name="voterClassificationType" type="string" column="voter_classification_type"/>
+        <property name="voterParticipation" type="string" column="voter_participation"/>
+        <property name="voterParticipationOther" type="string" column="voter_participation_other"/>
+        <property name="outreachParticipation" type="string" column="outreach_participation"/>
+        <property name="outreachParticipationOther" type="string" column="outreach_participation_other"/>
+        <property name="socialMedia" type="string" column="social_media"/>
+        <property name="socialMediaOther" type="string" column="social_media_other"/>
+        <property name="volunteering" type="string" column="volunteering"/>
+        <property name="volunteeringOther" type="string" column="volunteering_other"/>
+        <property name="satisfaction" type="string" column="satisfaction"/>
+        <property name="created" type="java.util.Date">
+        	<column name="created" sql-type="datetime" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.mail">
+    <class name="MailingList" table="mailing_list" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="name" type="string" column="name" />
+
+        <property name="apiKey" type="string" column="api_key" />
+        <property name="campaignId" type="string" column="campaign_id" />
+
+        <property name="from" type="string" column="from_address"/>
+        <property name="replyTo" type="string" column="reply_to_address"/>
+        <property name="signature" type="string" column="signature"/>
+        
+        <many-to-one name="fieldType" column="field_type_id" not-null="false" lazy="false"/>
+    </class>
+
+    <class name="MailingSemaphore" table="mailing_semaphore" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="busyStatus" type="boolean" column="busy_status"/>
+        <property name="recordCount" type="long" column="records_count"/>
+        <property name="offset" type="long" column="offset"/>
+    </class>
+
+</hibernate-mapping>

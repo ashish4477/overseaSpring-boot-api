@@ -1,0 +1,5 @@
+#sidebar .primary-links .fwab-link a,
+#sidebar .primary-links .svid-link a {  padding-top: 2px; padding-bottom: 2px; }
+
+.page-content .bd .bd-inner,
+.page-form .bd .bd-inner { min-height: 456px;  }

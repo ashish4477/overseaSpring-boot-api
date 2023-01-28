@@ -1,0 +1,16 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+    <reply_to>exxonmobilcat@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+    <p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Dear $!firstName,</strong></p>
+    <p>Your voter registration and/or ballot request is NOT complete until you submit it to your election office. Remember to print, sign and send in your form to your election official who needs your signature on file. You can check your <a href="https://www.usvotefoundation.org/vote/sviddomestic.htm">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">We are pleased that you have received your Official Federal Write-in Ballot and can now cast your vote in this important election! <strong>Remember to sign and date your original Voter's Declaration/Affirmation - Federal Write-in Absentee Ballot form and Addendum page.</strong> Mail both items with your Official Federal Write-in Ballot to your election official who must have your signature on file to verify the ballot.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">If a ballot arrives from your election officer after you mail the Write-in Ballot,&nbsp;please complete it and send it in to replace the Write-in Ballot.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">We hope you find these new tools valuable in aiding your participation in the upcoming election!</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Sincerely,<br />
+ 	<em>ExxonMobil Citizen Action Team</em></p>
+</div>
+    ]]></body_template>
+</email>

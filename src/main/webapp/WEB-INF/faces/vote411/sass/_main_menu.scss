@@ -1,0 +1,40 @@
+.row {
+  &.main-menu {
+    background: #fff;
+    margin-top: 35px;
+
+    nav {
+      background: $vote411-brand-lightgreen;
+
+      ul.navbar-nav {
+        li {
+          border-right: 1px solid #fff;
+
+          a {
+            color: #fff;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: $screen-md-min) {
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+
+        nav {
+          ul {
+            li {
+              border-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

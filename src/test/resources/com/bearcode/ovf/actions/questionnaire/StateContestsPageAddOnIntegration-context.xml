@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config/>
+	
+	<context:component-scan base-package="com.bearcode.ovf.editor" />
+	<context:component-scan base-package="com.bearcode.ovf.validators" />
+
+	<bean id="stateContestsPageAddOn" class="com.bearcode.ovf.actions.questionnaire.StateContestsPageAddOn" />
+	<bean id="candidatePageAddon" class="com.bearcode.ovf.actions.questionnaire.CandidatePageAddon" />
+	<bean id="votingPrecintService" class="com.bearcode.ovf.tools.votingprecinct.VotingPrecinctService" />
+	<bean id="electionService" class="com.bearcode.ovf.tools.candidate.ElectionService" />
+
+	<bean id="vipCandidateFinder" class="com.bearcode.ovf.tools.candidate.CandidateFinderVip">
+		<property name="states">
+			<list>
+				<value>OH</value>
+				<value>VA</value>
+			</list>
+		</property>
+	</bean>
+ 		
+	<bean id="vipStreetSegmentFinder" class="com.bearcode.ovf.tools.votingprecinct.StreetSegmentFinderVip">
+		<property name="restrictedAddressesRequired" value="true" />
+		<property name="states">
+			<list>
+				<value>OH</value>
+				<value>VA</value>
+			</list>
+		</property>
+		<property name="votingRegionType" value="County" />
+	</bean>
+	
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+				input.encoding=UTF-8
+				output.encoding=UTF-8
+			</value>
+		</property>
+	</bean>
+
+	<bean id="voteSmartService" class="com.bearcode.ovf.webservices.votesmart.VoteSmartService">
+		<property name="votesmartKey"><value>cde92dc5c95aa1f1217f136ed5d0eb67</value> 
+			</property>
+		<property name="votesmartCacheDir"
+			value="/var/www/www.overseasvotefoundation.org/votesmart_cache" />
+		<property name="votesmartCacheTime" value="60000" />
+		<property name="useVotesmartPresidental" value="true" />
+		<property name="useVotesmartSenate" value="true" />
+		<property name="useVotesmartRepresentatives" value="true" />
+	</bean>
+	
+	<bean id="districtLookupService" class="com.bearcode.ovf.webservices.DistrictLookupService">
+		<property name="melissaDataUrl" value="http://xml.melissadata.com/xml.asp" />
+		<property name="cacheDir"
+			value="/var/www/www.overseasvotefoundation.org/districtlookup_cache" />
+		<!-- production and staging -->
+		<property name="cacheTime" value="2592000000" />
+		<!-- 1 month = 30d*24h*60m*60s*1000ms, time in milliseconds -->
+	</bean>
+    <bean id="smartyStreetService" class="com.bearcode.ovf.webservices.SmartyStreetService">
+    </bean>
+ </beans>

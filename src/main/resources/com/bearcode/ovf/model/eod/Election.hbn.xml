@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.eod">
+    <class name="Election" table="elections" lazy="true" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <many-to-one name="stateInfo" column="svid_id" not-null="true"/> <!--class="StateSpecificDirectory"-->
+
+        <property name="heldOn" column="held_on_str" type="string" />  <!--type="java.util.Date"-->
+        <property name="title" column="title" type="string"/>
+
+		<property name="typeOfElection" column="type_of_election" not-null="true">
+			<type name="org.hibernate.type.EnumType">
+			 	<param name="enumClass">com.bearcode.ovf.model.eod.TypeOfElection</param>
+				<param name="type">12<!--value of java.sql.Types.VARCHAR--></param> 
+			</type>
+		</property>
+
+        <property name="citizenRegistration" column="citizen_reg_str" type="string"/>
+        <property name="citizenBallotRequest" column="citizen_request_str" type="string"/>
+        <property name="citizenBallotReturn" column="citizen_return_str" type="string"/>
+        <property name="militaryRegistration" column="military_reg_str" type="string"/>
+        <property name="militaryBallotRequest" column="military_request_str" type="string"/>
+        <property name="militaryBallotReturn" column="military_return_str" type="string"/>
+        <property name="domesticRegistration" column="domestic_reg_str" type="string"/>
+        <property name="domesticBallotRequest" column="domestic_request_str" type="string"/>
+        <property name="domesticBallotReturn" column="domestic_return_str" type="string"/>
+        <property name="domesticEarlyVoting" column="domestic_early_str" type="string"/>
+
+		<property name="domesticNotes" type="string" column="domestic_notes"/>
+        <property name="notes" type="string" />
+        <property name="order" type="int" column="order_ticket"/>
+
+    </class>
+
+
+</hibernate-mapping>

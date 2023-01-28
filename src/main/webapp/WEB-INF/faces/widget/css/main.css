@@ -1,0 +1,374 @@
+
+/* Bootstrap overrides */
+.label,
+.member-badge { background-color: inherit; }
+
+/*.container { width:auto; }   */
+
+h1, h2.title {
+  font-size:30px;
+  line-height: 1.3;
+}
+
+.mva.account.nav { padding-right:25px; }
+
+label input, label textarea, label select { display:inline; }
+
+.ui-accordion-header span {
+  padding-left:16px;
+  background: url('../img/icons/arrow.png') 0 3px no-repeat;
+  cursor: pointer;
+}
+
+.ui-accordion-header.ui-state-active span {
+  padding-left:16px;
+  background: url('../img/icons/down_arrow.png') 0 6px no-repeat;
+  cursor: pointer;
+}
+
+.accordion { margin-bottom: 0; }
+
+/* MVA Drop Down */
+
+
+.dropdown-menu .divider { display:block; }
+
+
+/* MVA Account */
+
+.account-nav h1{
+  background: url('../img/icons/my-voter-account-header-icon.png') no-repeat scroll left center transparent;
+  padding: 6px 0;
+}
+
+.account-nav h1,
+.account-nav h2,
+.account-nav h3{
+  margin-left: 40px;
+  color: #FFF;
+  font-size: 175%;
+  padding-left: 52px;
+}
+
+.account-nav h3{
+   font-size:145%;
+   margin-top: 12px;
+}
+
+
+.account-nav small {
+  padding-left: 1.1em;
+  white-space: nowrap;
+}
+.account-nav .thanks { text-align: right; }
+
+.account-nav .thanks h3 {
+	font-weight:700;
+  display:inline-block;
+  position: relative;
+  top: -20px;
+}
+
+.account-nav h3 {
+	font-weight:normal;
+}
+
+.mva .grid_16.main-content {
+  background:#dbdbdb url('../img/backgrounds/mva-bg.jpg');
+  padding-top:0;
+ }
+
+.mva .grid_15 {
+  margin:0 auto;
+  margin-bottom:55px;
+  padding:0;
+}
+
+.account-sub-nav {   
+  background-color: #0971B2;
+  border-top: solid #fff 2px;
+}
+
+.account-sub-nav ul {
+	list-style-type: none;
+	margin:0;
+  position: relative;
+  left: -5px;
+}
+
+.account-sub-nav li:first-child { margin-left:0; }
+
+.account-sub-nav ul li {
+	display:inline-block;
+	text-transform:uppercase;
+}
+
+.account-sub-nav ul li a {
+	color:#fff;
+	padding: 12px 6px;
+	display: block;
+}
+
+.mva.profile .account-sub-nav .profile,
+.mva.contacts .account-sub-nav .contacts,
+.mva.dates .account-sub-nav .dates,
+.mva.my-reps .account-sub-nav .my-reps,
+.mva.key-votes .account-sub-nav .key-votes,
+.mva.factcheck .account-sub-nav .in-the-news{ 
+  background:transparent url('/vote/img/icons/mva-arrow.png') bottom center no-repeat; 
+  position:relative;
+  z-index:2;
+}
+
+#update-account-message{
+  background-color: #fff;
+  border-color: #0971B2;
+  margin-top: -1px;
+  box-shadow: 2px 2px 8px rgba(9,113,178,.2);
+  padding-left:20px;
+}
+
+.account-sub-nav .key-votes { display:none; }
+.mva.key-votes .account-sub-nav .key-votes { display:inline-block; }
+
+.mva-fwab {
+  display:inline-block;
+  margin-top: 12px;
+}
+
+.membership {
+	color: #fff;
+	font-size: .75em;
+	margin-top: 14px;
+	text-align:center;
+}
+
+.membership.stat {
+  background: url('../img/icons/voter-star.png') no-repeat 6px top;
+  padding-top: 33px;
+  margin-top: 6px;
+  line-height: 12px;
+  padding-left: 1px;
+  width:40px;
+  display:inline-block;
+}
+
+.mva .voter-account-page { margin-left:2em; }
+
+.mva .voter-account-page .answers fieldset h3{font-size:125%;}
+.mva .voter-account-page h3,
+#eod-form.voter-account-page h3 { color:#064479; }
+
+.my-reps .voter-account-page h3 { margin-top:0; }
+
+#eod-form.voter-account-page h4,
+#eod-form.voter-account-page h5 { font-size:14px; }
+
+.mva .voter-account-page strong { color:#7d7d7d; }
+
+.mva .voter-account-page .grid_6.alpha { padding-left:10px; }
+
+.mva .voter-account-page .content {
+  padding-left: 10px;
+  padding-top: 0;
+  margin-bottom: 25px;
+}
+
+.mva .answers p{margin-left:25px;}
+.mva .answers .glyphicon{color:#128AC3;}
+
+.mva .byline {color:#999;}
+
+.row.mva-account { 
+  background-color: #8FBCDA;
+  margin-top: -56px;
+}
+
+.mva .voter-account-page .content p { margin-bottom:.25em; }
+
+.mva .voter-account-page .section.title {
+  background-color:#064479;
+  width:100%;
+  margin: 0;
+}
+
+#eod-form.voter-account-page .section.title h3,
+.mva .voter-account-page .section.title h3{
+  color:#fff;
+  padding: 5px 35px;
+  font-size: 150%;
+}
+
+.extended-profile h2 {
+	margin:12px 0;
+}
+
+.extended-profile label,
+.extended-profile input[type='checkbox'],
+.extended-profile input[type='radio']{
+  display: inline-block;
+  margin-left:5px;
+}
+
+.extended-profile label { margin-right:8px }
+
+#extendedProfile div span:nth-child(5),
+#extendedProfile div span:nth-child(6) { white-space: nowrap; }
+
+#extendedProfile legend {
+  font-weight: bold;
+  width:auto;
+}
+
+.extended-profile h2.section {
+  border-bottom:solid #C0C9D0 2px;
+  width: 92%;
+  padding-bottom: 5px;
+}
+
+.extended-profile h3.eod {
+  font-size: 18px;
+  margin-left: -22px;
+  margin-bottom: 21px;
+}
+
+.inline-checkboxes span { /*blame java not me*/
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.inline-checkboxes.wrap span { display: block; }
+
+.inline-checkboxes label { /* more blame game here*/
+  padding-left: 7px;
+  font-weight: normal;
+}
+
+.row.representatives {margin-bottom:25px;}
+
+.voter-account-page .wp-post-image{
+  max-width:145px;
+  max-height:145px !important; 
+  object-fit: cover;
+}
+
+.bill{
+  background-color: #f4fafd;
+  margin:2px 0;
+  padding: 10px;
+}
+
+.memberBadge {
+  min-width:90px;
+  width:90px;
+  height:79px;
+  margin-top: .25em;
+}
+
+.voter-account-page .accordian { margin-left:20px; }
+
+.row.inline dl,
+.row.inline dl label { display:inline; }
+
+.row.inline label,
+.row.inline input {
+  width:auto;
+  display:inline-block;
+}
+
+.smarty-ui{
+  margin-left: 1em;
+  z-index: 2;
+}
+
+/* New Responsive */
+
+.account-nav {
+  color:#fff;
+  background-color: #064479;
+  border-top: solid #fff 2px;
+}
+
+.account-nav .member img {
+    width:65px;
+    position:absolute;
+    left:75px;
+}
+
+.account-nav .navbar {
+  text-transform:uppercase;
+  min-height: 25px;
+  margin-bottom: 0;
+  border: none;
+}
+
+/* Form Selection */
+.form-type-selection h3 { text-align:center;}
+
+.form-type-selection .domestic-absentee { padding-left:20px; }
+
+.form-type-selection label  { font-size:113%; }
+
+.home.login #navbar{display:none;} /* temporary hack for login */
+
+@media (min-width: 480px) AND (max-width: 992px){
+	.thanks { text-align: center;}
+}
+
+input[type="submit"] {
+	border:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	-o-box-shadow:none;
+	box-shadow:none;
+  display: inline-block;
+  color: #fff;
+  margin-top:12px;
+  margin-bottom: 20px;
+  padding:7px 15px;
+  float:right;
+  background-color:#b20837;
+  text-transform: uppercase;
+}
+
+a.button,
+.my-reps .voter-account-page a.button{
+  display: inline-block;
+  color: #fff !important;
+  margin-bottom: 20px;
+  padding:7px 15px;
+  background-color:#b20837;
+  text-transform: uppercase;
+}
+
+button.open{
+	padding:3px 16px;
+	background-color: #fff;
+	border:solid #ABB0B3 3px;
+	color:#b20837;
+	text-transform:uppercase;
+}
+
+a.button.small {
+  font-size:85%;
+  margin-bottom:0;
+  color:#fff;
+}
+
+.button.back {
+  background-color:#b2b2b2;
+  background-image: none;
+  padding: 7px 15px;
+}
+
+.center-list {
+  text-align: center;
+}
+.center-list ul {
+  text-align: left;
+  display: inline-block;
+}

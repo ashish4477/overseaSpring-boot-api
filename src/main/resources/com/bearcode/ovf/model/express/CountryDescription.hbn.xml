@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.express">
+    <class name="CountryDescription" table="fedex_countries" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        <property name="name" column="name" type="string" />
+        <property name="pickup" column="pickup" type="boolean" />
+        <property name="dropoff" column="dropoff" type="boolean" />
+        <property name="servicePhone" column="service_phone" type="string"  not-null="false"/>
+        <property name="fedexUrl" column="fedex_url" type="string" not-null="false"/>
+        <property name="serviceUrl" column="service_url" type="string"  not-null="false"/>
+        <property name="dropoffUrl" column="dropoff_url" type="string"  not-null="false"/>
+        <property name="tcUrl" column="tc_url" type="string"  not-null="false"/>
+        <property name="rate" column="rate" type="double"  not-null="false"/>
+        <!--<property name="currencyCode" column="currency_code" type="string"  not-null="false"/>-->
+        <property name="localCurrencyName" column="local_currency" type="string"  not-null="false"/>
+        <property name="exchangeRate" column="exchange_rate" type="double"  not-null="false"/>
+        <property name="deliveryTime" column="`time`" type="string"  not-null="false"/>
+        <property name="accountNumber" column="account_number" type="string"  not-null="false"/>
+        <property name="lastDate" column="last_date_gmt" type="java.util.Date"  not-null="false"/>
+        <property name="gmtOffset" column="gmt_offset" type="double"  not-null="true"/>
+        <property name="lastDateText" column="last_date_text" type="string"  not-null="true"/>
+        <property name="comment" column="comment" type="string"  not-null="true"/>
+        <property name="group" column="`group`" type="string" not-null="false"/>
+        <property name="zipPattern" column="zip_pattern" type="string" not-null="false"/>
+        <property name="countryCode" column="country_code_2" type="string" not-null="false"/>
+    </class>
+
+</hibernate-mapping>

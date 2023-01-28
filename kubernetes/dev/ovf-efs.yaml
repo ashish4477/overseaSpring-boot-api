@@ -1,0 +1,9 @@
+---
+efsProvisioner:
+  efsFileSystemId: "fs-957f5a21"
+  awsRegion: "us-east-1"
+  provisionerName: "fs-957f5a21.efs.us-east-1.amazonaws.com"
+  reclaimPolicy: "Retain"
+
+podAnnotations:
+  iam.amazonaws.com/role: "efs-full"

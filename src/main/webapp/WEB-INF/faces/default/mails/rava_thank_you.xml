@@ -1,0 +1,18 @@
+<email>
+    <subject>Important Reminders from Overseas Vote</subject>
+    <from>voterhelpdesk@overseasvotefoundation.org</from>
+   <reply_to>voterhelpdesk@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;"><strong>Dear $!firstName,</strong></p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Thanks for choosing the Overseas Vote site to register to vote and request your ballots for $!year. <strong>Remember to sign and send in your form</strong> to your election official who needs your original signature on file.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Our foundation is a nonprofit, nonpartisan public charity powered by a dedicated team of volunteers. Please help us &mdash; <a href="https://www.usvotefoundation.org/donate">Make a Donation Today!</a></p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">Wishing you a great voting experience this year,<br />
+	<em>From the volunteer team at at Overseas Vote – an initiative of U.S. Vote Foundation</em></p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">P.S. <strong>Spread the word</strong> about how easy it is to register and to vote from overseas by liking us on <a href="https://www.facebook.com/USVote">Facebook</a>.</p>
+	<p style="font-family: 'Trebuchet MS', Arial, sans-serif;">And please, <strong><a href="https://www.usvotefoundation.org/donate">Make your donation today!</a></strong></p>
+	<p style="font-size:smaller;color:gray; font-family: 'Trebuchet MS', Arial, sans-serif;"><a href="https://www.usvotefoundation.org/contact">Contact us</a> at anytime with questions and comments<br />
+	&copy;2005-$!year U.S. Vote Foundation, All rights reserved.</p>
+</div>
+    ]]></body_template>
+</email>

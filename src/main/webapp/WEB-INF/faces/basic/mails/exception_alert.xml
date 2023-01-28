@@ -1,0 +1,17 @@
+<email>
+    <subject>Exception was thrown</subject>
+    <from>info@system.overseasvotefoundation.org</from>
+   <reply_to>voterhelpdesk@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div>
+<p>New exception was thrown at $requestUrl with query &quot;$!queryString&quot;</p>
+<p>Exception: $!exception.class.canonicalName $!exception.message </p>
+<p>Stack trace:</p>
+<p>
+#foreach( $trace in $exception.stackTrace )
+$trace<br/>
+#end
+</p>
+</div>
+    ]]></body_template>
+</email>

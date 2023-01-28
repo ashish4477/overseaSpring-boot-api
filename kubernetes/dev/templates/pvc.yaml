@@ -1,0 +1,17 @@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: ovf-dev-efs-pvc
+  namespace: default
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "aws-efs"
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: aws-efs

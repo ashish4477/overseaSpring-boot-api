@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.vip">
+	<class name="VipReferendumDetail" table="vip_referendum_details" lazy="false" dynamic-insert="true">
+        <id name="id" type="long" column="id">
+            <generator class="native" />
+        </id>
+        
+        <property name="conStatement" type="string" column="con_statement" />
+        
+        <property name="passageThreshold" type="string" column="passage_threshold" />
+        
+        <property name="effectOfAbstain" type="string" column="effect_of_abstain" />
+        
+        <property name="proStatement" type="string" column="pro_statement" />
+        
+        <many-to-one name="referendum" class="VipReferendum" column="referendum_id" lazy="false" cascade="all" not-null="true" fetch="join" />
+	</class>
+</hibernate-mapping>

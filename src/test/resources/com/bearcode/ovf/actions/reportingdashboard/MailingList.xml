@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<dataset>
+	<faces_config id="1" url_path="www.ovf/vote" path_prefix="" default="1" />
+	<faces_config id="2" url_path="minnesota.ovf/vote" path_prefix="" default="0" />
+
+	<countries id="1" name="United States of America" abbreviation="USA" active="1" />
+
+	<states id="1" name="Vermont" abbr="VT" fips_code="50" />
+	<voting_regions id="1" name="Montpelier" state_id="1" /> 
+	
+	<states id="2" name="Minnesota" abbr="MN" fips_code="27" />
+	<voting_regions id="2" name="Aitkin County" state_id="2" />
+	
+	<roles id="1" name="admin" />
+	<roles id="2" name="voter" />
+	<roles id="10" name="reporting_dashboard" />
+	
+	<user_names id="1" title="" first_name="Joe" last_name="Admin" middle_name="" suffix="" />
+	<users id="1" username="admin@test.bear-code.com" real_email="admin@test.bear-code.com" name_id="1" previous_name_id="1" />
+	<users_roles user_id="1" role_id="1" />
+	
+	<user_names id="2" title="" first_name="Jen" last_name="Minnesota" middle_name="" suffix="" />
+	<users id="2" username="minnesota@test.minnesota.bear-code.com" name_id="2" previous_name_id="2" />	
+	<users_admin_faces user_id="2" face_id="2" />
+	<users_roles user_id="2" role_id="10" />
+	
+	<mailing_list_address id="1" first_name="Terry" last_name="OVF" email="terry-ovf@test.overseasvotefoundation.org" url="www.ovf/vote" state="1" region="1" voter_type="" phone="" voting_city="" voting_state_name="VT" current_address="" current_city="" current_postal_code="" current_country_name="" country="1" />
+	<mailing_list_address id="2" first_name="Tom" last_name="Minnesota" email="tom-minnesota@test.minnesota.gov" url="minnesota.ovf/vote" state="2" region="2" voter_type="" phone="" voting_city="" voting_state_name="MN" current_address="" current_city="" current_postal_code="" current_country_name="" country="1" />
+</dataset>

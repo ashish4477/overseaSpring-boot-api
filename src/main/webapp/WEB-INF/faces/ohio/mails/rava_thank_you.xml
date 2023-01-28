@@ -1,0 +1,24 @@
+<email>
+    <subject>Important: Submit Your Voter Form to Your Election Office from Ohio Overseas and Military Voter Services</subject>
+    <from>ohio@overseasvotefoundation.org</from>
+    <reply_to>ohio@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+	<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+		<p><strong>Dear $!firstName,</strong></p>
+
+		<p>Your voter registration and/or ballot request is NOT complete until you submit it to your election office. Remember to print, sign and send in your form to your election official who needs your signature on file. You can check your <a href="https://ohio.overseasvotefoundation.org/vote/svid.htm?submission=true&stateId=39">State Requirements/ Voter Materials Transmission Options</a> to confirm the various options for transmitting your form.</p>
+
+		<p>Thank you for using the Ohio Voter Registration/Ballot Request tool. Be sure to send in your completed and signed Federal Post Card Application (FPCA) form to either your county board of elections or the Ohio Secretary of State's office.</p>
+		<p>Whether you are serving in our military or living outside of the United States, you can access all of the information and materials you need in order to successfully participate in Ohio elections in one convenient place.</p>
+		
+		<p>The Military Ready-to-Vote program is designed for Ohio's service members. Visit <a href="http://www.OhioMilitaryVotes.com">www.OhioMilitaryVotes.com</a> to get answers to FAQs, track your ballot or sign up for elections updates.</p>
+
+		<p>The Ohio Voter Passport program provides similar resources just for Ohioans living overseas. Go to <a href="http://www.OhioVoterPassport.com">www.OhioVoterPassport.com</a> for more information.</p>
+		
+		<p>No matter where your work, service or studies take you, your vote is important back home. If I or my office can assist you in anyway, please let us know.</p>
+		
+		<p>Sincerely,</p>
+		<p>Frank Larose<br/>Ohio Secretary of State</p>
+	</div>
+    ]]></body_template>
+</email>

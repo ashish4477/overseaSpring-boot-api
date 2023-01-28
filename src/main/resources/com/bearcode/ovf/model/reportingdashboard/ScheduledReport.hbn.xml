@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+			"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.bearcode.ovf.model.reportingdashboard">
+	<class name="ScheduledReport" table="rd_scheduled_reports"
+		dynamic-insert="true">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+		
+		<many-to-one name="user" column="user_id" not-null="false"/>
+		<many-to-one name="report" column="report_id" lazy="false" not-null="false"/>
+		
+		<property name="duration" column="duration" not-null="true">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.reportingdashboard.ReportTime</param>
+				<param name="type">12</param>
+			</type>
+		</property>
+
+		<property name="interval" column="repeat_interval" not-null="false">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.bearcode.ovf.model.reportingdashboard.ReportTime</param>
+				<param name="type">12</param>
+			</type>
+		</property>
+		
+		<property name="nextExecutionDate" type="java.util.Date">
+        	<column name="next_execution_date" sql-type="datetime" />
+		</property>
+        <property name="lastSentDate" type="java.util.Date">
+        	<column name="last_sent_date" sql-type="datetime" />
+        </property>
+	</class>
+</hibernate-mapping>

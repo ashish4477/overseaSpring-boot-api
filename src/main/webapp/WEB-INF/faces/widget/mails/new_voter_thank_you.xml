@@ -1,0 +1,32 @@
+<email>
+    <subject>Your Overseas Vote Voter Account</subject>
+    <from>Overseas Vote Helpdesk &lt;voterhelpdesk@overseasvotefoundation.org&gt;</from>
+    <reply_to>voterhelpdesk@overseasvotefoundation.org</reply_to>
+    <body_template><![CDATA[
+<div style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+	<p ><strong>Dear $!firstName,</strong></p>
+
+<p>Overseas Vote congratulates you on opening your new Voter Account. This will be the hub of your voting activity. You can login now using the following link: <a href="https://www.overseasvotefoundation.org/vote/Login.htm?newAccount">Access My Voter Account</a></p>
+
+<p>Your Voter Account is the place where you can access all your information you need to register to vote in person or via absentee ballot and will save you a ton of time!</p>
+
+<p>Once you have logged into your Voter Account you will have instant access to:</p>
+
+<ul>
+ <li>Election dates and deadlines
+ <li>Fact-checked news
+ <li>Contact information for your local election officials
+ <li>A detailed helpdesk and contact who can answer your individual questions
+ <li>Voting history of your congressional officials
+ </ul>
+
+<p>...and many more features that make it easy to be an informed and engaged voter. We are excited to have you as a new Voter Account holder.</p>
+
+<p>Please don’t hesitate to <a href="https://www.overseasvotefoundation.org/contact">contact us</a> with any questions you may have!</p>
+
+    <em>From the volunteer team at at Overseas Vote – an initiative of U.S. Vote Foundation</em>
+
+	<p style="font-size:smaller;color:gray;">&copy;2005-$!year All rights reserved. U.S. VOTE FOUNDATION is a trade name and trademark of <a href="https://www.overseasvotefoundation.org">Overseas Vote Foundation</a>.</p>
+</div>
+    ]]></body_template>
+</email>

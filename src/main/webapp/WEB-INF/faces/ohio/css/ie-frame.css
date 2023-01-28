@@ -1,0 +1,8 @@
+#fx-shadow {
+	position:absolute;
+	top: expression(eval(document.body.scrollTop) + "px");
+}
+
+#container select {
+	visibility:hidden;
+}
